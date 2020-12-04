@@ -21,7 +21,9 @@ The objective of this lesson is demonstrate how to [TO BE PROVIDED]
 
 **Step 5:** Also, let's look at the hidden configuration file. First, we'll confirm the file is there: 
 
-`clear && ls -a`{{execute}}
+`clear && ls -1Ap`{{execute}}
+
+Notice the `.env` file in the list. This file holds configuration information that will be used by the application.
 
 **Step 6:** Now, look at the contents
 
