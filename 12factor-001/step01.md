@@ -19,9 +19,9 @@ The objective of this lesson is demonstrate how to [TO BE PROVIDED]
 
 `tree ./`{{execute}}
 
-**Step 5:** Let's look a the `.env` file.
+**Step 5:** Let's create the `.env` configuration file 
 
-`~/12factor/.env`{{open}}
+`touch .env && echo PINGER_PORT=3030 >> .env`{{execute}}
 
 ---
 
