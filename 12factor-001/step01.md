@@ -19,9 +19,15 @@ The objective of this lesson is demonstrate how to [TO BE PROVIDED]
 
 `tree ./`{{execute}}
 
-**Step 5:** Let's create the `.env` configuration file 
+**Step 5:** Also, let's look at the hidden configuration file
 
-`touch .env && echo PINGER_PORT=3030 >> .env`{{execute}}
+`ls -a`{{execute}}
+
+You'll see the following:
+
+```
+PINGER_PORT=3030
+```
 
 ---
 
