@@ -15,9 +15,13 @@ The objective of this lesson is demonstrate how to [TO BE PROVIDED]
 
 `git checkout 1-codebase.0.0.1`{{execute}}
 
-**Step 3:** List the file
+**Step 4:** List the file
 
 `tree ./`{{execute}}
+
+**Step 5:** Let's look a the `.env` file.
+
+`~/12factor/.env`{{open}}
 
 ---
 
