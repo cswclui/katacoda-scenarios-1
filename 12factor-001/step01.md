@@ -19,9 +19,13 @@ The objective of this lesson is demonstrate how to [TO BE PROVIDED]
 
 `tree ./`{{execute}}
 
-**Step 5:** Also, let's look at the hidden configuration file
+**Step 5:** Also, let's look at the hidden configuration file. First, we'll confirm the file is there: 
 
-`ls -a`{{execute}}
+`clear && ls -a`{{execute}}
+
+**Step 6:** Now, look at the contents
+
+`cat .env`{{execute}}
 
 You'll see the following:
 
