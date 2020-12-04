@@ -6,4 +6,4 @@
 
 [TO BE PROVIDED]
 
-Click the CONTINUE button to start.
+Click the START SCENARIO button to start.
