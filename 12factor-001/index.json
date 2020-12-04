@@ -1,0 +1,39 @@
+{
+  "title": "12 Factor App: 1-Codebase",
+  "description": "Learn the details of organizing all application assets in a common codebase",
+  "difficulty": "General understanding of structured programming",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+        "title": "TO BE PROVIDED A",
+        "text": "step01.md"
+      },
+      {
+        "title": "TO BE PROVIDED B",
+        "text": "step02.md"
+      },
+      {
+        "title": "TO BE PROVIDED C",
+        "text": "step03.md"
+      },
+      {
+        "title": "TO BE PROVIDED C",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "vscode-terminal-split",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal for Working with KinD\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "nodejs:12"
+  }
+}
