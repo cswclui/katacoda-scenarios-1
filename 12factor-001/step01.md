@@ -7,13 +7,17 @@ The objective of this lesson is demonstrate how to [TO BE PROVIDED]
 
 `git clone https://github.com/innovationinsoftware/12factor.git`{{execute}}
 
-**Step 2:** Navigate to the branch in the GitHub code for this scenario
+**Step 2:** Navigate to the code just cloned
 
-`git checkout 1-codebase.0.0.1`
+`cd 12factor`{{execute}}
+
+**Step 3:** Checkout the branch from the local GitHub code for this scenario
+
+`git checkout 1-codebase.0.0.1`{{execute}}
 
 **Step 3:** List the file
 
-[MORE TO COME]
+`tree ./`{{execute}}
 
 ---
 
