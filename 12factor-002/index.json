@@ -1,0 +1,32 @@
+{
+  "title": "12 Factor App: 2-Dependencies",
+  "description": "Learn how to manage external dependencies to make application development flexible and scalable",
+  "difficulty": "Reqiores a general understanding of structured programming and using git",
+  "time": "12 minutes",
+  "details": {
+    "steps": [{
+        "title": "Getting the Lab's Code from GitHub",
+        "text": "step01.md"
+      },
+      {
+        "title": "Comparing dependencies",
+        "text": "step02.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal for Working with 12 Factor App\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "nodejs:12"
+  }
+}
