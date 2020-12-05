@@ -15,4 +15,4 @@ You have cloned the code for this lab and have navigated to the working director
 
 ---
 
-***Next: Inspecting the General Codebase***
+***Next: Comparing Dependencies***
