@@ -1,7 +1,7 @@
 {
   "title": "12 Factor App: 2-Dependencies",
   "description": "Learn how to manage external dependencies to make application development flexible and scalable",
-  "difficulty": "Reqiores a general understanding of structured programming and using git",
+  "difficulty": "Requires a general understanding of structured programming and using git",
   "time": "12 minutes",
   "details": {
     "steps": [{
