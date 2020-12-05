@@ -19,6 +19,13 @@ You should see the following output:
 
 `git checkout 1-codebase.0.0.1`{{execute}}
 
+You'll see input at follows:
+
+```
+Branch '1-codebase.0.0.1' set up to track remote branch '1-codebase.0.0.1' from 'origin'.
+Switched to a new branch '1-codebase.0.0.1'
+```
+
 **Step 3:** View the files in the branch:
 
 `tree ./`{{execute}}
@@ -43,7 +50,7 @@ You'll see output as follows:
 * `server.js` is the application code, which is a logic written in Node.JS and runs as an HTTP webserver.
 * `test` is the directory that has files that contains code for testing the application
 
-**Step 4:** Also, there a hidden file name, `.env` that contains environmental configuration setting that the applicatoin will use. Let's confirm the file is there: 
+**Step 4:** Also, there is a hidden file name, `.env` that contains environmental configuration setting(s) that the applicatoin will use. Let's confirm the file is there: 
 
 `clear && ls -1Ap`{{execute}}
 
