@@ -1,10 +1,36 @@
 ## Objective
-The objective of this lesson is demonstrate how to [TO BE PROVIDED]
+The objective of this lesson is demonstrate how to start the lab's demonstration application's webserver and then call the server using the `curl` command.
 
 ## Steps
 
-[TO BE PROVIDED]
+**Step 1:** Confirm you are in the working directory of the lab's application.
+
+`pwd`{{execute}}
+
+You should see the following output:
+
+`/root/12factor`
+
+If you are not in that working director, execute the following command: `cd /root/12factor`{{execute}}.
+
+**Step 2:** Start the Pinger web server
+
+`node server.js`{{execute}}
+
+You will see the following output:
+
+
+**Step 3:** Call the web server using the `curl` command
+
+`curl http:localhost:3030`{{execute}}
+
+You will see the following output:
+
+Notice that the webserver is running on the port defined by environment variable, `PINGER_PORT` as declared in the configuration file, `.env`. 
+
+As mentioned at the beginning of the lab, the **Codebase** principle of 12 Factor App is that all assets relevant to the application are stored along with the application code in a central repository. We'll look at the details of storing configuration information in the central repository in the lab the demonstrates the third principle of 12 Factor App: Configuration.
 
 ---
 
-***Next: TO BE PROVIDED***
+***CONGRATULATIONS!! You've finished the lab!*** Click the CONTINUE button to finish up
+

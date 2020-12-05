@@ -19,10 +19,28 @@ If you are not in that working director, execute the following command: `cd /roo
 
 `npm test`{{execute}}
 
-You'll see output as follows:
+Notice that that the tests of run. Two tests have passed as shown in the line:
 
-We've tested the application to verity that the code is operational. The next lesson is the get the application up and runnig.
+`2 passing (31ms)`
+
+Also notice that running the tests produced a code coverage report, like so:
+
+```
+
+-----------|----------|----------|----------|----------|-------------------|
+File       |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-----------|----------|----------|----------|----------|-------------------|
+All files  |      100 |       50 |      100 |      100 |                   |
+ server.js |      100 |       50 |      100 |      100 |                 4 |
+-----------|----------|----------|----------|----------|-------------------|
+
+```
+
+A coverage report describes how many line of code were actually exercised in the testing session. While not part of 12 Factor App, the notion of testing all lines of code is an important concept in testing best practices. Unfortunately the test we've just run has not exercised 4 lines fo code.
 
 ---
+
+We've tested the application to verity that the code is operational. The next lesson is the get the application up and running.
+
 
 ***Next: Running the Application***
