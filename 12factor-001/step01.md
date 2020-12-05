@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is demonstrate how to get the clone the lab code from GitHub into the Innovation In Software interactive learning environment.
+The objective of this lesson is demonstrate how to clone the lab code from GitHub into the Innovation In Software interactive learning environment.
 
 ## Steps
 
