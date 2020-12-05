@@ -30,7 +30,7 @@ and then enter:
 
 `set number`
 
-You will see current version of the Pinger code, which is written in Node.JS.
+You will see current version of the Pinger code, which is written in Node.JS, in the `vi` editor with line numbers showing.
 
 ---
 
