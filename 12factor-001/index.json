@@ -31,8 +31,8 @@
     }
   },
   "environment": {
-    "uilayout": "vscode-terminal-split",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal for Working with KinD\u001b[m\r\n"
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal for Working with 12 Factor App\u001b[m\r\n"
   },
   "backend": {
     "imageid": "nodejs:12"
