@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is demonstrate how to [TO BE PROVIDED]
+The objective of this lesson is demonstrate how to get the clone the lab code from GitHub into the Innovation In Software interactive learning environment.
 
 ## Steps
 
@@ -15,26 +15,22 @@ The objective of this lesson is demonstrate how to [TO BE PROVIDED]
 
 `git checkout 1-codebase.0.0.1`{{execute}}
 
+You see the following output:
+
+```
+
+```
+
 **Step 4:** List the file
 
 `tree ./`{{execute}}
 
-**Step 5:** Also, let's look at the hidden configuration file. First, we'll confirm the file is there: 
-
-`clear && ls -1Ap`{{execute}}
-
-Notice the `.env` file in the list. This file holds configuration information that will be used by the application.
-
-**Step 6:** Now, look at the contents
-
-`cat .env`{{execute}}
-
-You'll see the following:
+You see the following output:
 
 ```
-PINGER_PORT=3030
+
 ```
 
 ---
 
-***Next: TO BE PROVIDED***
+***Next: Inspecting the General Codebase***
