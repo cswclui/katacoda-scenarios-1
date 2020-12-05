@@ -27,7 +27,7 @@ You'll see output as follows:
 
 ```
 Branch '1-codebase.0.0.1' set up to track remote branch '1-codebase.0.0.1' from 'origin'.
-Switch
+Switched to a new branch '1-codebase.0.0.1'
 
 ```
 
@@ -37,7 +37,14 @@ Switch
 
 You'll see output as follows:
 
-HERE
+```
+{
+  "dotenv": "^8.2.0",
+  "uuid": "^3.3.3"
+}
+```
+
+ Notice that this version has only two packages listed. These are the only packages that is version of the code requires.
 
 **Step 4:** Check out the second,  version of *Pinger* from the local `git` repo that we've just cloned from GitHub
 
@@ -46,8 +53,8 @@ HERE
 You'll see output as follows:
 
 ```
-Switched to branch '2-dependencies.0.0.1'
-Your branch is up to date with 'origin/2-dependencies.0.0.1'.
+Branch '2-dependencies.0.0.1' set up to track remote branch '2-dependencies.0.0.1' from 'origin'.
+Switched to a new branch '2-dependencies.0.0.1'
 
 ```
 
@@ -57,12 +64,24 @@ Your branch is up to date with 'origin/2-dependencies.0.0.1'.
 
 You'll see output as follows:
 
-HERE
+```
+{
+  "dotenv": "^8.2.0",
+  "faker": "^5.1.0",
+  "uuid": "^3.3.3"
+}
+```
 
-Notice the difference? You'll see that the package, `"faker": "^5.1.0"` has been added. Why?
+Notice the difference? You'll see that the added package, `"faker": "^5.1.0"` has been added. Why had this addition been made?
 
-Because `faker` is needed to support a new feature of *Pinger*. The new features returns a random message as part of the HTPP response.
+The reason is because `faker` is needed to support a new feature of *Pinger*. The new features returns a random message as part of the HTPP response whick we'll exammine in the next lab.
+
+The important thing to understand now it the the Depenedencies principle of 12 Factor App states that all external dependencies should exist in separate artitfact repositories and downloaded at runtime. In this case, the default  artifact repository for Node.js applications is [npmjs.com](https://www.npmjs.com/).
+
+The immediate benefit is that the application code for *Pinger* contains only the logic that is absolutely necessary to support its features. Extraneous logic resides in external dependencies. This allows the application to be upgraded without having to accommodate a lot of unnecessary code. Also, using well defined external libraries means that an application can avoid the problem of [dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).
 
 ---
+
+The next lesson take sa look at how the external dependency supports the new feature implemented in *Pinger*.
 
 ***Next: Examining the new feature, `randomMessage`***
