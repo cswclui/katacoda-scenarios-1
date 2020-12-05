@@ -1,5 +1,4 @@
 sudo apt update -y
 
-sudo apt install tree -y
+sudo apt install tree -y && clear
 
-clear
