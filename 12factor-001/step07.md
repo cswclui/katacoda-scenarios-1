@@ -19,12 +19,16 @@ If you are not in that working director, execute the following command: `cd /roo
 
 You will see the following output:
 
+`API Server is listening on port 3030`
 
-**Step 3:** Call the web server using the `curl` command
 
-`curl http:localhost:3030`{{execute}}
+**Step 3:** In a second terminal window call the web server using the `curl` command
+
+`curl http:localhost:3030`{{execute T2}}
 
 You will see the following output:
+
+
 
 Notice that the webserver is running on the port defined by environment variable, `PINGER_PORT` as declared in the configuration file, `.env`. 
 

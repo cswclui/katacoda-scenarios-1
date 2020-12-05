@@ -23,7 +23,7 @@ Notice that that the tests of run. Two tests have passed as shown in the line:
 
 `2 passing (31ms)`
 
-Also notice that running the tests produced a code coverage report, like so:
+Also notice that running the tests produced a [code coverage](https://www.techopedia.com/definition/22535/code-coverage) report, like so:
 
 ```
 

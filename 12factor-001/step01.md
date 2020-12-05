@@ -11,7 +11,7 @@ The objective of this lesson is demonstrate how to get the clone the lab code fr
 
 `cd 12factor`{{execute}}
 
-You have cloned the code for this lab and have navigated in the working directory of the lab's demonstration application. 
+You have cloned the code for this lab and have navigated to the working directory of the lab's demonstration application. 
 
 ---
 

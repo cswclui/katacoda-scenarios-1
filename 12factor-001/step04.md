@@ -69,4 +69,4 @@ Now that you have a basic understanding the code for the lab's demonstration app
 
 ---
 
-***Next: Viewing the Application's Configuration File**
+**Next: Viewing the Application's Configuration File**
