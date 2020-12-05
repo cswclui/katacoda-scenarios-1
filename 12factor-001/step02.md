@@ -47,7 +47,7 @@ You'll see output as follows:
 
 * `package.json` contains the list of external dependencies for the application
 * `readme.md` is the introductory readme documentation for the application
-* `server.js` is the application code, which is a logic written in Node.JS and runs as an HTTP webserver.
+* `server.js` is the application code, which has logic written in Node.JS and runs as an HTTP webserver.
 * `test` is the directory that has files that contains code for testing the application
 
 **Step 4:** Also, there is a hidden file name, `.env` that contains environmental configuration setting(s) that the applicatoin will use. Let's confirm the file is there: 

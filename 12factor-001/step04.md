@@ -28,11 +28,8 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 and then enter:
 
-`:`{{execute}}
+`:set number`{{execute}}
 
-finally, enter: 
-
-`set number`{{execute}}
 
 You will see current version of the Pinger code, which is written in Node.JS, in the `vi` editor with line numbers showing.
 
