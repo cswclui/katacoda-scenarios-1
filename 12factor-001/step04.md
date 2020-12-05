@@ -24,14 +24,18 @@ If you are not in that working director, execute the following command: `cd /roo
 
 **Step 3:** Turn on line numbering in `vi`.
 
-Press ESC (`^ESC`{{execute ctrl-seq}})
+Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 and then enter:
 
-`set number`
+`:`{{execute}}
+
+finally, enter: 
+
+`set number`{{execute}}
 
 You will see current version of the Pinger code, which is written in Node.JS, in the `vi` editor with line numbers showing.
 
 ---
 
-***Next: TO BE PROVIDED***
+***Next: Viewing the Application's Configuration File**
