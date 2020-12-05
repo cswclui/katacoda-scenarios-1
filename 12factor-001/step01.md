@@ -11,25 +11,7 @@ The objective of this lesson is demonstrate how to get the clone the lab code fr
 
 `cd 12factor`{{execute}}
 
-**Step 3:** Checkout the branch from the local GitHub code for this scenario
-
-`git checkout 1-codebase.0.0.1`{{execute}}
-
-You see the following output:
-
-```
-
-```
-
-**Step 4:** List the file
-
-`tree ./`{{execute}}
-
-You see the following output:
-
-```
-
-```
+You have cloned the code for this lab and have navigated in the working directory of the lab's demonstration application. 
 
 ---
 

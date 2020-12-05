@@ -25,10 +25,23 @@ You should see the following output:
 
 You'll see output as follows:
 
+```
+./
+├── package.json
+├── readme.md
+├── server.js
+└── test
+    └── http-tests.js
 
+1 directory, 4 files
+
+```
 **WHERE**
 
-`files here`
+* `package.json` contains the list of external dependencies for the application
+* `readme.md` is the introductory readme documentation for the application
+* `server.js` is the application code, which is a logic written in Node.JS and runs as an HTTP webserver.
+* `test` is the directory that has files that contains code for testing the application
 
 **Step 4:** Also, there a hidden file name, `.env` that contains environmental configuration setting that the applicatoin will use. Let's confirm the file is there: 
 
@@ -36,7 +49,17 @@ You'll see output as follows:
 
 You'll see output as follows:
 
-Notice the `.env` file in the list. This file holds configuration information that will be used by the application. We'll demonstrated different aspect of configuration as they apply to 12 Factor App throughout the labs. The important thing to know for now that in 12 Factor App configuration information is stored in the common repository according to the version of the code to which the configuration applies.
+```
+.env
+.git/
+package.json
+readme.md
+server.js
+test/
+
+```
+
+Notice the `.env` file in the list. This file holds configuration information that will be used by the application. We'll demonstrated different aspects of configuration as they apply to 12 Factor App throughout the labs. The important thing to know for now that in 12 Factor App configuration information is stored in the common repository according to the version of the code to which the configuration applies.
 
 ---
 
