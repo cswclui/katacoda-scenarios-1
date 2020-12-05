@@ -11,7 +11,7 @@ In this lab you'll doing following:
 * **Step 3:** Installing Dependencies
 * **Step 4:** Viewing the Application Code
 * **Step 5:** Viewing the Application's Configuration File
-* **Step 6:** Running the Unit Tests
+* **Step 6:** Running the Application's Tests
 * **Step 7:** Running the Application
 
 ## Executing command line instructions 

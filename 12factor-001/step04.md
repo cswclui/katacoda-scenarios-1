@@ -37,15 +37,19 @@ You will see current version of the Pinger code, which is written in Node.JS, in
 
 This code for the demonstration application is Javascript that runs under [Node.js](https://nodejs.org/en/about/).
 
-The code at lines 1 - 3 binds the external dependencies to the application code. The dependencies are Node.js packages which are libraries that contain logic that is useful in a particular way. fro example, the package `http` contains functions for creating and running a webserver. The package `uuid/v4` contains functions to generate random [universally unique identifiers](https://en.wikipedia.org/wiki/Universally_unique_identifier). 
+The code at lines 1 - 3 binds the external dependencies to the application code. The dependencies are Node.js packages which are libraries that contain logic that is intended to be shared among a variety of applications in a general manner. For example, the package, `dotenv` is a libary that reads the contents of a special file name `.env` to create environment variables that need be in memory and which the application will use.
+
+The package `http` contains functions for creating and running a webserver. The package `uuid/v4` contains functions to generate random [universally unique identifiers](https://en.wikipedia.org/wiki/Universally_unique_identifier). 
+
+([Dependencies](https://12factor.net/dependencies) is the second principle of 12 Factor App which we'll discuss in upcoming labs.)
 
 Line 4 declares variable, `port`. The value of `port` is the [TCP/IP](https://www.pcmag.com/encyclopedia/term/tcpip-port) port on which the web server will listen for incoming requests. If there is an environment variable with the name `PINGER_PORT` defined in the runtime environment, that value will be used. Otherwise, the default value, `3000` will be assigned to the variable, `port`. 
 
 Lines 6 -  16 is the Javascript function, `handleRequest` that accepts the HTTP `request` coming in from the internet. The function creates a simple HTTP `response` that returns a JSON object that reports the name of the application as well as the current time.
 
-Line 18 is the intelligence that creates the actual web server using [`http.createServer`](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_http_createserver_options_requestlistener). The request handler function, `handleRequest` is passed to `createServer()` as a parameter.
+Line 18 is the intelligence that creates the actual web server using the function, [`http.createServer`](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_http_createserver_options_requestlistener). The request handler function, `handleRequest` is passed to `createServer()` as a parameter.
 
-The server binds to the port at Lines 20 - 24 in the function, `server.listen()`
+The server binds to the port at Lines 20 - 22 in the function, `server.listen()`
 
 Lines 24 -27 defined a function, `shutdown()`. The purpose of `shutdown()` is to gracefully stop the server from running. The notion of a graceful shut down is part of the ninth principle of 12 Factor App: [Disposability](https://12factor.net/disposability). We'll discuss Disposability in upcoming labs.
 

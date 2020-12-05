@@ -13,7 +13,7 @@ A key concept in the first principle of 12 Factor App is that all the assets of 
 
 You should see the following output:
 
-`/root/12factor-001`
+`/root/12factor`
 
 **Step 2:** Checkout the code from the GitHub branch for the version of the application code for this lab, in the case `1-codebase.0.0.1`.
 

@@ -14,7 +14,7 @@ We're going to cover Dependencies in depth in upcoming labs, but for now the imp
 
 You should see the following output:
 
-`/root/12factor-001`
+`/root/12factor`
 
 **Step 2:** Confirm you are in correct GitHub Branch
 

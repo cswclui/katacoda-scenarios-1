@@ -15,7 +15,9 @@ We're going to cover configuration in depth in upcoming labs, but for now the im
 
 You should see the following output:
 
-`/root/12factor-001`
+`/root/12factor`
+
+If you are not in that working director, execute the following command: `cd /root/12factor`{{execute}}.
 
 **Step 2:** Confirm you are in correct GitHub Branch
 
@@ -40,6 +42,10 @@ You'll see the following:
 `PINGER_PORT=3030`
 
 This configuration seeting defines an environment variable, `PINGER_PORT` and assign the value `3030` to the variable. There is programming logic that is special to the application that reads the value of `PINGER_PORT` in order to determine the port that the application's web server will listen on for incoming requests.
+
+Now that we've reviewed how an external configuration file is used to set an environmental variable that gets consumed by the demonstration application, we'll move on to testing the application using the tests that are part of the general codebase.
+
+**Remember!** A central idea of CodeBase principle in 12 Factor App is that all assets for the application are stored in one central repository, this includes configuration information as well as application tests.
 
 ---
 

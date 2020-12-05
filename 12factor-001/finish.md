@@ -8,7 +8,7 @@ The interactive scenario demonstrated how to:
 * Install Dependencies
 * View and Understand the Application Code
 * View and Understand the Application's Configuration File
-* Understand and Run the Unit Tests
+* Understand and Run the Application's Tests
 * Run the Application
 
 In the next lab you'll be presented with an interactive demonstration about the second princple of 12 Factor App, **[Dependencies](https://12factor.net/dependencies)**.
