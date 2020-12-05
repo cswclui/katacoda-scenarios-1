@@ -21,6 +21,8 @@ You should see the following output:
 
 [MORE TO COME]
 
+`jq .dependencies package.json`{{execute}}
+
 ---
 
 ***Next: TO BE PROVIDED***
