@@ -70,4 +70,4 @@ Notice the `.env` file in the list. This file holds configuration information th
 
 ---
 
-***Next: Installing Dependecies***
+***Next: Installing Dependencies***
