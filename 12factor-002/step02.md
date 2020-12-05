@@ -19,10 +19,50 @@ You should see the following output:
 
 `/root/12factor`
 
-[MORE TO COME]
+**Step 2:** Check out the first version of *Pinger* from the local `git` repo that we've just cloned from GitHub
+
+`git checkout 1-codebase.0.0.1`{{execute}}
+
+You'll see output as follows:
+
+```
+Branch '1-codebase.0.0.1' set up to track remote branch '1-codebase.0.0.1' from 'origin'.
+Switch
+
+```
+
+**Step 3:** Let's take a look at the dependencies list in `package.json` using the `jq` tool that's been installed into the Katacoda virtual machine automatically.
 
 `jq .dependencies package.json`{{execute}}
 
+You'll see output as follows:
+
+HERE
+
+**Step 4:** Check out the second,  version of *Pinger* from the local `git` repo that we've just cloned from GitHub
+
+`git checkout 2-dependencies.0.0.1`{{execute}}
+
+You'll see output as follows:
+
+```
+Switched to branch '2-dependencies.0.0.1'
+Your branch is up to date with 'origin/2-dependencies.0.0.1'.
+
+```
+
+**Step 5:** Now let's take a look at the dependencies list in the second version of `package.json` using the `jq` tool.
+
+`jq .dependencies package.json`{{execute}}
+
+You'll see output as follows:
+
+HERE
+
+Notice the difference? You'll see that the package, `"faker": "^5.1.0"` has been added. Why?
+
+Because `faker` is needed to support a new feature of *Pinger*. The new features returns a random message as part of the HTPP response.
+
 ---
 
-***Next: TO BE PROVIDED***
+***Next: Examining the new feature, `randomMessage`***
