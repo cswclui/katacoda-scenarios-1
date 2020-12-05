@@ -7,7 +7,7 @@ The objective of this lesson is demonstrate how to get the clone the lab code fr
 
 `git clone https://github.com/innovationinsoftware/12factor.git`{{execute}}
 
-**Step 2:** Navigate to the code just cloned
+**Step 2:** Navigate to the working directory of the code just cloned. This directory contains all the assets for the lab's demonstration application.
 
 `cd 12factor`{{execute}}
 
