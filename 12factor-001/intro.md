@@ -22,4 +22,10 @@ This scenario is completely interactive. The instructions you'll be given will b
 
 just click on it and the command will execute in the interative terminal window.
 
+## About the demonstration application
+
+This lab uses a demonstration application named, *Pinger*. The purpose of *Pinger* is to report environmental information of a webserver at runtime. We'll be adding features to *Pinger* throughout the labs in order to demonstrate the principles of 12 Factor App. In order to control developement, a new branch will be created in this project's GitHub repository each time a feature set is created.
+
+---
+
 Click the START SCENARIO button to start.

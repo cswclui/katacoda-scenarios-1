@@ -1,7 +1,7 @@
 {
   "title": "12 Factor App: 1-Codebase",
   "description": "Learn the details of organizing all application assets in a common codebase",
-  "difficulty": "General understanding of structured programming",
+  "difficulty": "Requires a general understanding of structured programming and using git",
   "time": "12 minutes",
   "details": {
     "steps": [{
