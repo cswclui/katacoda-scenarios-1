@@ -107,6 +107,8 @@ Notice that now the directory, `node_modules` is installed the demonstration app
 
 Notice that not only are the packages for `donenv` and `uuid` installed, but so are all the dependency packages that are associated with those two packages.
 
+Having to manage each of these dependency installations manually is an arduous task. Fortanately following the **Dependendencies** principle of 12 Factor app makes things a lot easier.
+
 ## Discussion
 
 The important thing to understand is that the **Dependencies** principle of 12 Factor App states that all external dependencies should exist in separate artitfact repositories and downloaded at runtime. In this case, the default artifact repository for Node.js applications is [npmjs.com](https://www.npmjs.com/).
