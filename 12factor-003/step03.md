@@ -62,7 +62,7 @@ Notice too, that there a new environment variables in the `.env`. These environm
 
 You'll get the following output:
 
-HERE
+`API Server is listening on port 3040`
 
 **Step 7:** Make a `curl` call to the application in the first terminal window:
 
