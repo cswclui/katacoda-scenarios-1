@@ -13,8 +13,12 @@
         "text": "step02.md"
       },
       {
-        "title": "Managing Independent Config Across Versions",
+        "title": "Managing An Independent Config Across Versions",
         "text": "step03.md"
+      },
+      {
+        "title": "Changing Application Behavior Using Config Settings",
+        "text": "step04.md"
       }
     ],
     "intro": {

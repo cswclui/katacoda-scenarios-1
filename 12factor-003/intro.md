@@ -19,6 +19,7 @@ In this lab you'll doing following:
 * **Step 1:** Cloning the Lesson Code from GitHub
 * **Step 2:** Understanding the Benefit of an Independent Config
 * **Step 3:** Managing Independent Config Across Versions
+* **Step 4:** Changing Application Behavior Using Config Settings
 
 ## Executing command line instructions 
 
