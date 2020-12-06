@@ -73,17 +73,41 @@ The snippet of JSON shown above is the list of dependencies that applications ne
 
 You'll get the following output:
 
-HERE
+```
+added 245 packages from 699 contributors and audited 245 packages in 5.274s
+
+24 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+```
 
 **Step 5:** Review the contents after the dependencies have been installed:
 
-`tree ./ l -l 2`{{execute}}
+`tree ./ -L 1`{{execute}}
 
 You'll get the following output:
 
-HERE
+```
+./
+├── node_modules
+├── package.json
+├── package-lock.json
+├── readme.md
+├── server.js
+└── test
 
-Notice that now the directory, `node_modules` is installed the demonstration application's working directory along with each dependency in a subdirectory.
+```
+
+Notice that now the directory, `node_modules` is installed the demonstration application's working directory.
+
+**Step 6:** Take a look at the contents of the directory `node_modules`.
+
+`ls ./node_modules/`{{execute}}
+
+Notice that not only are the packages for `donenv` and `uuid` installed, but so are all the dependency packages that are associated with those two packages.
+
+## Discussion
 
 The important thing to understand is that the **Dependencies** principle of 12 Factor App states that all external dependencies should exist in separate artitfact repositories and downloaded at runtime. In this case, the default artifact repository for Node.js applications is [npmjs.com](https://www.npmjs.com/).
 
