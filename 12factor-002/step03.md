@@ -52,7 +52,7 @@ You'll get the following output:
 
 **Step 5:** Start the demonstration application webserver in a second terminal window:
 
-`node server.js`{{execute T2}}
+`cd 12factor && node server.js`{{execute T2}}
 
 You'll get the following output:
 
@@ -70,7 +70,7 @@ Pay attention to the output. We'll be comparing it to the output in the second v
 
 **Step 8:** Stop the web server that's running in the second terminal window:
 
-`echo "Click to Shutdown Web Server"`{{execute interrupt T2}}
+`echo "Web server as been shut down"`{{execute interrupt T2}}
 
 **Step 7:** Delete the `node_modules` directory that we intalled in the previous lesson
 
