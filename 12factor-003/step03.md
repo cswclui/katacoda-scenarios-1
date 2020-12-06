@@ -49,6 +49,7 @@ Notice we've changed the port to which the webserver will listen for incoming re
 
 Notice too, that there a new environment variables in the `.env`. These environment variables are special to the demonstration application. They're meaning is as follows:
 
+* `PINGER_PORT` defines the port where the application's webserver will be listening
 * `PINGER_ADMIN` is a flag that when set to `true` will make it so that *Pinger* will return details about the enviornment in which it is running.
 * `CURRENT_VERSION` describes the current version of the of *Pinger*
 
