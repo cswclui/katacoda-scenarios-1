@@ -30,8 +30,29 @@ Branch '1-codebase.0.0.1' set up to track remote branch '1-codebase.0.0.1' from 
 Switched to a new branch '1-codebase.0.0.1'
 
 ```
+**Step 3:** Take a look at the contents of the demonstration application's working directory.
 
-**Step 3:** Let's take a look at the dependencies list in `package.json` using the `jq` tool that's been installed into the Katacoda virtual machine automatically.
+`tree ./`{{execute}}
+
+You'll see output as follows:
+
+```
+./
+├── package.json
+├── readme.md
+├── server.js
+└── test
+    └── http-tests.js
+
+1 directory, 4 files
+
+```
+
+Notice that are **no** dependencies installed. If there were, under Node.js you would see directory named, `node_modules`.
+
+However, the list of dependencies that the demonstration application needs is defined in the file, `package.json`.
+
+**Step 4:** Let's take a look at the dependencies list in `package.json` using the `jq` tool that's been installed into the Katacoda virtual machine automatically.
 
 `jq .dependencies package.json`{{execute}}
 
@@ -44,44 +65,32 @@ You'll see output as follows:
 }
 ```
 
- Notice that this version has only two packages listed. These are the only packages that this version of the code requires.
+The snippet of JSON shown above is the list of dependencies that applications needs. The dependencies  are Node.js packages that are stored in the Node.js package repository, [NPM](https://www.npmjs.com/). You use the command set, `npm install` to have the Node.js development framework go out to the Internet and install the dependencies from NPM, which we'll do in the following step.
 
-**Step 4:** Check out the second,  version of *Pinger* from the local `git` repo that we've just cloned from GitHub
+**Step 4:** Install the demonstration application's dependencies.
 
-`git checkout 2-dependencies.0.0.1`{{execute}}
+`npm install`{{execute}}
 
-You'll see output as follows:
+You'll get the following output:
 
-```
-Branch '2-dependencies.0.0.1' set up to track remote branch '2-dependencies.0.0.1' from 'origin'.
-Switched to a new branch '2-dependencies.0.0.1'
+HERE
 
-```
+**Step 5:** Review the contents after the dependencies have been installed:
 
-**Step 5:** Now let's take a look at the dependencies list in the second version of `package.json` using the `jq` tool.
+`tree ./ l -l 2`{{execute}}
 
-`jq .dependencies package.json`{{execute}}
+You'll get the following output:
 
-You'll see output as follows:
+HERE
 
-```
-{
-  "dotenv": "^8.2.0",
-  "faker": "^5.1.0",
-  "uuid": "^3.3.3"
-}
-```
+Notice that now the directory, `node_modules` is installed the demonstration application's working directory along with each dependency in a subdirectory.
 
-Notice the difference? You'll see that the package, [`faker`](https://www.npmjs.com/package/faker): "^5.1.0" has been added. Why has this addition been made?
-
-The reason is because `faker` is needed to support a new feature of *Pinger*. The new features returns a random message as part of the HTPP response whick we'll exammine in the next lab.
-
-The important thing to understand now it the the Depenedencies principle of 12 Factor App states that all external dependencies should exist in separate artitfact repositories and downloaded at runtime. In this case, the default  artifact repository for Node.js applications is [npmjs.com](https://www.npmjs.com/).
+The important thing to understand is that the **Dependencies** principle of 12 Factor App states that all external dependencies should exist in separate artitfact repositories and downloaded at runtime. In this case, the default artifact repository for Node.js applications is [npmjs.com](https://www.npmjs.com/).
 
 The immediate benefit is that the application code for *Pinger* contains only the logic that is absolutely necessary to support its features. Extraneous logic resides in external dependencies. This allows the application to be upgraded without having to accommodate a lot of unnecessary code. Also, using well defined external libraries means that an application can avoid the problem of [dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).
 
 ---
 
-The next lesson take sa look at how the external dependency supports the new feature implemented in *Pinger*.
+The next lesson take at look at how to manage dependencies across multiple versions of an applicaton based on the **Dependencies** principle of 12 Factor App.
 
-***Next: Examining the new feature, `randomMessage`***
+***Next: Managing dependencies across multiple versions***

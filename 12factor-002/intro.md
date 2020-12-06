@@ -6,7 +6,9 @@ The objective of this lab is to demonstrate the basic concepts behind of the sec
 
 In this lab you'll doing following:
 
-[TO BE PROVIDED]
+* **Step 1:** Setting Lesson Code
+* **Step 2:** Understanding the Benefit of Dependencies
+* **Step 3:** Managing Dependencies in Version Control
 
 ## Executing command line instructions 
 

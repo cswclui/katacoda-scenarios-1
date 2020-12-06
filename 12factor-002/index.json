@@ -9,8 +9,12 @@
         "text": "step01.md"
       },
       {
-        "title": "Comparing dependencies",
+        "title": "Understanding the Benefit of Dependencies",
         "text": "step02.md"
+      },
+      {
+        "title": "Managing Dependencies Among Versions",
+        "text": "step03.md"
       }
     ],
     "intro": {
