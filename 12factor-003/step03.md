@@ -20,7 +20,7 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 **Step 2:** We're going to checkout another, later version of the demonstration application, *Pinger* . But, first we need to delete the existing directory, `node_modules` because the next version will have its own set of dependencies that need to downloaded and used at run time.
 
-`rm -rf node_modules`{{execute T1}}
+`clear && rm -rf node_modules`{{execute T1}}
 
 **Step 3:** Check out a new version of the demonstration application from the local repository that you cloned down from GitHub at the start of this lesson.
 

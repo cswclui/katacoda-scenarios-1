@@ -38,7 +38,7 @@ EOF
 
 **Step 5:** Let's take a look at the configuration settings in the `.env` file.
 
-`cat .env`{{execute T1}}
+`clear && cat .env`{{execute T1}}
 
 You'll get the following output:
 
@@ -55,14 +55,25 @@ Notice we've changed the `PINGER_ADMIN` to `false`. This change will restrict th
 
 You'll get the following output:
 
-HERE
+`API Server is listening on port 3040`
 
 **Step 7:** Make a `curl` call to the application in the first terminal window:
 
 `curl http://localhost:3040`{{execute T1}}
 
+You'll get output as follows:
 
-Notice that now, we are getting less information in the response and the configuration settings are affecting how the application behaves.
+```
+{
+    "appName": "Pinger",
+    "currentTime": "2020-12-06T21:39:22.458Z",
+    "PINGER_PORT": "3040",
+    "randomMessage": "nulla tempore ipsum sit aut",
+    "correlationId": "7bdb15cb-f2b1-428a-9c41-f2803595ccaa"
+}
+```
+
+Notice that now, we are getting less information in the HTTP response. This is because we modified the configuration setting to `PINGER_ADMIN=false`. The demonstration application consumes the environmental variables. The application's logic is such that when it consumes, `PINGER_ADMIN=false`, the programming resticts the information sent in the response.
 
 ## Discussion
 

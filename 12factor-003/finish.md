@@ -6,5 +6,6 @@ The interactive scenario demonstrated how to:
 * Set Up the Lesson Code from GitHub
 * Understand the Benefit of Dependencies
 * Manage Dependencies Across Versions in Source Control
+* Change Application Behavior Using Config Settings
 
-In the next lab you'll be presented with an interactive demonstration about the second princple of 12 Factor App, **[Configuration](https://12factor.net/config)**.
+In the next lab you'll be presented with an interactive demonstration about the fourth princple of 12 Factor App, **[Backing services](https://12factor.net/backing-services)**.
