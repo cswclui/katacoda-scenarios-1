@@ -1,4 +1,4 @@
-**Congratulations!** You've completed the scenario, **12 Factor App: Dependencies**.
+**Congratulations!** You've completed the scenario, **12 Factor App: Config**.
 
 
 The interactive scenario demonstrated how to:
