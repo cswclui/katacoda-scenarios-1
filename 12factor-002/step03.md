@@ -116,7 +116,7 @@ The reason is because `faker` is needed to support a new feature of *Pinger*. Th
 
 **Step 12:** Make a call the web server.
 
-`curl http://localhost:3030`{{execute T1}
+`curl http://localhost:3030`{{execute T1}}
 
 You'll get the following output:
 
