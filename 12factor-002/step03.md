@@ -52,7 +52,7 @@ You'll get the following output:
 
 **Step 5:** Start the demonstration application webserver in a second terminal window:
 
-`node server.js`{{execute T2}
+`node server.js`{{execute T2}}
 
 You'll get the following output:
 
@@ -60,7 +60,7 @@ HERE
 
 **Step 6:** Make a `curl` call to the application in the first terminal window:
 
-`curl http://localhost:3030`{{execute T1}
+`curl http://localhost:3030`{{execute T1}}
 
 You'll get the following output:
 
