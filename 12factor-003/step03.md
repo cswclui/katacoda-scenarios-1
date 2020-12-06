@@ -71,6 +71,10 @@ HERE
 
 Notice that now, we are getting a lot more information in the response and the configuration settings are affecting how the application behaves.
 
+**Step 7:** Shut down the web server in preparation for next lesson
+
+`echo "Web server as been shut down"`{{execute interrupt T2}}
+
 ---
 
 In the next lesson we're going shut down the webserver and change the `PINGER_ADMIN` to `false` in order to change the application's behavior.
