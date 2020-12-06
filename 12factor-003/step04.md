@@ -51,7 +51,7 @@ Notice we've changed the `PINGER_ADMIN` to `false`. This change will restrict th
 
 **Step 6:** Start the demonstration application webserver in a second terminal window:
 
-`cd 12factor && node server.js`{{execute T2}}
+`cd /root/12factor && node server.js`{{execute T2}}
 
 You'll get the following output:
 

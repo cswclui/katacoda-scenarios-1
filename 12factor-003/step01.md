@@ -15,4 +15,4 @@ You have cloned the code for this lab and have navigated to the working director
 
 ---
 
-***Next: Understanding the Benefit of Dependencies Under 12 Factor App***
+***Next: Understanding the Benefit of Config Under 12 Factor App***

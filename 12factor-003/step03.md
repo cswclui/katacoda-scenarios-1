@@ -56,7 +56,7 @@ Notice too, that there a new environment variables in the `.env`. These environm
 
 `npm install`{{execute T1}}
 
-**Step 5:** Start the demonstration application webserver in a second terminal window:
+**Step 6:** Start the demonstration application webserver in a second terminal window:
 
 `cd /root/12factor && node server.js`{{execute T2}}
 
@@ -64,14 +64,14 @@ You'll get the following output:
 
 HERE
 
-**Step 6:** Make a `curl` call to the application in the first terminal window:
+**Step 7:** Make a `curl` call to the application in the first terminal window:
 
 `curl http://localhost:3040`{{execute T1}}
 
 
 Notice that now, we are getting a lot more information in the response and the configuration settings are affecting how the application behaves.
 
-**Step 7:** Shut down the web server in preparation for next lesson
+**Step 8:** Shut down the web server in preparation for next lesson
 
 `echo "Web server as been shut down"`{{execute interrupt T2}}
 
