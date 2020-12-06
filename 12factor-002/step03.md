@@ -64,7 +64,13 @@ HERE
 
 You'll get the following output:
 
-HERE
+```
+{
+    "appName": "Pinger",
+    "currentTime": "2020-12-06T18:23:31.454Z",
+    "PINGER_PORT": "3030"
+}
+```
 
 Pay attention to the output. We'll be comparing it to the output in the second version.
 
@@ -127,12 +133,14 @@ You'll get the following output:
 ```
 {
     "appName": "Pinger",
-    "currentTime": "2020-12-06T18:10:51.660Z",
-    "PINGER_PORT": "3030"
+    "currentTime": "2020-12-06T18:24:51.495Z",
+    "PINGER_PORT": "3030",
+    "randomMessage": "totam inventore quis natus atque",
+    "correlationId": "e45cc945-85eb-45fd-8f27-ae276d767178"
 }
 ```
 
-Notice that the applications response has an added property in the JSON, `randomeMessage`.
+Notice that the applications response has an added attribute in the JSON, `randomeMessage` as well as the attribute, `correlationId`. These are new attributes are special this version. Also, the value for the attribute, `randomeMessage` is generated using the `faker` module has been added to the application as an independent dependency.
 
 ## Discussion
 

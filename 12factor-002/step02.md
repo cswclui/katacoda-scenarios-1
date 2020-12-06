@@ -99,7 +99,7 @@ You'll get the following output:
 
 ```
 
-Notice that now the directory, `node_modules` is installed the demonstration application's working directory.
+Notice that now the directory, `node_modules` is installed in the demonstration application's working directory.
 
 **Step 6:** Take a look at the contents of the directory `node_modules`.
 
