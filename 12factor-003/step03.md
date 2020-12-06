@@ -1,7 +1,7 @@
 ## Objective
-The objective of this lesson is to demonstrate how use and manage enternal dependencies over multiple versions in order to make an applications flexible, scalable and easier to change.
+The objective of this lesson is to demonstrate how use and manage enternal configurations over multiple versions in order to make an applications flexible, scalable and easier to change.
 
-In this lab we're going to compare two version of the lab's demonstration application to learn how control application change using dependency mamagement.
+In this lab we're going to compare two version of the lab's demonstration application to learn how control configuration changes across multiple versions.
 
 
 ## Steps
@@ -56,7 +56,7 @@ You'll get the following output:
 
 You'll get the following output:
 
-`API Server is listening on port 3030`
+HERE
 
 **Step 6:** Make a `curl` call to the application in the first terminal window:
 

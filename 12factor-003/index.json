@@ -1,0 +1,36 @@
+{
+  "title": "12 Factor App: 3-Config",
+  "description": "Learn how to manage application configuration for web-scale ",
+  "difficulty": "Requires a general understanding of structured programming and using git",
+  "time": "12 minutes",
+  "details": {
+    "steps": [{
+        "title": "Getting the Lab's Code from GitHub",
+        "text": "step01.md"
+      },
+      {
+        "title": "Understanding the Benefit of Config",
+        "text": "step02.md"
+      },
+      {
+        "title": "Managing Independent Config Across Versions",
+        "text": "step03.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal for Working with 12 Factor App\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "nodejs:12"
+  }
+}

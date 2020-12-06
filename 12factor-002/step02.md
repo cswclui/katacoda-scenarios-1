@@ -117,6 +117,6 @@ The immediate benefit is that the application code for *Pinger* contains only th
 
 ---
 
-The next lesson take at look at how to manage dependencies across multiple versions of an applicaton based on the **Dependencies** principle of 12 Factor App.
+The next lesson takes at look at how to manage dependencies across multiple versions of an applicaton based on the **Dependencies** principle of 12 Factor App.
 
 ***Next: Managing dependencies across multiple versions***
