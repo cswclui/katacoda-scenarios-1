@@ -74,11 +74,11 @@ Pay attention to the output. We'll be comparing it to the output in the second v
 
 **Step 7:** Delete the `node_modules` directory that we intalled in the previous lesson
 
-`rm -rf ./node_modules`{{execute}}
+`rm -rf ./node_modules`{{execute T1}}
 
 **Step 8:** Check out the second version of *Pinger* from the local `git` repo that we've just cloned from GitHub
 
-`git checkout 2-dependencies.0.0.1`{{execute}}
+`git checkout 2-dependencies.0.0.1`{{execute T1}}}
 
 You'll see output as follows:
 
@@ -90,7 +90,7 @@ Switched to a new branch '2-dependencies.0.0.1'
 
 **Step 9:** Now let's take a look at the dependencies list in the second version of `package.json` using the `jq` tool.
 
-`jq .dependencies package.json`{{execute}}
+`jq .dependencies package.json`{{execute T1}}}
 
 You'll see output as follows:
 
@@ -114,13 +114,23 @@ The reason is because `faker` is needed to support a new feature of *Pinger*. Th
 
 `node server.js`{{execute T2}}
 
+You'll get the following output:
+
+`API Server is listening on port 3030`
+
 **Step 12:** Make a call the web server.
 
 `curl http://localhost:3030`{{execute T1}}
 
 You'll get the following output:
 
-HERE
+```
+{
+    "appName": "Pinger",
+    "currentTime": "2020-12-06T18:10:51.660Z",
+    "PINGER_PORT": "3030"
+}
+```
 
 Notice that the applications response has an added property in the JSON, `randomeMessage`.
 
