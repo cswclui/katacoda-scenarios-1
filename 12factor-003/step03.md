@@ -28,7 +28,10 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 You'll see output as follows:
 
-HERE
+```
+Branch '3-config.0.0.1' set up to track remote branch '3-config.0.0.1' from 'origin'.
+Switched to a new branch '3-config.0.0.1'
+```
 
 **Step 4:** Let's take a look at the configuration settings in the `.env` file.
 
@@ -49,9 +52,13 @@ Notice too, that there a new environment variables in the `.env`. These environm
 * `PINGER_ADMIN` is a flag that when set to `true` will make it so that *Pinger* will return details about the enviornment in which it is running.
 * `CURRENT_VERSION` describes the current version of the of *Pinger*
 
+**Step 5:** Install the dependencies
+
+`npm install`{{execute T1}}
+
 **Step 5:** Start the demonstration application webserver in a second terminal window:
 
-`cd 12factor && node server.js`{{execute T2}}
+`cd /root/12factor && node server.js`{{execute T2}}
 
 You'll get the following output:
 

@@ -90,8 +90,10 @@ You'll get the following output:
 ```
 {
     "appName": "Pinger",
-    "currentTime": "2020-12-06T18:23:31.454Z",
-    "PINGER_PORT": "3030"
+    "currentTime": "2020-12-06T20:54:57.858Z",
+    "PINGER_PORT": "3030",
+    "randomMessage": "porro esse nesciunt qui doloribus",
+    "correlationId": "ce4edf1b-6250-4665-be45-0e31a8780e06"
 }
 
 ```
