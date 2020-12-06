@@ -1,12 +1,7 @@
 ## Objective
-The objective of this lesson is to demonstrate how use and manage enternal dependencies in order to make an applications flexible, scalable and easier to change.
+The objective of this lesson is to demonstrate how use and manage enternal dependencies over multiple versions in order to make an applications flexible, scalable and easier to change.
 
 In this lab we're going to compare two version of the lab's demonstration application to learn how control application change using dependency mamagement.
-
-## Key Concept: 12 Factor App - Dependencies
-A key concept in the **Dependencies** principle of 12 Factor App is that all external modules, packages or libraries are stored independent of your application and are stored in an external artifact repository. You application will keep a list of of external dependencies and the development framework that you use to program your application will have the capability to download the required dependencies from the give artifact repoistory at runtime.
-
-Under no circumstance should external dependencies be stored in the application's central respository.
 
 
 ## Steps
@@ -19,19 +14,11 @@ You should see the following output:
 
 `/root/12factor`
 
-**Step 2:** Check out the first version of *Pinger* from the local `git` repo that we've just cloned from GitHub
+If the working directory is not `/root/12factor`, execute the following command:
 
-`git checkout 1-codebase.0.0.1`{{execute}}
+`cd /root/12factor`{{execute}}
 
-You'll see output as follows:
-
-```
-Branch '1-codebase.0.0.1' set up to track remote branch '1-codebase.0.0.1' from 'origin'.
-Switched to a new branch '1-codebase.0.0.1'
-
-```
-
-**Step 3:** Let's take a look at the dependencies list in `package.json` using the `jq` tool that's been installed into the Katacoda virtual machine automatically.
+**Step 2:** Let's take a look at the existing dependencies list in `package.json` using the `jq` tool that's been installed into the Katacoda virtual machine automatically.
 
 `jq .dependencies package.json`{{execute}}
 
@@ -44,9 +31,52 @@ You'll see output as follows:
 }
 ```
 
- Notice that this version has only two packages listed. These are the only packages that this version of the code requires.
+Notice that this version has only two packages listed. These are the only packages that this version of the code requires.
 
-**Step 4:** Check out the second,  version of *Pinger* from the local `git` repo that we've just cloned from GitHub
+**Step 4:** Let's confirm that the dependencies we installed in the previous lesson are still in the working directory
+
+`tree ./ -L 1`{{execute}}
+
+You'll get the following output:
+
+```
+./
+├── node_modules
+├── package.json
+├── package-lock.json
+├── readme.md
+├── server.js
+└── test
+
+```
+
+**Step 5:** Start the demonstration application webserver in a second terminal window:
+
+`node server.js`{{execute T2}
+
+You'll get the following output:
+
+HERE
+
+**Step 6:** Make a `curl` call to the application in the first terminal window:
+
+`curl http://localhost:3030`{{execute T1}
+
+You'll get the following output:
+
+HERE
+
+Pay attention to the output. We'll be comparing it to the output in the second version.
+
+**Step 8:** Stop the web server that's running in the second terminal window:
+
+`echo "Click to Shutdown Web Server"`{{execute interrupt T2}}
+
+**Step 7:** Delete the `node_modules` directory that we intalled in the previous lesson
+
+`rm -rf ./node_modules`{{execute}}
+
+**Step 8:** Check out the second version of *Pinger* from the local `git` repo that we've just cloned from GitHub
 
 `git checkout 2-dependencies.0.0.1`{{execute}}
 
@@ -58,7 +88,7 @@ Switched to a new branch '2-dependencies.0.0.1'
 
 ```
 
-**Step 5:** Now let's take a look at the dependencies list in the second version of `package.json` using the `jq` tool.
+**Step 9:** Now let's take a look at the dependencies list in the second version of `package.json` using the `jq` tool.
 
 `jq .dependencies package.json`{{execute}}
 
@@ -74,14 +104,32 @@ You'll see output as follows:
 
 Notice the difference? You'll see that the package, [`faker`](https://www.npmjs.com/package/faker): "^5.1.0" has been added. Why has this addition been made?
 
-The reason is because `faker` is needed to support a new feature of *Pinger*. The new features returns a random message as part of the HTPP response whick we'll exammine in the next lab.
+The reason is because `faker` is needed to support a new feature of *Pinger*. This new feature will return a randomMessage as part of the HTTP response.
 
-The important thing to understand now it the the Depenedencies principle of 12 Factor App states that all external dependencies should exist in separate artitfact repositories and downloaded at runtime. In this case, the default  artifact repository for Node.js applications is [npmjs.com](https://www.npmjs.com/).
+**Step 10:** Install the dependencies for the new, second version
 
-The immediate benefit is that the application code for *Pinger* contains only the logic that is absolutely necessary to support its features. Extraneous logic resides in external dependencies. This allows the application to be upgraded without having to accommodate a lot of unnecessary code. Also, using well defined external libraries means that an application can avoid the problem of [dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).
+`npm install`{{execute T1}}
+
+**Step 11:** Start the web server in a second terminal window.
+
+`node server.js`{{execute T2}}
+
+**Step 12:** Make a call the web server.
+
+`curl http://localhost:3030`{{execute T1}
+
+You'll get the following output:
+
+HERE
+
+Notice that the applications response has an added property in the JSON, `randomeMessage`.
+
+## Discussion
+
+The important concept demonstrated in this lesson is that the demonstration application code contained only the logic with was relevant to its purpose and that it relied upon a dependency to provide the additional intelligence needed to realize the new feature.
+
+Separating code from dependencies is an essential principle of 12 Factor App. Dependency separation makes it a lot easier to manage applications over the long run.
 
 ---
 
-The next lesson take sa look at how the external dependency supports the new feature implemented in *Pinger*.
-
-***Next: Examining the new feature, `randomMessage`***
+**Congratulations!** You've finished the scenario.
