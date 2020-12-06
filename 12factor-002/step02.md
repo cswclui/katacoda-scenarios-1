@@ -44,7 +44,7 @@ You'll see output as follows:
 }
 ```
 
- Notice that this version has only two packages listed. These are the only packages that is version of the code requires.
+ Notice that this version has only two packages listed. These are the only packages that this version of the code requires.
 
 **Step 4:** Check out the second,  version of *Pinger* from the local `git` repo that we've just cloned from GitHub
 
@@ -72,7 +72,7 @@ You'll see output as follows:
 }
 ```
 
-Notice the difference? You'll see that the added package, `"faker": "^5.1.0"` has been added. Why had this addition been made?
+Notice the difference? You'll see that the package, [`faker`](https://www.npmjs.com/package/faker): "^5.1.0" has been added. Why has this addition been made?
 
 The reason is because `faker` is needed to support a new feature of *Pinger*. The new features returns a random message as part of the HTPP response whick we'll exammine in the next lab.
 
