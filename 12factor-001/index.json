@@ -44,7 +44,7 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal for Working with 12 Factor App\u001b[m\r\n"
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...001b[m\r\n"
   },
   "backend": {
     "imageid": "nodejs:12"
