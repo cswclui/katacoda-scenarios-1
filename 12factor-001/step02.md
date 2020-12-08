@@ -17,7 +17,7 @@ You should see the following output:
 
 **Step 2:** Checkout the code from the GitHub branch for the version of the application code for this lab, in the case `1-codebase.0.0.1`.
 
-`git checkout 2-dependencies.0.0.1`{{execute}}
+`git checkout 1-codebase.0.0.1`{{execute}}
 
 You'll see output as follows:
 
