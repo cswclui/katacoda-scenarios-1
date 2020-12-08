@@ -1,4 +1,4 @@
-export LESS="-eirMX"
+#export LESS="-eirMX"
 
 sudo apt update -y
 
