@@ -26,7 +26,7 @@ You should see the following output:
 
 **Step 3:** View the file, `package.json` which is this list of Node.Js dependencies the application requires.
 
-`cat package.json`{{execute}}
+`clear && cat package.json`{{execute}}
 
 ---
 
