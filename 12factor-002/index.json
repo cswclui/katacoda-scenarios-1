@@ -27,7 +27,8 @@
     }
   },
   "environment": {
-    "uilayout": "terminal","\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
   },
   "backend": {
     "imageid": "nodejs:12"

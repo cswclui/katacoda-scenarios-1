@@ -1,5 +1,5 @@
 {
-  "title": "12 Factor App: 3-Backing Services",
+  "title": "12 Factor App: 4-Backing Services",
   "description": "Learn how to support backing services for you web services",
   "difficulty": "Requires a general understanding of structured programming and using git",
   "time": "12 minutes",
@@ -13,7 +13,7 @@
         "text": "step02.md"
       },
       {
-        "title": "Creating the Backing Service",
+        "title": "Creating a Backing Service",
         "text": "step03.md"
       },
       {
