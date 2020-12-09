@@ -13,6 +13,8 @@ The objective of this lesson is to demonstrate how to clone the lab code from Gi
 
 You have cloned the code for this lab and have navigated to the working directory of the lab's demonstration application. 
 
+**Step 2:** This lesson 
+
 ---
 
-***Next: Understanding the Benefit of Config Under 12 Factor App***
+***Next: Understanding the Benefit of Backing Services Under 12 Factor App***

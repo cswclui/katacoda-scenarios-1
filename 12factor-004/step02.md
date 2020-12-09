@@ -1,7 +1,7 @@
 ## Objective
-The objective of this lesson is to demonstrate how use and manage external configuration according to the [Backing Services](https://12factor.net/config) principle of 12 Factor App in order to make an applications flexible, scalable and easier to change.
+The objective of this lesson is to develop an understanding of the benefit of using the [Backing Services](https://12factor.net/backing-services) principle of 12 Factor App in order to make an application flexible, scalable and easier to change.
 
-In this lab we're going to evolve the lab's demonstration application to learn how to delegate data storage to an external resource.
+In this lab we're going to evolve the lab's demonstration application to learn how to delegate data storage to an external resource. Using data storage as a backing service is typical in the 12 Factor App.
 
 ## Key Concept: 12 Factor App - Back Services
 A key concept in the **Backing Services** principle of 12 Factor App is that crtical, but fundamentally independent logic should be part of the application's source code. For example, imagine that you are logging incoming HTTP requests to a file in the hosting machine's file system. At some point the risk that the log files will eat up capacity is real. Or, if the machine fails for some reason. Then the log data is lost.
@@ -28,7 +28,8 @@ You should see the following output:
 You'll see output as follows:
 
 ```
-TBD
+Branch '4-backing-services.0.0.1' set up to track remote branch '4-backing-services.0.0.1' from 'origin'.
+Switched to a new branch '4-backing-services.0.0.1'
 
 ```
 **Step 3:** Take a look at the contents of the demonstration application's working directory.
@@ -38,9 +39,22 @@ TBD
 You'll see output as follows:
 
 ```
-TBD
+.
+├── collector
+│   ├── datastore
+│   ├── index.js
+│   ├── package.json
+│   └── test
+└── pinger
+    ├── logger
+    ├── package.json
+    ├── readme.md
+    ├── server.js
+    └── test
 
 ```
+
+Notice that this branch of the source introduces an application named `collector` in addition to the demonstration application `pinger` that we've been working with in previous lessons.
 
 ## Summary
 

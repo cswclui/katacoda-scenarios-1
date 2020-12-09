@@ -1,6 +1,6 @@
 {
   "title": "12 Factor App: 4-Backing Services",
-  "description": "Learn how to support backing services for you web services",
+  "description": "Learn how to implememnt backing services in your web services",
   "difficulty": "Requires a general understanding of structured programming and using git",
   "time": "12 minutes",
   "details": {
@@ -35,6 +35,6 @@
     "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "nodejs:12"
+    "imageid": "ubuntu"
   }
 }
