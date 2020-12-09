@@ -1,4 +1,5 @@
-export LESS="-eirMX"
+#export LESS="-eirMX"
+git config --global pager.branch false
 
 sudo apt update -y
 
