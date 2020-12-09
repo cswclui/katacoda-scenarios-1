@@ -1,6 +1,6 @@
 {
-  "title": "12 Factor App: 2-Dependencies",
-  "description": "Learn how to manage external dependencies to make application development flexible and scalable",
+  "title": "12 Factor App: 3-Backing Services",
+  "description": "Learn how to support backing services for you web services",
   "difficulty": "Requires a general understanding of structured programming and using git",
   "time": "12 minutes",
   "details": {
@@ -9,12 +9,16 @@
         "text": "step01.md"
       },
       {
-        "title": "Understanding the Benefit of Dependencies",
+        "title": "Understanding the Benefit of Using a Backing Service",
         "text": "step02.md"
       },
       {
-        "title": "Managing Dependencies Among Versions",
+        "title": "Creating the Backing Service",
         "text": "step03.md"
+      },
+      {
+        "title": "Binding an Application to a Backing Service",
+        "text": "step04.md"
       }
     ],
     "intro": {
@@ -27,7 +31,8 @@
     }
   },
   "environment": {
-    "uilayout": "terminal","\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
   },
   "backend": {
     "imageid": "nodejs:12"
