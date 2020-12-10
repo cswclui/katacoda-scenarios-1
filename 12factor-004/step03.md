@@ -47,7 +47,7 @@ At the logical level what's happening is that the program sends the incoming `re
 const url = `http://${process.env.COLLECTOR_HOSTNAME}:${process.env.COLLECTOR_PORT}`
 
 ```
-You'll see that the URL definition is composed of values from the environment varialbles `COLLECTOR_HOSTNAME}` and `COLLECTOR_PORT`. The question is, where and how are these environment variables set. To answer this question we need to look at the `.env` file for *Pinger`, which we'll do in a moment. But first let's get out of `vi`.
+You'll see that the URL definition is composed of values from the environment varialbles `COLLECTOR_HOSTNAME}` and `COLLECTOR_PORT`. The question is, where and how are these environment variables set. To answer this question we need to look at the `.env` file for *Pinger*, which we'll do in a moment. But first let's get out of `vi`.
 
 **Step 4:** Get out of `vi` line numbered view mode
 
@@ -76,7 +76,7 @@ COLLECTOR_PORT=4001
 
 The `.env` file contains the values for the environment variables `COLLECTOR_HOSTNAME` && `COLLECTOR_PORT`. Thus, in this case the endpoint for the backing service is, `http://localhost:4001`.
 
-Putting the definition of the endpoint to backing service should seem familiar becuase this is an prime example of the third principle of 12 Factor App - Config.
+Putting the values that define the endpoint to the backing service into environment variables should seem familiar because this is an prime example of the third principle of 12 Factor App - Config.
 
 In the next lesson we'll look the details of creating backing service.
 

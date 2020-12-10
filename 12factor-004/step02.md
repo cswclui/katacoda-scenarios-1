@@ -4,7 +4,7 @@ The objective of this lesson is to develop an understanding of the benefit of us
 In this lab we're going to evolve the lab's demonstration application to learn how to delegate data storage to an external resource. Using data storage as a backing service is typical in the 12 Factor App.
 
 ## Key Concept: 12 Factor App - Back Services
-A key concept in the **Backing Services** principle of 12 Factor App is that crtical, but fundamentally independent logic should be part of the application's source code. For example, imagine that you are logging incoming HTTP requests to a file in the hosting machine's file system. At some point the risk that the log files will eat up capacity is real. Or, if the machine fails for some reason. Then the log data is lost.
+A key concept in the **Backing Services** principle of 12 Factor App is that critical, but fundamentally independent logic should be part of the application's source code. For example, imagine that you are logging incoming HTTP requests to a file in the hosting machine's file system. At some point the risk that the log files will eat up capacity is real. Or, if the machine fails for some reason. Then the log data is lost.
 
 Now granted there are a lot of precautionary measures you can take to prevent such hazard on the file system, but by using the principle of Backing Server can have log data to to an external resource. The external resource might be another file server on the network or even a database. But, the important things is that the identified resource will be designed in such as way as to absorb a near infinite amount of log data. This way your application is doing what it's designed to do and log management, which is not really the intention of your service, is delegated elsewhere.
 
