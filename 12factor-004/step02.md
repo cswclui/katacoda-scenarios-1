@@ -56,6 +56,20 @@ You'll see output as follows:
 
 Notice that this branch of the source introduces an application named `collector` in addition to the demonstration application `pinger` that we've been working with in previous lessons.
 
+`collector` will be the backing service to `pinger`. `collector` will collect and store log data from `pinger`. `collector` is designed to store large amounts of log data so that `pinger` can do what it needs to do without having to work about storage capaicity for logging.
+
+**Step 4:** Take a look at the webserver code for `pinger` by loading the file in the the `vi` editor:
+
+`vi ./pinger/server.js`
+
+**Step 5:** Turn on the line numbering the `vi` editor:
+
+Press the ESC key: `^ESC`{{execute ctrl-seq}}
+
+and then enter:
+
+`:set number`{{execute}}
+
 ## Summary
 
 ----

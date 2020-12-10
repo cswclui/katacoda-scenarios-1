@@ -27,6 +27,10 @@ We'll do a fast check of Redis by going into the Redis container and executing a
 
 `sudo docker exec -it innoredis sh`{{execute}}
 
+You'll see the container's command prompt as output:
+
+`#`
+
 **Step 5:** Start the `redis-cli` tool so that you can communicate with the `redis` database
 
 `redis-cli`{{execute}}
