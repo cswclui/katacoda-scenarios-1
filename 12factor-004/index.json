@@ -19,6 +19,10 @@
       {
         "title": "Binding an Application to a Backing Service",
         "text": "step04.md"
+      },
+      {
+        "title": "Using a Backing Service",
+        "text": "step05.md"
       }
     ],
     "intro": {

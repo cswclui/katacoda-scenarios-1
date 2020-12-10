@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is to create a backing service.
+The objective of this lesson is to provide an example of the *Pinger* webservice using the backing service *Collector*.
 
 
 ## Steps
@@ -20,6 +20,6 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 ---
 
-***Next: Using a Backing Service***
+**Congratuations!** You've complete the lab
 
 

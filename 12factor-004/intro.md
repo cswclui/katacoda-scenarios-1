@@ -19,6 +19,7 @@ In this lab you'll doing following:
 * **Step 2:** Understanding the Benefit of Using a Backing Service
 * **Step 3:** Binding an Application to a Backing Service
 * **Step 4:** Creating a Backing Service
+* **Step 5:** Using a Backing Service
 
 ## Executing command line instructions 
 
