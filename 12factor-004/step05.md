@@ -29,13 +29,18 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 **Step 3:** In a second terminal window, start up *Collector*.
 
-`node ~/12factor/collector/index.js`{{execute T2}}
+`cd ~/12factor/collector && node index.js`{{execute T2}}
 
-You will see the following output:
+You will see output similar to the following (the date will be different):
+
+```
+Collector Server started on port 4001 at Thu Dec 10 2020 20:28:55 GMT+0000 (Coordinated Universal Time)
+
+```
 
 **Step 4:** In a third terminal window, start up *Pinger*.
 
-`node ~/12factor/pinger/server.js`{{execute T2}}
+`cd ~/12factor/pinger && node server`{{execute T2}}
 
 **Step 5:** In the first terminal window, make a `curl` call to *Pinger* which is running on `localhost:3040`.
 

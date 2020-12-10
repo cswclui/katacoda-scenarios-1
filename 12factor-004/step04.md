@@ -22,11 +22,25 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 `clear && tree ./collector -L 2`{{execute}}
 
-The backing service *Collector* has two parts. The first is the source code for the API which receives the HTTP request for the logger. The second is the code that binds the *Collector* to the underlying Redis database.
+You'll see output as follows:
+
+```
+./collector
+├── datastore
+│   └── index.js
+├── index.js
+├── package.json
+└── test
+    └── api-tests.js
+
+2 directories, 4 files
+```
+
+The backing service *Collector* has two parts. The first is the file,`index.js` which is the source code for the API which receives the HTTP request for the logger. The second is the code that binds the *Collector* to the underlying Redis database. This code is in the file `./datastore/index.js`.
 
 Let's look at the API code first.
 
-**Step 3:** Open the source code for the *Collector* API in the 'vi` editor:
+**Step 3:** Open the source code for the *Collector* API in the `vi` editor:
 
 `vi ./collector/index.js`{{execute}}
 
@@ -90,7 +104,7 @@ Notice that the code does look for the environment variables, `COLLECTOR_DELEGAT
 
 The actual work of writing the the Redis database is done at `Lines 18 - 26`.
 
-The code will read from the Redis database according the key value created at `Lines 19` using the `uuidv4()` method from the Node.js [uuid](https://www.npmjs.com/package/uuid) package and passed by the call to Redis at `Line 20`, via the `setAsync` which is derived the the Node.JS [Redis package](https://www.npmjs.com/package/redis).
+The code will read from the Redis database according the key value created at `Lines 19` using the `uuidv4()` method from the Node.js [uuid](https://www.npmjs.com/package/uuid) package and passed by the call to Redis at `Line 20`, via the `setAsync` method which is derived the the Node.JS [Redis package](https://www.npmjs.com/package/redis).
 
 As you can see, the backing service, *Collector* is a [RESTful](https://restfulapi.net/) API that represents a Redis database.
 
