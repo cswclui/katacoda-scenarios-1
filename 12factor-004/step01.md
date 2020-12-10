@@ -51,9 +51,19 @@ You'll get the following output:
 
 `exit`{{execute}}
 
+You'll see the following output
+
+`#`
+
 **Step 8:** Exit `redis` container
 
 `exit`{{execute}}
+
+You'll see the following output
+
+`$`
+
+You have exited Redis and are back at the command prompt of the virtual machine in the interactive learning environment.
 
 ---
 
