@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is to bind the demonstration application to the Backing Service created in the last lesson.
+The objective of this lesson is to create a backing service.
 
 
 ## Steps
@@ -20,8 +20,8 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 ---
 
-**Congratuations!** You've complete the lab
 
 
+***Next: Binding an Application to a Backing Service***
 
 

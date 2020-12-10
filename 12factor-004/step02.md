@@ -13,9 +13,9 @@ Also, an intrinsic concept in Backing Service is tranportability. In other words
 
 ## Steps
 
-**Step 1:** Confirm you are in the working directory of the lab's application.
+**Step 1:** Navigate back to the the lesson's working directory.
 
-`pwd`{{execute}}
+`cd /root/12factor && pwd`{{execute}}
 
 You should see the following output:
 
@@ -60,7 +60,7 @@ Notice that this branch of the source introduces an application named `collector
 
 **Step 4:** Take a look at the webserver code for `pinger` by loading the file in the the `vi` editor:
 
-`vi ./pinger/server.js`
+`vi ./pinger/server.js`{{execute}}
 
 **Step 5:** Turn on the line numbering the `vi` editor:
 
@@ -70,9 +70,35 @@ and then enter:
 
 `:set number`{{execute}}
 
+Notice that a `logger` is defined at Line 5.
+
+Go to Line 37:
+
+`:37`{{execute}}
+
+You'll see code like this:
+
+`logger.info(request)`
+
+Here's what's going on. The code is logging the incoming `request` so that there's an audit trail about what's going on. A good question to ask is ths: *Where is the `logger` sending the data?* In order to answer this question we need to look at the code for `logger`, which we'll do in the next lesson when we look at binding to a backing service.
+
+But, before moving forward answering this question we need to get out of `vi`.
+
+**Step 6:** Get out of `vi` line numbered view mode
+
+Press the ESC key: `^ESC`{{execute ctrl-seq}}
+
+**Step 7:** Exit `vi`
+
+`:q!`{{execute}}
+
+You have exited `vi`.
+
+
+
 ## Summary
 
 ----
 
 
-***Next: Creating a Backing Service***
+***Next: Binding to a back service***
