@@ -7,7 +7,7 @@ In this lesson we're going to start the both the *Pinger* and the associate back
 
 Once every thing is up and running, we'll make a call to to *Pinger* using `curl`. Calling `curl` will generate a request to *Pinger*. *Pinger* will record the request using its `logger` and then create and return a response. The `logger` in turn will send the contents of the request onto the backing service, *Collector*. (We covered how `logger` works in a previous lesson.
 
-We'll do 3 calls to *Pinger* using `curl`. Then, we'll check the keys of the data stored in the Redis database from the command line. Inspecting the Redis keys will correlate with the request logging activity that took in *Pinger*.
+We'll do a call to *Pinger* using `curl`. Then, we'll check the keys of the data stored in the Redis database from the command line. Inspecting the Redis keys will correlate with the request logging activity that took in *Pinger*.
 
 ## Steps
 
@@ -25,7 +25,7 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 **Step 2:** Install the dependencies for both the *Pinger* and *Collector* applications.
 
-`npm install ./pinger && npm install ./collector`{{execute}}
+`cd ~/12factor/pinger && npm install && cd ~/12factor/collector && npm install && cd ~/12factor`{{execute}}
 
 **Step 3:** In a second terminal window, start up *Collector*.
 
@@ -40,21 +40,20 @@ Collector Server started on port 4001 at Thu Dec 10 2020 20:28:55 GMT+0000 (Coor
 
 **Step 4:** In a third terminal window, start up *Pinger*.
 
-`cd ~/12factor/pinger && node server`{{execute T2}}
+`cd ~/12factor/pinger && node server.js`{{execute T3}}
+
+You will see output similar to the following (the date will be different):
+
+```
+Pinger is listening on port 3040 at Thu Dec 10 2020 20:54:34 GMT+0000 (Coordinated Universal Time)
+
+```
 
 **Step 5:** In the first terminal window, make a `curl` call to *Pinger* which is running on `localhost:3040`.
 
 `clear && curl localhost:3040`{{execute T1}}
 
-**Step 6:** Make a second call to *Pinger*
-
-`clear && curl localhost:3040`{{execute T1}}
-
-**Step 7:** Make a third call to *Pinger*
-
-`clear && curl localhost:3040`{{execute T1}}
-
-**Step 8:** Navigate into the shell of the Docker container the is running Redis
+**Step 6:** Navigate into the shell of the Docker container the is running Redis
 
 `sudo docker exec -it innoredis sh`{{execute T1}}
 
@@ -62,7 +61,7 @@ You'll see the container's command prompt as output:
 
 `#`
 
-**Step 9:** Start the `redis-cli` tool so that you can communicate with the `redis` database
+**Step 7:** Start the `redis-cli` tool so that you can communicate with the `redis` database
 
 `redis-cli`{{execute T1}}
 
@@ -70,7 +69,7 @@ You'll the following output which is the command line for the `redis-cli`:
 
 `127.0.0.1:6379>` 
 
-**Step 10:** Get the keys to all the records stored in the Redis database by executing the Redis `KEYS` command under the Redis CLI.
+**Step 8:** Get the keys to all the records stored in the Redis database by executing the Redis `KEYS` command under the Redis CLI.
 
  `KEYS *`{{execute T1}}
  
