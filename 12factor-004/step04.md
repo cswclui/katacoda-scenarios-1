@@ -52,13 +52,13 @@ and then enter:
 
 `:set number`{{execute}}
 
-`Lines 22 -34` contain the code that accepts the HTTP POST request.
+`Lines 16 -28` contain the code that accepts the HTTP POST request.
 
-Notice that `Line 29` is the code that does the work of saving the incoming request to the Redis database. This is the code:
+Notice that `Line 23` is the code that does the work of saving the incoming request to the Redis database. This is the code:
 
 `const rslt = await write(newData);`
 
-The `write` method which is used at `Line 29` is declared earlier in the file at `Line 5`. The `write` method is the result of a Node.js `exports` from the `./collector/datastore/index.js` file. This file is where the Redis binding takes place. We'll look at this next, but first we need to close down the `vi` editor. 
+The `write` method which is used at `Line 23` is declared earlier in the file at `Line 5`. The `write` method is the result of a Node.js `exports` from the `./collector/datastore/index.js` file. This file is where the Redis binding takes place. We'll look at this next, but first we need to close down the `vi` editor. 
 
 **Step 4:** Get out of `vi` line numbered view mode
 
