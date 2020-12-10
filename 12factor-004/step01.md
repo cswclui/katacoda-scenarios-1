@@ -17,9 +17,9 @@ You have cloned the code for this lab and have navigated to the working director
 
 `sudo docker run --name innoredis -p 6379:6379 -d redis`{{execute}}
 
-You'll see output similar to the following:
+You'll see output similar, but not exactly like the following:
 
-`TBD`
+`b58182cd32e6ebaeeacca2492ea308fffb1242adff32b2d606d5d7ba778dbc17`
 
 We'll do a fast check of Redis by going into the Redis container and executing a `ping` command against Redis which will prove the application is working.
 
@@ -27,7 +27,15 @@ We'll do a fast check of Redis by going into the Redis container and executing a
 
 `sudo docker exec -it innoredis sh`{{execute}}
 
-**Step 5:** Execute the `ping` command at the command line:
+**Step 5:** Start the `redis-cli` tool so that you can communicate with the `redis` database
+
+`redis-cli`{{execute}}
+
+You'll the following output which is the command line for the `redis-cli`:
+
+`127.0.0.1:6379>`
+
+**Step 6:** Execute the `ping` command at the command line:
 
 `ping`{{execute}}
 
@@ -35,7 +43,11 @@ You'll get the following output:
 
 `PONG`
 
-**Step 6:** Exit out the the container
+**Step 7:** Exit out the the `redis-cli`:
+
+`exit`{{execute}}
+
+**Step 8:** Exit `redis` container
 
 `exit`{{execute}}
 
