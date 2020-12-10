@@ -100,11 +100,11 @@ and then enter:
 
 `const client = redis.createClient({host,port});`
 
-Notice that the code does look for the environment variables, `COLLECTOR_DELEGATE_HOSTNAME` and `COLLECTOR_DELEGATE_PORT` at `Lines 1 -2`, following the 12 Factor App principle of Config. But, if the environmental variables are not provided, the code will default to `localhost:6379` which is the default host and port for Redis. This is done as a matter of conveniceds for the developer.
+Notice that the code does look for the environment variables, `COLLECTOR_DELEGATE_HOSTNAME` and `COLLECTOR_DELEGATE_PORT` at `Lines 1 -2`, following the 12 Factor App principle of Config. But, if the environmental variables are not provided, the code will default to `localhost:6379` which is the default host and port for Redis. This is done as a matter of convenience for the developer.
 
 The actual work of writing the the Redis database is done at `Lines 18 - 26`.
 
-The code will read from the Redis database according the key value created at `Lines 19` using the `uuidv4()` method from the Node.js [uuid](https://www.npmjs.com/package/uuid) package and passed by the call to Redis at `Line 20`, via the `setAsync` method which is derived the the Node.JS [Redis package](https://www.npmjs.com/package/redis).
+The code will read from the Redis database according the key value created at `Lines 19` using the `uuidv4()` method from the Node.js [uuid](https://www.npmjs.com/package/uuid) package and passed by the call to Redis at `Line 20`, via the `setAsync` method which is derived from the Node.JS [Redis package](https://www.npmjs.com/package/redis).
 
 As you can see, the backing service, *Collector* is a [RESTful](https://restfulapi.net/) API that represents a Redis database.
 

@@ -73,12 +73,14 @@ You'll the following output which is the command line for the `redis-cli`:
 
  `KEYS *`{{execute T1}}
  
- As a return you will get a list of Universally Unique Identifiers (UUID)
+ As a return you will get a list of Universally Unique Identifiers (UUID), like so:
  
  ```
- TBD
+1) "803e5081-9d63-42d8-9075-16e0f109ef08"
  
  ```
+ 
+ In this case because we've only make one request to *Pinger* the single log entry that cascaded from *Pinger* onto *Collector* and into the the Redis database is reflected in the single UUID shown in the list returned from Reds.
  
 Now, return to the command prompt of the virtual machine in the interactive learning environment.
  
