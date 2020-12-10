@@ -25,29 +25,17 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 **Step 2:** Install the dependencies for both the *Pinger* and *Collector* applications.
 
-`npm install ./pinger/package.json && npm install ./collector/package.json`{{execute}}
+`npm install ./pinger && npm install ./collector`{{execute}}
 
 **Step 3:** In a second terminal window, start up *Collector*.
 
-`node ./collector/index.js`{{execute T2}
+`node ~/12factor/collector/index.js`{{execute T2}}
 
 You will see the following output:
-
-```
-TBD
-
-```
 
 **Step 4:** In a third terminal window, start up *Pinger*.
 
-`node ./pinger/server.js`{{execute T2}
-
-You will see the following output:
-
-```
-TBD
-
-```
+`node ~/12factor/pinger/server.js`{{execute T2}}
 
 **Step 5:** In the first terminal window, make a `curl` call to *Pinger* which is running on `localhost:3040`.
 

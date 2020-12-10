@@ -38,13 +38,13 @@ and then enter:
 
 `:set number`{{execute}}
 
-`Lines 26 -39` contains the code that accept s the HTTP POST request.
+`Lines 22 -34` contain the code that accepts the HTTP POST request.
 
-Notice that `Line 34` is the code that does the work of saving the incoming request to the Redis database. This is the code:
+Notice that `Line 29` is the code that does the work of saving the incoming request to the Redis database. This is the code:
 
 `const rslt = await write(newData);`
 
-The `write` method which is used at `Line 34` is declared earlier in the file at `Line 10`. The `write` method at `Line 10` is a Node.js `exports` from the `./collector/datastore/index.js` file. This file is where the Redis binding takes place. We'll look at this next, but first we need to close down the `vi` editor. 
+The `write` method which is used at `Line 29` is declared earlier in the file at `Line 5`. The `write` method is the result of a Node.js `exports` from the `./collector/datastore/index.js` file. This file is where the Redis binding takes place. We'll look at this next, but first we need to close down the `vi` editor. 
 
 **Step 4:** Get out of `vi` line numbered view mode
 
@@ -90,9 +90,11 @@ Notice that the code does look for the environment variables, `COLLECTOR_DELEGAT
 
 The actual work of writing the the Redis database is done at `Lines 18 - 26`.
 
-The code will read from the Redis database according the key value at `Lines 28 - 36`.
+The code will read from the Redis database according the key value created at `Lines 19` using the `uuidv4()` method from the Node.js [uuid](https://www.npmjs.com/package/uuid) package and passed by the call to Redis at `Line 20`, via the `setAsync` which is derived the the Node.JS [Redis package](https://www.npmjs.com/package/redis).
 
-Now that we've analyzed data read and write features of *Collector* close up the `vi` editor.
+As you can see, the backing service, *Collector* is a [RESTful](https://restfulapi.net/) API that represents a Redis database.
+
+Now that we've analyzed data write features of *Collector* close up the `vi` editor.
 
 **Step 8:** Get out of `vi` line numbered view mode
 
