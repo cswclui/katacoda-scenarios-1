@@ -23,10 +23,11 @@ You'll see output as follows:
 ├── package.json
 ├── readme.md
 └── test
+    └── http-tests.js
 
 ```
 
-There are three files of particular interest in the working directory. There is the `Jenkinsfile` that contains the pipeline script that will execute the Build and Release tasks in Jenkins.
+There are three files of particular interest in the working directory. There's the `Jenkinsfile` that contains the pipeline script that will execute the Build and Release tasks in Jenkins.
 
 The file, `Dockerfile` provides the description of the container image that Jenkins will build during the Run stage. (To learn more about `Dockerfile` go [here](https://docs.docker.com/engine/reference/builder/).)
 
@@ -46,11 +47,11 @@ and then enter:
 
 `:set number`{{execute}}
 
-Notice the `Jenkinsfile` describes 3 stages. There is the stage `build ` as `Line 5` that has the instructions to get the code for the demonstration application from GitHub and the install the dependencies that the demonstration application needs. This is the actual implmentation of the `Build` stage as described by 12 Factor App.
+Notice the `Jenkinsfile` describes 3 stages. There's the stage, `build ` at `Line 5` that has the instructions to get the code for the demonstration application from GitHub and then install the dependencies that the demonstration application needs. This is the actual implmentation of the `Build` stage as described by 12 Factor App.
 
-The `test` stage starts at `Line 12`. While Build, Release, Run does not mandate testing your build. It's always a good idea to run any tests available to make sure all is well.
+The `test` stage starts at `Line 12`. While Build, Release, Run does not mandate testing your build, it's always a good idea to run any tests available to make sure all is well.
 
-The `Release` stage starts at `Line 17`. This is the point where Jenkins will create a container image of the demonstration application and then "push' (a.k.a. Release) that created image into the Local Container Repository. Once the container image is in the Local Container Repository is it avaiable to be used in an runtime environment that has access to the container repository.
+The `Release` stage starts at `Line 17`. This is the point where Jenkins will create a container image of the demonstration application and then "push" (a.k.a. Release) that created container image into the Local Container Repository. Once the container image is in the Local Container Repository it is avaiable to be used in an runtime environment that has access to the container repository.
 
 Now the we've covered the structure of the `Jenkinsfile`, let's take a look at how to get Jenkins to identify it in the source code repository on GitHub and run it automatically.
 
