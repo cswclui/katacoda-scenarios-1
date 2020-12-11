@@ -1,9 +1,13 @@
 ## Objective
 The objective of this lesson is to develop an understanding of the benefit of using the [Build, Release Run](https://12factor.net/build-release-run) principle of 12 Factor App in order to make it so you can build your application from the source repository and deploy it in a consistent manner that scales.
 
-In this lab we're going to ....
+## What you'll be doing
 
-But, before we do, we need to install Jenkins in Katacoda. Jenkins is the release platform we're gong to use to demonstrate the principle of Build, Release Run. 
+In this lab we're going to work Jenkins. Jenkins will download the source for this scenario for branch of the GitHub repository. Then, after the source code has been downloaded from GitHub, Jenkins will install the application's dependencies and run the unit tests that ship with the source code.
+
+[PUT IN THE INSTRUCTIONS ABOUT THE BUILD AND RELEASE INSTRUCTIONS]
+
+But, before we do, we need to install Jenkins in Katacoda. Jenkins is the release platform we're going to use to demonstrate the principle of Build, Release Run. 
 
 
 ## Steps
@@ -28,7 +32,40 @@ Switched to a new branch '5-build-release-run.0.0.1'
 
 ```
 
-Next we're going to install Jenkins using a special version designed especially for this lesson.
+We're now ready to install Jenkins. As mentioned earlier, we're going to run Jenkins in a Docker container created especially for this scenario.
+
+**Step 3:** Go back to the `HOME` directory
+
+`cd ~/`{{execute}}
+
+**Step 4:** Get the special Jenkins Docker code from GitHub
+
+`git clone https://github.com/reselbob/fatjenkins.git`{{execute}}
+
+**Step 5:** Go the Jenkin's source code working directory
+
+`cd fatjenkins`{{execute}}
+
+**Step 6:** Build the Docker image for Jenkins
+
+`docker build -t fatjenkins:v1 .`{{execute}}
+
+**Step 7:** Create the Jenkins container from the Docker image
+
+`docker run --name jenkins -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker fatjenkins:v1`{{execute}}
+
+**Step 8:**  Get the initial login ID that you'll need to access Jenkins
+
+`docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`{{execute}}
+
+You see output similar, but not the same as the following. **Make sure you save the output. You are going to need that output to get into Jenkins the first time you access the website.
+
+Jenkins is now up and running. You can access it by clicking this URL:
+
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
+
+When you go to the URL you'll be asked to enter the ID value you generated in **Step 8**. Once you get into the Jenkin website, follow the instructions to complete the Jenkins setup process.
+
 
 
 ## Summary
