@@ -26,7 +26,7 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 **Step 2:** Take a look at the contents of the file, `env.list`.
 
-`clear && cat nv.list`{{execute T1}}
+`clear && cat env.list`{{execute T1}}
 
 You see the following output.
 
