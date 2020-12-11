@@ -15,7 +15,7 @@ You should see the following output:
 
 **Step 2:** Check out the `git` branch that contains the source code for this lesson:
 
-`5-build-release-run.0.0.1`{{execute}}
+`git checkout 5-build-release-run.0.0.1`{{execute}}
 
 You'll see output as follows:
 
