@@ -58,11 +58,17 @@ We're now ready to install Jenkins. As mentioned earlier, we're going to run Jen
 
 `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`{{execute}}
 
-You see output similar, but not the same as the following. **Make sure you save the output. You are going to need that output to get into Jenkins the first time you access the website.
+**Hint:** Some times it takes the Jenkins container to spin up. You might have to try **Step 8* more than once.
+
+You see output similar, but not the same as the following:
+
+`134dbef47a2540a791c08b0af7575e30`
+
+**Make sure you save the output.** You are going to need that output to get into Jenkins the first time you access the website.
 
 Jenkins is now up and running. You can access it by clicking this URL:
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
 When you go to the URL you'll be asked to enter the ID value you generated in **Step 8**. Once you get into the Jenkin website, follow the instructions to complete the Jenkins setup process.
 

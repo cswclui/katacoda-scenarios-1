@@ -48,7 +48,7 @@ There is a demonstration application that is used in this secnario. It is called
 *  **`id`** is UUID assigned by the application at runtime
 *  **created** is the date when the object was created
 
-TBD
+We'll use this application to demonstrate concepts in this scenario as well as others that follow.
 
 ---
 
