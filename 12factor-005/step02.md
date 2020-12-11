@@ -1,14 +1,7 @@
 ## Objective
-The objective of this lesson is to develop an understanding of the benefit of using the [Build, Release Run](https://12factor.net/build-release-run) principle of 12 Factor App in order to make it so you can build your application from the source repository and deploy it in a consistent manner that scales.
+The objective of this lesson is to install the [Jenkins](https://www.jenkins.io/) into the Katacoda interactive learning environment.
 
-## What you'll be doing
-
-In this lab we're going to work Jenkins. Jenkins will download the source for this scenario for branch of the GitHub repository. Then, after the source code has been downloaded from GitHub, Jenkins will install the application's dependencies and run the unit tests that ship with the source code.
-
-[PUT IN THE INSTRUCTIONS ABOUT THE BUILD AND RELEASE INSTRUCTIONS]
-
-But, before we do, we need to install Jenkins in Katacoda. Jenkins is the release platform we're going to use to demonstrate the principle of Build, Release Run. 
-
+Jenkins is a well known open source platform for continuous integration and continuous delivery ([CI/CD](https://en.wikipedia.org/wiki/CI/CD)) activity. As mentioned previously, we'll use Jenkins to work with a script stored in the common GitHub code repository to automatically do the Build and Release stages of Build, Release, Run.
 
 ## Steps
 
@@ -58,9 +51,9 @@ We're now ready to install Jenkins. As mentioned earlier, we're going to run Jen
 
 `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`{{execute}}
 
-**BEWARE:** Sometimes it takes the Jenkins container to spin up. You might have to try **Step 8** more than once.
+**BEWARE:!!!** Sometimes it takes the Jenkins container to spin up. You might have to try **Step 8** more than once.
 
-You see output similar, but not the same as the following:
+You will see output similar, but not the same as the following:
 
 `134dbef47a2540a791c08b0af7575e30`
 
@@ -70,9 +63,15 @@ Jenkins is now up and running. You can access it by clicking this URL:
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
-When you go to the URL you'll be asked to enter the ID value you generated in **Step 8**. Once you get into the Jenkin website, follow the instructions to complete the Jenkins setup process.
+When you go to the URL you'll be asked to enter the ID value you generated in **Step 8**. Once you get into the Jenkin website, follow the instructions to complete the Jenkins setup process. The following animated GIF will walk you through the process. **REMEMBER!!!! Make sure ID string outputted at the beginning of this step on hand.**
+
+**Step 9:** Watch the following animated GIF to see the detail for initializing Jenkins:
+
+
 
 **Hint:** Jenkis will as you which plugins you want to install. Select the option, **INSTALL SUGGESTED PLUGINS**.
+
+![install suggested plugins](12factor-005/assets/12-factor-5-intro.jpg)
 
 
 

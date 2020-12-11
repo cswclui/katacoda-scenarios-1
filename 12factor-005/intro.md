@@ -24,7 +24,7 @@ The Jenkins job will get the source code for the demonstration project, install 
 
 Then, after testing the Jenkins job will create a [container image](https://www.docker.com/resources/what-container) according to the `Dockerfile` that also ships with the source code. The Jenkins job will then store the container image in a local container registry in the virtual machine for the Katacoda interactive learning environment.
 
-![jenkins-container](12factor-005/assets/12-factor-5-intro.png)
+![jenkins-container](12factor-005/assets/12-factor-5-intro.jpg)
 
 As mentioned aboave, the Release stage needs to have a container registry available to store the container image that the automated Jenkins job will create. This instance of the Katacoda interactive learning enviroment has a container repository installed and running at `localhost:5000`.
 
