@@ -67,8 +67,9 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 You have exited `vi`.
 
-**Step 7:** View the following animated GIF that demonstrates how to bind the Jenkins job the the source code GitHub for this lesson. Once you job is bound, Jenkins will automatically identify and read the `Jenkinsfile` in the source code diretory and excecute the tasks within.
+**Step 7:** View the following video that demonstrates how to bind the Jenkins job to the `Jenkinsfile` in the the source code GitHub repository for this lesson. Once you job is bound, Jenkins will automatically identify and read the `Jenkinsfile` in the source code directory and excecute the tasks within.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PrttXoc2d7s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 
