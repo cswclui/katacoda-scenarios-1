@@ -52,7 +52,7 @@ We're now ready to install Jenkins. As mentioned earlier, we're going to run Jen
 
 **Step 7:** Create the Jenkins container from the Docker image
 
-`docker run --name jenkins -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker fatjenkins:v1`{{execute}}
+`docker run --name jenkins --network="host" -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker fatjenkins:v1`{{execute}}
 
 **Step 8:**  Get the initial login ID that you'll need to access Jenkins
 
