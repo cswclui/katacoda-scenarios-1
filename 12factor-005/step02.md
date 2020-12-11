@@ -65,7 +65,9 @@ https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
 When you go to the URL you'll be asked to enter the ID value you generated in **Step 8**. Once you get into the Jenkin website, follow the instructions to complete the Jenkins setup process. The following animated GIF will walk you through the process. **REMEMBER!!!! Make sure ID string outputted at the beginning of this step on hand.**
 
-**Step 9:** Watch the following animated GIF to see the detail for initializing Jenkins:
+**Step 9:** Watch the following short video to see the details for initializing Jenkins:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AY5PVkEsn-o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
