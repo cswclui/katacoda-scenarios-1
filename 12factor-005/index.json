@@ -1,8 +1,8 @@
 {
   "title": "12 Factor App: 5-Build, Release, Run",
   "description": "Learn how to deploy your app in a way from source code in a uniform manner that's easy to control and scale",
-  "difficulty": "Requires a general understanding of structured programming, using git and a reading knowlege of Node.js",
-  "time": "12 minutes",
+  "difficulty": "Requires a general understanding of structured programming, using git, using Docker and a reading knowlege of Node.js",
+  "time": "20 minutes",
   "details": {
     "steps": [{
         "title": "Getting the Lab's Code from GitHub",
@@ -13,16 +13,12 @@
         "text": "step02.md"
       },
       {
-        "title": "Understanding the Benefit of Build, Release, Run",
+        "title": "Setting up the Automated Jenkins Pipeline to Build and Release Code",
         "text": "step03.md"
       },
       {
-        "title": "Peparing a Build, Release, Run environment under Jenkins",
+        "title": "unning the Demonstration Application Using the Container Registry",
         "text": "step04.md"
-      },
-      {
-        "title": "Implementing Build, Release, Run",
-        "text": "step05.md"
       }
     ],
     "intro": {

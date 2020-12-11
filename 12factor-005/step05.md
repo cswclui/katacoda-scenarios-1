@@ -19,6 +19,9 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 `cd /root/12factor`{{execute T1}}
 
+`docker run --name my
+secretagent -d -p 3060:3050 localhost:5000/secretagent:v1`
+
 
 ## Summary
 

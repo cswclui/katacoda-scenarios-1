@@ -58,7 +58,7 @@ We're now ready to install Jenkins. As mentioned earlier, we're going to run Jen
 
 `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`{{execute}}
 
-**Hint:** Sometimes it takes the Jenkins container to spin up. You might have to try **Step 8** more than once.
+**BEWARE:** Sometimes it takes the Jenkins container to spin up. You might have to try **Step 8** more than once.
 
 You see output similar, but not the same as the following:
 
