@@ -7,7 +7,7 @@ The interactive scenario demonstrated how to:
 * Installed Jenkins in Katacoda
 * Set up the Automated Jenkins Pipeline to Build and Release Code
 * Create a Backing Service
-* Run the Demonstration Application Using the Container Registry
+* Run the Demonstration Application Using the Local Container Registry
 
 
-In the next lab you'll be presented with an interactive demonstration about the fifth princple of 12 Factor App, **[Build, release, run](https://12factor.net/build-release-run)**.
+In the next lab you'll be presented with an interactive demonstration about the sixth princple of 12 Factor App, **[Processes](https://12factor.net/processes)**.

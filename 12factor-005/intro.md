@@ -29,7 +29,7 @@ The steps you'll take in this scenario are as follows:
 * **Step 1:** Cloning the Lesson Code from GitHub
 * **Step 2:** Installing Jenkins in Katacoda
 * **Step 3:** Setting up the Automated Jenkins Pipeline to Build and Release Code
-* **Step 4:** Running the Demonstration Application Using the Container Registry
+* **Step 4:** Running the Demonstration Application Using the Local Container Registry
 
 ## Executing command line instructions 
 

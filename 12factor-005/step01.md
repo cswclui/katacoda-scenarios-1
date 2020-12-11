@@ -13,9 +13,6 @@ The objective of this lesson is to demonstrate how to clone the lab code from Gi
 
 You have cloned the code for this lab and have navigated to the working directory of the lab's demonstration application. 
 
-```
-TBP
-```
 ---
 
 ***Next: Installing Jenkins in Katacoda***

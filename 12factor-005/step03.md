@@ -12,7 +12,7 @@ A key concept in the **Build, Release, Run** principle of 12 Factor App is ...
 
 ---
 
-***Next: Peparing a Build, Release, Run environment under Jenkins"***
+***Next: Running the Demonstration Application Using the Local Container Registry***
 
 
 

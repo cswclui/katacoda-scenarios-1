@@ -81,4 +81,4 @@ When you go to the URL you'll be asked to enter the ID value you generated in **
 ----
 
 
-***Next: Understanding the Benefit of Build, Release, Run"***
+***Next: Setting up the Automated Jenkins Pipeline to Build and Release Code***
