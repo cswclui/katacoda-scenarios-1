@@ -16,13 +16,19 @@ According to the website, [12 Factor App](https://12factor.net/build-release-run
 
 ## What you'll be doing 
 
-In this lab we are going to use the [Multibanch Pipeline](https://www.jenkins.io/blog/2015/12/03/pipeline-as-code-with-multibranch-workflows-in-jenkins/) feature of Jenkins to run a Jenkin job automatically according to a `Jenkinsfile` that is stored in the GitHub branch for this scenario. (We'll examine the `Jenkinsfile` in detail as the lesson progresses.)
+In this lab we are going to use the [Multibanch Pipeline](https://www.jenkins.io/blog/2015/12/03/pipeline-as-code-with-multibranch-workflows-in-jenkins/) feature of Jenkins to run a Jenkin job automatically according to a `Jenkinsfile` that is stored in the GitHub branch for this scenario. (We'll examine the `Jenkinsfile` in detail as the lesson progresses.) The `Jenkinsfile` and the Jenkins job it describes is designed to touch on all the key conceptual points of Build, Release, Run.
 
-The Release stage need to have a container registry available to store the container image that the automated Jenkins job will create. This instance of the Katacoda interactive learning enviroment has a container repository installed and running at `localhost:5000`. Jenkins will release container image of the demonstration app it builds in the local container repository. Then, when it comes time to do the Run stage, we'll use the container image stored in the local container repository to get the demonstration application named Secret Society up and running.
+The Jenkins job will clone the latest code for the demonstration project, *Secret Society* from the GitHub repository. As mentioned above, the source code ships with a `Jenkinsfile` which is a set of instructions that Jenkins will execute automagically.
 
+The Jenkins job will get the source code for the demonstration project, install the dependencies and then run the unit tests on the code. The tests will pass.
+
+Then, after testing the Jenkins job will create a [container image](https://www.docker.com/resources/what-container) according to the `Dockerfile` that also ships with the source code. The Jenkins job will then store the container image in a local container registry in the virtual machine for the Katacoda interactive learning environment.
 
 ![jenkins-container](12factor-005/assets/12-factor-5-intro.png)
 
+As mentioned aboave, the Release stage needs to have a container registry available to store the container image that the automated Jenkins job will create. This instance of the Katacoda interactive learning enviroment has a container repository installed and running at `localhost:5000`.
+
+When it comes time to do the Run stage, we'll use the container image stored in the local container repository to get the demonstration application up and running from the command line of the virtual machine for the Katacoda interactive learning environment.
 
 The steps you'll take in this scenario are as follows:
 
