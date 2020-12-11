@@ -73,12 +73,9 @@ You have exited `vi`.
 
 ## Summary
 
-```
 In this step we bound Jenkins to a `Jenkinsfile` in the lesson's GitHub repository and made it so that Jenkins created a container image of the demonstration application, *Secret Society*. Jenkins stored that container iamge in the Local Container Repository which you can access from the Katacoda command line.
 
 Next we'll work at the Katacoda command line to start and call the demonstration application by running it as Docker container. The container image that we'll use will be the one that Jenkins stored in the Local Container Repository.
-
-```
 
 ---
 
