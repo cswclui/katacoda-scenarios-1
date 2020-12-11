@@ -69,9 +69,7 @@ When you go to the URL you'll be asked to enter the ID value you generated in **
 
 
 
-**Hint:** Jenkis will as you which plugins you want to install. Select the option, **INSTALL SUGGESTED PLUGINS**.
-
-![install suggested plugins](12factor-005/assets/12-factor-5-intro.jpg)
+**Hint:** Jenkins will as you which plugins you want to install during the intialization process. Select the option, **INSTALL SUGGESTED PLUGINS**.
 
 
 
