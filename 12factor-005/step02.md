@@ -63,7 +63,7 @@ Jenkins is now up and running. You can access it by clicking this URL:
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
-When you go to the URL you'll be asked to enter the ID value you generated in **Step 8**. Once you get into the Jenkin website, follow the instructions to complete the Jenkins setup process. The following animated GIF will walk you through the process. **REMEMBER!!!! Make sure ID string outputted at the beginning of this step on hand.**
+When you go to the URL you'll be asked to enter the ID value you generated in **Step 8**. Once you get into the Jenkin website, follow the instructions to complete the Jenkins setup process. The following animated GIF will walk you through the process. **REMEMBER!!!! Make sure the token string outputted at the beginning of this step is on hand to copy into the Jenkins UI.**
 
 **Step 9:** Watch the following short video to see the details for initializing Jenkins:
 
@@ -71,7 +71,7 @@ When you go to the URL you'll be asked to enter the ID value you generated in **
 
 
 
-**Hint:** Jenkins will as you which plugins you want to install during the intialization process. Select the option, **INSTALL SUGGESTED PLUGINS**.
+**Hint:** Jenkins will ask you which plugins you want to install during the intialization process. Select the option, **INSTALL SUGGESTED PLUGINS**.
 
 
 
