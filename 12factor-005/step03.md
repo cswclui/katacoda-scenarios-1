@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is to review the `Jenkinsfile` that Jenkins will use to run the Build and Release states of the 12 Factor App principle of [Build, Release, Run](https://12factor.net/build-release-run). Also, we're going to demonstrate how to create the Jenkins Multibranch Pipeline job that will execute the Build and Release stages automatically.
+The objective of this lesson is to review the `Jenkinsfile` that Jenkins will use to run the Build and Release states of the 12 Factor App principle of [Build, Release, Run](https://12factor.net/build-release-run). Also, we're going to demonstrate how to create the Jenkins Pipeline job that will execute the Build and Release stages automatically.
 
 ## Steps
 
@@ -69,7 +69,7 @@ You have exited `vi`.
 
 **Step 7:** View the following video that demonstrates how to bind the Jenkins job to the `Jenkinsfile` in the the source code GitHub repository for this lesson. Once you job is bound, Jenkins will automatically identify and read the `Jenkinsfile` in the source code directory and excecute the tasks within.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PrttXoc2d7s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Pw08ZJit1U4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 

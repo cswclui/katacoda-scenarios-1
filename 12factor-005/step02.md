@@ -63,19 +63,19 @@ Jenkins is now up and running. You can access it by clicking this URL:
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
-When you go to the URL you'll be asked to enter the ID value you generated in **Step 8**. Once you get into the Jenkin website, follow the instructions to complete the Jenkins setup process. The following animated GIF will walk you through the process. **REMEMBER!!!! Make sure the token string outputted at the beginning of this step is on hand to copy into the Jenkins UI.**
+When you go to the URL you'll be asked to enter the ID value you generated in **Step 8**. Once you get into the Jenkin website, follow the instructions to complete the Jenkins setup process. The following video will walk you through the process. **REMEMBER!!!! Make sure the token string outputted at the beginning of this step is on hand to copy into the Jenkins UI.**
 
 **Step 9:** Watch the following short video to see the details for initializing Jenkins:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AY5PVkEsn-o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D0TRbUNgcV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Hint:** Jenkins will ask you which plugins you want to install during the intialization process. Select the option, **INSTALL SUGGESTED PLUGINS**.
 
 
 
 ## Summary
+
+In this lesson you got Jenkins up and running as Docker container. In the next lesson we're going to create a Jenkins Pipeline job that will run a `Jenkinsfile` script stored in the GitHub repository along with the application source code. The `Jenkinsfile` script contains the instructions to get the source code for the demonstration application, *Secret Society* from GitHub, build it into a container image and then store that container image on the Local Container Registry that was installed behind the scenes in the Katacoda interactive learning environment.
 
 ----
 
