@@ -29,9 +29,9 @@ Install the stateless processes as a collection of Docker containers running und
 
 `sh docker-seed.sh`{{execute}}
 
-**Step 4:** Start the application using Docker Compose under the Docker network named, `westfield_mall`.
+**Step 4:** In a second terminal window, start the application using Docker Compose under the Docker network named, `westfield_mall`.
 
-`docker-compose up`{{execute}}
+`docker-compose up`{{execute T2}}
 
 
 
