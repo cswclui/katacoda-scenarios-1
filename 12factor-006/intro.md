@@ -13,7 +13,7 @@ According to the website, [12 Factor App](https://12factor.net/build-release-run
 
 ## What you'll be doing 
 
-In this scenario you'll be installing, analyzing and running a demonstration application named, *Food Court*. *Food Court* is a collection of Docker containers. Each container runs as a stateless process in compliance with the 12 Factor principle of Process.
+In this scenario you'll be installing, analyzing and running a demonstration application named, *Food Court*. *Food Court* is a collection of Docker containers. Each container runs as a stateless process in compliance with the 12 Factor principle of Processes.
 
 
 ![Food Court](12factor-006/assets/foodcourt.jpg)
