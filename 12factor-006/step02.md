@@ -31,7 +31,7 @@ Install the stateless processes as a collection of Docker containers running und
 
 **Step 4:** In a second terminal window, start the application using Docker Compose under the Docker network named, `westfield_mall`.
 
-`docker-compose up`{{execute T2}}
+`cd ~/12factor && docker-compose up`{{execute T2}}
 
 
 
