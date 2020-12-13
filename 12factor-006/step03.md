@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is examine the structure of the demonstration application, *Food Court* to see how the code support the 12 Factor App principle of Processes
+The objective of this lesson is examine the structure of the demonstration application, *Food Court* to see how the code support notion of a stateless processe as prescribed by the 12 Factor App principle of Processes
 
 ## Steps
 
@@ -29,6 +29,8 @@ The file, `docker-seed.sh` is a utility script the creates a Local Docker Regist
 `cat `docker-seed.sh`{{execute T1`}}
 
 Each process runs as a webserver making it so the only means of interaction between processes is via standard [HTTP reqeust methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) between the web servers.
+
+None of the processes/webservers maintain state. In the case of `customer`, all it knows how to do is to find a `restaurant` and random. All a `restaurant` knows is how to pick an order off its menu at random and deliver it to the caller. The restaurant has now idea about the customer other than the information it's given at the time of the request.
 
 Isolating the code in isolated processes makes maintaining the code for each process easier.
 

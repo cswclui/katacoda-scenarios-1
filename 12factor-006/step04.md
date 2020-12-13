@@ -7,7 +7,7 @@ Running the processes as independent containers complies with the 12 Factor prin
 
 The only entry point into the *Food Court* application is to call the `customer` process which will, in turn, call one of the restaurant processes at random. (Docker Compose was configure to only expose the process `customer` at port 4000.)
 
-Calling the `customer` process via `localhost:4000` will make it so that the `customer` subsequently call a restuarant process.
+Calling the `customer` process via `localhost:4000` will make it so that the `customer` subsequently call a restaurant process.
 
 ## Steps
 
