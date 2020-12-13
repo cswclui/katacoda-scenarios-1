@@ -33,9 +33,7 @@ Install the stateless processes as a collection of Docker containers running und
 
 `docker-compose up`{{execute}}
 
-**Step 5:** Make 20 calls on the application using `curl`;
 
-`for i in {1..20}; do curl localhost:4000 -w "\n"; done`{{execute}}
 
 #Summary
 
