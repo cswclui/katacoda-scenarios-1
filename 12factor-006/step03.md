@@ -37,7 +37,7 @@ Each of these images represent a distinct, stateless process
 
 **WHERE**
 
-* **customer** is a process that is an emulation of a customer buying food a food counter in a food court
+* **customer** is a process that is an emulation of a customer buying food at a food counter in a food court
 * **burgerqueen** is a food counter in the food court
 * **hobos** is a food counter in the food court
 * **iowafried** is a food counter in the food court
