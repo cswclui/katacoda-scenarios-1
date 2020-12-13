@@ -3,6 +3,8 @@ The objective of this lesson is examine the structure of the demonstration appli
 
 ## Steps
 
+**Step 1:** View the file and directory structure of the demonstration application
+
 `tree ./ -L 1`{{execute T1}}
 
 You'll get the following output:
@@ -13,18 +15,16 @@ You'll get the following output:
 ├── customer
 ├── docker-compose.yaml
 ├── docker-seed.sh
-├── docker-swarm-compose.yaml
 ├── hobos
 ├── iowafried
 └── payments
 
 ```
 
-List the docker images in the Local Container Registry
+**Step 2:** List the docker images in the Local Container Registry
+
 
 `curl http://localhost:5000/v2/_catalog`{{execute T1}}
-
----
 
 You'll get the following output:
 
