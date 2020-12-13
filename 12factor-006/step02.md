@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is demonstrate how to [TO BE PROVIDED]
+The objective of this lesson is to install the source code for the demonstration application, *Food Court*, convert each process in the source code into a container image, store that image in a Local Container Registyr and then get the demonstration application up and running under Docker Compose.
 
 ## Steps
 
@@ -33,9 +33,6 @@ Install the stateless processes as a collection of Docker containers running und
 
 `cd ~/12factor && docker-compose up`{{execute T2}}
 
-
-
-# Summary
 
 ---
 

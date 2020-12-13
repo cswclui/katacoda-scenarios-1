@@ -17,12 +17,22 @@ You'll get the following output:
 ├── docker-seed.sh
 ├── hobos
 ├── iowafried
-└── payments
+└── readme.md
 
 ```
+The directories, `burgerqueen`, `customer`, `hobos` and `iowafried` in the tree above contain the code for each of the processes that will be represented in a distinct container.
 
-**Step 2:** List the docker images in the Local Container Registry
+The file, `docker-seed.sh` is a utility script the creates a Local Docker Registry and then creates a docker image according to the `Dockerfile` that is stored along with the application code in each process directory. The docker image that is created is then stored in the Local Docker Registry.
 
+**Step 2:** View the contents of `docker-seed.sh`
+
+`cat `docker-seed.sh`{{execute T1`}}
+
+Each process runs as a webserver making it so the only means of interaction between processes is via standard [HTTP reqeust methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) between the web servers.
+
+Isolating the code in isolated processes makes maintaining the code for each process easier.
+
+**Step 3:** List the docker images in the Local Container Registry
 
 `curl http://localhost:5000/v2/_catalog`{{execute T1}}
 
@@ -33,13 +43,13 @@ You'll get the following output:
 
 ```
 
-Each of these images represent a distinct, stateless process
-
 **WHERE**
 
 * **customer** is a process that is an emulation of a customer buying food at a food counter in a food court
 * **burgerqueen** is a food counter in the food court
 * **hobos** is a food counter in the food court
 * **iowafried** is a food counter in the food court
+
+Each of these images represent of the distinct, stateless containers that will make up the processes for the entirety of the demonstration application.
 
 ***Next: Running the demonstration application***
