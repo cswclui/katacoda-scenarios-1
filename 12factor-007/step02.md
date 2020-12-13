@@ -30,11 +30,22 @@ Install the stateless processes as a collection of Docker containers running und
 
 `sh docker-seed.sh`{{execute}}
 
-**Step 4:** In a second terminal window, start the application using Docker Compose under the Docker network named, `westfield_mall`.
+**Step 4:** Confirm that the expecxted the docker images in the Local Container Registry
+
+`curl http://localhost:5000/v2/_catalog`{{execute T1}}
+
+You should see the following as output:
+
+```
+{"repositories":["burgerqueen","customer","hobos","iowafried"]}
+
+```
+
+**Step 5:** In a second terminal window, start the application using Docker Compose under the Docker network named, `westfield_mall`.
 
 `cd ~/12factor && docker-compose up`{{execute T2}}
 
-**Step 5:** Make 20 calls on the application using `curl`;
+**Step 6:** Make 20 calls on the application using `curl`;
 
 `for i in {1..20}; do curl localhost:4000 -w "\n"; done`{{execute T1}}
 
