@@ -18,12 +18,18 @@ You should see the following output:
 You'll see output as follows:
 
 ```
-Branch '56-processes.0.0.1' set up to track remote branch '6-processes.0.0.1' from 'origin'.
+Branch '6-processes.0.0.1' set up to track remote branch '6-processes.0.0.1' from 'origin'.
 Switched to a new branch '6-processes.0.0.1'
 
 ```
 
+Install the stateless processes as a collection of Docker containers running under [Docker Compose](https://docs.docker.com/compose/).
+
+**Step 3:** Execute the bash script that executes the provisioning
+
+`sh docker-seed.sh`{{execute}}
+
 
 ---
 
-***Next: TO BE PROVIDED***
+***Next: Understanding the nature of stateless processes***
