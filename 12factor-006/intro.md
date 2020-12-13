@@ -4,7 +4,7 @@ The objective of this lab is to demonstrate the basic concepts behind of the six
 
 ## What is Processes?
 
-Processes is principle that states that a service or application must run in distinct, stateless process. State is held an ancillary process according the 12 Factor principle of [Backing service]([Processes](https://12factor.net/backing-service)).
+The Processes principle that states that a service or application must run in distinct, stateless process. State is held an ancillary process according the 12 Factor principle of [Backing service]([Processes](https://12factor.net/backing-service)).
 
 According to the website, [12 Factor App](https://12factor.net/build-release-run), 
 

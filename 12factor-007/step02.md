@@ -30,7 +30,7 @@ Install the stateless processes as a collection of Docker containers running und
 
 `sh docker-seed.sh`{{execute}}
 
-**Step 4:** Confirm that the expecxted the docker images in the Local Container Registry
+**Step 4:** Confirm that the expected the docker images in the Local Container Registry
 
 `curl http://localhost:5000/v2/_catalog`{{execute T1}}
 
