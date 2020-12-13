@@ -1,15 +1,15 @@
 {
   "title": "12 Factor App: 6-Processes",
-  "description": "Learn how to create web services and applications that run as one or more stateless processes",
-  "difficulty": "General understanding of structured programming, git, reading knowledge of Node.js",
+  "description": "Learn the benefit of running web services and applications as one or more stateless processes",
+  "difficulty": "General understanding of structured programming, git, and containers. A reading knowledge of Node.js",
   "time": "15 minutes",
   "details": {
     "steps": [{
-        "title": "TO BE PROVIDED A",
+        "title": "Installing the lesson code",
         "text": "step01.md"
       },
       {
-        "title": "TO BE PROVIDED B",
+        "title": "Provisioning the environment",
         "text": "step02.md"
       },
       {
