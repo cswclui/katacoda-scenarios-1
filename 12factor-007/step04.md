@@ -13,7 +13,7 @@ You should see the following output:
 
 **Step 2:** Take a look at the `docker-compose.yaml` source code in `vi`.
 
-`vi .docker-compose.yaml`{{execute T1}}}
+`vi docker-compose.yaml`{{execute T1}}}
 
 **Step 3:** Turn on the line numbering the `vi` editor:
 
