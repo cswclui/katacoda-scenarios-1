@@ -5,19 +5,19 @@
   "time": "15 minutes",
   "details": {
     "steps": [{
-        "title": "Installing the lesson code",
+        "title": "Cloning the Lesson Code from GitHub",
         "text": "step01.md"
       },
       {
-        "title": "Provisioning the environment",
+        "title": "Provisioning the Environment",
         "text": "step02.md"
       },
       {
-        "title": "Understanding the nature of stateless processes",
+        "title": "Understanding the Nature of Stateless Processes",
         "text": "step03.md"
       },
       {
-        "title": "Running the demonstration application",
+        "title": "Running the Demonstration Application",
         "text": "step04.md"
       }
     ],
