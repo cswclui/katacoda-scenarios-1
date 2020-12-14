@@ -4,7 +4,7 @@ The objective of this lab is to demonstrate the basic concepts behind of the sev
 
 ## What is Port Binding?
 
-The Port Binding principle that a web application or service should expose itself to the network as a port number and any web server or other protocl that support network traffic should be internl the the web application or service.
+The Port Binding principle is that a web application or service should expose itself to the network as a port number. Any web server or other protocol that supports network traffic should be internal to the web application or service.
 
 According to the website, [12 Factor App](https://12factor.net/port-binding), 
 
@@ -23,5 +23,13 @@ The steps you'll take in this scenario are as follows:
 * **Step 2:** Getting the Code Up and Running
 * **Step 3:** Learn the Value of Port Binding
 * **Step 4:** Binding to Services by Port Number
+
+## Executing command line instructions 
+
+This scenario is completely interactive. The instructions you'll be given will be executed directly in the terminal window that is embedded directly in the Katacoda interactive learning environment. In the steps to come, when you see a command line instruction with a black background and check mark at the end, like so:
+
+![Katacoda command line](12factor-007/assets/command-01.png)
+
+just click on it and the command will execute in the interative terminal window.
 
 Click the START SCENARIO button to start.

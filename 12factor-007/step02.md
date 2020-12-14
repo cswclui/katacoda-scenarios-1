@@ -45,6 +45,23 @@ You should see the following as output:
 
 `cd ~/12factor && docker-compose up`{{execute T2}}
 
+Notice the as the containers in *Food Court* come online under Docker Compose that the web service `customer` is running on port `3000` like so:
+
+```
+customer_1     | Friendly Shopper API Server is listening on port 3000
+
+```
+
+While the restaurant web services are running on port `3001`.
+
+```
+hobos_1        | Howard Bonsons API Server is started on 3001  at Sun Dec 13 2020 23:47:47 GMT+0000 (UTC) with pid6
+iowafried_1    | Iowa Fried Chicken API Server is started on 3001  at Sun Dec 13 2020 23:47:46 GMT+0000 (UTC) withpid 6
+burgerqueen_1  | Burger Queen API Server is started on 3001  at Sun Dec 13 2020 23:47:48 GMT+0000 (UTC) with pid 6
+
+```
+This is something to remember as we'll talk about port numbers more in upcoming lessons.
+
 **Step 6:** Make 20 calls on the application using `curl`;
 
 `for i in {1..20}; do curl localhost:4000 -w "\n"; done`{{execute T1}}
@@ -73,6 +90,8 @@ You'll get output similar to, but not exactly like the following:
 {"restaurant":"Howard Bonsons","order":"grilled cheese","customer":"Friendly Shopper"}
 {"restaurant":"Howard Bonsons","order":"fried shrimp","customer":"Friendly Shopper"}
 ```
+As you see the application is up an running properly.
+
 
 ---
 
