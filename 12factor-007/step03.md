@@ -37,7 +37,7 @@ The assumption is that all restaurants will be running on the same port. This is
 
 Let's get out of `vi` and take a look at some code for a restaurant.
 
-![portbinding(12factor-007/assets/portbinding.jpg)
+![portbinding](12factor-007/assets/portbinding.jpg)
 
 **Step 4:** Get out of `vi` line numbered view mode
 
@@ -69,7 +69,7 @@ Notice `Line 2` in the `burgerqueen` code:
 const port = process.env.APP_PORT || 3000;
 
 ```
- `Line 2` is where the restaurant service, in this case `burger	queen` get the port on which it will run. As with the other service it looks to get its value from the environment variable, `APP_PORT`. If the environment variable does not exists, it uses the default port, `3000`. That the `customer` and the restaurant services, `burger	ueen`, `hobos` and iowafried` are all using the same environment variable name is permisssible because each of these services will run in a container. Thus, each container will have its own instance of the environment variable.
+ `Line 2` is where the restaurant service, in this case `burger	queen` get the port on which it will run. As with the other service it looks to get its value from the environment variable, `APP_PORT`. If the environment variable does not exists, it uses the default port, `3000`. That the `customer` and the restaurant services, `burger	ueen`, `hobos` and `iowafried` are all using the same environment variable name is permisssible because each of these services will run in a container. Thus, each container will have its own instance of the environment variable.
  
 The important thing is this: as with `customer` each restaurant service is self-contained and each restaurant service presents itself via its port number.
 
