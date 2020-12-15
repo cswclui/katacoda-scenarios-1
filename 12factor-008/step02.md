@@ -45,22 +45,53 @@ You should see the following as output:
 
 `cd ~/12factor/k8s/ && sh generate-k8s-resources.sh`{{execute T1}}
 
-**Step 6**  Get the external IP address of the `customer` service
+**Step 6** Confirm all the deployments and services are running
 
-`kubectl get svc`{{execute T1}}
+`kubectl get deployment`{{execute T1}}
+
+You'll see out put similar to the following:
+
+```
+
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+burgerqueen-deployment   1/1     1            1           2m3s
+collector-deployment     1/1     1            1           2m2s
+customer-deployment      1/1     1            1           2m2s
+hobos-deployment         1/1     1            1           2m1s
+iowafried-deployment     1/1     1            1           2m1s
+redis-deployment         1/1     1            1           2m
+
+```
+
+`kubectl get service`{{execute T1}}
 
 You get output similar to the following:
 
+```
+NAME          TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)        AGE
+burgerqueen   ClusterIP      10.99.38.60      <none>         80/TCP         5s
+collector     ClusterIP      10.98.97.42      <none>         80/TCP         5s
+customer      LoadBalancer   10.98.104.91     10.98.104.91   80:32122/TCP   4s
+hobos         ClusterIP      10.102.225.246   <none>         80/TCP         4s
+iowafried     ClusterIP      10.105.87.146    <none>         80/TCP         4s
+kubernetes    ClusterIP      10.96.0.1        <none>         443/TCP        7m14s
+redis         ClusterIP      10.98.138.176    <none>         80/TCP         3s
 
 ```
-TBP
+
+Take notice of the `EXTERNAL-IP` of the service `customer`. This is the entry point service into *Food Court* within the Kubernetes cluster. In this case the `EXTERNAL-IP` is `10.98.104.91`.
+
+**Step 6** Confirm that Food Court is running in the Kubernetes cluster by making executing `curl` against `customer`. (Notice that `customer` is running on port `80`. Thus, when we call `curl` we can execute using the service name only and expect that the default HTTP port of will be used.
+
+```
+`curl 10.98.104.91`{{execute T1}}
+
+```
+You get output similar to the following:
 
 ```
 
-**Step 7** Call the service 20 times
-
-```
-TBP
+{"restaurant":"Iowa Fried Chicken","order":"20 Piece Bucket"},"customer":"Friendly Shopper"}
 
 ```
 

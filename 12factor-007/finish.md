@@ -1,11 +1,11 @@
-**Congratulations!** You've completed the scenario, ***[Concurrency](https://12factor.net/concurrency)***
+**Congratulations!** You've completed the scenario, ***[Port Binding](https://12factor.net/port-binding)***
+
+The interactive scenario you:	The interactive scenario you:
 
 
-The interactive scenario you:
+* Installed the Source Code from GitHub	* Installed the Source Code from GitHub
+* Got the Code Up and Running	* Got the Code Up and Running
+* Learned the Value of Port Binding	* Learned About Process Concurrency According to Type
+* Bound to Services by Port Number
 
-* Installed the Source Code from GitHub
-* Got the Code Up and Running
-* Learned About Process Concurrency According to Type
-* Ran the Demonstration Application for Process Concurrency
-
-In the next lab you'll be presented with an interactive demonstration about the ninth princple of 12 Factor App, **[Disposability](https://12factor.net/disposability)**.
+In the next lab you'll be presented with an interactive demonstration about the eighth princple of 12 Factor App, **[Concurrency](https://12factor.net/concurrency)**.

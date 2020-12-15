@@ -9,7 +9,7 @@
         "text": "step01.md"
       },
       {
-        "title": "Getting the Code Up and Running",
+        "title": "Getting the Code Up and Running in a Kubernetes",
         "text": "step02.md"
       },
       {
@@ -17,7 +17,7 @@
         "text": "step03.md"
       },
       {
-        "title": "Running the Demonstration Application for Process Concurrency",
+        "title": "Affecting the Demonstration Application's Process Concurrency",
         "text": "step04.md"
       }
     ],
