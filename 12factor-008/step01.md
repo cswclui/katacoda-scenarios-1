@@ -9,7 +9,7 @@ The objective of this lesson is to demonstrate how to clone the lab code from Gi
 
 **Step 2:** In a second terminal window, turn on minikube Load Balancing
 
-`minikube tunnel`{{execute T2}
+`minikube tunnel`{{execute T2}}
 
 **Step 3:** Get the code from GitHub:
 
