@@ -1,0 +1,40 @@
+{
+  "title": "12 Factor App: 8-Concurrency",
+  "description": "Learn the details creating web applications and services that scale according to process type",
+  "difficulty": "General understanding of structured programming, git, Kubernetes and reading knowledge of Node.js",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+        "title": "Installing the Source Code from GitHub",
+        "text": "step01.md"
+      },
+      {
+        "title": "Getting the Code Up and Running",
+        "text": "step02.md"
+      },
+      {
+        "title": "Learning About Process Concurrency According to Type",
+        "text": "step03.md"
+      },
+      {
+        "title": "Running the Demonstration Application for Process Concurrency",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
