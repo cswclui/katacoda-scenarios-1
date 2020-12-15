@@ -25,6 +25,14 @@ You have cloned the code for this lab and have navigated to the working director
 
 `kubectl get nodes`{{execute T1}}
 
+You'll get output similar to the following:
+
+```
+NAME       STATUS   ROLES    AGE   VERSION
+minikube   Ready    master   54s   v1.17.0
+
+```
+
 ---
 
 ***Next: Getting the code up and running***

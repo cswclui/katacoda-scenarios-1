@@ -15,7 +15,7 @@ You should see the following output:
 
 **Step 2:** Take a look at the pods running the Kubernetes cluster
 
-`kubectl get pods`{{execute T1}}
+`kubectl get deployment`{{execute T1}}
 
 You'll see out put similar to the following:
 
