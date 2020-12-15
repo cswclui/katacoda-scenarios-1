@@ -3,19 +3,27 @@ The objective of this lesson is to demonstrate how to clone the lab code from Gi
 
 ## Steps
 
+**Step 1:** Start minikube
+
+`minikube start`{{execute T1}}
+
+Step 2:** Turn on minikube Load Balancing
+
+`minikube tunnel`{{execute T2}
+
 **Step 1:** Get the code from GitHub:
 
-`cd ~/ && git clone https://github.com/innovationinsoftware/12factor.git`{{execute}}
+`cd ~/ && git clone https://github.com/innovationinsoftware/12factor.git`{{execute T1}}}
 
 **Step 2:** Navigate to the working directory of the code just cloned. This directory contains all the assets for the lab's demonstration application.
 
-`cd ~/12factor && pwd`{{execute}}
+`cd ~/12factor && pwd`{{execute T1}}}
 
 You have cloned the code for this lab and have navigated to the working directory of the lab's demonstration application. 
 
 **Step :** Confirm Kubernetes is up and running and the nodes are accessible
 
-`kubectl get nodes`{{execute}}
+`kubectl get nodes`{{execute T1}}
 
 ---
 
