@@ -1,6 +1,6 @@
 {
   "title": "12 Factor App: 8-Concurrency",
-  "description": "Learn the details creating web applications and services that scale according to process type",
+  "description": "Learn the details for creating web applications and services that scale according to process type",
   "difficulty": "General understanding of structured programming, git, Kubernetes and reading knowledge of Node.js",
   "time": "15 minutes",
   "details": {

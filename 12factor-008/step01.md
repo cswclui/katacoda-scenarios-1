@@ -3,6 +3,10 @@ The objective of this lesson is to demonstrate how to clone the lab code from Gi
 
 ## Steps
 
+**Step 1:** Start up the Minikube environment. (Minikube is a small scal instance of Kubernetes designed for experimentation)
+
+`minikube start`{{execute}}
+
 **Step 1:** Get the code from GitHub:
 
 `git clone https://github.com/innovationinsoftware/12factor.git`{{execute}}
