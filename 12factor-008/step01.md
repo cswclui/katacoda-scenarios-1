@@ -13,7 +13,7 @@ The objective of this lesson is to demonstrate how to clone the lab code from Gi
 
 **Step 3:** Get the code from GitHub:
 
-`cd ~/ && git clone https://github.com/innovationinsoftware/12factor.git`{{execute T1}}}
+`cd ~/ && git clone https://github.com/innovationinsoftware/12factor.git`{{execute T1}}
 
 **Step 4:** Navigate to the working directory of the code just cloned. This directory contains all the assets for the lab's demonstration application.
 
