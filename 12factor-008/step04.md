@@ -19,13 +19,15 @@ You should see the following output:
 
 **Step 3:** Change the the number of pods assigned to each deployment to accommodate the stress points we described above
 
-`sh update-k8s-deployments.sh`{{execite T1}}
+`cd k8s && sh update-k8s-deployments.sh`{{execute T1}}
 
 You get out put simlar to the following:
 
 ```
 
-TBP
+deployment.apps/collector-deployment configured
+deployment.apps/customer-deployment configured
+deployment.apps/hobos-deployment configured
 
 ```
 
