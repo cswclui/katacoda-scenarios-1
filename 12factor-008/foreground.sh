@@ -10,6 +10,8 @@ docker run -d --network="host" -p 5000:5000 --restart=always --name registry reg
 
 #Add KinD
 
+echo Adding KinD...
+
 curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 
 sudo chmod +x ./kubectl
