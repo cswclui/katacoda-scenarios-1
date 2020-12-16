@@ -15,6 +15,13 @@ You should see the following output:
 
 `kubectl get deployment`{{execute T1}}
 
+You'll see out put similar to the following:
+
+```
+TBP
+
+```
+
 [DISCUSSION]
 
 **Step 3:** Change the the number of pods assigned to each deployment to accommodate the stress points we described above
@@ -39,7 +46,12 @@ You get out put simlar to the following:
 
 ```
 
-TBP
+burgerqueen-deployment   1/1     1            1           3m42s
+collector-deployment     2/2     2            2           3m42s
+customer-deployment      3/3     3            3           3m41s
+hobos-deployment         4/4     4            4           3m41s
+iowafried-deployment     1/1     1            1           3m41s
+redis-deployment         1/1     1            1           3m40s
 
 ```
 
