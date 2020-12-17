@@ -1,7 +1,7 @@
 {
-  "title": "12 Factor App: 8-Concurrency",
-  "description": "Learn the details of creating web applications and services that scale according to process type",
-  "difficulty": "General understanding of structured programming, git, Kubernetes and reading knowledge of Node.js",
+  "title": "12 Factor App: 9-Disposability",
+  "description": "Learn the details of creating web apps and services that shutdown safely and gracefull upon termination",
+  "difficulty": "General understanding of structured programming, git, reading knowledge of Node.js",
   "time": "15 minutes",
   "details": {
     "steps": [{
@@ -9,15 +9,15 @@
         "text": "step01.md"
       },
       {
-        "title": "Getting the Code Up and Running in a Kubernetes",
+        "title": "TO BE PROVIDED B",
         "text": "step02.md"
       },
       {
-        "title": "Learning About Process Concurrency According to Type",
+        "title": "TO BE PROVIDED C",
         "text": "step03.md"
       },
       {
-        "title": "Affecting the Demonstration Application's Process Concurrency",
+        "title": "TO BE PROVIDED C",
         "text": "step04.md"
       }
     ],
@@ -35,6 +35,6 @@
     "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "minikube"
+    "imageid": "ubuntu"
   }
 }
