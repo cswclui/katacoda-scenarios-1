@@ -49,6 +49,24 @@ You should see the following as output:
 
 `kubectl get deployment`{{execute T1}}
 
+You'll get the following output:
+
+```
+deployment.apps/burgerqueen-deployment created
+deployment.apps/collector-deployment created
+deployment.apps/customer-deployment created
+deployment.apps/hobos-deployment created
+deployment.apps/iowafried-deployment created
+deployment.apps/redis-deployment created
+service/burgerqueen created
+service/collector created
+service/customer created
+service/hobos created
+service/iowafried created
+service/redis created
+
+```
+
 You'll see out put similar to the following:
 
 ```
@@ -82,11 +100,9 @@ Take notice of the `EXTERNAL-IP` of the service `customer`. This is the entry po
 
 **Step 6** Confirm that Food Court is running in the Kubernetes cluster by making executing `curl` against `customer`. (Notice that `customer` is running on port `80`. Thus, when we call `curl` we can execute using the service name only and expect that the default HTTP, `80`, port of will be used.
 
-```
-`curl 10.98.104.91`{{execute T1}}
+`curl 10.98.104.91`
 
-```
-You get output similar to the following:
+You get output similar to the following (The restuarant will differ.):
 
 ```
 

@@ -36,19 +36,19 @@ In this case, we're going to increase the number of pods associated with the `co
 
 **Step 3:** View the actual manifest file that will instigate the pod allocation for `collector` by executing the following command:
 
-`clear && cat k8s/manifests/collector-deployment-update.yaml`{{execute T1}
+`clear && cat k8s/manifests/collector-deployment-update.yaml`{{execute T1}}
 
 We'll increase the number of pods associated with the `customer` service from `1` to `3`.
 
 **Step 4:** View the manifest file that will instigate the pod allocation for `customer` by executing the following command:
 
-`clear && cat k8s/manifests/customer-deployment-update.yaml`{{execute T1}
+`clear && cat k8s/manifests/customer-deployment-update.yaml`{{execute T1}}
 
 We'll increase the number of pods associated with the `hobos` service from `1` to `4`.
 
 **Step 5:** View the manifest file that will instigate the pod allocatin for `hobos ` by executing the following command:
 
-`clear && cat k8s/manifests/hobos-deployment-update.yaml`{{execute T1}
+`clear && cat k8s/manifests/hobos-deployment-update.yaml`{{execute T1}}
 
 Now, let's do the update using the bash script that's part of this lesson.
 
