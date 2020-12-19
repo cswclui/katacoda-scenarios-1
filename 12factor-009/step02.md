@@ -15,9 +15,29 @@ The objective of this lesson is demonstrate how to get the demonstration code up
 
 `npm test`{{execute T1}}
 
+You'll get output similar to the following:
+
+```
+> burgerqueen@1.0.0 test /root/12factor/burgerqueen
+> mocha test
+
+Burger Queen, API Server is started on 3000  at Sat Dec 19 2020 17:49:30 GMT+0000 (Coordinated Universal Time), with pid 2446
+  API Tests:
+{ restaurant: 'Burger Queen', order: 'whooper' }
+    ✓ Can access GET item /
+
+  API Tests:
+{
+  status: 'SHUTDOWN',
+  shutdownMessage: 'Burger Queen API Server shutting down at Sat Dec 19 2020 17:49:30 GMT+0000 (Coordinated Universal Time)',
+  pid: 2446
+}
+
+```
+
 **Step 4:** Start up the *Burger Queen* service
 
-`node index.js`{{execute T1}}
+`clear ** node index.js`{{execute T1}}
 
 You'll see the output similar to the following:
 
