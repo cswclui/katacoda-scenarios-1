@@ -18,7 +18,7 @@ In this lab we're going to examine the shutdown code in the restaurant service, 
 You'll be doing the following steps:
 
 * **Step 1:** Installing the Source Code from GitHub
-* **Step 2:** Getting the Code Up and Running in a Kubernetes
+* **Step 2:** Getting the Code Up and Running
 * **Step 3:** Instigating Shutdown of a Service
 * **Step 4:** Analyzing the Shutdown Code
 
