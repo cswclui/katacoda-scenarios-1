@@ -22,8 +22,11 @@ The steps you'll take in this scenario are as follows:
 * **Step 4:** Affecting the Demonstration Application's Process Concurrency
 
 ## About the demonstration application
+The demonstration application used in the scenario is a version of the *Food Court* project we've worked with previously. However, in this lab , *Food Court* has been refectored to run under a Kubernetes Cluster.
 
 ![Food Court](12factor-008/assets/foodcourt.jpg)
+
+Each component is represented as a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/). Each service is backed by a [Kubernetes Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) of pods. You're going to affect concurrency by adjusting the `replicas` attribute in the manifest `yaml` file for some of the deployments.
 
 ## Executing command line instructions 
 

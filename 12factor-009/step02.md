@@ -3,7 +3,7 @@ The objective of this lesson is demonstrate how to get the demonstration code up
 
 ## Steps
 
-**Step 1:** Navigate back to the the lesson's working directory.
+**Step 1:** Go to the director of the *Burger Queen* service of *Food Court*.
 
 `cd /root/12factor && pwd`{{execute T1}}
 
