@@ -5,7 +5,7 @@ The objective of this lesson is demonstrate how instigate a service shutdown and
 
 **Step 1:** Send a `ctrl+c` exist command to the process running the *Burger Queen* service in the first terminal window
 
-`echo "Send ctrl+c to terminate the Burger Queen service"`{{execute interrupt}}
+`echo "Sent ctrl+c to terminate the Burger Queen service"`{{execute interrupt}}
 
 You'll get the following output:
 

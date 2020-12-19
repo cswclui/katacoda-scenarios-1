@@ -37,7 +37,7 @@ Burger Queen, API Server is started on 3000  at Sat Dec 19 2020 17:49:30 GMT+000
 
 **Step 4:** Start up the *Burger Queen* service
 
-`clear ** node index.js`{{execute T1}}
+`clear && node index.js`{{execute T1}}
 
 You'll see the output similar to the following:
 
