@@ -12,7 +12,7 @@ gpg --keyserver keyserver.ubuntu.com --recv-keys 16126D3A3E5C1192
 
 echo "installing Jenkins"
 
-wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add -
 
 sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 
