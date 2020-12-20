@@ -1,11 +1,11 @@
 {
-  "title": "12 Factor App: Dev/Prod Parity",
+  "title": "12 Factor App: 10-Dev/Prod Parity",
   "description": "Learn the details coordintating releases along a consitent deployment path",
   "difficulty": "General understanding of structured programming, git, Docker Compose, Jenkins, and a reading knowledge of Node.js",
   "time": "15 minutes",
   "details": {
     "steps": [{
-        "title": "Installingthe Jenkins",
+        "title": "Installing Jenkins",
         "text": "step01.md"
       },
       {
