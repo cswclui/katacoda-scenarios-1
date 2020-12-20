@@ -20,15 +20,19 @@ sudo apt install jenkins -y
 
 echo "usermod -aG sudo jenkins"
 
-sudo usermod -aG sudo jenkins
+sudo groupadd docker
+
+sudo usermod -aG docker $USER
+
+sudo chmod 777 /var/run/docker.sock
 
 sudo systemctl start jenkins
 
-sudo ufw allow 8080
+# sudo ufw allow 8080
 
-sudo ufw status
+# sudo ufw status
 
-sudo mount -o remount,exec /var
+# sudo mount -o remount,exec /var
 
 
 echo "Installed Jenkins"
