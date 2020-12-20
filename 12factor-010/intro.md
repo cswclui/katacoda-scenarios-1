@@ -1,4 +1,4 @@
-![logo](assets/logo-sm.png)
+![logo](12factor-001/assets/logo-sm.png)
 
 ## Objective
 
