@@ -1,3 +1,5 @@
+![logo](assets/logo-sm.png)
+
 ## Objective
 
 The objective of this lab is to demonstrate the basic concepts behind of the tenth of 12 Factor App principles, **[Dev/prod parity](https://12factor.net/dev-prod-parity)**.
