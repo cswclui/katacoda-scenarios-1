@@ -5,7 +5,7 @@ Jenkins is a well known open source platform for continuous integration and cont
 
 ## Steps
 
-**Step 1:** Navigate back to the the lesson's working directory.
+**Step 1:** Confirm you're in the lesson's working directory.
 
 `cd /root/12factor && pwd`{{execute}}
 
@@ -66,4 +66,4 @@ In this lesson you got Jenkins up and running as a Docker container. In the next
 ----
 
 
-***Next: Setting up the Automated Jenkins Pipeline to Build and Release Code***
+***Next: Preparing for the Pipeline Scripts for Multiple Releases**
