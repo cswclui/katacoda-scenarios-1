@@ -4,9 +4,9 @@ sudo apt update -y
 
 sudo apt-get install jq -y
 
-sudo apt install tree -y && clear
+sudo apt install tree -y
 
-sudo docker run -d --network="host" -p 5000:5000 --restart=always --name registry registry:2 && clear
+sudo docker run -d --network="host" -p 5000:5000 --restart=always --name registry registry:2
 
 echo "You're good to go!"
 
