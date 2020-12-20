@@ -18,9 +18,9 @@ sudo apt update -y
 
 sudo apt install jenkins -y
 
-echo "usermod -a -G docker jenkins"
+echo "usermod -aG sudo jenkins"
 
-sudo usermod -a -G docker jenkins
+sudo usermod -aG sudo jenkins
 
 sudo systemctl start jenkins
 
