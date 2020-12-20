@@ -1,3 +1,4 @@
+![logo](12factor-001/assets/logo-sm.png)
 ## Objective
 
 The objective of this lab is to demonstrate the basic concepts behind of the seventh of 12 Factor App principles, **[Port Binding](https://12factor.net/port-binding)**.

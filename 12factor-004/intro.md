@@ -1,3 +1,4 @@
+![logo](12factor-001/assets/logo-sm.png)
 ## Objective
 
 The objective of this lab is to demonstrate the basic concepts behind of the fourth of 12 Factor App principles, **[Backing Services](https://12factor.net/backing-services)**.

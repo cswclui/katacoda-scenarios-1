@@ -1,3 +1,4 @@
+![logo](12factor-001/assets/logo-sm.png)
 ## Objective
 The objective of this lesson is to demonstrate how to clone the lab code from GitHub into the Innovation In Software interactive learning environment.
 
