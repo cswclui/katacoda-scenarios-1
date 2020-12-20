@@ -20,8 +20,8 @@ In other words, Dev/Prod Parity is about making sure the deployment paths among 
 
 You'll be doing the following steps:
 
-* **Step 1:** Installing Jenkins
-* **Step 2:** Installing the Source Code
+* **Step 1:** Installing the Source Code
+* **Step 2:** Installing Jenkins
 * **Step 3:** Preparing for Multiple Releases
 * **Step 4:** Implementing Dev-Prod Parity Under Jenkins
 

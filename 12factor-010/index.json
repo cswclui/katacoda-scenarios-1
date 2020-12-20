@@ -5,11 +5,11 @@
   "time": "15 minutes",
   "details": {
     "steps": [{
-        "title": "Installing Jenkins",
+        "title": "Installing the Source Code",
         "text": "step01.md"
       },
       {
-        "title": "Installing the Source Code",
+        "title": "Installing Jenkins",
         "text": "step02.md"
       },
       {
