@@ -18,6 +18,8 @@ sudo apt update -y
 
 sudo apt install jenkins -y
 
+sudo usermod -a -G docker jenkins
+
 sudo systemctl start jenkins
 
 sudo ufw allow 8080
