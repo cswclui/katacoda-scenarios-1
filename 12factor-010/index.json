@@ -1,0 +1,39 @@
+{
+  "title": "12 Factor App: Dev/Prod Parity",
+  "description": "Learn the details coordintating releases along a consitent deployment path",
+  "difficulty": "General understanding of structured programming, git, Docker Compose, Jenkins, and a reading knowledge of Node.js",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+        "title": "Installingthe Jenkins",
+        "text": "step01.md"
+      },
+      {
+        "title": "Installing the Source Code",
+        "text": "step02.md"
+      },
+      {
+        "title": "Preparing for Multiple Releases",
+        "text": "step03.md"
+      },
+      {
+        "title": "Implementing Dev-Prod Parity Under Jenkins",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
