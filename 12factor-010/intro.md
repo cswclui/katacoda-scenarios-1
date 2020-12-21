@@ -18,7 +18,7 @@ In other words, Dev/Prod Parity is about making sure the deployment paths among 
 
 ## What you'll be doing 
 
-In this scenario you'll be working with principle of Dev/prod parity](https://12factor.net/dev-prod-parity) to by installing an instance of Jenkins directly in the Katacoda interactive learning environment and then configure Jenkins to deploy two versions of the screnario's demonstration application, *Secret Society*.
+In this scenario you'll be working with principle of [Dev/prod parity](https://12factor.net/dev-prod-parity) to by installing an instance of Jenkins directly in the Katacoda interactive learning environment and then configure Jenkins to deploy two versions of the screnario's demonstration application, *Secret Society*.
 
 Version 1 of *Secret Society* is a simple web application that emits an HTTP response in JSON that has the name of secret agent, a secret message and some meta data. 
 
