@@ -18,8 +18,17 @@ In other words, Dev/Prod Parity is about making sure the deployment paths among 
 
 ## What you'll be doing 
 
-[TBP]
+In this scenario you'll be working with principle of Dev/prod parity](https://12factor.net/dev-prod-parity) to by installing an instance of Jenkins directly in the Katacoda interactive learning environment and then configure Jenkins to deploy two versions of the screnario's demonstration application, *Secret Society*.
+
+Version 1 of *Secret Society* is a simple web application that emits an HTTP response in JSON that has the name of secret agent, a secret message and some meta data. 
+
+Version 2 of *Secret Society*  has an added an added feature. The new feature is that the JSON will also report the region in which the secret agent operates.
+
 ![Katacoda command line](12factor-010/assets/dev-prod-parity.png)
+
+When you look at the details of this scenario you'll discover that the deployment process for both versions is identical. Any difference that exists is in the configuration settings made in the associated `Jenkinsfile` and `docker-compose.yaml` files that are relevant to the given branch.
+
+Keeping the deployment process identical among version releases and putting the routing information to the target runtime environment in a release specific set of configuration files is the key principle of [Dev/prod parity](https://12factor.net/dev-prod-parity).
 
 You'll be doing the following steps:
 
