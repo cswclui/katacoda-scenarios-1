@@ -19,6 +19,7 @@ In other words, Dev/Prod Parity is about making sure the deployment paths among 
 ## What you'll be doing 
 
 [TBP]
+![Katacoda command line](12factor-010/assets/dev-prod-parity.png)
 
 You'll be doing the following steps:
 
@@ -31,7 +32,7 @@ You'll be doing the following steps:
 
 This scenario is completely interactive. The instructions you'll be given will be executed directly in the terminal window that is embedded directly in the Katacoda interactive learning environment. In the steps to come, when you see a command line instruction with a black background and check mark at the end, like so:
 
-![Katacoda command line](12factor-009/assets/command-01.png)
+![Katacoda command line](12factor-010/assets/command-01.png)
 
 just click on it and the command will execute in the interative terminal window.
 
