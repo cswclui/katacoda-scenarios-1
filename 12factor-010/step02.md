@@ -61,9 +61,9 @@ When you go to the URL you'll be asked to enter the ID value you generated in **
 
 ## Summary
 
-In this lesson you got Jenkins up and running as a Docker container. In the next lesson we're going to create a two Jenkins Pipeline jobs. Each job will run a `Jenkinsfile` script that stored in the GitHub repositories that correlate to the two versions of *Secret Society* that we're going to release according to the 12 Factor App principle of [Dev/Prod Parity](https://12factor.net/dev-prod-parity). Each `Jenkinsfile` script contains the instructions to get the source code for the relevant version of demonstration application, *Secret Society* from GitHub and build that code into a container image. The image is then stored according to a verion number tag in the Local Container Registry that was installed behind the scenes in the Katacoda interactive learning environment.
+In this lesson you got Jenkins up and running as a Docker container. In the next lesson we're going to create two Jenkins Pipeline jobs. Each job will run a `Jenkinsfile` script that's stored in the GitHub repository that correlates to the two versions of *Secret Society* that we're going to release according to the 12 Factor App principle of [Dev/Prod Parity](https://12factor.net/dev-prod-parity). Each `Jenkinsfile` script contains the instructions to clone the source code for the relevant version of the demonstration application, *Secret Society*. Also, the script will build that code into a container image. The image is then stored in the Local Container Registry according to a tag for the particular version. (The Local Container Registry was installed behind the scenes in the Katacoda interactive learning environment at the start of the scenario.
 
 ----
 
 
-***Next: Preparing for the Pipeline Scripts for Multiple Releases**
+**Next: Preparing for the Pipeline Scripts for Multiple Releases**

@@ -1,9 +1,9 @@
 ## Objective
-The objective of this lesson is demonstrate how to demonstrate the principle Dev-Prod Parity by looking that the script and configuration settings two version of the demonstration application, *Secret Society*.
+The objective of this lesson is build an understanding of the principle of [Dev-Prod Parity](https://12factor.net/dev-prod-parity) by looking that the script and configuration settings for the two versions of the demonstration application, *Secret Society*.
 
-The second version of *Secret Society* has a new feature that will report some new data. However, except for the new data, the build, run and release processes for both versions of demonstration application are nearly identical. The same process is used to get process from source control all they through the CI/CD process to a target runtime environment.
+The second version of *Secret Society* has a new feature that will report some new data. However, except for the new data, the `build`, `run` and `release` processes for both versions of the demonstration application are nearly identical. The same process is used to get the code from source control, build it and then move it all the through the CI/CD process to a target runtime environment.
 
-In this lesson you'll be examing the two `Jenkinsfile` pipeline scripts that will be driving the deployment processes the adhere to the Dev-Prod Parity principle of 12 Factor App. (Go [here](https://www.jenkins.io/doc/book/pipeline/syntax/) to learn the structure of a pipeline script in Jenkins.)
+(You can go [here](https://www.jenkins.io/doc/book/pipeline/syntax/) to learn the structure of a pipeline script in Jenkins.)
 
 ## Steps
 
@@ -49,11 +49,11 @@ This Jeninsfile pipeline as five stages, `build service`, `test service`, `relea
 
 **WHERE**
 
-* `build service` clone the code from the branch on the GitHub repo that has `V!` of *Secret Society* and run `npm install` to download the dependencies from the internet.
+* `build service` clone the code from the branch on the GitHub repo that has `V1` of *Secret Society* and runs `npm install` to download the dependencies from the internet.
 * `test service` runs the unit tests that ship with the source code
-* `release service to container repo` build the `docker` image of the *Secret Society* and pushes it the Local Container Repository running inside of the Katacoda interactive learning environment
-* `provision target deployment` installs `docker-compose` which is the runtime provisiong tool for this scenario. (You'd use a provisioning tools such as [Ansible](https://www.ansible.com/) or [Vagrant](https://www.vagrantup.com/) in a "real world" setting.
-* `run service on deployment target` executes `docker-compose up` to create the container relevant to `V1` of *Secret Society* had have it run on the docker network, `US_WEST` at `port` 4000. (Here are the links to the relevant [`Dockerfile`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/app/Dockerfile) and [`docker-compose.yaml`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) files if you want to see th exact details.
+* `release service to container repo` builds a `docker` image of *Secret Society* and pushes it to the Local Container Registry running inside of the Katacoda interactive learning environment
+* `provision target deployment` installs `docker-compose` which is the runtime provisioning tool for this scenario. (You'd use a provisioning tools such as [Ansible](https://www.ansible.com/) or [Vagrant](https://www.vagrantup.com/) in a "real world" setting.
+* `run service on deployment target` executes `docker-compose up` to create the container relevant to the `V1` release of *Secret Society* and have it run on the docker network, `north_america` at `port` 4000. (Here are the links to the relevant [`Dockerfile`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/app/Dockerfile) and [`docker-compose.yaml`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) files if you want to see the exact details.
 
 `Lines 5 - 16` describe the stage `build service`.
 
@@ -65,9 +65,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 `34`{{execute}}
 
-This is the code for the the `release service to container repo` stage
-
-`Lines 24 - 32` is where the pipleine code builds the `docker` image and pushes it into the Local Container Repository at `Line 29`.
+`Lines 24 - 32` are the code for the the `release service to container repo` stage. This is where the pipleine code builds the `docker` image and pushes it into the Local Container Repository at `Line 29`.
 
 Let's go down a bit further in the file:
 
@@ -75,15 +73,17 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 `51`{{execute}}
 
-`Lines 34 - 39` is the stage, `provision target deployment` where `docker-compose` is installed in the pipeline environment for this Jenkis job.
+`Lines 34 - 39` is the stage, `provision target deployment` where `docker-compose` is installed in the pipeline environment for this Jenkins job.
 
-`Lines 41 - 57` is the stage, `run service on deployment target` where the command `docker-compose up` is run. Running the command will make is it so that docker-compose createa a container for the docker image, `secretagent:v1` and runs it in a docker network named, `north_america` as defined in the file, [`docker-compose.yaml`](vhttps://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) under the `port` 4000, which is exposed to the Jenkins pipeline script.
+`Lines 41 - 57` is the stage, `run service on deployment target` where the command `docker-compose up` is run. Running the command will make is it so that `docker-compose` creates a container for the docker image, `secretagent:v1` and runs it in a docker network named, `north_america` as defined in the file, [`docker-compose.yaml`](vhttps://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) under the `port` 4000, which is exposed to the Jenkins pipeline script.
 
 You'll notice the pipeline script calls `wget -O- http://localhost:4000` that at `Line 46`,
 
-**The important thing to notice** about the `Jenkinfile` pipeline script is tahat the only thing that is special is the information relevant to the `V1` release of *Secret Society*. For example, the call to the branch `10-dev-prod-parity.0.0.1` on GitHub at `Line 7` and building the `docker` image using the tag `secretagent:v1` at `Line 27`.
+**The important thing to notice** that the only thing special in the `Jenkinfile` pipeline script is the information that is relevant to the `V1` release of *Secret Society*. For example, the call to the branch `10-dev-prod-parity.0.0.1` on GitHub at `Line 7` and building the `docker` image using the tag `secretagent:v1` at `Line 27`.
 
-All the other code is part of the deployment logic. Next, well look at the `Jenkinsfile` for `V2` of of *Secret Society*. You'll the only difference is the branch in GitHub from where the source code will be cloned and the tag name of the `docker` image the pipeline will build. All the other information that is special the release is in the [`docker-compose.yaml`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.2/docker-compose.yaml) file. 
+All the other code is part of the deployment logic.
+
+Next, well look at the `Jenkinsfile` for `V2` of of *Secret Society*. You'll see that the only difference is the branch in GitHub from where the source code will be cloned and the tag name of the `docker` image the pipeline will build. All the other information that is special the release is in the [`docker-compose.yaml`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.2/docker-compose.yaml) file. 
 
 
 **Step 5:** Get out of `vi` line numbered view mode
