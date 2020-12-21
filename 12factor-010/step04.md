@@ -17,6 +17,8 @@ One job, which will have the title, `secret_society_v1` will bind the source cod
 
 The title of the second pipeline job is `secret_society_v2`. The second pipeline job will bind the the same source code repository in GitHub as the first pipeline job. However, the second pipeline job, `secret_society_v2` will bind to the branch `10-dev-prod-parity.0.0.2`. This branch has the source code for the `V2` version of *Secrety Society*.
 
+![Jenkins Pipeline](12factor-010/assets/jenkins-pipeline.png)
+
 You'll run each job to get a sense of how parallel deplopyments work. You'll notice that the process for deploying *Secrety Society* is identical in each Jenkins pipeline job. The difference between jobs is determined by the configuration settings defined the `Jenkinsfile` and `docker-compose.yaml` files in each branch. This pattern of parallel deployments is the essence of Dev-Prod Parity.
 
 The video shown below describes the tasks that need to be done in Jenkins in order to create the two pipeline jobs.
