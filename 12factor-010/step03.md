@@ -53,7 +53,7 @@ This Jeninsfile pipeline as five stages, `build service`, `test service`, `relea
 * `test service` runs the unit tests that ship with the source code
 * `release service to container repo` builds a `docker` image of *Secret Society* and pushes it to the Local Container Registry running inside of the Katacoda interactive learning environment
 * `provision target deployment` installs `docker-compose` which is the runtime provisioning tool for this scenario. (You'd use a provisioning tools such as [Ansible](https://www.ansible.com/) or [Vagrant](https://www.vagrantup.com/) in a "real world" setting.
-* `run service on deployment target` executes `docker-compose up` to create the container relevant to the `V1` release of *Secret Society* and have it run on the docker network, `north_america` at `port` 4000. (Here are the links to the relevant [`Dockerfile`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/app/Dockerfile) and [`docker-compose.yaml`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) files if you want to see the exact details.
+* `run service on deployment target` executes `docker-compose up` to create the container relevant to the `V1` release of *Secret Society* and have it run on the docker network, `dev_network` at `port` 4000. (Here are the links to the relevant [`Dockerfile`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/app/Dockerfile) and [`docker-compose.yaml`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) files if you want to see the exact details.
 
 `Lines 5 - 16` describe the stage `build service`.
 
@@ -75,7 +75,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 `Lines 34 - 39` is the stage, `provision target deployment` where `docker-compose` is installed in the pipeline environment for this Jenkins job.
 
-`Lines 41 - 57` is the stage, `run service on deployment target` where the command `docker-compose up` is run. Running the command will make is it so that `docker-compose` creates a container for the docker image, `secretagent:v1` and runs it in a docker network named, `north_america` as defined in the file, [`docker-compose.yaml`](vhttps://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) under the `port` 4000, which is exposed to the Jenkins pipeline script.
+`Lines 41 - 57` is the stage, `run service on deployment target` where the command `docker-compose up` is run. Running the command will make is it so that `docker-compose` creates a container for the docker image, `secretagent:v1` and runs it in a docker network named, `dev_network` as defined in the file, [`docker-compose.yaml`](vhttps://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) under the `port` 4000, which is exposed to the Jenkins pipeline script.
 
 You'll notice the pipeline script calls `wget -O- http://localhost:4000` that at `Line 46`,
 
@@ -125,7 +125,7 @@ and then enter:
 
 Take a look around the `Jenkinsfile`. Notice that except for  navigating to  a different branch on GitHub and using a different `tag` when creating the `docker` image for the deployment, the pipeline script in the `Jenkinsfile` for `V2` is the same as the pipeline script in `V1`.
 
-As mentioned above, keep processes identical is a key concept of the principle of [Dev/Prod Parity](https://12factor.net/dev-prod-parity) in 12 Factor App.
+As mentioned above, keeping processes identical is a key concept of the principle of [Dev/Prod Parity](https://12factor.net/dev-prod-parity) in 12 Factor App.
 
 **Step 10:** Get out of `vi` line numbered view mode
 
