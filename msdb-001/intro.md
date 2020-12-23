@@ -10,7 +10,7 @@
 
 You'll be doing the following steps:
 
-* **Step 1:** Installing the Lesson Code
+* **Step 1:** Installing the Lab Code
 * **Step 2:** Examining the Code
 * **Step 3:** Running the Code as a Microservice
 * **Step 4:** Making the Microservice Transportable

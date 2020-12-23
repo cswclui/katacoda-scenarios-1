@@ -5,7 +5,7 @@
   "time": "15 minutes",
   "details": {
     "steps": [{
-        "title": "Installing the Lesson Code",
+        "title": "Installing the Lab Code",
         "text": "step01.md"
       },
       {
