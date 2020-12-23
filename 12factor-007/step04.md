@@ -15,15 +15,15 @@ You should see the following output:
 
 **Step 2:** Open the `docker-compose.yaml` source code in `vi`.
 
-`vi docker-compose.yaml`{{execute T1}}}
+`vi docker-compose.yaml`{{execute T1}}
 
 **Step 3:** Turn on the line numbering the `vi` editor:
 
-Press the ESC key: `^ESC`{{execute ctrl-seq T1}}}
+Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
 
 and then enter:
 
-`:set number`{{execute T1}}}
+`:set number`{{execute T1}}
 
 The port settings in *Food Court* for the `customer` service are declared at `Lines 6 - 7`. The environment variable `APP_PORT` declares the port that the `customer` web server will listen for incoming requests. The environment variable `RESTAURANT_PORT` declares the port to where `customer` will a send HTTP request to restaurant.
 
