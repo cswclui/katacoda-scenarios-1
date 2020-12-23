@@ -81,7 +81,7 @@ Let's take a look at the webserver code that's driving microservice.
 
 **Step 4:** Open the file `index.js` source code in `vi`.
 
-`vi index.js`{{execute }}
+`vi index.js`{{execute}}
 
 **Step 5:** Turn on the line numbering the `vi` editor:
 
@@ -91,17 +91,45 @@ and then enter:
 
 `:set number`{{execute}}
 
-[DISCUSSION]
+`Line 8` has an important line of code. That line imports the function, `getRandomFortune()` from the `dataManager` module. `getRandomFortune()` has logic that goes into the text file,`fortunes.txt` and selects a random line of code to return to the function's caller.
 
-**Step 6:** Get out of `vi` line numbered view mode
+Deliverying that one line of text is the sole responsibility of the microservice. And, that text comes from the unique data that the service carries.
+
+Let's go and see how `getRandomFortune()` is used in the server.
+
+**Step 6:** Go to down in the webserver code.
 
 Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
-**Step 7:** Exit `vi`
+`:38`{{execute}}
+
+`Lines 29 - 34` is where the actual work is done to deliver the fortune to the caller of the API. Notice when an HTPP request is made at the `/` entry point to the API the webserver code calls `getRandomFortune()` and returns the retrieved fortune as a string to the `response` the correlates to the `request`.
+
+The implementation is simple but it's effective. The microservice does one thing and one thing only. And, it uses data that is confined to the microservice.
+
+Press the ESC key: `^ESC`{{execute ctrl-seq}}
+
+`:38`{{execute}}
+
+**Step 7:** Get out of `vi` line numbered view mode
+
+Press the ESC key: `^ESC`{{execute ctrl-seq}}
+
+**Step 8:** Exit `vi`
 
 `:q!`{{execute}}
 
 You have exited `vi`.
+
+## Summary
+
+The important idea is this lesson in terms of database design for microservices is to understand that an essential principle of microservices is that a microservice carries its own data. In this case we saw how the microservice's data was stored in file, `fortunes.txt`.
+
+## SOMETHING TO THINK ABOUT
+
+If an essential principle of data design for microservices is that a microservice carries its own data, how can we get a microservice to scale into thousands of instances and yet provide data reliably. Running a lot of instances of the microservice using a text file for each service instance will work for trivial demonstration purposes, but in a production enviornment the burden of data access, even a read scenario, can be overwhelming.
+
+***How can we apply the principle that a microservice carries its own data the "real world"?***
 
 ---
 
