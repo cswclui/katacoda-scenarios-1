@@ -50,7 +50,7 @@ You'll get the following output:
 └── index.js
 
 ```
-The text file, `fortunes.txt` has the data which the microservice provides to services webserver. The file, `index.js` contains the logic that retrieves data from the text file, `fortunes.`
+The text file, `fortunes.txt` has the data which the microservice provides to the microservice's webserver. The file, `index.js` contains the logic that retrieves data from the text file, `fortunes.`
 
 Let's take a look at some of the data in `fortunes.txt`.
 
@@ -103,9 +103,9 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 `:38`{{execute}}
 
-`Lines 29 - 34` is where the actual work is done to deliver the fortune to the caller of the API. Notice when an HTPP request is made at the `/` entry point to the API the webserver code calls `getRandomFortune()` and returns the retrieved fortune as a string to the `response` the correlates to the `request`.
+`Lines 29 - 34` is where the actual work is done to deliver the fortune to the caller of the API. Notice when an HTTP request is made at the `/` entry point to the API the webserver code calls `getRandomFortune()` and returns the retrieved `fortune` in JSON format as a`response` to the `request`.
 
-The implementation is simple but it's effective. The microservice does one thing and one thing only. And, it uses data that is confined to the microservice.
+The implementation is simple but it's effective. The microservice does one thing and one thing only. And, it uses data that's confined to the contextual boundary of the microservice.
 
 Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
@@ -127,9 +127,9 @@ The important idea is this lesson in terms of database design for microservices 
 
 ## SOMETHING TO THINK ABOUT
 
-If an essential principle of data design for microservices is that a microservice carries its own data, how can we get a microservice to scale into thousands of instances and yet provide data reliably. Running a lot of instances of the microservice using a text file for each service instance will work for trivial demonstration purposes, but in a production enviornment the burden of data access, even a read scenario, can be overwhelming.
+If an essential principle of data design for microservices is that a microservice carries its own data, how can we get a microservice to scale into thousands of instances and yet provide data reliably. Running a lot of instances of the microservice using a text file for each service instance will work for trivial demonstration purposes, but in a production enviornment the burden of data access, even in a read scenario, can be overwhelming.
 
-***How can we apply the principle that a microservice carries its own data the "real world"?***
+***How can we apply the principle that a microservice carries its own data to "real world" situations?***
 
 ---
 

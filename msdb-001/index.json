@@ -5,7 +5,7 @@
   "time": "15 minutes",
   "details": {
     "steps": [{
-        "title": "Installing the Lab Code",
+        "title": "Installing the Lab Code from GitHub",
         "text": "step01.md"
       },
       {
