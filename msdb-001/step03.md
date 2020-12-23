@@ -1,9 +1,38 @@
 ## Objective
-The objective of this lesson is demonstrate how to [TO BE PROVIDED]
+The objective of this lesson is get the *Fortunes* microservice up and running and then to make some calls on it via `HTTP GET`.
 
 ## Steps
 
-[TO BE PROVIDED]
+**Step 1:** confirm you're in the microservice's working directory.
+
+`cd ~/simplemicroservice`{{execute}}
+
+`clear && pwd`{{execute}}
+
+You get the following output:
+
+
+`/root/simplemicroservice`
+
+**Step 2:** In a second terminal window, start the microservice:
+
+`node index.js`{{execute T2}}
+
+
+**Step 3:** In the first terminal window Call the microservice 20 times using `curl`.
+
+`for i in {1..20}; do curl localhost:3000 -w "\n"; done`{{execute T1}}
+
+You'll see output similar to the following:
+
+```
+TBP
+
+```
+
+## Summary
+
+Being able to run the microservice from the command line proves that the microservice is **discrete** and **emphemeral** but it has limited value in terms of supporting the  principle that a microservice is **transportable**. The next lesson is where we'll demonstrate how to make the microservice tranportable by making it so it can be run in a [Docker container](https://en.wikipedia.org/wiki/Docker_%28software%29).
 
 ---
 
