@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is demonstrate how to [TO BE PROVIDED]
+The objective of this lesson is learn about how to provide application configuration information as part of an application's common code base in accordance with the Configuration princple of The 12 Factor App. 
 
 ## Key Concept: 12 Factor App - Configuration
 A key concept in the third principle of 12 Factor App is configuration for the application is stored in along with the application in the common repository.
