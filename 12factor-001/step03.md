@@ -2,9 +2,9 @@
 The objective of this lesson is demonstrate how to view and install the external dependencies that the lab's application requires.
 
 ## Key Concept: 12 Factor App - Dependencies
-A key concept in the second principle of 12 Factor App is that all independent code modules and libraries are listed as dependencies of the application and installed with the main application needs them at runtime, either for testing or general operation.
+A key concept in the second principle of the 12 Factor App is that all independent code modules and libraries are listed as dependencies of the application and installed when the main application needs them at runtime, either for testing or general operation.
 
-We're going to cover Dependencies in depth in upcoming labs, but for now the important thing to understand is that the lab's application has external dependencies and they will be installed now.
+We're going to cover Dependencies in-depth in upcoming labs, but for now, the important thing to understand is that the lab's application has external dependencies, and they will be installed now.
 
 ## Steps
 
@@ -24,7 +24,7 @@ You should see the following output:
 
 `1-codebase.0.0.1`
 
-**Step 3:** View the file, `package.json` which is this list of Node.Js dependencies the application requires.
+**Step 3:** View the file, `package.json` which is the list of Node.Js dependencies the application requires.
 
 `clear && cat package.json`{{execute}}
 
