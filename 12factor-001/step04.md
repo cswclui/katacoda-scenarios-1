@@ -16,7 +16,7 @@ You should see the following output:
 
 `/root/12factor`
 
-If you are not in that working director, execute the following command: `cd /root/12factor`{{execute}}.
+If you are not in that working directory, execute the following command: `cd /root/12factor`{{execute}}.
 
 **Step 2:** Open the application code in the `vi` editor.
 
@@ -65,7 +65,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 You have exited `vi`.
 
-Now that you have a basic understanding the code for the lab's demonstration application, we'll move on and look at how the runtime environment variable `PINGER_PORT` is set a configuration file.
+Now that you have a basic understanding of the code for the lab's demonstration application, we'll move on and look at how the runtime environment variable `PINGER_PORT` is set in the configuration file.
 
 ---
 
