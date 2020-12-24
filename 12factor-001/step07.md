@@ -24,11 +24,17 @@ You will see the following output:
 
 **Step 3:** In a second terminal window call the web server using the `curl` command
 
-`curl http:localhost:3030`{{execute T2}}
+`curl http://localhost:3030`{{execute T2}}
 
 You will see the following output:
 
-
+```
+{
+    "appName": "Pinger",
+    "currentTime": "2020-12-24T16:04:38.215Z",
+    "PINGER_PORT": "3030"
+}
+```
 
 Notice that the webserver is running on the port defined by environment variable, `PINGER_PORT` as declared in the configuration file, `.env`. 
 
