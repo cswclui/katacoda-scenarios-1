@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is demonstrate how to [TO BE PROVIDED]
+The objective of this lesson is demonstrate how to [TO BE PROVIDED] <WHAT GOES HERE?>
 
 ## Key Concept: 12 Factor App - Configuration
 A key concept in the third principle of 12 Factor App is configuration for the application is stored in along with the application in the common repository.
