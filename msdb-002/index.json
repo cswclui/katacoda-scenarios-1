@@ -1,6 +1,6 @@
 {
   "title": "Microservice Database Design: 2-Examining a Single Source Database Architecture",
-  "description": "Learn the shortcomings of using a single source database architecture in web-scale microservice",
+  "description": "Learn the shortcomings of using a single source database architecture in a web-scale microservice",
   "difficulty": "General understanding of structured programming, git, reading knowledge of TypeScript and the fundamentals of databases and data structures",
   "time": "15 minutes",
   "details": {
