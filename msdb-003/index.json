@@ -1,23 +1,23 @@
 {
-  "title": "Microservice Database Design: 1-The Essential Principles",
-  "description": "Learn the essential design princple of database design for a microservice",
-  "difficulty": "General understanding of structured programming, git, Docker containers, and reading knowledge of Node.js",
+  "title": "Microservice Database Design: 3-Implementing the CQRS Pattern",
+  "description": "Learn how to to work with data sources under CQRS",
+  "difficulty": "General understanding of structured programming, git, reading knowledge of TypeScript and the fundamentals of databases and data structures",
   "time": "15 minutes",
   "details": {
     "steps": [{
-        "title": "Installing the Lab Code from GitHub",
+        "title": "Cloning the Code from GitHub",
         "text": "step01.md"
       },
       {
-        "title": "Examining the Code",
+        "title": "Getting the Code Up and Running",
         "text": "step02.md"
       },
       {
-        "title":  "Running the Code as a Microservice",
+        "title": "TO BE PROVIDED C",
         "text": "step03.md"
       },
       {
-        "title": "Making the Microservice Transportable",
+        "title": "TO BE PROVIDED C",
         "text": "step04.md"
       }
     ],
