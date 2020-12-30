@@ -7,4 +7,4 @@ The objective of this lesson is examine a single source data architecture and di
 
 ---
 
-***Next: TO BE PROVIDED***
+***Next: Identifying opportunities for improvement***
