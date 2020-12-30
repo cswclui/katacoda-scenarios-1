@@ -94,11 +94,25 @@ You'll get output similar to the following:
 
 **Step XX:**  Install the Kafka command line tool:
 
-`npm install -g kafka-console`{{execute}}
+`npm install -g kafka-cli`{{execute}}
 
 **Step XX:**  Take a look at the messages on the topic, ``
 
-`kcli consume $KAFKA_TOPIC | jq .value`{{execute}}
+`kfk consumer`{{execute}}
+
+`localhost:9092`{{execute}}
+
+`OnNewOrder`{{execute}}
+
+`0`{{execute}}
+
+You get output similar to the following:
+
+```
+
+TBP
+
+```
 
 
 ---
