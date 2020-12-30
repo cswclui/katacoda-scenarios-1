@@ -11,7 +11,7 @@ You'll get the following output:
 
 `/root/simplecqrs`
 
-**Step 2:** Install the applications dependencies
+**Step 2:** Install the application's dependencies
 
 `npm install`{{execute T1}}
 

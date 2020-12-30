@@ -19,8 +19,8 @@ The objective of this lesson is demonstrate how to clone from GitHub the project
 You'll see output as follows:
 
 ```
-Branch 03-implement-event-driven-architecture.0.0.1 set up to track remote branch 03-implement-event-driven-architecture.0.0.1 from origin.
-Switched to a new branch '03-implement-event-driven-architecture.0.0.1'
+Branch 02-implement-read-write-datasources.0.0.1 set up to track remote branch 02-implement-read-write-datasources.0.0.1 fromorigin.
+Switched to a new branch '02-implement-read-write-datasources.0.0.1'
 
 ```
 

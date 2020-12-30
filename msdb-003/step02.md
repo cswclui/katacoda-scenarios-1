@@ -11,7 +11,7 @@ You'll get the following output:
 
 `/root/simplecqrs`
 
-**Step 2:** Install the applications dependencies
+**Step 2:** Install the application's dependencies
 
 `npm install`{{execute T1}}
 
@@ -20,9 +20,9 @@ You'll get output similar to the following:
 ```
 .
 .
-added 293 packages from 643 contributors and audited 294 packages in 13.9s
+added 310 packages from 693 contributors and audited 312 packages in 13.596s
 
-23 packages are looking for funding
+26 packages are looking for funding
   run `npm fund` for details
 
 found 0 vulnerabilities
