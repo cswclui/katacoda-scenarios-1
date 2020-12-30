@@ -20,9 +20,9 @@ You'll get output similar to the following:
 ```
 .
 .
-added 293 packages from 643 contributors and audited 294 packages in 13.9s
+added 387 packages from 740 contributors and audited 391 packages in 17.259s
 
-23 packages are looking for funding
+27 packages are looking for funding
   run `npm fund` for details
 
 found 0 vulnerabilities
@@ -74,7 +74,7 @@ https://[[HOST_SUBDOMAIN]]-9001-[[KATACODA_HOST]].environments.katacoda.com/orde
 
 You'll get output similar to the following:
 
-![orders output](msdb-03/assets/orders.png)
+![orders output](msdb-003/assets/orders.png)
 
 ---
 

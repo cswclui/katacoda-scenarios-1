@@ -8,7 +8,7 @@
 
 [TO BE PROVIDED]
 
-![Basic CQRS](msdb-004/assets/CQRS-basic.png)
+![Basic CQRS](msdb-003/assets/CQRS-basic.png)
 
 You'll be doing the following steps:
 
