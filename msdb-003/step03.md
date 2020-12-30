@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is demonstrate how to [TO BE PROVIDED]
+The objective of this lesson is analyze the demonstration application to learn how it supports the Command Query Responsibility pattern.
 
 ## Steps
 
