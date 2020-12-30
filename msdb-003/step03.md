@@ -22,7 +22,7 @@ Notice that there are `customer` and `order` tables, but the structured in terms
 
 `curl -O https://downloads.mongodb.com/compass/mongosh-0.6.1-linux.tgz`{{execute}}
 
-`mv mongosh-0.6.1-linux.tgz ../mongosh-0.6.1-linux.tgz`
+`mv mongosh-0.6.1-linux.tgz ../mongosh-0.6.1-linux.tgz`{{execute}}
 
 `cd .. && tar -xf mongosh-0.6.1-linux.tgz`{{execute}}
 
