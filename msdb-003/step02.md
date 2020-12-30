@@ -39,7 +39,7 @@ found 0 vulnerabilities
 
 **Step 5:** Export the environment variable that declares URL on which the read source is running. (We'll cover the reasoning behind using separate read and write datasources in the following lessons.)
 
-`MONGODB_URL=mongodb://localhost:27017/simplecqrs_r`{{execute T1}}
+`export MONGODB_URL=mongodb://localhost:27017/simplecqrs_r`{{execute T1}}
 
 **Step 6:** Start the application
 
