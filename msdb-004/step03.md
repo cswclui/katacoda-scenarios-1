@@ -94,12 +94,10 @@ You'll get output similar to the following:
 
 **Step XX:**  Install the Kafka command line tool:
 
-`npm install -g kafka-cli`{{execute}}
+`npm install -g kafka-cli`{{execute T2}}
 
 **Step XX:**  Take a look at the messages on the topic:
 
-
-`npm install -g kafka-cli`{{execute T2}}
 
 `kfk consumer`{{execute T2}}
 
@@ -112,8 +110,27 @@ You'll get output similar to the following:
 You get output similar to the following:
 
 ```
+.
+.
 
-TBP
+{
+  topic: 'OnNewOrder',
+  value: '{"description":"repellendus aut et eaque","email":"Alexanne.Glover@augusta.biz","eventName":"OnNewOrder","firstName":"Alexanne","lastName":"Glover","orderId":"0a506ec8-17c8-4260-ab33-ce145cc7a233","quantity":6}',
+  offset: 0,
+  partition: 0,
+  highWaterOffset: 10,
+  key: '0a506ec8-17c8-4260-ab33-ce145cc7a233'
+}
+{
+  topic: 'OnNewOrder',
+  value: '{"description":"ipsam consequatur ipsam est","email":"Tracy.Hilpert@michele.info","eventName":"OnNewOrder","firstName":"Tracy","lastName":"Hilpert","orderId":"24ad3aa1-bf2e-46c6-a746-956de48737cb","quantity":1}',
+  offset: 1,
+  partition: 0,
+  highWaterOffset: 10,
+  key: '24ad3aa1-bf2e-46c6-a746-956de48737cb'
+}
+.
+.
 
 ```
 
