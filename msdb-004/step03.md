@@ -92,6 +92,14 @@ You'll get output similar to the following:
 
 `exit`{{execute}}
 
+**Step XX:**  Install the Kafka command line tool:
+
+`npm install -g kafka-console`{{execute}}
+
+**Step XX:**  Take a look at the messages on the topic, ``
+
+`kcli consume $KAFKA_TOPIC | jq .value`{{execute}}
+
 
 ---
 
