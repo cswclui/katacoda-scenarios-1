@@ -8,7 +8,7 @@ The objective of this lesson is to examine an example of an web application that
 
 In this lesson you're going to get a install and run a simple microservice that manages `order` information. The demonstration microservice writes and reads data to a single data source.
 
-![Katacoda command line](msdb-002/assets/CQRS-old-school.jpg)
+![Single Data Source Architecture](msdb-002/assets/CQRS-old-school.jpg)
 
 While not an optimal approach to data management as web-scale, having insight into single source data architecture is worth taking the time to understand.
 
