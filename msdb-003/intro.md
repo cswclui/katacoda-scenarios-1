@@ -11,7 +11,7 @@
 You'll be doing the following steps:
 
 * **Step 1:** Installing the lesson code
-* **Step 2:** TBP
+* **Step 2:** Getting the code up and running
 * **Step 3:** TBP
 * **Step 4:** TBP
 
