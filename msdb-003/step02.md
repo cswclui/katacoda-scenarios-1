@@ -20,9 +20,9 @@ You'll get output similar to the following:
 ```
 .
 .
-added 387 packages from 740 contributors and audited 391 packages in 17.259s
+added 293 packages from 643 contributors and audited 294 packages in 13.9s
 
-27 packages are looking for funding
+23 packages are looking for funding
   run `npm fund` for details
 
 found 0 vulnerabilities
