@@ -33,7 +33,7 @@ found 0 vulnerabilities
 
 `docker-compose up -d`{{execute T1}}
 
-**Step 3:** Export the environment variable that declare the port on which the application is to run.
+**Step 3:** Export the environment variable that declares the port on which the application is to run.
 
 `export APP_PORT=9001`{{execute T1}}
 
