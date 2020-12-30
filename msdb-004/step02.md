@@ -33,6 +33,23 @@ found 0 vulnerabilities
 
 `docker-compose -f docker-compose-debug.yml up -d`{{execute T1}}
 
+Confirm that the containers are running:
+
+`docker ps -a`{{execute T1}}
+
+You'll get output similar to the following:
+
+```
+CONTAINER ID        IMAGE                         COMMAND                  CREATED              STATUS              PORTS                                        NAMES
+db48e703510b        confluentinc/cp-kafka:5.3.0   "/etc/confluent/dock…"   About a minute ago   Up About a minute   0.0.0.0:9092->9092/tcp                       simplecqrs_kafka2_1
+e1c27560c295        zookeeper:3.4.9               "/docker-entrypoint.…"   About a minute ago   Up About a minute   2888/tcp, 0.0.0.0:2181->2181/tcp, 3888/tcp   simplecqrs_zookeeper_1
+b547d11c26d6        mariadb                       "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3306->3306/tcp                       simplecqrs_mariadb_1
+e99cc6537575        mongo:latest                  "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:27017->27017/tcp                     mongodb
+455588dc4fdb        adminer                       "entrypoint.sh docke…"   About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp                       simplecqrs_adminer_1
+ece24fb49365        registry:2                    "/entrypoint.sh /etc…"   2 minutes ago        Up 2minutes    
+
+```
+
 **Step 4:** Export the environment variable that declares the port on which the application is to run.
 
 `export APP_PORT=9001`{{execute T1}}

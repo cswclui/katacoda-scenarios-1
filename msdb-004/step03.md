@@ -96,15 +96,18 @@ You'll get output similar to the following:
 
 `npm install -g kafka-cli`{{execute}}
 
-**Step XX:**  Take a look at the messages on the topic, ``
+**Step XX:**  Take a look at the messages on the topic:
 
-`kfk consumer`{{execute}}
 
-`localhost:9092`{{execute}}
+`npm install -g kafka-cli`{{execute T2}}
 
-`OnNewOrder`{{execute}}
+`kfk consumer`{{execute T2}}
 
-`0`{{execute}}
+`localhost:9092`{{execute T2}}
+
+`OnNewOrder`{{execute T2}}
+
+`0`{{execute T2}}
 
 You get output similar to the following:
 
