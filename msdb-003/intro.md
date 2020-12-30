@@ -8,6 +8,8 @@
 
 [TO BE PROVIDED]
 
+![Basic CQRS](msdb-004/assets/CQRS-basic.png)
+
 You'll be doing the following steps:
 
 * **Step 1:** Installing the lesson code
