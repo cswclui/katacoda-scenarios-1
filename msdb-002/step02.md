@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is get the lab's source code up and running.
+The objective of this lesson is get the lab's source code up and running, seed the application with dagta and then check to make sure that the data seeding was successful.
 
 ## Steps
 
