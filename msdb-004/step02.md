@@ -31,7 +31,7 @@ found 0 vulnerabilities
 
 **Step 3:** Install the application's backing servicew which are a single relational database, [`MariaDB`](https://mariadb.org/), a document database, [`MongoDB`](https://www.mongodb.com/2) and the [`Apache Kafka`](https://kafka.apache.org/) message broker. All the backing services throughout the lessons will run as an aggregation of containers under [`docker-compose`](https://docs.docker.com/compose/).
 
-`docker-compose up -d`{{execute T1}}
+`docker-compose -f docker-compose-debug.yml up -d`{{execute T1}}
 
 **Step 4:** Export the environment variable that declares the port on which the application is to run.
 
