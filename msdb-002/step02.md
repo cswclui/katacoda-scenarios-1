@@ -49,6 +49,21 @@ You'll get the following output
 
 `cd simplecqrs && npm run seed`{{execute T2}}
 
+You'll get output similar to the following:
+
+```
+Seeded {"count":0,"customerEmail":"Katheryn.Batz@nels.info","customerFirstName":"Katheryn","customerLastName":"Batz","description":"eum sit atque earum"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
+Seeded {"count":8,"customerEmail":"Lavonne.Kemmer@adolph.com","customerFirstName":"Lavonne","customerLastName":"Kemmer","description":"veritatis voluptas sint repellat"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
+Seeded {"count":7,"customerEmail":"Christop.Kilback@myrna.org","customerFirstName":"Christop","customerLastName":"Kilback","description":"aut rerum quas hic"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
+Seeded {"count":8,"customerEmail":"Cielo.O'Hara@janet.info","customerFirstName":"Cielo","customerLastName":"O'Hara","description":"explicabo aut ut dicta"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
+Seeded {"count":7,"customerEmail":"Abbigail.Welch@murl.name","customerFirstName":"Abbigail","customerLastName":"Welch","description":"aliquid iste aspernatur natus"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
+Seeded {"count":10,"customerEmail":"Henriette.DuBuque@ezra.org","customerFirstName":"Henriette","customerLastName":"DuBuque","description":"voluptatem nihil unde ut"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
+Seeded {"count":2,"customerEmail":"Vivianne.Dibbert@westley.org","customerFirstName":"Vivianne","customerLastName":"Dibbert","description":"nemo est id molestiae"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
+Seeded {"count":9,"customerEmail":"Hallie.Thiel@collin.info","customerFirstName":"Hallie","customerLastName":"Thiel","description":"cupiditate saepe dolores reprehenderit"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
+Seeded {"count":7,"customerEmail":"Stephanie.Jones@martine.net","customerFirstName":"Stephanie","customerLastName":"Jones","description":"dolorum beatae repellendus nesciunt"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
+Seeded {"count":2,"customerEmail":"Sarah.Hyatt@joannie.net","customerFirstName":"Sarah","customerLastName":"Hyatt","description":"inventore consequatur qui aut"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
+```
+
 **Step 6:** Click the following link to verify that the data seeding has been successful.
 
 https://[[HOST_SUBDOMAIN]]-9001-[[KATACODA_HOST]].environments.katacoda.com/orders
@@ -57,4 +72,4 @@ https://[[HOST_SUBDOMAIN]]-9001-[[KATACODA_HOST]].environments.katacoda.com/orde
 
 ---
 
-***Next: TO BE PROVIDED***
+***Next: Analyzing the Application***
