@@ -1,8 +1,8 @@
-**Congratulations!** You've completed the scenario, ***XXXX***
+**Congratulations!** You've completed the scenario that describes a more advanced example of the Command Query Responsibility Segregation (CQRS) pattern that takes a event-driven approach to data management.
+The interactive scenario you:
 
-The interactive scenario learned how to:
 
-* AAAA
-* BBBB
-* CCCC
-* DDDD
+* Installed the lesson code
+* Got the code up and running
+* Analyzed the application
+* Identified opportunities for improvement

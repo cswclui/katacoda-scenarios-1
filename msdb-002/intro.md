@@ -2,11 +2,15 @@
 
 ## Objective
 
-[TO BE PROVIDED]
+The objective of this lesson is to examine an example of an web application that takes a single source approach to data architecture.
 
-## What you'll be doing 
+## What you'll be doing
 
-[TO BE PROVIDED]
+In this lesson you're going to get a install and run a simple microservice that manages `order` information. The demonstration microservice writes and reads data to a single data source.
+
+![Katacoda command line](msdb-001/assets/CQRS-old-school.jpg)
+
+While not an optimal approach to data management as web-scale, having insight into single source data architecture is worth taking the time to understand.
 
 You'll be doing the following steps:
 
@@ -19,7 +23,7 @@ You'll be doing the following steps:
 
 This scenario is completely interactive. The instructions you'll be given will be executed directly in the terminal window that is embedded directly in the Katacoda interactive learning environment. In the steps to come, when you see a command line instruction with a black background and check mark at the end, like so:
 
-![Katacoda command line](12factor-010/assets/command-01.png)
+![Katacoda command line](msdb-002/assets/command-01.png)
 
 just click on it and the command will execute in the interative terminal window.
 
