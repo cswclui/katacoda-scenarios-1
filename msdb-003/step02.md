@@ -47,7 +47,12 @@ found 0 vulnerabilities
 
 You'll get the following output
 
-`server is listening on 9001`
+```
+connected
+Read database connected at Wed Dec 30 2020 04:12:31 GMT+0000 (Coordinated Universal Time)
+server is listening on 9001
+
+```
 
 **Step 7:** In a second terminal window, seed the application with data
 
