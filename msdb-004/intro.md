@@ -6,6 +6,8 @@
 
 ## What you'll be doing 
 
+![Event Driven Architecture](msdb-004/assets/CQRS-basic-mediator.png)
+
 [TO BE PROVIDED]
 
 You'll be doing the following steps:
