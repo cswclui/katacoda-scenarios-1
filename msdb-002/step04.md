@@ -9,7 +9,7 @@ The objective of this lesson is to examine the shortcoming that is inherent when
 
 **Step 2:** Open the application's TypeScript source code in the `vi` editor.
 
-`vi src/app.ts{{execute T2}}
+`vi src/app.ts`{{execute T2}}
 
 **Step 3:** Turn on the line numbering the `vi` editor:
 
