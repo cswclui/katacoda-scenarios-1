@@ -2,15 +2,34 @@
 
 ## Objective
 
-[TO BE PROVIDED]
+The objective of this scenario is to implement and analyze a simple example of the  Command Query Responsibility Segregation pattern.
 
 ## What you'll be doing 
 
-[TO BE PROVIDED]
+In this scenario you'll work with a demonstration microservice that allows users to save and view `orders`.
+
+An `order` is a data structure as follows:
+
+```
+{
+  id: uuid,
+  description: string
+  quanity: number,
+  firstName: string,
+  lastName: string,
+  email: string
+}
+
+```
+
+In this scencario we'll `order` management will be separated into two data sources. One data source will accept and store `write` data. The other data source will store and publish `read` data. Separating `write` from `read` is the essential concept driving the CQRS pattern.
 
 ![Basic CQRS](msdb-003/assets/CQRS-basic.png)
 
-You'll be doing the following steps:
+The `order` described above serves as a input data into the microservce. However, as we examine the microservice, we'll find that there is not only the `order` described above, but also another `order` structure that is used internally in the microservice. This disparity between the two `order` structures is an example of problem of defining data structures according to context boundary. (We'll look at this issue when we analyze the microservice.) 
+
+
+In this scenario you'll be doing the following steps:
 
 * **Step 1:** Installing the lesson code
 * **Step 2:** Getting the code up and running
