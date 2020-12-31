@@ -68,8 +68,12 @@ Seeded {"count":2,"customerEmail":"Sarah.Hyatt@joannie.net","customerFirstName":
 
 https://[[HOST_SUBDOMAIN]]-9001-[[KATACODA_HOST]].environments.katacoda.com/orders
 
+You'll get output similar to the following:
+
+![Katacoda command line](msdb-002/assets/seed-output.png)
+
 
 
 ---
 
-***Next: Analyzing the Application***
+***Next: Analyzing the application***
