@@ -3,7 +3,7 @@ The objective of this lesson is analyze the demonstration service to learn how i
 
 ## What You'll Be Doing
 
-In the previous lesson we got the application up an running. Now, let's take a look at how the CQRS pattern is implemented. The place will start is to look at the `write` and `read` endpoints in the `orders` microservice.
+In the previous lesson we got the application up and running. Now, let's take a look at how the CQRS pattern is implemented. The place to start is to look at the `write` and `read` endpoints in the `orders` microservice.
 
 The `orders` microservice's exposes itself to the network as a RESTful API that publishes the following endpoints:
 
@@ -13,7 +13,7 @@ The `orders` microservice's exposes itself to the network as a RESTful API that 
 * `GET` `/customers`
 * `GET` `/customers/:email`
 
-First, let's email the endpoints `GET` `/orders` and `GET` `/orders/:id`
+First, let's take a look at the details of the API in code.
 
 ## Steps
 
@@ -21,7 +21,7 @@ First, let's email the endpoints `GET` `/orders` and `GET` `/orders/:id`
 
 `clear && cd ~/simplecqrs/src/`{{execute T2}}
 
-**Step 2:** Take a look at the files and directories in the  source code working directory:
+**Step 2:** Take a look at the files and directories in the source code's working directory:
 
 `tree ./ -L 1`{{execute T2}}
 
@@ -38,15 +38,14 @@ You'll get the following output:
 **WHERE**
 
 * `app.ts` is the file that has the code that runs the API's webserver and accepts HTTP `requests` and `responses`.
-* `read_db` contains the code and objects for the `read` database. `(Remember, the essential concept behind CQRS is that `read` and `write` behavior is divided between two data sources.
-* `write_db` contains the code and objects for the `write` database.
+* `read_db` contains the code and objects for the `read` data source. (Remember, the essential concept behind CQRS is that `read` and `write` behavior is divided between two data sources.
+* `write_db` contains the code and objects for the `write` data source.)
 
 Let's take a look at the webserver code in `app.ts`.
 
 **Step 3:** Open `app.ts` in the `vi` editor
 
-
-`vi src/app.ts`{{execute T2}}
+`vi app.ts`{{execute T2}}
 
 **Step 4:** Turn on the line numbering the `vi` editor:
 
@@ -80,13 +79,13 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:81`{{execute T2}}
 
-Notice that the statement at `Line 82`.
+Notice that the statement at `Line 81`.
 
 ```
 await readDataManager.setOrder(readInput)
 
 ```
-Not only has the data been submitted in the `POST` request to `/order` been passed to the `write` database, at `Line 82` that data is also passed to the `read` database via `readDataManager.setOrder(readInput)`.
+Not only has the data been submitted in the `POST` request to `/order` been passed to the `write` database at `Line 64`, also that data is is passed to the `read` database via `readDataManager.setOrder(readInput)`  at `Line 82`.
 
 Thus, the `request` data is stored in both the `write` and `read` data sources.
 
@@ -208,15 +207,17 @@ You'll get output similar to the following:
 
 ```
 
+Querying the MongoDB database using the command line tool reveals that data that we written to `POST` `/orders` when we seeded the database as the beginning of this scenario is indeed in the `read` data source too.
+
 **Step 15:**  Leave the command line tool:
 
 `exit`{{execute}}
 
-As you can see, all `order` data has been store in both the `write` data store and the `read` data store. The system is in sync.
+As you can see, all `order` data has been stored in both the `write` data store and the `read` data store. The microservice is in sync.
 
 ## Summary:
 
-The essential principle driving the CQRS pattern is that `write` data and `read` data are divided into two data stores and that queries use the `read` data store and commands use the `write` data store. This demonstration microservice illustrates the principle. But, there is a problem.
+The essential principle driving the CQRS pattern is that `write` data and `read` data are divided into two data stores and that queries use the `read` data store to retrieve data and commands use the `write` data store to store data. This demonstration microservice illustrates the principle. But, there is a problem.
 
 Sending data to the `write` and `read` data sources from the request handler in the web-server satisfies the spirit of CQRS, but it's not a very good way to implement the pattern. Putting logic that segregates write `write`/`read` in the webserver code not only is a violation of the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) but also makes the code hard to refactor.
 

@@ -8,21 +8,9 @@ The objective of this scenario is to implement and analyze a simple example of t
 
 In this scenario you'll work with a demonstration microservice that allows users to save and view `orders`.
 
-An `order` is a data structure as follows:
 
-```
-{
-  id: uuid,
-  description: string
-  quanity: number,
-  firstName: string,
-  lastName: string,
-  email: string
-}
 
-```
-
-In this scencario we'll `order` management will be separated into two data sources. One data source will accept and store `write` data. The other data source will store and publish `read` data. Separating `write` from `read` is the essential concept driving the CQRS pattern.
+In this scencario `order` management will be separated into two data sources. One data source will accept and store `write` data. The other data source will store and publish `read` data. Separating `write` from `read` acivity is the essential concept driving the CQRS pattern.
 
 ![Basic CQRS](msdb-003/assets/CQRS-basic.png)
 
