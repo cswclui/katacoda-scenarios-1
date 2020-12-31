@@ -26,7 +26,7 @@ In this scencario we'll `order` management will be separated into two data sourc
 
 ![Basic CQRS](msdb-003/assets/CQRS-basic.png)
 
-The `order` described above serves as a input data into the microservce. However, as we examine the microservice, we'll find that there is not only the `order` described above, but also another `order` structure that is used internally in the microservice. This disparity between the two `order` structures is an example of problem of defining data structures according to context boundary. (We'll look at this issue when we analyze the microservice.) 
+The `order` described above serves as a input data into the microservce. However, as we examine the microservice, we'll find that there is not only the `order` described above, but also another `order` structure that is used internally in the microservice. This disparity between the two `order` structures is an example of the issue of defining data structures according to context boundary. (We'll look at this issue when we analyze the microservice.) 
 
 
 In this scenario you'll be doing the following steps:
