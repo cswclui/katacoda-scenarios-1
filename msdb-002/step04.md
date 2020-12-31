@@ -47,7 +47,7 @@ You have exited `vi`.
 
 ## Summary
 
-Using a single source database architecture to support `write` and `read` activity is acceptable for small application. But, for larger application using the CQRS pattern is a good way to address the performance degradation that can occur when a single source database architecture is overwhelmed.
+Using a single source database architecture to support `write` and `read` activity is acceptable for small applications. But, for larger applications, using the CQRS pattern is a good way to address the performance degradation that can occur when a single source database architecture is overwhelmed.
 
 In the next scenario you'll be introduced to the CQRS pattern by getting basic implementation up and running.
 
