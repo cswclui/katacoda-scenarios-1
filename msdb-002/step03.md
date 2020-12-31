@@ -13,7 +13,7 @@ Now let's look at how the datasource is used in the application:
 
 **Step 2:** Open the application's TypeScript source code in the `vi` editor.
 
-`vi src/app.ts{{execute T2}}
+`vi src/app.ts`{{execute T2}}
 
 **Step 3:** Turn on the line numbering the `vi` editor:
 
@@ -49,7 +49,7 @@ You have exited `vi`.
 
 ## Summary
 
-The most important thing to understand in this lesson is that both `write` and `read` behavior is confined to a single datasource, the `mariadb` database.
+The essential concept to remember in this lesson is that both `write` and `read` behavior is confined to a single datasource, the `mariadb` database.
 
 In the next lesson we'll discuss the shortcoming that is inherent in using a single datasource data architecture and also discuss how to address the shortcoming.
 
