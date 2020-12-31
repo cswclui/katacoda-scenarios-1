@@ -2,7 +2,7 @@
 
 ## Objective
 
-The objective of this scenario is to implement and analyze a simple example of the  Command Query Responsibility Segregation pattern.
+The objective of this scenario is to implement and analyze a simple example of the  [Command Query Responsibility Segregation](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs) pattern.
 
 ## What you'll be doing 
 
