@@ -33,15 +33,30 @@ found 0 vulnerabilities
 
 `docker-compose -f docker-compose-debug.yml up -d`{{execute T1}}
 
-**Step 4:** Export the environment variable that declares the port on which the application is to run.
+**Step 4:** Confirm that the Docker containers are up and running:
+
+`docker ps -a`{{execute T1}}
+
+You'll get output similar to the following:
+
+```
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                      NAMES
+ab742a7799f8        mongo:latest        "docker-entrypoint.s…"   26 seconds ago      Up 25 seconds       0.0.0.0:27017->27017/tcp   mongodb
+5604590b92c8        mariadb             "docker-entrypoint.s…"   26 seconds ago      Up 23 seconds       0.0.0.0:3306->3306/tcp     simplecqrs_mariadb_1
+6ef296705d36        adminer             "entrypoint.sh docke…"   26 seconds ago      Up 25 seconds       0.0.0.0:8080->8080/tcp     simplecqrs_adminer_1
+4eb352ced8e9        registry:2          "/entrypoint.sh /etc…"   4 minutes ago       Up 3 minutes                          registry
+
+```
+
+**Step 5:** Export the environment variable that declares the port on which the application is to run.
 
 `export APP_PORT=9001`{{execute T1}}
 
-**Step 5:** Export the environment variable that declares URL on which the read source is running. (We'll cover the reasoning behind using separate read and write datasources in the following lessons.)
+**Step 6:** Export the environment variable that declares URL on which the read source is running. (We'll cover the reasoning behind using separate read and write datasources in the following lessons.)
 
 `export MONGODB_URL=mongodb://localhost:27017/simplecqrs_r`{{execute T1}}
 
-**Step 6:** Start the application
+**Step 7:** Start the application
 
 `npm start`{{execute T1}}
 
@@ -54,7 +69,7 @@ server is listening on 9001
 
 ```
 
-**Step 7:** In a second terminal window, seed the application with data
+**Step 8:** In a second terminal window, seed the application with data
 
 `cd simplecqrs && npm run seed`{{execute T2}}
 
@@ -73,7 +88,7 @@ Seeded {"count":7,"customerEmail":"Stephanie.Jones@martine.net","customerFirstNa
 Seeded {"count":2,"customerEmail":"Sarah.Hyatt@joannie.net","customerFirstName":"Sarah","customerLastName":"Hyatt","description":"inventore consequatur qui aut"}  at Wed Dec 30 2020 01:47:41 GMT+0000 (Coordinated Universal Time)
 ```
 
-**Step 8:** Click the following link to verify that the data seeding has been successful.
+**Step 9:** Click the following link to verify that the data seeding has been successful.
 
 https://[[HOST_SUBDOMAIN]]-9001-[[KATACODA_HOST]].environments.katacoda.com/orders
 
