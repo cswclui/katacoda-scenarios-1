@@ -10,10 +10,12 @@ The objective of this lesson is analyze the demonstration application to learn h
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
+Once you're at the login page for admin application for the relational database, `mariadb`, enter the login credentials shown below.
+
 
 ![Database Access](msdb-003/assets/db_access.jpg)
 
-Notice that there are `customer` and `order` tables, but the structured in terms of relational database design.
+Notice that there are `customer` and `order` tables, and that they are structured in terms of relational database design.
 
 
 ![Database Admin UI](msdb-003/assets/db_admin_ui.png)
