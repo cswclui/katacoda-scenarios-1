@@ -1,9 +1,61 @@
 ## Objective
-The objective of this lesson is analyze the demonstration application to learn how it supports the Command Query Responsibility pattern.
+The objective of this lesson is analyze the demonstration service to learn how it supports the [Command Query Responsibility Segregation](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs pattern.)
+
+## What You'll Be Doing
+
+In the previous lesson we got the application up an running. Now, let's take a look at how the CQRS pattern is implemented. The place will start is to look at the `write` and `read` endpoints in the `orders` microservice.
+
+The `orders` microservice's exposes itself to the network as a RESTful API that publishes the following endpoints:
+
+* `GET` `/orders`
+* `GET` `/orders/:id`
+* `POST` `/orders`
+* `GET` `/customers`
+* `GET` `/customers/:email`
+
+First, let's email the endpoints `GET` `/orders` and `GET` `/orders/:id`
 
 ## Steps
 
-[TO BE PROVIDED]
+**Step 1:** Go the TypeScript source code working directory:
+
+`clear && cd ~/simplecqrs/src/`{{execute T2}}
+
+**Step 2:** Take a look at the files and directories in the  source code working directory:
+
+`tree ./ -L 1`{{execute T2}}
+
+You'll get the following output:
+
+```
+./
+├── app.ts
+├── read_db
+└── write_db
+
+```
+
+**WHERE**
+
+* `app.ts` is the file that has the code that runs the API's webserver and accepts HTTP `requests` and `responses`.
+* `read_db` contains the code and objects for the `read` database. `(Remember, the essential concept behind CQRS is that `read` and `write` behavior is divided between two data sources.
+* `write_db` contains the code and objects for the `write` database.
+
+Let's take a look at the webserver code in `app.ts`.
+
+**Step 3:** Open `app.ts` in the `vi` editor
+
+
+`vi src/app.ts`{{execute T2}}
+
+**Step 4:** Turn on the line numbering the `vi` editor:
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+and then enter:
+
+`:set number`{{execute T2}}
+
 
 
 **Step XX:** Use the MariaDB administration tool that ships with the lesson to view the contents of the `write` data source. Click the following link:
