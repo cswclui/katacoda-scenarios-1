@@ -7,7 +7,7 @@ As we saw in the previous lesson, incoming data associated with a `POST` is save
 
 **Step 1:** Confirm you are in the working directory of the demonstration microservice's source code.
 
-`cd clear && ~/simplecqrs/src && pwd`{{execute T2}
+`clear && cd ~/simplecqrs/src && pwd`{{execute T2}}
 
 You will see the following output:
 
@@ -40,7 +40,13 @@ const order: any = await writeDataManager.setOrder(input)
 ```
 The statement at `Line 64` sends data to the method, `writeDataManager.setOrder(input)` **WHERE** `writeDataManager` is an object that encapsulates access to the `mariadb` write database.
 
-Now go down to `Line 81`. Notice the statement:
+Now go down to `Line 81`.
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:81`{{execute T2}}
+
+Notice the statement:
 
 ```
 await readDataManager.setOrder(readInput)

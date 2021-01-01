@@ -207,7 +207,7 @@ You'll get output similar to the following:
 
 ```
 
-Querying the MongoDB database using the command line tool reveals that data that we written to `POST` `/orders` when we seeded the database as the beginning of this scenario is indeed in the `read` data source too.
+Querying the MongoDB database using the command line tool reveals that data that was written to `POST` `/orders` when we seeded the database as the beginning of this scenario is indeed in the `read` data source too.
 
 **Step 15:**  Leave the command line tool:
 
