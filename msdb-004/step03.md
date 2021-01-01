@@ -25,9 +25,44 @@ The benefit of taking an even-driven approach to adding data to the `read` data 
 You'll get the following output:
 
 ```
-TBP
+./
+├── app.ts
+├── broker
+├── interfaces
+├── mediator
+├── read_db
+└── write_db
 
 ```
+
+**WHERE**
+
+* `app.ts` is the code for the web server that powers the microservice's API
+* `broker` is the directory that contains the TypeScript class that manages publishing and subscribing to the Kafka message broker backing services
+* `interfaces` is the directory that contains the interfaces that describe the structure of data coming into the microservice
+* `mediator` is the directory that contains the TypeScript class, `Mediator`
+* `read_db` is the directory that contains the data models and classes to implement data access for the microservices `read` data source.
+*  `write_db` is the directory that contains the data models and classes to implement data access for the microservices `write` data source.
+
+Let's take a look at the webserver code in `app.ts`.
+
+**Step 3:** Open `app.ts` in the `vi` editor
+
+`vi app.ts`{{execute T2}}
+
+**Step 4:** Turn on the line numbering the `vi` editor:
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+and then enter:
+
+`:set number`{{execute T2}}
+
+**Step 5:** Go down to `Line 60`.
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:60`{{execute T2}}
 
 
 **Step XX:** Use the MariaDB administration tool that ships with the lesson to view the contents of the `write` data source. Click the following link:
