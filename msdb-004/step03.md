@@ -1,9 +1,33 @@
 ## Objective
-The objective of this lesson is analyze the demonstration application to learn how it supports the Command Query Responsibility pattern in an event-driven architecture.
+The objective of this lesson is analyze the demonstration application to learn how it supports the [Command Query Responsibility Segregation ](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation) (CQRS) pattern in an [event-driven architecture](https://en.wikipedia.org/wiki/Event-driven_architecture).
 
+## What You'll Be Doing
+
+In the previous lesson we demonstrated a simple implementation of the CQRS in which new data was added to both the `write` and `read` data sources from within the handler code of the HTTP `POST` request. This approach had two significant shortcomings. First, it's violation of the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns). Second, it makes the code hard to refactor.
+
+In this lesson we're going to take another approach. Instead of adding new data to both the `write` and `read` data sources in sequence with in the scope of a single function, we're going to implement an event driven design.
+
+Part of this design implementation is to introduce a new component in the form of a TypeScript class named, `Mediator`. The `Mediator` does the work of coordinating the works of adding new data to both the `write` and `read` data sources. The `Mediator` will add data to the `write` datasource directly. Then, the `Mediator` will publish a message to the message broker which is part of the this version of the `Order` microservice. The message will have data that is associated with an event named, `OnNewOrder`. The `read` data source is subscribed to the message broker to receive `OnNewOrder` messages.
+
+When the component managing the `read` data source receives an `OnNewOrder` message it adds the data in that message to the `read` data source.
+
+The benefit of taking an even-driven approach to adding data to the `read` data source is that the process is loosely coupled. The activities of the `read` data source is completely separate from all other activity. Also, the `read` activity is asynchronous. This means that new data will be added to the `read` data source independently, without blocking activity in the parent microservice.
 ## Steps
 
-[TO BE PROVIDED]
+**Step 1:** Go the TypeScript source code working directory:
+
+`clear && cd ~/simplecqrs/src/`{{execute T2}}
+
+**Step 2:** Take a look at the files and directories in the source code's working directory:
+
+`tree ./ -L 1`{{execute T2}}
+
+You'll get the following output:
+
+```
+TBP
+
+```
 
 
 **Step XX:** Use the MariaDB administration tool that ships with the lesson to view the contents of the `write` data source. Click the following link:
