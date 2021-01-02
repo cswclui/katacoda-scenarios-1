@@ -6,4 +6,5 @@ The interactive scenario you:
 * Got the code up and running
 * Analyzed the application
 * Viewed the actual data
-* Identified opportunities for improvement
+
+This is the final secnario in this series of interactive labs about the [Command Query Responsibility Segregation ](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation).

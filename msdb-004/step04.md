@@ -143,4 +143,4 @@ You get output similar to the following abbeviation of message stored in Kafka:
 
 ---
 
-***Next: Identifying opporunities for improvement.***
+**Congratuations!** You've completed the lab.
