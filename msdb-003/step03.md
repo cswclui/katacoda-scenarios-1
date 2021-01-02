@@ -117,7 +117,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 You have exited `vi`.
 
-We've just examined the code logic. Next let's look at how things pan out in the actual databases. First, lets look at the `write` data source.
+
 
 **Step 10:** Use the MariaDB administration tool that ships with the lesson to view the contents of the `write` data source. Click the following link:
 
@@ -219,11 +219,10 @@ As you can see, all `order` data has been stored in both the `write` data store 
 
 The essential principle driving the CQRS pattern is that `write` data and `read` data are divided into two data stores and that queries use the `read` data store to retrieve data and commands use the `write` data store to store data. This demonstration microservice illustrates the principle. But, there is a problem.
 
-Sending data to the `write` and `read` data sources from the request handler in the web-server satisfies the spirit of CQRS, but it's not a very good way to implement the pattern. Putting logic that segregates write `write`/`read` in the webserver code not only is a violation of the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) but also makes the code hard to refactor.
+Sending data to the `write` and `read` data sources from the request handler in the web-server satisfies the spirit of CQRS, but it's not a very good way to implement the pattern. Putting logic that segregates write `write`/`read` in the webserver code not only is a violation of the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) but also makes the code hard to refactor. We'll address this issue in an upcoming lesson.
 
-The next lesson will look at this problem in detail and suggest a way to address the issue at hand.
-
+In this lesson we've just examined the code logic. In th next lesson weel take a concrete look at the `mariadb` relational database that as the `write` data and the `MongoDB` document database that has the `read` data.
 
 ---
 
-***Next: Identifying opportunities for improvement***
+***Next: Viewing the data sources***

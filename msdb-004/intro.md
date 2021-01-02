@@ -20,7 +20,8 @@ You'll be doing the following steps:
 * **Step 1:** Installing the lesson code
 * **Step 2:** Getting the code up and running
 * **Step 3:** Analyzing the application
-* **Step 4:** Identifying opportunities for improvement
+* **Step 4:** Viewing the Actual Data
+* **Step 5:** Identifying opportunities for improvement
 
 ## Executing command line instructions 
 

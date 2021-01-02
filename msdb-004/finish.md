@@ -5,4 +5,5 @@ The interactive scenario you:
 * Installed the lesson code
 * Got the code up and running
 * Analyzed the application
+* Viewed the actual data
 * Identified opportunities for improvement
