@@ -91,17 +91,88 @@ Let's get out of the file, `app.ts` and take a look at the method, `Mediator.set
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
-**Step 8:** Exit `vi`
+`:q!`{{execute  T2}}
+
+You have exited `vi`.
+
+
+**Step 8:** Open the file `mediator/Mediator.ts` in the `vi` editor
+
+`vi mediator/Mediator.ts`{{execute  T2}}
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+and then enter:
+
+`:set number`{{execute T2}}
+
+The code for the method `Meditator.setOrder(inputOrder)` is at `Lines 42-60`. The first line of code to examine is at `Lines 44`, so lets go there.
+
+**Step 9:** Take a look at the code at `Line 44`;
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:44`{{execute T2}}
+
+Notice the statement:
+
+```
+const result: Order  = await this.writeDataManager.setOrder(order);
+
+```
+
+This is where the data is added to the `write` data source using the `writeDataManager`. Once the data is added to the `write` data source, it needs to be added to the `read` data source. However, instead of creating a situation in which the `write` data source is tightly bound to the `read` data source, `Mediator` will send a message to the `OnNewOrder` topic of the message broker. The assumption is that the `read` data source is subscribed to to the topic `OnNewOrder` and will receive messages published to that topic.
+
+The code that does the work of publishing to the message broker is located at `Line 58`, so let's to there.
+
+**Step 10:** Take a look at the code at `Line 58`;
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:58`{{execute T2}}
+
+Notice the line of code at `Line 58`:
+
+```
+await this.messageBroker.publish(event, topic);
+
+```
+
+**WHERE:**
+
+* `event` is the message to be sent to the message broker. The message is defined at `Lines 48-55`.
+* `topic` is the name of topic on the message broker to which the message will be published. The topic name is returned by a call to `getOnNewOrderTopicSync()` at `Line 62`.
+
+The code at `Line 58` does the work of publishing a message that describes the new `Order` data to the topic, `OnNewOrder` in message broker. 
+
+At this point we've used `Mediator.setOrder(inputOrder)` toadd incoming `order` to the `write` data source and sent a message to parties interested in and subscribed to the topic `OnNewOrder`. The last piece of th puzzle is to see how the message is consumed by the microservice. This work id done by the class `ReadDataManager`. The `ReadDataManager` encapsulates `write` and `read` activities to the `read` data source. It also subscribes to the topic named, `OnNewOrder` on the message broker.
+
+Let's exit `vi` to get out of the file, `mediator/Mediator.ts` and then take a look at `ReadDataManager`.
+
+**Step 11:** Get out of `vi` line numbered view mode
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:q!`{{execute  T2}}
 
 You have exited `vi`.
 
-**Step 9:** Open the file `src/Mediator/mediator.ts` in the `vi` editor
 
-`vi src/Mediator/mediator.ts`{{execute  T2}}
+**Step 12:** Open the file `read_db/ReadDataManager.ts` in the `vi` editor
 
+`vi read_db/ReadDataManager.ts`{{execute  T2}}
 
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+and then enter:
+
+`:set number`{{execute T2}}
+
+**Step 13:** Take a look at the constructor for the class, `ReadDataManager`. The constructor is at `Line 15`. 
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:15`{{execute T2}}
 
 This lesson gave you a sense of how the code is organized to support CQRS using an event-driven architecture. In the next lesson you'll look at the actual data sources involved in the pattern.
 
