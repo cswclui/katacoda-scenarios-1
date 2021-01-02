@@ -174,7 +174,33 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:15`{{execute T2}}
 
-This lesson gave you a sense of how the code is organized to support CQRS using an event-driven architecture. In the next lesson you'll look at the actual data sources involved in the pattern.
+Notice that `ReadDataManager` uses the `messageBroker` to subscribe to the topic of interest, in this case it's `OnNewOrder`.
+
+The behavior that `ReadDataManager` will execute upon receiving the message is defined by the method, `this.handler`. Let's take a look at the code for `this.handler` which executes at `Lines 71-105`.
+
+**Step 14:** Take a look at the method `this.handler`. 
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:71`{{execute T2}}
+
+Notice that the method, `handler` checks to see if the `customer` alread exists according to `email` address in the `read` data source. If not it is added at `Line 87`,
+
+Then, if the `event.topic` is `OnNewOrder` the code will add the `order` information to the `read` data source using the `addOrder` method which is internal current method, `handler`. The statement, `await addOrder(input)` is executed at `Line 104`.
+
+**Step 15:** Close the `vi` editor.
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:q!`{{execute  T2}}
+
+You have exited `vi`.
+
+## Summary
+
+This lesson gave you a sense of how the code is organized to support CQRS using an event-driven architecture. You saw that the `WriteDataManager` added data to the `write` data source directly, but also sent a message to the `OnNewOrder` topic on the message broker. Sending the message informed interested parties that a new `Order` was added to the microservice. The `read` data source is subscribed to the topic `OnNewOrder` and thus is implicitly interested in the message. Thus, when the `ReadDataManager` received the message, it added the new `Order` information to the MongoDB document database that is encapsulated within the `ReadDataManager`.
+
+This is essentially how an event-driven approach to data management works. But, there is still an outstand issue. The `ReadDataManager` is loosely coupled to the `Mediator`, but the `WriteDataManager` is not. We'll take a look at the implications in the last lesson in this scenario. But in the next lesson you'll look at the actual data sources involved in the pattern.
 
 ---
 
