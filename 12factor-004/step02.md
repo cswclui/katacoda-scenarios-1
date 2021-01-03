@@ -62,7 +62,7 @@ Notice that this branch of the source introduces an application named `collector
 
 `vi ./pinger/server.js`{{execute}}
 
-**Step 5:** Turn on the line numbering the `vi` editor:
+**Step 5:** Turn on line numbering in the `vi` editor:
 
 Press the ESC key: `^ESC`{{execute ctrl-seq}}
 

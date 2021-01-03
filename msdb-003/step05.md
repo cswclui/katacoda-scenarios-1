@@ -16,7 +16,7 @@ You will see the following output:
 
 `vi app.ts`{{execute T2}}
 
-**Step 3:** Turn on the line numbering the `vi` editor:
+**Step 3:** Turn on the line numbering in the `vi` editor:
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 

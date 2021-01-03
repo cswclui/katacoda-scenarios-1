@@ -83,7 +83,7 @@ Let's take a look at the webserver code that's driving the microservice.
 
 `vi index.js`{{execute}}
 
-**Step 5:** Turn on the line numbering the `vi` editor:
+**Step 5:** Turn on line numbering in the `vi` editor:
 
 Press the ESC key: `^ESC`{{execute ctrl-seq}}
 

@@ -39,7 +39,7 @@ Let's look at `Jenkinsfile.`
 
 `vi ./Jenkinsfile`{{execute}}
 
-**Step 4:** Turn on the line numbering the `vi` editor:
+**Step 4:** Turn on line numbering in the `vi` editor:
 
 Press the ESC key: `^ESC`{{execute ctrl-seq}}
 

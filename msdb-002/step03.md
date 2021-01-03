@@ -15,7 +15,7 @@ Now let's look at how the datasource is used in the application:
 
 `vi src/app.ts`{{execute T2}}
 
-**Step 3:** Turn on the line numbering the `vi` editor:
+**Step 3:** Turn on line numbering in the `vi` editor:
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 

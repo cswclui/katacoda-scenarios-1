@@ -52,7 +52,7 @@ Let's take a look at the webserver code in `app.ts`.
 
 `vi app.ts`{{execute T2}}
 
-**Step 4:** Turn on the line numbering the `vi` editor:
+**Step 4:** Turn on line numbering in the `vi` editor:
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 

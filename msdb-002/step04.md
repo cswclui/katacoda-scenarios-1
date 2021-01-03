@@ -11,7 +11,7 @@ The objective of this lesson is to examine the shortcoming that is inherent when
 
 `vi src/app.ts`{{execute T2}}
 
-**Step 3:** Turn on the line numbering the `vi` editor:
+**Step 3:** Turn on the line numbering in the `vi` editor:
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
