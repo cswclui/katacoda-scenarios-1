@@ -23,25 +23,37 @@ and then enter:
 
 `:set number`{{execute T2}}
 
-**Step 4:** Go down to `Line 60`.
+**Step 4:** Go down to `Line 39`.
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
-`:60`{{execute T2}}
+`:39`{{execute T2}}
 
 Notice the statement `dataManager.getOrders()` at `Line 39`. This is the code that gets `order` data from the datasource.
 
+**Step 5:** Go down to `Line 47`.
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:47`{{execute T2}}
+
 Notice the statement `dataManager.getOrder(req.params.id)` at `Line 47`. This is the code that gets data for a particular `order` from the datasource.
 
-Notice the statement `dataManager.setOrders(imput)` at `Line 57`. This is the code that sets data for an `order` to the datasource.
+**Step 6:** Go down to `Line 57`.
 
-The important thing to understand is that all `read` and `write` data access is being managed by a single database. The actual database is a `mariadb` instance that is encapsulated into the `dataManager`.
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
-**Step 5:** Get out of `vi` line numbered view mode
+`:57`{{execute T2}}
+
+Notice the statement `dataManager.setOrders(input)` at `Line 57`. This is the code that sets new `order` data to the datasource.
+
+The important thing to understand is that all `read` and `write` data behavior is being managed by a single database. The actual database is a `mariadb` instance that is encapsulated into the `dataManager`.
+
+**Step 7:** Get out of `vi` line numbered view mode
 
 Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
-**Step 6:** Exit `vi`
+**Step 8:** Exit `vi`
 
 `:q!`{{execute}}
 

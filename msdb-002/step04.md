@@ -19,13 +19,29 @@ and then enter:
 
 `:set number`{{execute T2}}
 
-**Step 4:** Go down to `Line 60`.
+**Step 4:** Go down to `Line 39`.
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
-`:60`{{execute T2}}
+`:39`{{execute T2}}
 
-As we saw in the pervious lesson, the statement, `dataManager.getOrders()` at `Line 39` gets `order` data from the datasource. The statement, `dataManager.getOrder(req.params.id)` at `Line 47` gets data for a particular `order` from the datasource. The statement `dataManager.setOrders(imput)` at `Line 57` sets data for an `order` to the datasource.
+As we saw in the pervious lesson, the statement, `dataManager.getOrders()` at `Line 39` gets `order` data from the datasource.
+
+**Step 5:** Go down to `Line 47`.
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:47`{{execute T2}}
+
+The statement, `dataManager.getOrder(req.params.id)` at `Line 47` gets data for a particular `order` from the datasource.
+
+**Step 6:** Go down to `Line 57`.
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:57`{{execute T2}}
+
+The statement `dataManager.setOrders(input)` at `Line 57` sets data for an `order` to the datasource.
 
 Writing and reading to a single datasource is acceptable for small applications that have a limited number of transactions.
 
@@ -35,11 +51,11 @@ However, when an application grows to web-scale in which there might be hundreds
 
 The way to address this problem is to segregate `write` behavior and storage from `read` behavior and storage; hence the term, [Command Query Responsibility Segregation](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs pattern) (CQRS). Under CQRS a `write` is considered a command and a `read` is considered a query.
 
-**Step 5:** Get out of `vi` line numbered view mode
+**Step 7:** Get out of `vi` line numbered view mode
 
 Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
-**Step 6:** Exit `vi`
+**Step 8:** Exit `vi`
 
 `:q!`{{execute}}
 
