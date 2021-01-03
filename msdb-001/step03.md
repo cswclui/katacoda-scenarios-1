@@ -26,7 +26,25 @@ You get the following output:
 You'll see output similar to the following:
 
 ```
-TBP
+{"fortune":"C:\\ is the root of all directories."}
+{"fortune":"You can't unscramble a scrambled egg."}
+{"fortune":"A man of straw needs a woman of gold."}
+{"fortune":"Penny wise, pound foolish."}
+{"fortune":"If anything can go wrong, it will."}
+{"fortune":"Windows will never cease."}
+{"fortune":"The devil finds work for idle hands."}
+{"fortune":"Familiarity breeds contempt."}{"fortune":"Like a fish out of water."}
+{"fortune":"As is the gardener so is the garden."}
+{"fortune":"A friend is easier lost than found."}
+{"fortune":"A bird makes his nest little by little."}
+{"fortune":"Pride cometh before a fall."}
+{"fortune":"One man's meat is another man's poison."}
+{"fortune":"You are what you eat."}
+{"fortune":"Pride feels no pain."}
+{"fortune":"Some of the best gifts come in small packages."}
+{"fortune":"Blood is thicker than water."}
+{"fortune":"If you tell the truth, you don't have to remember anything."}
+{"fortune":"All work and no play makes Jack a dull boy."}
 
 ```
 

@@ -107,10 +107,6 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 The implementation is simple but it's effective. The microservice does one thing and one thing only. And, it uses data that's confined to the contextual boundary of the microservice.
 
-Press the ESC key: `^ESC`{{execute ctrl-seq}}
-
-`:38`{{execute}}
-
 **Step 7:** Get out of `vi` line numbered view mode
 
 Press the ESC key: `^ESC`{{execute ctrl-seq}}
