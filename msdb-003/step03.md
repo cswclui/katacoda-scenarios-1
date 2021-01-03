@@ -38,8 +38,8 @@ You'll get the following output:
 **WHERE**
 
 * `app.ts` is the file that has the code that runs the API's webserver and accepts HTTP `requests` and `responses`.
-* `read_db` contains the code and objects for the `read` data source. (Remember, the essential concept behind CQRS is that `read` and `write` behavior is divided between two data sources.
-* `write_db` contains the code and objects for the `write` data source.)
+* `read_db` contains the code and objects for the `read` data source. (Remember, the essential concept behind CQRS is that `read` and `write` behavior is divided between two data sources.)
+* `write_db` contains the code and objects for the `write` data source.
 
 Let's take a look at the webserver code in `app.ts`.
 
@@ -71,13 +71,13 @@ const order: any = await writeDataManager.setOrder(input)
 ```
 The statement at `Line 64` sends data to the method, `writeDataManager.setOrder(input)` **WHERE** `writeDataManager` is an object that encapsulates access to the `mariadb` write database. The object, `writeDataManager` uses data models that are stored in files in the directory `write_db`. 
 
-The important thing to understand at this point is that once data is received at the endpoint, `POST /orders`, the data is written to the `write` data source. However, there's more. It's also written to the `read` data source. Let's take a look.
+The important thing to understand at this point is that once data is received at the endpoint, `POST /orders`, the data is written to the `write` data source. In addition, there's more. The new `order` data is also written to the `read` data source. Let's take a look at the details.
 
-**Step 6:** Go to `Line 81`.
+**Step 6:** Go to `Line 82`.
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
-`:81`{{execute T2}}
+`:82`{{execute T2}}
 
 Notice that the statement at `Line 81`.
 
@@ -85,7 +85,7 @@ Notice that the statement at `Line 81`.
 await readDataManager.setOrder(readInput)
 
 ```
-Not only has the data been submitted in the `POST` request to `/order` been passed to the `write` database at `Line 64`, also that data is is passed to the `read` database via `readDataManager.setOrder(readInput)`  at `Line 82`.
+Not only has the data been submitted in the `POST` request to `/order` been passed to the `write` database at `Line 64`, also that data is passed to the `read` database via `readDataManager.setOrder(readInput)`  at `Line 82`.
 
 Thus, the `request` data is stored in both the `write` and `read` data sources.
 
@@ -121,7 +121,7 @@ You have exited `vi`.
 
 The essential principle driving the CQRS pattern is that `write` data and `read` data are divided into two data stores and that queries use the `read` data store to retrieve data and commands use the `write` data store to store data. This demonstration microservice illustrates the principle. But, there is a problem.
 
-Sending data to the `write` and `read` data sources from the request handler in the web-server satisfies the spirit of CQRS, but it's not a very good way to implement the pattern. Putting logic that segregates write `write`/`read` in the webserver code not only is a violation of the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) but also makes the code hard to refactor. We'll address this issue in an upcoming lesson.
+Sending data to the `write` and `read` data sources from the request handler in the webserver satisfies the spirit of CQRS, but it's not a very good way to implement the pattern. Putting logic that segregates write `write`/`read` in the webserver code not only is a violation of the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) but also makes the code hard to refactor. We'll address these issues in an upcoming lesson.
 
 In this lesson we've just examined the code logic. In th next lesson weel take a concrete look at the `mariadb` relational database that as the `write` data and the `MongoDB` document database that has the `read` data.
 

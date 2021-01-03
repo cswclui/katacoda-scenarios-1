@@ -1,7 +1,7 @@
 ## Objective
 The objective of this lesson is identify the shortcoming in this secenario's implementation of the the Command Query Responsibility Segregtation pattern and present an better approach to implementation.
 
-As we saw in the previous lesson, incoming data associated with a `POST` is saved both the `write` and `read` data sources. However, there is a problem. Let's take a look.
+As we saw in the previous lesson, incoming data associated with a `POST` is saved to both the `write` and `read` data sources. However, there is a problem. Let's take a look.
 
 ## Steps
 
@@ -11,6 +11,7 @@ As we saw in the previous lesson, incoming data associated with a `POST` is save
 
 You will see the following output:
 
+`/root/simplecqrs/src`
 
 **Step 2:** Open `app.ts` in the `vi` editor
 
@@ -24,13 +25,19 @@ and then enter:
 
 `:set number`{{execute T2}}
 
-**Step 4:** Go down to `Line 60`.
+**Step 4:** Go down to `Line 61`.
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
-`:60`{{execute T2}}
+`:61`{{execute T2}}
 
 Notice the statement `app.post("/orders", async (req, res) => {...` at `Line 61`. This is the code that adds `order` information to the microservice.
+
+**Step 5:** Go down to `Line 64`.
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:64`{{execute T2}}
 
 Notice the statement starting at `Line 64`:
 
@@ -53,13 +60,13 @@ await readDataManager.setOrder(readInput)
 
 ```
 
-Not only has the data been submitted in the `POST` request to `/order` been passed to the `write` database at `Line 64`, also that data is is passed to the `read` database via `readDataManager.setOrder(readInput)`  at `Line 82`.
+Not only has the data that's submitted in the `POST` request to `/order` been passed to the `write` database at `Line 64`, also that data is is passed to the `read` database via `readDataManager.setOrder(readInput)`  at `Line 82`.
 
-**Step 5:** Get out of `vi` line numbered view mode
+**Step 6:** Get out of `vi` line numbered view mode
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
-**Step 6:** Exit `vi`
+**Step 7:** Exit `vi`
 
 `:q!`{{execute  T2}}
 
