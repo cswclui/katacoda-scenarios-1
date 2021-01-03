@@ -33,7 +33,7 @@ Writing and reading to a single datasource is acceptable for small applications 
 
 However, when an application grows to web-scale in which there might be hundreds of thousands, if not millions of `reads` and `writes` a minute, performance can degrade.
 
-The way to address this problem is to segregate `write` behavior and storage from `read` behavior and storage; hence the term Command Query Responsiblity Segregation (CQRS). Under CQRS a `write` is considered a command and a `read` is considered a query.
+The way to address this problem is to segregate `write` behavior and storage from `read` behavior and storage; hence the term, [Command Query Responsibility Segregation](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs pattern) (CQRS). Under CQRS a `write` is considered a command and a `read` is considered a query.
 
 **Step 5:** Get out of `vi` line numbered view mode
 

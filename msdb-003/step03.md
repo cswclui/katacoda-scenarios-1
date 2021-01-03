@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is analyze the demonstration service to learn how it supports the [Command Query Responsibility Segregation](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs pattern.)
+The objective of this lesson is analyze the demonstration service to learn how it supports the [Command Query Responsibility Segregation](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs pattern).
 
 ## What You'll Be Doing
 
