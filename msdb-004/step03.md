@@ -40,11 +40,11 @@ You'll get the following output:
 **WHERE**
 
 * `app.ts` is the code for the web server that powers the microservice's API
-* `broker` is the directory that contains the TypeScript class, `MessageBroker` that manages publishing and subscribing to the Kafka message broker backing services
+* `broker` is the directory that contains the TypeScript class, `MessageBroker` that manages publishing and subscribing to the [Kafka](https://kafka.apache.org/) message broker backing service
 * `interfaces` is the directory that contains the interfaces that describe the structure of data coming into the microservice
-* `mediator` is the directory that contains the TypeScript class, `Mediator`
-* `read_db` is the directory that contains the data models and classes to implement data access for the microservices `read` data source.
-*  `write_db` is the directory that contains the data models and classes to implement data access for the microservices `write` data source.
+* `mediator` is the directory that contains the TypeScript class, `Mediator`. The purpose of `Mediator` is to coordinate writing to both the `write` and `read` data sources as well a read data from the `read` data sources.
+* `read_db` is the directory that contains the data models and classes to implement data access for the microservice's `read` data source.
+*  `write_db` is the directory that contains the data models and classes to implement data access for the microservice's `write` data source.
 
 Let's take a look at the webserver code in `app.ts`.
 
@@ -83,7 +83,7 @@ const id: string = await mediator.setOrder(orderInput);
 
 ```
 
-The statement shown above uses an instance of the `Mediator` class to add `order` information to the microservice. Using the `Mediator` class is clear and appropriate separation of concerns. The purpose of the web server is to accept a `request` and send a `response`. The purpose of the `Mediator` class is to coordinate `write` and `read` behavior according to the CQRS pattern.
+The statement shown above uses an instance of the `Mediator` class to add `order` information to the microservice. Using the `Mediator` class is a clear and appropriate separation of concerns. **Remember**, the purpose of the web server is to accept a `request` and send a `response`. The purpose of the `Mediator` class is to coordinate `write` and `read` behavior according to the CQRS pattern.
 
 Let's get out of the file, `app.ts` and take a look at the method, `Mediator.setOrder(orderInput)`.
 
@@ -145,7 +145,7 @@ await this.messageBroker.publish(event, topic);
 
 The code at `Line 58` does the work of publishing a message that describes the new `Order` data to the topic, `OnNewOrder` in message broker. 
 
-At this point we've used `Mediator.setOrder(inputOrder)` toadd incoming `order` to the `write` data source and sent a message to parties interested in and subscribed to the topic `OnNewOrder`. The last piece of th puzzle is to see how the message is consumed by the microservice. This work id done by the class `ReadDataManager`. The `ReadDataManager` encapsulates `write` and `read` activities to the `read` data source. It also subscribes to the topic named, `OnNewOrder` on the message broker.
+At this point we've used `Mediator.setOrder(inputOrder)` to add incoming `order` data to the `write` data source and send a message to parties interested in and subscribed to the topic `OnNewOrder`. The last piece of th puzzle is to see how the message is consumed by the microservice. This work is done by the class `ReadDataManager`. The `ReadDataManager` encapsulates `write` and `read` activities to the `read` data source. It also subscribes to the topic named, `OnNewOrder` on the message broker.
 
 Let's exit `vi` to get out of the file, `mediator/Mediator.ts` and then take a look at `ReadDataManager`.
 
@@ -168,7 +168,7 @@ and then enter:
 
 `:set number`{{execute T2}}
 
-**Step 13:** Take a look at the constructor for the class, `ReadDataManager`. The constructor is at `Line 15`. 
+**Step 13:** Take a look at the constructor for the class, `ReadDataManager`. The [constructor](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html#constructor-functions-are-equivalent-to-classes) is at `Line 15`. 
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
@@ -176,7 +176,9 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 Notice that `ReadDataManager` uses the `messageBroker` to subscribe to the topic of interest, in this case it's `OnNewOrder`.
 
-The behavior that `ReadDataManager` will execute upon receiving the message is defined by the method, `this.handler`. Let's take a look at the code for `this.handler` which executes at `Lines 71-105`.
+The behavior that `ReadDataManager` will execute upon receiving the message is defined by the method, `this.handler`. (Both `messageBroker` and `handler` are injected into the `Mediator` class as option values that passed as parameters to the constructor.)
+
+Let's take a look at the code for `this.handler` which executes at `Lines 71-105`.
 
 **Step 14:** Take a look at the method `this.handler`. 
 
@@ -184,11 +186,19 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:71`{{execute T2}}
 
-Notice that the method, `handler` checks to see if the `customer` alread exists according to `email` address in the `read` data source. If not it is added at `Line 87`,
+Notice that the method, `handler` checks to see if the `customer` already exists in the `read` data source according to `email` address.  If not it is added at `Line 87`.
 
-Then, if the `event.topic` is `OnNewOrder` the code will add the `order` information to the `read` data source using the `addOrder` method which is internal current method, `handler`. The statement, `await addOrder(input)` is executed at `Line 104`.
+Then, if the `event.topic` has the value, `OnNewOrder` the code will add the `order` information to the `read` data source using the `addOrder` method which is a function that is internal to the current method, `handler`. The statement, `await addOrder(input)` is executed at `Line 104`.
 
-**Step 15:** Close the `vi` editor.
+**Step 15:** Go to `Line 104` in the `vi` editor.
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:104`{{execute T2}}
+
+Now that you've examined how the `Mediator` works with the `ReadDataManager` to add `order` information to the microservice, we can close the `vi` editor.
+
+**Step 16:** Close the `vi` editor.
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
@@ -198,9 +208,9 @@ You have exited `vi`.
 
 ## Summary
 
-This lesson gave you a sense of how the code is organized to support CQRS using an event-driven architecture. You saw that the `WriteDataManager` added data to the `write` data source directly, but also sent a message to the `OnNewOrder` topic on the message broker. Sending the message informed interested parties that a new `Order` was added to the microservice. The `read` data source is subscribed to the topic `OnNewOrder` and thus is implicitly interested in the message. Thus, when the `ReadDataManager` received the message, it added the new `Order` information to the MongoDB document database that is encapsulated within the `ReadDataManager`.
+This lesson gave you a sense of how the code is organized to support CQRS using an event-driven architecture. You saw that the `Mediator` class worked with the `WriteDataManager` to add data to the `write` data source directly. Also, `Mediator` sent a message to the `OnNewOrder` topic on the message broker. Sending the message informed interested parties that a new `Order` is added to the microservice. The `read` data source is subscribed to the topic `OnNewOrder` and thus, is implicitly interested in the message. When the `ReadDataManager` received the message, it added the new `Order` information to the MongoDB document database that is the backing service that is encapsulated within the `ReadDataManager`.
 
-This is essentially how an event-driven approach to data management works. But, there is still an outstand issue. The `ReadDataManager` is loosely coupled to the `Mediator`, but the `WriteDataManager` is not. We'll take a look at the implications in the last lesson in this scenario. But in the next lesson you'll look at the actual data sources involved in the pattern.
+This is essentially how an event-driven approach to data management works. In the next lesson you'll look at the actual data sources involved in the pattern.
 
 ---
 

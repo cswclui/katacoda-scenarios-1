@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is demonstrate how to view the actual data that's been generated during the seeding process to discover how the the CQRS is supported in a concrete manner.
+The objective of this lesson is to view the actual data that's generated during the seeding process of demonstration microservice in order to discover in a concrete manner how the CQRS pattern is supported.
 
 ## What You'll Be Doing
 
@@ -18,8 +18,11 @@ https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
 Notice that there are `customer` and `order` tables, but the structured in terms of relational database design.
 
-
 ![Database Admin UI](msdb-003/assets/db_admin_ui.png)
+
+Follow the illustration below to access the data in the `order` table. (1) Click on `order` in the table column. Then, (2) click on `Select data` in the `order` detail page.
+
+Now, let's look at the `read` data in MongoDB.
 
 **Step 2:** Install the MongoDB command line client shell
 
@@ -95,6 +98,8 @@ You'll get output similar to the following:
 
 `exit`{{execute}}
 
+Next, we'll see that Kafka has been saving incoming messages for historical purposes.
+
 **Step 7:**  Install the Kafka command line tool:
 
 `npm install -g kafka-cli`{{execute T2}}
@@ -136,6 +141,8 @@ You get output similar to the following abbeviation of message stored in Kafka:
 .
 
 ```
+
+When you scroll through the interactive terminal you'll notice that the data that's in the `read` data source has also been saved in the Kafka event store.
 
 **Step 9:** Exit the Kafka command line tool
 
