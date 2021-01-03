@@ -3,14 +3,13 @@ The objective of this lesson is get the *Fortunes* microservice up and running a
 
 ## Steps
 
-**Step 1:** confirm you're in the microservice's working directory.
+**Step 1:** Confirm you're in the microservice's working directory.
 
 `cd ~/simplemicroservice`{{execute}}
 
 `clear && pwd`{{execute}}
 
 You get the following output:
-
 
 `/root/simplemicroservice`
 
@@ -19,7 +18,7 @@ You get the following output:
 `node index.js`{{execute T2}}
 
 
-**Step 3:** In the first terminal window Call the microservice 20 times using `curl`.
+**Step 3:** In the first terminal window call the microservice 20 times using `curl`.
 
 `for i in {1..20}; do curl localhost:3000 -w "\n"; done`{{execute T1}}
 

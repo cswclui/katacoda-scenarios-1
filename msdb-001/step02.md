@@ -9,9 +9,9 @@ A microservice...
 * **is transportable**
 * **is ephemeral**
 
-The purpose of the demonstration microservice, *Fortunes* is to deliver some words of wisdom on demand. This is the microservice's **single purpose**. The demonstration microservice runs as an API in webserver. It is **discrete** in that it carries all it needs to do the work it needs to do. No external tools need to be injected. And, the microservice **carries its own data** which is kept private interally. There is no data sharing going on behind the scenes.
+The purpose of the demonstration microservice, *Fortunes* is to deliver some "words of wisdom" on demand. This is the microservice's **single purpose**. The demonstration microservice runs as an API under a webserver. It is **discrete** in that it carries all it needs to do its work. No external tools need to be injected. And, the microservice **carries its own data** which is kept private interally. There is no data sharing going on behind the scenes.
 
-The microservice is **transportable** in that it can be moved and run an a variety of target environments easily. Finally, it is **ephemeral** because if it is destroyed it can be reconstituted quickly and easily.
+The microservice is **transportable** in that it can be moved and run on a variety of target environments easily. Finally, it is **ephemeral** because if it is destroyed it can be reconstituted quickly and easily.
 
 ## Steps
 
@@ -50,7 +50,7 @@ You'll get the following output:
 └── index.js
 
 ```
-The text file, `fortunes.txt` has the data which the microservice provides to the microservice's webserver. The file, `index.js` contains the logic that retrieves data from the text file, `fortunes.`
+The text file, `fortunes.txt` has the data which the microservice provides to the webserver. The file, `index.js` contains the logic that retrieves data from the text file, `fortunes.txt`
 
 Let's take a look at some of the data in `fortunes.txt`.
 
@@ -75,9 +75,9 @@ You learn by looking and listening as opposed to talking. That's why you have tw
 
 ```
 
-Each line of the text file is "words of wisdom "that you would typically find in a fortune cookie. Granted, the data is a bit trivial, but it does serve the purpose of the microservice. And, as we discussed above, this data is dedicated to the service and apparent only within the operational boundary of the service. No other service has indirect access to this data.
+Each line of the text file is a "words of wisdom" that you would typically find in a fortune cookie. Granted, the data is a bit trivial, but it does serve the purpose of the microservice. Also, as we discussed above, this data is dedicated to the service and apparent only within the operational boundary of the service. No other service has indirect access to this data.
 
-Let's take a look at the webserver code that's driving microservice.
+Let's take a look at the webserver code that's driving the microservice.
 
 **Step 4:** Open the file `index.js` source code in `vi`.
 
@@ -91,7 +91,7 @@ and then enter:
 
 `:set number`{{execute}}
 
-`Line 8` has an important line of code. That line imports the function, `getRandomFortune()` from the `dataManager` module. `getRandomFortune()` has logic that goes into the text file,`fortunes.txt` and selects a random line of text to return to the function's caller.
+`Line 8` is an important line of code. That line imports the function, `getRandomFortune()` from the `dataManager` module. `getRandomFortune()` has logic that goes into the text file,`fortunes.txt` and selects a random line of text to return to the function's caller.
 
 Deliverying that one line of text is the sole responsibility of the microservice. And, that text comes from the unique data that the service carries.
 
@@ -103,7 +103,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 `:38`{{execute}}
 
-`Lines 29 - 34` is where the actual work is done to deliver the fortune to the caller of the API. Notice when an HTTP request is made at the `/` entry point to the API the webserver code calls `getRandomFortune()` and returns the retrieved `fortune` in JSON format as a`response` to the `request`.
+`Lines 29 - 34` is where the actual work is done to deliver the fortune to the caller of the API. Notice when an HTTP request is made at the `/` entry point to the API. The webserver code calls `getRandomFortune()` and returns the retrieved `fortune` in JSON format as a`response` to the `request`.
 
 The implementation is simple but it's effective. The microservice does one thing and one thing only. And, it uses data that's confined to the contextual boundary of the microservice.
 

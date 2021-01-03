@@ -3,7 +3,7 @@ The objective of this lesson is demonstrate how to package an API up into a tran
 
 ## Steps
 
-**Step 1:** confirm you're in the microservice's working directory.
+**Step 1:** Confirm you're in the microservice's working directory.
 
 `cd ~/simplemicroservice`{{execute}}
 
@@ -21,9 +21,9 @@ You get the following output:
 
 `docker run -d -p 3003:3000 --name fortunes_service fortunes`{{execute}}
 
-We now have the *Fortunes* microservice running in a Docker container. Let's exercies it
+We now have the *Fortunes* microservice running in a Docker container. Let's exercise it.
 
-**Step 4:** Make a call on the *Fortunes* microservice that is exposed the host network via `port` `3001` as declared in the option `-p 3003:3000` of the `docker run` command executed in the previous step.
+**Step 4:** Make a call on the *Fortunes* microservice that is exposed to the host network via `port` `3001` as declared in the option `-p 3003:3000` of the `docker run` command executed in the previous step.
 
 `curl localhost:3003`{{execute}}
 
@@ -33,7 +33,7 @@ You get output similar to the following:
 
 ## Summary
 
-The microservice is now transportable. The Docker image we created in Step 2 can be pushed to a `public` or `private` Container Registry such as [Docker Hub](https://hub.docker.com/). Once a container image it is avaiable to be used in any environment that supports running containers. This is possible because everything the microservice needs is packaged in the container image. Hence, the essential principles are supported. As we described at the beginning of this lab, microservice...
+The microservice is now transportable. The Docker image we created in Step 2 can be pushed to a `public` or `private` Container Registry such as [Docker Hub](https://hub.docker.com/). Once a container image is stored in a container registry, it is avaiable to be used in any environment that supports running containers. This is possible because everything the microservice needs is packaged in the container image. Hence, the essential principles are supported. As we described at the beginning of this lab, microservice...
 
 * **has a single responsility**
 * **is discrete**
