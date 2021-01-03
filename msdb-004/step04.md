@@ -14,13 +14,15 @@ You'll look at the `mariadb` database that stores the `write` data and the `Mong
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
 
-![Database Access](msdb-003/assets/db_access.jpg)
+![Database Access](msdb-004/assets/db_access.jpg)
 
 Notice that there are `customer` and `order` tables, but the structured in terms of relational database design.
 
-![Database Admin UI](msdb-003/assets/db_admin_ui.png)
+![Database Admin UI](msdb-004/assets/db_admin_ui.png)
 
 Follow the illustration below to access the data in the `order` table. (1) Click on `order` in the table column. Then, (2) click on `Select data` in the `order` detail page.
+
+![Database Admin UI](msdb-004/assets/mariadb-ui-steps.png)
 
 Now, let's look at the `read` data in MongoDB.
 
@@ -146,7 +148,7 @@ When you scroll through the interactive terminal you'll notice that the data tha
 
 **Step 9:** Exit the Kafka command line tool
 
-`exit`{{execute T2}}  
+`echo "Ctrl+C out of the terminal"`{{execute interrupt T2}}
 
 ---
 
