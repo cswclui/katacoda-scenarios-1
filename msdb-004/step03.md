@@ -7,11 +7,11 @@ In the previous lesson we demonstrated a simple implementation of the CQRS in wh
 
 In this lesson we're going to take another approach. Instead of adding new data to both the `write` and `read` data sources in sequence with in the scope of a single function, we're going to implement an event driven design.
 
-Part of this design implementation is to introduce a new component in the form of a TypeScript class named, `Mediator`. The `Mediator` does the work of coordinating the works of adding new data to both the `write` and `read` data sources. The `Mediator` will add data to the `write` datasource directly. Then, the `Mediator` will publish a message to the message broker which is part of the this version of the `Order` microservice. The message will have data that is associated with an event named, `OnNewOrder`. The `read` data source is subscribed to the message broker to receive `OnNewOrder` messages.
+Part of this design implementation is to introduce a new component in the form of a TypeScript class named, `Mediator`. The `Mediator` does the work of coordinating the work of adding new data to both the `write` and `read` data sources. The `Mediator` will add data to the `write` datasource directly. Then, the `Mediator` will publish a message to the message broker. (The messsage broker is part of the this version of the `Order` microservice.) The message will have data that is associated with an event named, `OnNewOrder`. The `read` data source is subscribed to the message broker to receive `OnNewOrder` messages.
 
 ![Event Driven Architecture](msdb-004/assets/CQRS-basic-mediator.png)
 
-When the component managing the `read` data source receives an `OnNewOrder` message it adds the data in that message to the `read` data source.
+When the component managing the `read` data source receives an `OnNewOrder` message it adds the data in that message to its underlying instance of `MongoDB`.
 
 The benefit of taking an even-driven approach to adding data to the `read` data source is that the process is loosely coupled. The activities of the `read` data source are completely separate from all other activity. Also, the `read` activity is asynchronous. This means that new data will be added to the `read` data source independently, without blocking activity in the parent microservice.
 ## Steps
@@ -114,14 +114,14 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:44`{{execute T2}}
 
-Notice the statement:
+Notice the statement at `Line 44`:
 
 ```
 const result: Order  = await this.writeDataManager.setOrder(order);
 
 ```
 
-This is where the data is added to the `write` data source using the `writeDataManager`. Once the data is added to the `write` data source, it needs to be added to the `read` data source. However, instead of creating a situation in which the `write` data source is tightly bound to the `read` data source, `Mediator` will send a message to the `OnNewOrder` topic of the message broker. The assumption is that the `read` data source is subscribed to to the topic `OnNewOrder` and will receive messages published to that topic.
+This is where the data is added to the `write` data source using the `writeDataManager`. Once the data is added to the `write` data source, it needs to be added to the `read` data source. Thus, `Mediator` will send a message to the `OnNewOrder` topic of the message broker. The assumption is that the `read` data source is subscribed to to the topic `OnNewOrder` and will receive messages published to that topic.
 
 The code that does the work of publishing to the message broker is located at `Line 58`, so let's to there.
 
@@ -174,7 +174,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:15`{{execute T2}}
 
-Notice that `ReadDataManager` uses the `messageBroker` to subscribe to the topic of interest, in this case the topic is, `OnNewOrder`.
+Notice at `Line 17` that `ReadDataManager` uses the `messageBroker` to subscribe to the topic of interest, in this case the topic is, `OnNewOrder`.
 
 The behavior that `ReadDataManager` will execute upon receiving the message is defined by the method, `this.handler`. (Both `messageBroker` and `handler` are injected into the `Mediator` class as option values that are passed to the constructor by way of the `option` parameter object.)
 
@@ -186,7 +186,9 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:71`{{execute T2}}
 
-Notice that the method, `handler` checks to see if the `customer` already exists in the `read` data source according to `email` address.  If not it is added at `Line 87`.
+Notice that the method, `handler` has a internal method, `addOrder()`. 
+
+The `addOrder()` function adds data to two collections (`Order` and `Customer`) in the underlying `MongoDB` document database. It's adds `order` data to the `Order` collection at `Line 80`.
 
 **Step 15:** Go to `Line 87` in the `vi` editor.
 
@@ -194,13 +196,15 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:87`{{execute T2}}
 
-Then, if the `event.topic` has the value, `OnNewOrder` the code will add the `order` information to the `read` data source using the `addOrder` method which is a function that is internal to the current method, `handler`. The statement, `await addOrder(input)` is executed at `Line 104`.
+Also, `addOrder()` uses a MongoDB method, `findOneAndUpdate()` at `Line 87` to see if the `customer` already exists in the `read` the `Customer` collection. If the `customer` does not exist, it's added to the `Customer` collection. (Doing an "upsert" automatically is behavior provided by the MongoDB method, `findOneAndUpdate()`.)
 
 **Step 16:** Go to `Line 104` in the `vi` editor.
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:104`{{execute T2}}
+
+Again, the function `addOrder())` is internal to the function, `handler`. `addOrder()` is not called until the `handler` function is called, and only if the incoming `event.topic` has the value, `OnNewOrder` as shown at `Line 91`. If indeed, `event.topic === "OnNewOrder"` then statement, `await addOrder(input)` is executed at `Line 104`.
 
 Now that you've examined how the `Mediator` works with the `ReadDataManager` to add `order` information to the microservice, we can close the `vi` editor.
 

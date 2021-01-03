@@ -85,7 +85,7 @@ Notice that the statement at `Line 81`.
 await readDataManager.setOrder(readInput)
 
 ```
-Not only has the data been submitted in the `POST` request to `/order` been passed to the `write` database at `Line 64`, also that data is passed to the `read` database via `readDataManager.setOrder(readInput)`  at `Line 82`.
+Not only has the data been submitted in the `POST` request to `/order` been passed to the `write` database at `Line 64`, also that data is passed to the `read` database via `readDataManager.setOrder(readInput)`  at `Line 81`.
 
 Thus, the `request` data is stored in both the `write` and `read` data sources.
 

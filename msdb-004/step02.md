@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is get the lab's source code up and running, seed the application with dagta and then check to make sure that the data seeding was successful.
+The objective of this lesson is get the lab's source code up and running, seed the application with data and then check to make sure that the data seeding was successful.
 
 ## Steps
 
@@ -29,7 +29,7 @@ found 0 vulnerabilities
 
 ```
 
-**Step 3:** Install the application's backing servicew which are a single relational database, [`MariaDB`](https://mariadb.org/), a document database, [`MongoDB`](https://www.mongodb.com/2) and the [`Apache Kafka`](https://kafka.apache.org/) message broker. All the backing services throughout the lessons will run as an aggregation of containers under [`docker-compose`](https://docs.docker.com/compose/).
+**Step 3:** Install the application's backing services which are a single relational database, [`MariaDB`](https://mariadb.org/), a document database, [`MongoDB`](https://www.mongodb.com/2) and the [`Apache Kafka`](https://kafka.apache.org/) message broker. All the backing services throughout the lessons will run as an aggregation of containers under [`docker-compose`](https://docs.docker.com/compose/).
 
 `docker-compose -f docker-compose-debug.yml up -d`{{execute T1}}
 
