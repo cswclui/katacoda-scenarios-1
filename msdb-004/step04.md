@@ -20,7 +20,7 @@ Notice that there are `customer` and `order` tables, but the structured in terms
 
 ![Database Admin UI](msdb-004/assets/db_admin_ui.png)
 
-Follow the illustration below to access the data in the `order` table. (1) Click on `order` in the table column. Then, (2) click on `Select data` in the `order` detail page.
+Follow the illustration below to access the data in the `order` table. (1) Click on `order` in the table column. Then, (2) click on `Select data` in the `order` detail page. (Click on the image to get a larger, expanded view.)
 
 ![Database Admin UI](msdb-004/assets/mariadb-ui-steps.png)
 
@@ -145,10 +145,6 @@ You get output similar to the following abbeviation of message stored in Kafka:
 ```
 
 When you scroll through the interactive terminal you'll notice that the data that's in the `read` data source has also been saved in the Kafka event store.
-
-**Step 9:** Exit the Kafka command line tool
-
-`echo "Ctrl+C out of the terminal"`{{execute interrupt T2}}
 
 ---
 

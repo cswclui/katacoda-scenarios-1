@@ -42,7 +42,7 @@ You'll get the following output:
 * `app.ts` is the code for the web server that powers the microservice's API
 * `broker` is the directory that contains the TypeScript class, `MessageBroker` that manages publishing and subscribing to the [Kafka](https://kafka.apache.org/) message broker backing service
 * `interfaces` is the directory that contains the interfaces that describe the structure of data coming into the microservice
-* `mediator` is the directory that contains the TypeScript class, `Mediator`. The purpose of `Mediator` is to coordinate writing to both the `write` and `read` data sources as well a read data from the `read` data sources.
+* `mediator` is the directory that contains the TypeScript class, `Mediator`. The purpose of `Mediator` is to coordinate writing to both the `write` and `read` data sources as well as reading data from the `read` data sources.
 * `read_db` is the directory that contains the data models and classes to implement data access for the microservice's `read` data source.
 *  `write_db` is the directory that contains the data models and classes to implement data access for the microservice's `write` data source.
 
@@ -174,9 +174,9 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:15`{{execute T2}}
 
-Notice that `ReadDataManager` uses the `messageBroker` to subscribe to the topic of interest, in this case it's `OnNewOrder`.
+Notice that `ReadDataManager` uses the `messageBroker` to subscribe to the topic of interest, in this case the topic is, `OnNewOrder`.
 
-The behavior that `ReadDataManager` will execute upon receiving the message is defined by the method, `this.handler`. (Both `messageBroker` and `handler` are injected into the `Mediator` class as option values that passed as parameters to the constructor.)
+The behavior that `ReadDataManager` will execute upon receiving the message is defined by the method, `this.handler`. (Both `messageBroker` and `handler` are injected into the `Mediator` class as option values that are passed to the constructor by way of the `option` parameter object.)
 
 Let's take a look at the code for `this.handler` which executes at `Lines 71-105`.
 
@@ -188,9 +188,15 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 Notice that the method, `handler` checks to see if the `customer` already exists in the `read` data source according to `email` address.  If not it is added at `Line 87`.
 
+**Step 15:** Go to `Line 87` in the `vi` editor.
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+`:87`{{execute T2}}
+
 Then, if the `event.topic` has the value, `OnNewOrder` the code will add the `order` information to the `read` data source using the `addOrder` method which is a function that is internal to the current method, `handler`. The statement, `await addOrder(input)` is executed at `Line 104`.
 
-**Step 15:** Go to `Line 104` in the `vi` editor.
+**Step 16:** Go to `Line 104` in the `vi` editor.
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
@@ -198,7 +204,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 Now that you've examined how the `Mediator` works with the `ReadDataManager` to add `order` information to the microservice, we can close the `vi` editor.
 
-**Step 16:** Close the `vi` editor.
+**Step 17:** Close the `vi` editor.
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
