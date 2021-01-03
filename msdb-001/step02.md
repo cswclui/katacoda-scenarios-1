@@ -35,7 +35,7 @@ You'll get the following output:
 
 ```
 
-The key file to take notice is `index.js`. `index.js` contains the code the runs the webserver that represents the microservice to the network. The director, `dataManager` contains the code that provides data to the microservice.
+The key file to take notice of is `index.js`. `index.js` contains the code the runs the webserver that represents the microservice to the network. The directory, `dataManager` contains the code that provides data to the microservice.
 
 **Step 2:** Take a look at the files in the directory, `dataManager`.
 
@@ -75,7 +75,7 @@ You learn by looking and listening as opposed to talking. That's why you have tw
 
 ```
 
-Each line the text file is some words of wisdom that you would typically find in a fortune cookie. Granted, the data is a bit trivial, but it does serve the purpose of the microservice. And, as we discussed above, this data is dedicated to the service within the operational boundary of the service. No other service has indirect access to this data.
+Each line of the text file is "words of wisdom "that you would typically find in a fortune cookie. Granted, the data is a bit trivial, but it does serve the purpose of the microservice. And, as we discussed above, this data is dedicated to the service and apparent only within the operational boundary of the service. No other service has indirect access to this data.
 
 Let's take a look at the webserver code that's driving microservice.
 
@@ -91,7 +91,7 @@ and then enter:
 
 `:set number`{{execute}}
 
-`Line 8` has an important line of code. That line imports the function, `getRandomFortune()` from the `dataManager` module. `getRandomFortune()` has logic that goes into the text file,`fortunes.txt` and selects a random line of code to return to the function's caller.
+`Line 8` has an important line of code. That line imports the function, `getRandomFortune()` from the `dataManager` module. `getRandomFortune()` has logic that goes into the text file,`fortunes.txt` and selects a random line of text to return to the function's caller.
 
 Deliverying that one line of text is the sole responsibility of the microservice. And, that text comes from the unique data that the service carries.
 
@@ -123,7 +123,7 @@ You have exited `vi`.
 
 ## Summary
 
-The important idea is this lesson in terms of database design for microservices is to understand that an essential principle of microservices is that a microservice carries its own data. In this case we saw how the microservice's data was stored in file, `fortunes.txt`.
+The important idea is this lesson in terms of database design for microservices is to understand that an essential principle of microservices is that **a microservice carries its own data**. In this case we saw how the microservice's data was stored in file, `fortunes.txt`.
 
 ## SOMETHING TO THINK ABOUT
 
