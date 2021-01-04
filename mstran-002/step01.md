@@ -11,10 +11,6 @@ The objective of this lesson is demonstrate how to clone from GitHub the project
 
 `cd ~/fortune-cookies/monolith && pwd`{{execute T1}}
 
-Confirm the working directory
-
-`clear && pwd`{{execute T1}}
-
 You'll see output as follows:
 
 `/root/fortune-cookies/monolith`
