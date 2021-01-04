@@ -2,7 +2,7 @@
 
 The interactive scenario learned how to:
 
-* AAAA
-* BBBB
-* CCCC
-* DDDD
+* Install the lesson code
+* Get the code up and running
+* Exercise the code
+* Understand the code as an example of a monolithic service

@@ -9,7 +9,7 @@ The objective of this lesson is demonstrate how to clone from GitHub the project
 
 **Step 2:** Navigate to the working directory of the code just cloned. This directory contains all the assets for the lab's demonstration application.
 
-`cd ~/fortune-cookies/monolith && pwd`{{execute T1}}
+`git clone cd ~/fortune-cookies/monolith && pwd`{{execute T1}}
 
 Confirm the working directory
 

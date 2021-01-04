@@ -9,7 +9,7 @@ In this lesson we're going to bring the demonstration code which is a monolithic
 
 **Step 1:** Confirm the working directory for the monolithic verison of *Fortune Cookies*.
 
-`clear && cd ~/fortune-cookies/monolith && pwd`{{execute T1}
+`clear && cd ~/fortune-cookies/monolith && pwd`{{execute T1}}
 
 You'get get the following output:
 
@@ -17,7 +17,7 @@ You'get get the following output:
 
 **Step 2:** Build a Docker image of the application:
 
-`docker build -t monolith .`{{execute T1}
+`docker build -t monolith .`{{execute T1}}
 
 **Step 3:** Create a Docker container:
 
@@ -28,7 +28,7 @@ Give things a minute to "warm up"
 
 **Step 4:** Do a log dump to see scheduler activity:
 
-`docker logs --tail 2500 fc-monolith`{{execute T1}
+`docker logs --tail 2500 fc-monolith`{{execute T1}}
 
 You'll get output similar to the following"
 

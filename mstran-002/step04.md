@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is demonstrate how to [TO BE PROVIDED]
+The objective of this lesson is examine that demonstration service, *Fortune Cookies* in order to understand the the monolithic nature of the service.
 
 ## Steps
 

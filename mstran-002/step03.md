@@ -5,7 +5,7 @@ The objective of this lesson is demonstrate how to exercise the demonstration mo
 
 **Step 1:** Do a log dump to see scheduler activity:
 
-`docker logs --tail 2500 fc-monolith`{{execute T1}}
+`clear && docker logs --tail 2500 fc-monolith`{{execute T1}}
 
 You should see some screen chatter similiar to this:
 
@@ -28,6 +28,10 @@ Greetings from Addie D'Amore: After dinner rest a while, after supper walk a mil
 
 ```
 
+**Step 2:** Clear the screen to make things easier to view moving forward:
+
+`clear`{{execute T1}}
+
 **Step 2:** Add a user using `curl`:
 
 `curl -X POST 'http://localhost:3000/api/users' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:3000' --data '{"firstName":"Cool", "lastName":"McCool", "dob":"1979-01-27", "email":"cool.mccool@reallycool.com"}'`{{execute T1}}
@@ -41,7 +45,7 @@ If a user is saved to the system, the user data will be returned with a system a
 
 **Step 3:** Execute the following command to see if Cool McCool is active.
 
-`docker logs --tail 2500 fc-monolith | grep McCool`{{execute T1}}
+`clear && docker logs --tail 2500 fc-monolith | grep McCool`{{execute T1}}
 
 When you take a look at the logs again, you will see that Cool McCool is sending fortunes out too with output similar to this:
 
