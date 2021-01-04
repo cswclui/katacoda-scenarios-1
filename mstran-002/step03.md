@@ -65,4 +65,4 @@ Greetings from Cool McCool: If you lie down with dogs, you'll get up with fleas.
 
 ---
 
-***Next: TO BE PROVIDED***
+***Next: Understanding the code***
