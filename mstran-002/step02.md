@@ -1,7 +1,7 @@
 ## Objective
 The objective of this lesson is to get the demonstration code up and running.
 
-##What You'll Be Doing
+## What You'll Be Doing
 
 In this lesson we're going to bring the demonstration code which is a monolithic version of the service, *Fortune Cookies* up and running as a docker container.
 
