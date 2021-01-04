@@ -3,7 +3,7 @@ The objective of this lesson is analyze the demonstration application to learn h
 
 ## What You'll Be Doing
 
-In the previous lesson we demonstrated a simple implementation of the CQRS in which new data was added to both the `write` and `read` data sources from within the handler code of the HTTP `POST` request. This approach had two significant shortcomings. First, it's violation of the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns). Second, it makes the code hard to refactor.
+In the previous lesson we demonstrated a simple implementation of the CQRS in which new data was added to both the `write` and `read` data sources from within the handler code of the HTTP `POST` request. This approach had two significant shortcomings. First, it's a violation of the concept of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns). Second, it makes the code hard to refactor.
 
 In this lesson we're going to take another approach. Instead of adding new data to both the `write` and `read` data sources in sequence with in the scope of a single function, we're going to implement an event driven design.
 
@@ -196,7 +196,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 `:87`{{execute T2}}
 
-Also, `addOrder()` uses a MongoDB method, `findOneAndUpdate()` at `Line 87` to see if the `customer` already exists in the `read` the `Customer` collection. If the `customer` does not exist, it's added to the `Customer` collection. (Doing an "upsert" automatically is behavior provided by the MongoDB method, `findOneAndUpdate()`.)
+Also, `addOrder()` uses a MongoDB method, `findOneAndUpdate()` at `Line 87` to see if the `customer` already exists in the `Customer` collection. If the `customer` does not exist, it's added to the `Customer` collection. (Doing an "upsert" automatically is behavior provided by the MongoDB method, `findOneAndUpdate()`.)
 
 **Step 16:** Go to `Line 104` in the `vi` editor.
 
