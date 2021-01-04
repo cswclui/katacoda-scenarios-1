@@ -21,7 +21,7 @@ You'get get the following output:
 
 **Step 3:** Create a Docker container:
 
-`docker run -p 3000:3000 -d --name fc-monolith monolith`{{execute T1}
+`docker run -p 3000:3000 -d --name fc-monolith monolith`{{execute T1}}
 
 Give things a minute to "warm up"
 
