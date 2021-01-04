@@ -1,4 +1,4 @@
-![logo](mstran-001/assets/logo-sm.png)
+![logo](mstran-002/assets/logo-sm.png)
 
 ## Objective
 

@@ -17,7 +17,7 @@ Confirm the working directory
 
 You'll see output as follows:
 
-`/root/fortune-cookies/monolith`{{execute T1}}
+`/root/fortune-cookies/monolith`
 
 ---
 
