@@ -40,6 +40,13 @@ You'll get the following output upon succesful completion:
 
 `sh docker-seed.sh`{{execute T1}}
 
+Upon successful seeding of the Local Container Repository you'll get the following output:
+
+```
+{"repositories":["fortunes","scheduler","sender","targetmockserver","testconsumer","users"]}
+
+```
+
 **Step 4:** Add the Kubernetes pods and services to the Kubernetes cluster running under `minikube`.
 
 `cd kubernetes`{{execute T1}}
