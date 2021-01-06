@@ -36,11 +36,11 @@ You'll get the following output upon succesful completion:
 
 ```
 
-**Step 3:** Run the shell script the creates a local Docker registry and seed the registry with the containers representing each microservice
+**Step 3:** Run the shell script the creates a Local Container Registry and seeds the registry with the containers representing each microservice
 
 `sh docker-seed.sh`{{execute T1}}
 
-Upon successful seeding of the Local Container Repository you'll get the following output:
+Upon successful seeding of the Local Container Registry you'll get the following output:
 
 ```
 {"repositories":["fortunes","scheduler","sender","targetmockserver","testconsumer","users"]}
@@ -117,7 +117,7 @@ SMS is sending a POST at Sun Aug 04 2019 17:04:33 GMT+0000 (UTC) with the body {
 
 Shutdown the log stream
 
-`Ctrl+C`{{execute interrupt T2}}
+`echo "Ctrl+C"`{{execute interrupt T2}}
 
 View the logs for `twitter` target:
 
@@ -134,7 +134,7 @@ TWITTER is sending a POST at Sun Aug 04 2019 17:05:25 GMT+0000 (UTC) with the bo
 ```
 Shutdown the log stream
 
-`Ctrl+C`{{execute interrupt T2}}
+`echo "Ctrl+C"`{{execute interrupt T2}}
 
 View the logs for `facebook` target:
 
@@ -151,7 +151,7 @@ FACEBOOK is sending a POST at Sun Aug 04 2019 17:05:50 GMT+0000 (UTC) with the b
 ```
 Shutdown the log stream
 
-`Ctrl+C`{{execute interrupt T2}}
+`echo "Ctrl+C"`{{execute interrupt T2}}
 
 The output above indicates that the targets of *Fortnue Cookie* data recieved their fortunes.
 

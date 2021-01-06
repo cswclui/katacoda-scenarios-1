@@ -15,6 +15,17 @@ You'll see output as follows:
 
 `/root/fortune-cookies/microservice-sync`
 
+**Step 3:** Check out the branch relevant to this lesson:
+
+`git checkout expose_users_under_loadbalancer`
+
+You'll get the following output:
+
+```
+Branch 'expose_users_under_loadbalancer' set up to track remote branch 'expose_users_under_loadbalancer' from 'origin'.
+Switched to a new branch 'expose_users_under_loadbalancer'
+```
+
 ---
 
 ***Next: Getting the code up and running***

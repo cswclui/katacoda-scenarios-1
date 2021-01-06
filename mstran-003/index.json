@@ -1,7 +1,7 @@
 {
   "title": "Microservice Transformation: 3-Working with a Synchronous Microservice Oriented Application",
   "description": "Learn the structure and mechanics of of a microservice oriented application (MOA) by running a demonstration project",
-  "difficulty": "General understanding of structured programming, git, containers and a reading knowledge of Node.js",
+  "difficulty": "General understanding of structured programming, git, containers, Kubernetes and a reading knowledge of Node.js",
   "time": "15 minutes",
   "details": {
     "steps": [{

@@ -4,9 +4,11 @@
 
 The objective of the secenario is to get an example of a synchronous version of the *Fortune Cookies* microservice oriented application (MOA) installed and up and running. Then, once running the added objective is to understand the structure and mechanics of the MOA. nature of the service.
 
+![logo](mstran-003/assets/sync-architecture.png)
+
 ## What you'll be doing 
 
-In this scenario you'll get the demonstration service up and running as a Docker container. Then, once the service is running, you'll add a new user to the service.
+In this scenario you'll get the demonstration MOA up and running as a Kubernetes clsuter container. Then, once the MOA is running, you'll request fortunes from *Fortune Cookies* microservices oriented application.
 
 You'll be doing the following steps:
 
