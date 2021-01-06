@@ -7,7 +7,7 @@ First, we need to install a gRPC client.
 
 **Step 1:** Install the build tools
 
-`cd ~/`{execute T1}}
+`cd ~/`{{execute T1}}
 
 `apt-get install build-essential autoconf libtool pkg-config -y`{{execute T1}}
 
