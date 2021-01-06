@@ -1,6 +1,6 @@
 {
-  "title": "Microservice Transformation: 3-Working with a Synchronous Microservice Oriented Application",
-  "description": "Learn the structure and mechanics of a synchronous microservice oriented application (MOA) by running a demonstration project",
+  "title": "Microservice Transformation: 5-Working with a Hybrid Microservice Oriented Application",
+  "description": "Learn the structure and mechanics of an hybrid microservice oriented application (MOA) by running a demonstration project",
   "difficulty": "General understanding of structured programming, git, containers, Kubernetes and a reading knowledge of Node.js",
   "time": "20 minutes",
   "details": {
@@ -35,6 +35,6 @@
     "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "minikube"
+    "imageid": "ubuntu"
   }
 }
