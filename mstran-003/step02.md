@@ -96,7 +96,9 @@ users        ClusterIP   10.104.217.252   <none>        80/TCP    90s
 
 **Step 6:**  Wait about 10 seconds for the MOA to warm up and then check the logs of some of the target pods
 
-`kubectl logs sms -f`{{execute T1}}
+View the logs for the `sms` target:
+
+`kubectl logs sms -f`{{execute T2}}
 
 You'll get output similar to the following:
 
@@ -113,7 +115,13 @@ SMS is sending a POST at Sun Aug 04 2019 17:04:33 GMT+0000 (UTC) with the body {
 
 ```
 
-`kubectl logs sms -f`{{execute T1}}
+Shutdown the log stream
+
+`Ctrl+C`{{execute interrupt T2}}
+
+View the logs for `twitter` target:
+
+`kubectl logs twitter -f`{{execute T2}}
 
 ```
 TWITTER is sending a POST at Sun Aug 04 2019 17:05:20 GMT+0000 (UTC) with the body {"fortune":"Flattery is all right so long as you don't inhale."}.
@@ -124,6 +132,11 @@ TWITTER is sending a POST at Sun Aug 04 2019 17:05:24 GMT+0000 (UTC) with the bo
 TWITTER is sending a POST at Sun Aug 04 2019 17:05:25 GMT+0000 (UTC) with the body {"fortune":"Procrastination is the thief of time."}.
 
 ```
+Shutdown the log stream
+
+`Ctrl+C`{{execute interrupt T2}}
+
+View the logs for `facebook` target:
 
 `kubectl logs facebook -f`{{execute T1}}
 
@@ -136,6 +149,9 @@ FACEBOOK is sending a POST at Sun Aug 04 2019 17:05:49 GMT+0000 (UTC) with the b
 FACEBOOK is sending a POST at Sun Aug 04 2019 17:05:50 GMT+0000 (UTC) with the body {"fortune":"You can't live on bread alone."}.
 
 ```
+Shutdown the log stream
+
+`Ctrl+C`{{execute interrupt T2}}
 
 The output above indicates that the targets of *Fortnue Cookie* data recieved their fortunes.
 
