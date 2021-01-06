@@ -22,7 +22,10 @@ You'get get the following output:
 You'll get the following output:
 
 ```
-TBP
+Creating network "seat-saver_seatsaver" with the default driver
+Creating seat-saver_seatsaver_1 ... done
+Creating seat-saver_redis_1     ... done
+Creating seat-saver_mongo_1     ... done
 
 ```
 
