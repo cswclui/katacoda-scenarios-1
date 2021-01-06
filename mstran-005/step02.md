@@ -31,7 +31,7 @@ TBP
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
-
+![GraphQL Playground](mstran-005/assets/seat-saver-01.png)
 
 ---
 

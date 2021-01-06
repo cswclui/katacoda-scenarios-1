@@ -2,13 +2,13 @@
 
 ## Objective
 
-The objective of the secenario is to get an example of an asynchronous version of the *Fortune Cookies* microservice oriented application (MOA) installed and up and running. Then, once running, the added objective is to understand the structure and mechanics of the MOA.
+The objective of the secenario is to get an example of an hybrind version of a microservice oriented application (MOA) named *Seat Saver* installed and up and running. Then, once running, the added objective is to understand the structure and mechanics of the MOA.
 
-![logo](mstran-004/assets/async-architecture.png)
+![Hybrid Architecture](mstran-005/assets/general-architecture.png)
 
 ## What you'll be doing 
 
-In this scenario you'll get the demonstration MOA up and running as a Kubernetes clsuter container. Then, once the MOA is running, you'll request fortunes from *Fortune Cookies* microservices oriented application.
+In this scenario you'll get the demonstration MOA up and running as a GraphQL API. Then, once the MOA is running, you'll subscribe to the internal message server within the GraphQL API and then execute queries and mutations against the API instigate data persistenced and message emission.
 
 You'll be doing the following steps:
 
