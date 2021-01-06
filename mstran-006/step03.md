@@ -11,7 +11,7 @@ First, we need to install a gRPC client.
 
 `apt-get install build-essential autoconf libtool pkg-config -y`{{execute T1}}
 
-`apt-get install clang-5.0 libc++-dev`{{execute T1}}
+`apt-get install clang-5.0 libc++-dev -y`{{execute T1}}
 
 `cd grpc`{{execute T1}}
  
