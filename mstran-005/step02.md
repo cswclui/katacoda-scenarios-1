@@ -17,7 +17,7 @@ You'get get the following output:
 
 **Step 2:** Run the MOA as `docker-compose` application
 
-`docker-compose up`{{execute T1}}
+`docker-compose up -d`{{execute T1}}
 
 You'll get the following output:
 
