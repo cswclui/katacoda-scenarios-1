@@ -23,6 +23,10 @@ You'get get the following output:
 
 `docker run -p 3000:3000 -d --name fc-monolith monolith`{{execute T1}}
 
+You'll get output similar to the following:
+
+`ae3565952f83cc84304b0e101eacfa3544dd9520cfe39d9f69d8958b7a5fc5fa`
+
 Give things a minute to "warm up"
 
 
