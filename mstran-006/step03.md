@@ -7,23 +7,27 @@ First, we need to install a gRPC client.
 
 **Step 1:** Install the build tools
 
-`cd ~/`{{execute T1}}
+`go get github.com/fullstorydev/grpcurl/... -v`{{execute T1}}
 
-`apt-get install build-essential autoconf libtool pkg-config -y`{{execute T1}}
+`go install github.com/fullstorydev/grpcurl/cmd/grpcurl`{{execute T1}}
 
-`apt-get install clang-5.0 libc++-dev -y`{{execute T1}}
+Next, we need to get an understanding of the the gRPC API.
 
-`cd grpc`{{execute T1}}
- 
-`git submodule update --init`{{execute T1}}
+**Step 2:** Confirm the working directory
 
-`mkdir -p cmake/build`{{execute T1}}
+`clear && cd ~/seat-saver-grpc && pwd`{{execute T1}}
 
-`cd cmake/build`{{execute T1}}
+**Step 3:** Get a list of services
 
-`cmake -DgRPC_BUILD_TESTS=ON ../..`{{execute T1}}
+`grpcurl -import-path ./proto -proto seatsaver.proto list`{{execute T1}}
 
-`make grpc_cli`{{execute T1}}
+**Step 4:** Describe the a remote procedure
+
+`grpcurl -import-path ./proto -proto seatsaver.proto describe seatsaver.SeatSaverService.GetVenues`{{execute T1}}
+
+**Step 5:** 
+
+`grpcurl -plaintext -import-path ./proto -proto seatsaver.proto localhost:50051 seatsaver.SeatSaverService/GetVenues`{{execute T1}}
 
 ---
 
