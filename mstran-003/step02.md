@@ -15,23 +15,38 @@ You'get get the following output:
 
 `/root/fortune-cookies/microservice-sync`
 
-**Step 2:** Start the minikube server that this demonstration MOA needs in order to work with Kuberenetes
+**Step 2:** Start the `minikube` server that this demonstration MOA needs in order to work with Kuberenetes
 
 `minikube start`{{execute T1}}
 
 You'll get the following output upon succesful completion:
 
-`TBP`
+```
+* minikube v1.8.1 on Ubuntu 18.04
+* Using the none driver based on user configuration
+* Running on localhost (CPUs=2, Memory=2460MB, Disk=145651MB) ...
+* OS release is Ubuntu 18.04.4 LTS
+* Preparing Kubernetes v1.17.3 on Docker 19.03.6 ...
+  - kubelet.resolv-conf=/run/systemd/resolve/resolv.conf
+* Launching Kubernetes ...
+* Enabling addons: default-storageclass, storage-provisioner
+* Configuring local host environment ...
+* Waiting for cluster to come online ...
+* Done! kubectl is now configured to use "minikube"
+
+```
 
 **Step 3:** Run the shell script the creates a local Docker registry and seed the registry with the containers representing each microservice
 
 `sh docker-seed.sh`{{execute T1}}
 
+**Step 4:** Add the Kubernetes pods and services to the Kubernetes cluster running under `minikube`.
+
 `cd kubernetes`{{execute T1}}
 
 `sh generate-k8s-resources.sh`{{execute T1}}
 
-**Step 4:** Check out all went well by listing the pods and services:
+**Step 5:** Check out all went well by listing the pods and services:
 
 `kubectl get pods`{{execute T1}}
 
@@ -72,7 +87,7 @@ users        ClusterIP   10.104.217.252   <none>        80/TCP    90s
 
 ```
 
-**Step 4:**  Wait about 10 seconds for the MOA to warm up and then check the logs of some target pods
+**Step 6:**  Wait about 10 seconds for the MOA to warm up and then check the logs of some of the target pods
 
 `kubectl logs sms -f`{{execute T1}}
 
