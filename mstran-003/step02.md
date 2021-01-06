@@ -40,7 +40,20 @@ You'll get the following output upon succesful completion:
 
 `minikube tunnel`{{execute T2}}
 
-You'll get the following output from the process which will continue to run the third terminal window.
+You'll get the following episodic output from the process which will continue to run the third terminal window.
+
+```
+Status:
+        machine: minikube
+        pid: 6655
+        route: 10.96.0.0/12 -> 172.17.0.44
+        minikube: Running
+        services: []
+    errors:
+                minikube: no errors
+                router: no errors
+                loadbalancer emulator: no errors
+```
 
 
 **Step 4:** Run the shell script the creates a Local Container Registry and seeds the registry with the containers representing each microservice
