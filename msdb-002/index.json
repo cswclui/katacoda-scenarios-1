@@ -1,0 +1,40 @@
+{
+  "title": "Microservice Database Design: 2-Examining a Single Source Database Architecture",
+  "description": "Learn the shortcomings of using a single source database architecture in a web-scale microservice",
+  "difficulty": "General understanding of structured programming, git, reading knowledge of TypeScript and the fundamentals of databases and data structures",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+        "title": "Cloning the Code from GitHub",
+        "text": "step01.md"
+      },
+      {
+        "title": "Getting the Code Up and Running",
+        "text": "step02.md"
+      },
+      {
+        "title": "Analyzing the Application",
+        "text": "step03.md"
+      },
+      {
+        "title": "Identifying Opportunities for Improvement",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

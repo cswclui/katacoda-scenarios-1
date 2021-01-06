@@ -1,0 +1,40 @@
+{
+  "title": "Microservice Transformation: 1-The Essential Principles",
+  "description": "Learn the essential design princple of database design for a microservice",
+  "difficulty": "General understanding of structured programming, git, Docker containers, and reading knowledge of Node.js",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+        "title": "Installing the Lab Code from GitHub",
+        "text": "step01.md"
+      },
+      {
+        "title": "Examining the Code",
+        "text": "step02.md"
+      },
+      {
+        "title":  "Running the Code as a Microservice",
+        "text": "step03.md"
+      },
+      {
+        "title": "Making the Microservice Transportable",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

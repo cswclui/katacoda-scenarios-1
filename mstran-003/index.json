@@ -1,0 +1,40 @@
+{
+  "title": "Microservice Transformation: 3-Working with a Synchronous Microservice Oriented Application",
+  "description": "Learn the structure and mechanics of a synchronous microservice oriented application (MOA) by running a demonstration project",
+  "difficulty": "General understanding of structured programming, git, containers, Kubernetes and a reading knowledge of Node.js",
+  "time": "20 minutes",
+  "details": {
+    "steps": [{
+        "title": "Installing the Code",
+        "text": "step01.md"
+      },
+      {
+        "title": "Getting the Code Up and Running",
+        "text": "step02.md"
+      },
+      {
+        "title": "Exercising the Code",
+        "text": "step03.md"
+      },
+      {
+        "title": "Understanding the Code",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}

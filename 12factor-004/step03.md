@@ -24,7 +24,7 @@ If the working directory is not `/root/12factor`, execute the following command:
 
 `vi ./pinger/logger/index.js`{{execute}}
 
-**Step 3:** Turn on the line numbering the `vi` editor:
+**Step 3:** Turn on line numbering in the `vi` editor:
 
 Press the ESC key: `^ESC`{{execute ctrl-seq}}
 

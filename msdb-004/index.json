@@ -1,0 +1,40 @@
+{
+  "title": "Microservice Database Design: 4-Taking an Event Driven Approach to CQRS",
+  "description": "Learn how implement the CQRS pattern efficiently",
+  "difficulty": "General understanding of structured programming, git, reading knowledge of TypeScript, the fundamentals of databases and data structures and the basics of working with message brokers",
+  "time": "20 minutes",
+  "details": {
+    "steps": [{
+        "title": "Cloning the Code from GitHub",
+        "text": "step01.md"
+      },
+      {
+        "title": "Getting the Code Up and Running",
+        "text": "step02.md"
+      },
+      {
+        "title": "Analyzing the Application",
+        "text": "step03.md"
+      },
+      {
+        "title": "Viewing the Data Sources",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

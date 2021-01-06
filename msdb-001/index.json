@@ -1,11 +1,11 @@
 {
-  "title": "Microservice Database Design: 1- The Essential Principle",
+  "title": "Microservice Database Design: 1-The Essential Principles",
   "description": "Learn the essential design princple of database design for a microservice",
   "difficulty": "General understanding of structured programming, git, Docker containers, and reading knowledge of Node.js",
   "time": "15 minutes",
   "details": {
     "steps": [{
-        "title": "Installing the Lab Code",
+        "title": "Installing the Lab Code from GitHub",
         "text": "step01.md"
       },
       {
