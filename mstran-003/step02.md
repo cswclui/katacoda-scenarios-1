@@ -36,9 +36,9 @@ You'll get the following output upon succesful completion:
 
 ```
 
-**Step 3:** In a third terminal window, turn on minikube Load Balancing
+**Step 3:** In a second terminal window, turn on minikube Load Balancing
 
-`minikube tunnel`{{execute T3}}
+`minikube tunnel`{{execute T2}}
 
 You'll get the following output from the process which will continue to run the third terminal window.
 
@@ -105,7 +105,7 @@ users        ClusterIP   10.104.217.252   <none>        80/TCP    90s
 
 View the logs for the `sms` target:
 
-`kubectl logs sms -f`{{execute T2}}
+`kubectl logs sms -f`{{execute T3}}
 
 You'll get output similar to the following:
 
@@ -124,11 +124,11 @@ SMS is sending a POST at Sun Aug 04 2019 17:04:33 GMT+0000 (UTC) with the body {
 
 Shutdown the log stream
 
-`echo "Ctrl+C"`{{execute interrupt T2}}
+`echo "Ctrl+C"`{{execute interrupt T3}}
 
 View the logs for `twitter` target:
 
-`kubectl logs twitter -f`{{execute T2}}
+`kubectl logs twitter -f`{{execute T3}}
 
 ```
 TWITTER is sending a POST at Sun Aug 04 2019 17:05:20 GMT+0000 (UTC) with the body {"fortune":"Flattery is all right so long as you don't inhale."}.
@@ -141,11 +141,11 @@ TWITTER is sending a POST at Sun Aug 04 2019 17:05:25 GMT+0000 (UTC) with the bo
 ```
 Shutdown the log stream
 
-`echo "Ctrl+C"`{{execute interrupt T2}}
+`echo "Ctrl+C"`{{execute interrupt T3}}
 
 View the logs for `facebook` target:
 
-`kubectl logs facebook -f`{{execute T1}}
+`kubectl logs facebook -f`{{execute T3}}
 
 ```
 FACEBOOK is sending a POST at Sun Aug 04 2019 17:05:45 GMT+0000 (UTC) with the body {"fortune":"He who fights and runs away, lives to fight another day."}.
@@ -158,7 +158,7 @@ FACEBOOK is sending a POST at Sun Aug 04 2019 17:05:50 GMT+0000 (UTC) with the b
 ```
 Shutdown the log stream
 
-`echo "Ctrl+C"`{{execute interrupt T2}}
+`echo "Ctrl+C"`{{execute interrupt T3}}
 
 The output above indicates that the targets of *Fortnue Cookie* data recieved their fortunes.
 
