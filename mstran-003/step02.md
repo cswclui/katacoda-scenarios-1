@@ -19,6 +19,8 @@ You'get get the following output:
 
 `sh docker-seed.sh`{{execute T1}}
 
+`cd kubernetes`{{execute T1}}
+
 `sh generate-k8s-resources.sh`{{execute T1}}
 
 **Step 3:** Check out all went well by listing the pods and services:
