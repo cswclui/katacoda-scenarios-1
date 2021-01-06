@@ -1,4 +1,4 @@
-![logo](mstran-002/assets/logo-sm.png)
+![logo](mstran-003/assets/logo-sm.png)
 
 ## Objective
 
@@ -19,7 +19,7 @@ You'll be doing the following steps:
 
 This scenario is completely interactive. The instructions you'll be given will be executed directly in the terminal window that is embedded directly in the Katacoda interactive learning environment. In the steps to come, when you see a command line instruction with a black background and check mark at the end, like so:
 
-![Katacoda command line](mstran-002/assets/command-01.png)
+![Katacoda command line](mstran-003/assets/command-01.png)
 
 just click on it and the command will execute in the interative terminal window.
 
