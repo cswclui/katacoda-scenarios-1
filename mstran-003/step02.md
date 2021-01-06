@@ -15,7 +15,15 @@ You'get get the following output:
 
 `/root/fortune-cookies/microservice-sync`
 
-**Step 2:** Run the shell script the creates a local Docker registry and seed the registry with the containers representing each microservice
+**Step 2:** Start the minikube server that this demonstration MOA needs in order to work with Kuberenetes
+
+`minikube start`{{execute T1}}
+
+You'll get the following output upon succesful completion:
+
+`TBP`
+
+**Step 3:** Run the shell script the creates a local Docker registry and seed the registry with the containers representing each microservice
 
 `sh docker-seed.sh`{{execute T1}}
 
@@ -23,7 +31,7 @@ You'get get the following output:
 
 `sh generate-k8s-resources.sh`{{execute T1}}
 
-**Step 3:** Check out all went well by listing the pods and services:
+**Step 4:** Check out all went well by listing the pods and services:
 
 `kubectl get pods`{{execute T1}}
 
@@ -106,6 +114,8 @@ FACEBOOK is sending a POST at Sun Aug 04 2019 17:05:49 GMT+0000 (UTC) with the b
 FACEBOOK is sending a POST at Sun Aug 04 2019 17:05:50 GMT+0000 (UTC) with the body {"fortune":"You can't live on bread alone."}.
 
 ```
+
+The output above indicates that the targets of *Fortnue Cookie* data recieved their fortunes.
 
 ---
 
