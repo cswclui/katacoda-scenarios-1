@@ -25,9 +25,15 @@ Next, we need to get an understanding of the the gRPC API.
 
 `grpcurl -import-path ./proto -proto seatsaver.proto describe seatsaver.SeatSaverService.GetVenues`{{execute T1}}
 
-**Step 5:** 
+**Step 5:**  Execute a method
 
 `grpcurl -plaintext -import-path ./proto -proto seatsaver.proto localhost:50051 seatsaver.SeatSaverService/GetVenues`{{execute T1}}
+
+Shutdown the log stream
+
+`echo "Ctrl+C"`{{execute interrupt T3}}
+
+
 
 ---
 
