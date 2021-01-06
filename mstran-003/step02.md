@@ -99,19 +99,18 @@ users       1/1     Running   0          16s
 You'll get output similar to the following:
 
 ```
-NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
-email        ClusterIP   10.97.47.100     <none>        80/TCP    92s
-facebook     ClusterIP   10.107.216.185   <none>        80/TCP    92s
-fortunes     ClusterIP   10.97.45.203     <none>        80/TCP    90s
-instagram    ClusterIP   10.98.41.69      <none>        80/TCP    92s
-kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP   8m39s
-linkedin     ClusterIP   10.104.201.201   <none>        80/TCP    91s
-scheduler    ClusterIP   10.98.77.10      <none>        80/TCP    91s
-sender       ClusterIP   10.109.110.42    <none>        80/TCP    91s
-sms          ClusterIP   10.108.136.36    <none>        80/TCP    91s
-twitter      ClusterIP   10.96.206.203    <none>        80/TCP    91s
-users        ClusterIP   10.104.217.252   <none>        80/TCP    90s
-
+NAME         TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+email        ClusterIP      10.96.43.129     <none>        80/TCP         65s
+facebook     ClusterIP      10.106.136.211   <none>        80/TCP         65s
+fortunes     ClusterIP      10.99.243.25     <none>        80/TCP         59s
+instagram    ClusterIP      10.110.147.152   <none>        80/TCP         64s
+kubernetes   ClusterIP      10.96.0.1        <none>        443/TCP        5m8s
+linkedin     ClusterIP      10.102.177.11    <none>        80/TCP         64s
+scheduler    ClusterIP      10.109.117.174   <none>        80/TCP         60s
+sender       ClusterIP      10.98.255.64     <none>        80/TCP         61s
+sms          ClusterIP      10.108.54.16     <none>        80/TCP         63s
+twitter      ClusterIP      10.111.153.196   <none>        80/TCP         62s
+users        LoadBalancer   10.98.16.60      10.98.16.60   80:30375/TCP   60s
 ```
 
 **Step 7:**  Wait about 10 seconds for the MOA to warm up and then check the logs of some of the target pods
