@@ -1,6 +1,7 @@
 ## Objective
 The objective of this lesson is learn about how to provide application configuration information as part of an application's common code base in accordance with the Configuration princple of The 12 Factor App. 
 
+
 ## Key Concept: 12 Factor App - Configuration
 A key concept in the third principle of 12 Factor App is configuration for the application is stored in along with the application in the common repository.
 
@@ -17,7 +18,7 @@ You should see the following output:
 
 `/root/12factor`
 
-If you are not in that working director, execute the following command: `cd /root/12factor`{{execute}}.
+If you are not in that working directory, execute the following command: `cd /root/12factor`{{execute}}.
 
 **Step 2:** Confirm you are in correct GitHub Branch
 
@@ -41,7 +42,7 @@ You'll see the following:
 
 `PINGER_PORT=3030`
 
-This configuration seeting defines an environment variable, `PINGER_PORT` and assign the value `3030` to the variable. There is programming logic that is special to the application that reads the value of `PINGER_PORT` in order to determine the port that the application's web server will listen on for incoming requests.
+This configuration setting defines an environment variable, `PINGER_PORT` and assigns the value `3030` to the variable. There is programming logic that is special to the application that reads the value of `PINGER_PORT` in order to determine the port that the application's web server will listen on for incoming requests.
 
 Now that we've reviewed how an external configuration file is used to set an environmental variable that gets consumed by the demonstration application, we'll move on to testing the application using the tests that are part of the general codebase.
 

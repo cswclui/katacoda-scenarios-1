@@ -1,11 +1,11 @@
 ![logo](12factor-001/assets/logo-sm.png)
 ## Objective
 
-The objective of this lab is to demonstrate the basic concepts behind of the first of 12 Factor App principles, **[Codebase](https://12factor.net/codebase)**.
+The objective of this lab is to demonstrate the basic concepts behind the first of 12 Factor App principles, **[Codebase](https://12factor.net/codebase)**.
 
 ## What you'll be doing 
 
-In this lab you'll doing following:
+In this lab you'll do the following:
 
 * **Step 1:** Getting the Lab's Code from GitHub
 * **Step 2:** Inspecting the General Codebase
