@@ -22,7 +22,8 @@ You'get get the following output:
 You'll get the following output:
 
 ```
-TBP
+Creating seat-saver-grpc_seatsaver_1 ... done
+Creating seat-saver-grpc_mongo_1     ... done
 
 ```
 
