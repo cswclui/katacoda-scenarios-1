@@ -17,7 +17,7 @@ You'll see output as follows:
 
 **Step 3:** Check out the branch relevant to this lesson:
 
-`git checkout expose_users_under_loadbalancer`
+`git checkout expose_users_under_loadbalancer`{{execute T1}}
 
 You'll get the following output:
 
