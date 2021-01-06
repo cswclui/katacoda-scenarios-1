@@ -36,7 +36,14 @@ You'll get the following output upon succesful completion:
 
 ```
 
-**Step 3:** Run the shell script the creates a Local Container Registry and seeds the registry with the containers representing each microservice
+**Step 3:** In a third terminal window, turn on minikube Load Balancing
+
+`minikube tunnel`{{execute T3}}
+
+You'll get the following output from the process which will continue to run the third terminal window.
+
+
+**Step 4:** Run the shell script the creates a Local Container Registry and seeds the registry with the containers representing each microservice
 
 `sh docker-seed.sh`{{execute T1}}
 
@@ -47,13 +54,13 @@ Upon successful seeding of the Local Container Registry you'll get the following
 
 ```
 
-**Step 4:** Add the Kubernetes pods and services to the Kubernetes cluster running under `minikube`.
+**Step 5:** Add the Kubernetes pods and services to the Kubernetes cluster running under `minikube`.
 
 `cd kubernetes`{{execute T1}}
 
 `sh generate-k8s-resources.sh`{{execute T1}}
 
-**Step 5:** Check out all went well by listing the pods and services:
+**Step 6:** Check out all went well by listing the pods and services:
 
 `kubectl get pods`{{execute T1}}
 
@@ -94,7 +101,7 @@ users        ClusterIP   10.104.217.252   <none>        80/TCP    90s
 
 ```
 
-**Step 6:**  Wait about 10 seconds for the MOA to warm up and then check the logs of some of the target pods
+**Step 7:**  Wait about 10 seconds for the MOA to warm up and then check the logs of some of the target pods
 
 View the logs for the `sms` target:
 
