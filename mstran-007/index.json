@@ -13,20 +13,16 @@
         "text": "step02.md"
       },
       {
-        "title": "Exercising the Code",
+        "title": "Understanding the Use Case and Solution",
         "text": "step03.md"
       },
       {
-        "title": "Understanding the Use Case and Solution",
+        "title": "Creating the User Defined Function for Strangler",
         "text": "step04.md"
       },
       {
-        "title": "Creating the User Defined Function for Strangler",
+        "title": "Forwarding Data Using the UDF in a Database Trigger",
         "text": "step05.md"
-      },
-      {
-        "title": "Applying the UDF in a Database Trigger to Forward Data",
-        "text": "step06.md"
       }
     ],
     "intro": {

@@ -22,7 +22,7 @@ You'll see output as follows:
 
 `cd ~/fortune-cookies/monolith_v2 && docker-compose up`{{execute T2}}
 
-You'll get the following output:
+You'll get output similar to the following along with ongoing console output relevant the backing services' activities:
 
 ```
 .
@@ -56,23 +56,29 @@ found 0 vulnerabilities
 
 `node server.js`{{execute T1}}
 
-You'll get the following output:
+You'll get an ongoing stream of output from the monolithic app:
 
-```
-TBD
-
-```
 
 **Step 5:** Use the MariaDB administration tool that ships with the lesson to view the contents of the monolith data source. Click the following link:
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
 
-![Database Access](msdb-004/assets/db_access.jpg)
+![Database Access](msdb-004/assets/db_access.png)
 
 You'll notice the database `fortune_cookies`. This is the database in which the monolithic application is storing data.
 
+![Database Components](msdb-004/assets/db_assets.png)
+
 **Step 6:** Enter the `fortune_cookies` database to view its tables.
+
+You'll notice that there are a large number of rows in the table, `SentFortunes`. This makes sense in that every time a `fortune` is sent, a write is made to the `SentFortunes` table.
+
+For the purposes of demonstration, in lessons to come we're going to add a trigger to the database backing the monolith application. This trigger will forward the information in each `write` to the table, `SentFortunes` to an external `receiver` service via HTTP.
+
+The purpose of `receiver` service is to act as a proxy to a message broker that will be brought online at a later time.
+
+![Strangler Pattern](mstran-007/assets/strangler.png)
 
 ---
 
