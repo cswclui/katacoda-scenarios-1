@@ -1,0 +1,48 @@
+{
+  "title": "Microservice Transformation: 7-Implementing the Strangler Pattern",
+  "description": "Learn the basic of implementing the Strangler Pattern to add a feature to an existing monolitic application",
+  "difficulty": "General understanding of structured programming, git, Docker, containers, database triggers, and a reading knowledge of Node.js",
+  "time": "20 minutes",
+  "details": {
+    "steps": [{
+        "title": "Installing the Code",
+        "text": "step01.md"
+      },
+      {
+        "title": "Getting the Code Up and Running",
+        "text": "step02.md"
+      },
+      {
+        "title": "Exercising the Code",
+        "text": "step03.md"
+      },
+      {
+        "title": "Understanding the Use Case and Solution",
+        "text": "step04.md"
+      },
+      {
+        "title": "Creating the User Defined Function for Strangler",
+        "text": "step05.md"
+      },
+      {
+        "title": "Applying the UDF in a Database Trigger to Forward Data",
+        "text": "step06.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
