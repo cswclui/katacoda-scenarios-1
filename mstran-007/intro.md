@@ -24,6 +24,7 @@ You'll be doing the following steps:
 * **Step 3:** Understanding the use case and solution
 * **Step 4:** Creating the User Defined Function for Strangler
 * **Step 5:** Forwarding Data Using the UDF in a Database Trigger
+* **Step 6:** Creating the Database Trigger
 
 ## Executing command line instructions 
 

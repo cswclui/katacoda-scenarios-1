@@ -17,12 +17,16 @@
         "text": "step03.md"
       },
       {
-        "title": "Creating the User Defined Function for Strangler",
+        "title": "Creating the Custom User Defined Function for Strangler",
         "text": "step04.md"
       },
       {
         "title": "Forwarding Data Using the UDF in a Database Trigger",
         "text": "step05.md"
+      },
+      {
+        "title": "Creating the Database Trigger",
+        "text": "step06.md"
       }
     ],
     "intro": {

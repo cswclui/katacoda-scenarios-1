@@ -82,4 +82,4 @@ The purpose of `receiver` service is to act as a proxy to a message broker that 
 
 ---
 
-***Next: Exercising the code***
+***Next: Understanding the use case and solution***
