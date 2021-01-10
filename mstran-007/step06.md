@@ -13,7 +13,7 @@ TBP
 
 `DELIMITER $`{{execute T3}}
 
-**Step 2:** At the prompt of the database client, enter the code to create the trigger:
+**Step 2:** At the prompt of the database client, enter the code to create the update trigger:
 
 ```
 CREATE TRIGGER upd_check
@@ -22,7 +22,7 @@ CREATE TRIGGER upd_check
       BEGIN
         DECLARE result char(255);
         DECLARE fortune char(255);
-        set fortune = CONCAT(NEW.firstName, " ", NEW.lastName, " ", NEW.fortune);
+        set fortune = CONCAT(NEW.firstName, ", ", NEW.lastName, ", ", NEW.fortune);
         set result = http_get('http://receiver:3030', fortune);
       END;
 $
