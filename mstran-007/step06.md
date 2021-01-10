@@ -13,7 +13,23 @@ TBP
 
 `DELIMITER $`{{execute T3}}
 
-**Step 2:** At the prompt of the database client, enter the code to create the update trigger:
+**Step 2:** Create a simple trigger that will `ping` the `receiver` when a record is added:
+
+```
+CREATE TRIGGER upd_ping
+  AFTER INSERT ON SentFortunes
+    FOR EACH ROW
+      BEGIN
+        set result = http_get('http://receiver:3030/ping');
+      END;
+$
+
+```
+
+
+**Step 3:** Go back to the first teminal window where the Docker-Compose containers are running. You'll see that the custom `receiver` service is processing data from the trigger in the database.
+
+**Step 4:** At the prompt of the database client, enter the code to create the update trigger:
 
 ```
 CREATE TRIGGER upd_check
@@ -29,7 +45,7 @@ $
 
 ```
 
-**Step 3:** Go back to the first teminal window where the Docker-Compose containers are running. You'll see that the custom `receiver` service is processing data from the trigger in the database.
+**Step 5:** Go back to the first teminal window where the Docker-Compose containers are running. You'll see that the custom `receiver` service is processing data from the trigger in the database.
 
 Once the connection between the database trigger and custom `receiver` is established and data is moving the `receiver` developers in the future can refactor the receiver to forward incoming data to a message broker.
 
