@@ -64,11 +64,11 @@ You'll get an ongoing stream of output from the monolithic app:
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
 
-![Database Access](msdb-007/assets/db_access.png)
+![Database Access](mstran-007/assets/db_access.png)
 
 You'll notice the database `fortune_cookies`. This is the database in which the monolithic application is storing data.
 
-![Database Components](msdb-007/assets/db_assets.png)
+![Database Components](mstran-007/assets/db_assets.png)
 
 **Step 6:** Enter the `fortune_cookies` database to view its tables.
 
