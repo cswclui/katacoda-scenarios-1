@@ -33,7 +33,7 @@ You'll get the following output:
 
 `bash ./build.sh`{{execute T3}}
 
-You will get the following error message:
+**WARNING:** You will get the following error message:
 
 `./build.sh: line 1: mysql: command not found`
 

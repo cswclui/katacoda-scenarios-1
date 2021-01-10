@@ -18,12 +18,12 @@ TBP
 ```
 CREATE TRIGGER upd_check
   AFTER INSERT ON SentFortunes
-    FOR EACH ROW   
-      BEGIN   
+    FOR EACH ROW
+      BEGIN
         DECLARE result char(255);
         DECLARE fortune char(255);
-        set fortune = CONCAT(NEW.firstName, " ", NEW.lastName, " ", NEW.fortune); 
-        set result = http_get(fortune);
+        set fortune = CONCAT(NEW.firstName, " ", NEW.lastName, " ", NEW.fortune);
+        set result = http_get('http://receiver:3030', fortune);
       END;
 $
 
