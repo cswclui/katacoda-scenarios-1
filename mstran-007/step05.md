@@ -49,12 +49,18 @@ TBP
 
 **Step 8:** Confirm that the `http_get` udf works:
 
-`SELECT http_get('http://receiver:3030/', '{"firstName":"Cool", "lastName":"McCool", "dob":"1979-01-27", "email":"cool.mccool@reallycool.com", "phone":"123-456-7890"}')`{{execute T3}}
+`SELECT http_get('http://receiver:3030/', '{"firstName":"Cool", "lastName":"McCool", "dob":"1979-01-27", "email":"cool.mccool@reallycool.com", "phone":"123-456-7890"}');`{{execute T3}}
 
 You'll get output similar to the following:
 
 ```
-TBP
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| http_get('http://receiver:3030/', '{"firstName":"Cool", "lastName":"McCool", "dob":"1979-01-27", "email":"cool.mccool@reallycool.com", "phone":"123-456-7890"}') |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| {"Body":"{\"receivedMethod\":\"GET\",\"receivedBody\":{}}"}
+                                                                                                     |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.034 sec)
 
 ```
 
