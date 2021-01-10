@@ -19,7 +19,7 @@ TBP
 
 **Step 2:** Go into a command line terminal in the database container:
 
-`docker exec -it fortunes-monolith_v2_mariadb_1 bash`{{execute T3}}
+`docker exec -it monolith_v2_mariadb_1 bash`{{execute T3}}
 
 **Step 3:** Go to the database's plugin directory:
 
