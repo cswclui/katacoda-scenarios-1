@@ -5,15 +5,15 @@ The objective of this lesson is demonstrate how to clone from GitHub the project
 
 **Step 1:** Get the code from GitHub:
 
-`git clone https://github.com/reselbob/fortune-cookies`{{execute T1}}
+`git clone https://github.com/reselbob/fortune-cookies.git`{{execute T1}}
 
 **Step 2:** Navigate to the working directory of the code just cloned. This directory contains all the assets for the lab's demonstration application.
 
-`cd fortune-cookies/monolith_v2 && pwd`{{execute T1}}
+`cd fortune-cookies/monolith_strangled/ && pwd`{{execute T1}}
 
 You'll see output as follows:
 
-`/root/fortune-cookies/monolith_v2`
+`/root/fortune-cookies/monolith_strangled`
 
 ---
 

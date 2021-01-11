@@ -1,6 +1,6 @@
 {
   "title": "Microservice Transformation: 7-Implementing the Strangler Pattern",
-  "description": "Learn the basic of implementing the Strangler Pattern to add a feature to an existing monolitic application",
+  "description": "Learn the basics of implementing the Strangler Pattern to isolate a feature to an existing monolitic application for eventual extraction",
   "difficulty": "General understanding of structured programming, git, Docker, containers, database triggers, and a reading knowledge of Node.js",
   "time": "20 minutes",
   "details": {
@@ -17,16 +17,8 @@
         "text": "step03.md"
       },
       {
-        "title": "Creating the Custom User Defined Function for Strangler",
+        "title": "Analyzing the Code",
         "text": "step04.md"
-      },
-      {
-        "title": "Forwarding Data Using the UDF in a Database Trigger",
-        "text": "step05.md"
-      },
-      {
-        "title": "Creating the Database Trigger",
-        "text": "step06.md"
       }
     ],
     "intro": {

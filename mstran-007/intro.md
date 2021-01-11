@@ -4,27 +4,19 @@
 
 The objective of the secenario is to demonstrate how to initiate the tranformation of a monolithic to a microservice using the [Strangler Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler-fig).
 
-![Hybrid Architecture](mstran-007/assets/seats-idl.png)
+## What You'll Be Doing 
 
-## What you'll be doing 
+The scenario implements a version of the Strangler Pattern that we'll call Strangler Lite. Strangler Lite augments the code in the `sender` component of *Fortune Cookies* so that *sent Fortune* that have been sent internally from within the monolith are emitted from the application to an independent, external MariaDB database. Once the data is in the MariaDB database, that data is accessible to any interested service.
 
-In this scenario you'll ...
+The project is deployed as Docker containers aggregated under [Docker Compose](https://docs.docker.com/compose/).
 
-```
-TBP
-
-```
-
-![Strangler Pattern](mstran-007/assets/strangler.png)
 
 You'll be doing the following steps:
 
 * **Step 1:** Installing the lesson code
 * **Step 2:** Getting the code up and running
 * **Step 3:** Understanding the use case and solution
-* **Step 4:** Creating the User Defined Function for Strangler
-* **Step 5:** Forwarding Data Using the UDF in a Database Trigger
-* **Step 6:** Creating the Database Trigger
+* **Step 4:** Analyzing the code
 
 ## Executing command line instructions 
 
