@@ -37,7 +37,7 @@ You'll get following output:
 
 **WHERE**
 
-* `config`, `data` and `init` are directories that were created by the database upon invocation
+* `config`, `data` and `init` are directories that were created in the local file system according to the volume configuration for the database container as described in the `docker-compose.yml` file.
 * `docker-compose.yml` is the file the contains the `Docker Compose` configuration settinsg
 * `monolith` contains the source code the *Fortunes Cookies* monolithic application
 * `report_gen` is the directory that has the source code for the external service that consumes the data emitted from the refactored `send` component.
@@ -63,7 +63,7 @@ Take a look at the `send` function which starts at `Line 7`. The comments in the
 
 Also, part of the strangling code is the addition of the `DataManager` which contains the [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) that encapsulates the data access activity to the MariaDB data base. The ORM that's used in the DataManager is the Node.js library, [Sequilize](https://www.npmjs.com/package/sequelize).
 
-The last piece to look at is the `report_gen` service. This is the service that consumes the data emitted from `sender` into the external data base.
+The last piece to look at is the `report_gen` service. This is the service that consumes the data emitted from `sender` into the external database.
 
 **Step 5:** Get out of `vi` line numbered view mode
 
@@ -95,7 +95,7 @@ and then enter:
 
 The code of interest is betweel `Lines 7 - 25`.
 
-Notice at `Line 18` that the code uses `getSentFortunes()` method from the `DataManager` component to get the *sent fortunes* data in the data source. As mentioned above, `DataManager` encapsulates data access activitie the external data source. The method, `getSentFortunes()` takes a single optional argument, `limit`. If a numeric value is sent in to the API as a `request` query parameter named, `limit`, the `DataManager.getSentFortunes(limit)` will return the number of fortunes defined by `limit`. Otherwise, `DataManager.getSentFortunes()` will return the default number of rows, `10`,
+Notice at `Line 18` that the code uses the `getSentFortunes()` method from the `DataManager` component to access the *sent fortunes* data in the data source. As mentioned above, `DataManager` encapsulates data access activities to and from the external data source. The method, `getSentFortunes()` takes a single optional argument, `limit`. `limit` is derived from the `request` query parameter of the same name. If `request.query.limit` contain a numeric value, then `DataManager.getSentFortunes(limit)` will return the number of fortunes defined by `limit`. Otherwise, `DataManager.getSentFortunes()` will return the default number of rows, `10`,
 
 **Step 10:** Get out of `vi` line numbered view mode
 
