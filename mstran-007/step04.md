@@ -37,13 +37,13 @@ You'll get following output:
 
 **WHERE**
 
-* `config`, `data` and `init` are directories that created by the database upon invocation
+* `config`, `data` and `init` are directories that were created by the database upon invocation
 * `docker-compose.yml` is the file the contains the `Docker Compose` configuration settinsg
 * `monolith` contains the source code the *Fortunes Cookies* monolithic application
-* `report_gen` is the directory that has the source code for the service that consumes the data emitted from the refactored `send` component.
-* `README.md` is the conventional file that contains content in markdown format that provides documentation about the project
+* `report_gen` is the directory that has the source code for the external service that consumes the data emitted from the refactored `send` component.
+* `README.md` is the conventional file that contains documentation content in markdown format
 
-`report_gen` is a new service, external *Fortunes Cookies* that will consume data cominng out of the monolith. The interesting work takes place in the `sender` component in the *Fortunes Cookies* monolithic application so let's go there.
+`report_gen` is a new service, external to *Fortunes Cookies* that will consume data cominng out of the monolith. The interesting work takes place in the `sender` component in the *Fortunes Cookies* monolithic application so let's go there.
 
 **Step 3:** Take a look at the file that contains the `sender` code. 
 
@@ -61,7 +61,7 @@ and then enter:
 
 Take a look at the `send` function which starts at `Line 7`. The comments in the code describe the old code and where the stranger code is added. The strangling code runs between `Lines 15 -22`.
 
-Also, part of the strangling code is the addition of the `DataManager` which contains the ORM that encapsulates the data access activity to the MariaDB data base. The ORM that's used in the DataManager is the Node.js library, [Sequilize](https://www.npmjs.com/package/sequelize).
+Also, part of the strangling code is the addition of the `DataManager` which contains the [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) that encapsulates the data access activity to the MariaDB data base. The ORM that's used in the DataManager is the Node.js library, [Sequilize](https://www.npmjs.com/package/sequelize).
 
 The last piece to look at is the `report_gen` service. This is the service that consumes the data emitted from `sender` into the external data base.
 
@@ -95,7 +95,7 @@ and then enter:
 
 The code of interest is betweel `Lines 7 - 25`.
 
-Notice at `Line 18` that the code uses `getSentFortunes()` method from the `DataManager` component to get the sent fortunes data in the data source. As mentioned above `DataManager` encapsulates data access activitie the external data source. The method, `getFortunes()` takes a single optional argument, `limit`. If a numeric value is sent in to the API as a `request` query parameter named, `limit`, the `DataManager.getSentFortunes(limit)` will return the number of fortunes defined by `limit`. Otherwise, `DataManager.getSentFortunes()` will return the default number of rows, `10`,
+Notice at `Line 18` that the code uses `getSentFortunes()` method from the `DataManager` component to get the *sent fortunes* data in the data source. As mentioned above, `DataManager` encapsulates data access activitie the external data source. The method, `getSentFortunes()` takes a single optional argument, `limit`. If a numeric value is sent in to the API as a `request` query parameter named, `limit`, the `DataManager.getSentFortunes(limit)` will return the number of fortunes defined by `limit`. Otherwise, `DataManager.getSentFortunes()` will return the default number of rows, `10`,
 
 **Step 10:** Get out of `vi` line numbered view mode
 
@@ -109,7 +109,7 @@ You have exited `vi`.
 
 ## Conclusion 
 
-In closing you can see that by adding an single new componse, `DataManager` and adding a few lines of new code in `sender` we've made it so *Fortune Cookies* can export *sent Fortunes* data to an external data source. Once the data is externalized, it can be consumed by any interested party such as `report_gen`.
+In closing you can see that by adding a new component, `DataManager` and adding a few lines of new code in `sender` we've made it so *Fortune Cookies* can export *sent Fortunes* data to an external data source. Once the data is externalized, it can be consumed by any interested party such as `report_gen`.
 
 Of course, there is more work to do. Eventually `sender` will need to be disconnected from the monolithic *Fortune Cookies* completely. This will take a lot more work. But, no matter what, starting to strangle `sender` by emitting it's data to an external data source is an important first step.
 
