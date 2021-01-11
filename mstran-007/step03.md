@@ -15,7 +15,7 @@ You'll see output as follows:
 
 **Step 3:** In a separate terminal window, run `curl ` against the `report_gen` service, like so:
 
-`curl localhost:3003?limit=6`
+`curl localhost:3003?limit=6`{{execute T1}}
 
 **WHERE**
 
