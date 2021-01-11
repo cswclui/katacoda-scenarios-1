@@ -2,8 +2,14 @@
 The objective of this lesson is analyzed the Strangler Lite code to see how the Strangler Pattern is implemented.
 
 ## What You'll Be Doing
+In this lesson we're going to look at how the Stranger Pattern is implemented in the `sender` component of the monolithic *Fortune Cookies*. Remember, the purpose of sender is to send fortunes onto intended targets.
 
 ![Fortune Cookies Components](mstran-007/assets/basic-architecture-components.png)
+
+The approach the Strangler Lite takes is to add a custom made `DatamManager` component into the monolithic application. `DatamManager` encapsulates data access activity to a MariaDB database using the [Sequilize](https://sequelize.org/) Node.js library. Also, a few lines of code will be added to the actual `sender` component that uses the `DataManager` to emit *sent Fortune* data to the external MariaDB database.
+
+![Strangler Architecture](mstran-007/assets/strangler-lite-architecture.png)
+
 
 ## Steps
 
@@ -37,7 +43,7 @@ You'll get following output:
 * `report_gen` is the directory that has the source code for the service that consumes the data emitted from the refactored `send` component.
 * `README.md` is the conventional file that contains content in markdown format that provides documentation about the project
 
-The interested work takes place in the `sender` component in the *Fortunes Cookies* monolithic application so let's go there.
+`report_gen` is a new service, external *Fortunes Cookies* that will consume data cominng out of the monolith. The interesting work takes place in the `sender` component in the *Fortunes Cookies* monolithic application so let's go there.
 
 **Step 3:** Take a look at the file that contains the `sender` code. 
 
@@ -51,7 +57,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
 
 and then enter:
 
-`:set number`{{execute T1}
+`:set number`{{execute T1}}
 
 Take a look at the `send` function which starts at `Line 7`. The comments in the code describe the old code and where the stranger code is added. The strangling code runs between `Lines 15 -22`.
 
@@ -85,9 +91,11 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
 
 and then enter:
 
-`:set number`{{execute T1}
+`:set number`{{execute T1}}
 
-Notice that the code uses `getFortunes()` method from the `DataManager` component to get the sent fortunes data in the data source. As mentioned above `DataManager` encapsulates data access activitie the external data source. The method, `getFortunes()` takes a single optional argument, `limit`. If a numeric value is sent in to the API as a `request` query parameter named, `limit`, the `DataManager.getFortunes(limit)` will return the number of fortunes defined by `limit`. Otherwise, DataManager.getFortunes() will return the default number of rows, `10`,
+The code of interest is betweel `Lines 7 - 25`.
+
+Notice at `Line 18` that the code uses `getSentFortunes()` method from the `DataManager` component to get the sent fortunes data in the data source. As mentioned above `DataManager` encapsulates data access activitie the external data source. The method, `getFortunes()` takes a single optional argument, `limit`. If a numeric value is sent in to the API as a `request` query parameter named, `limit`, the `DataManager.getSentFortunes(limit)` will return the number of fortunes defined by `limit`. Otherwise, `DataManager.getSentFortunes()` will return the default number of rows, `10`,
 
 **Step 10:** Get out of `vi` line numbered view mode
 
@@ -101,9 +109,9 @@ You have exited `vi`.
 
 ## Conclusion 
 
-In closing you can see that by adding an single new componse, `DataManager` adding a few lines of new code in `sender` we have made it so *Fortune Cookies* can export *sent Fortunes* data to an external data source. Once the data is externalized, it can be consumed by any interested party such as `report_gen`.
+In closing you can see that by adding an single new componse, `DataManager` and adding a few lines of new code in `sender` we've made it so *Fortune Cookies* can export *sent Fortunes* data to an external data source. Once the data is externalized, it can be consumed by any interested party such as `report_gen`.
 
-Of course, there is more work to do. Eventually `sender` will need to be disconnected from the monolithic *Fortune Cookies* completely. This will take a lot more work. But, no matter what, starting to strangle to `sender` by sending it's data to an external data source is an important first step.
+Of course, there is more work to do. Eventually `sender` will need to be disconnected from the monolithic *Fortune Cookies* completely. This will take a lot more work. But, no matter what, starting to strangle `sender` by emitting it's data to an external data source is an important first step.
 
 ---
 
