@@ -48,8 +48,8 @@ https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
 You'll notice the database `fortune_cookies`. This is the database in which the monolithic application is storing data.
 
-![Database Components](mstran-007/assets/db_assets.png)
-
 **Step 6:** Enter the `fortune_cookies` database to view its tables.
 
-You'll notice that the MariaDB is recieving data emitted from the send in the table, `SentFortunes`.
+![Database Components](mstran-007/assets/stranger-data-ui.png)
+
+You'll notice row count in the table, `SentFortunes`. You can infer that the MariaDB is receiving data emitted from the `send` component.
