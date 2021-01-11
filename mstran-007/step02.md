@@ -7,9 +7,9 @@ In this lesson we're going to examine the source code of the Stangler Lite versi
 
 ## Steps
 
-**Step 1:** Go to the working directory with the course code of the Stangler Lite version of *Fortune Cookies*.
+**Step 1:** In second termail window go to the working directory with the course code of the Stangler Lite version of *Fortune Cookies*.
 
-`clear && cd ~/fortune-cookies/monolith_strangled/ && pwd`{{execute T1}}
+`clear && cd ~/fortune-cookies/monolith_strangled/ && pwd`{{execute T2}}
 
 You'll see output as follows:
 
