@@ -4,7 +4,5 @@ The interactive scenario you:
 
 * Installed the lesson code
 * Got the code up and running
-* Developed and understanding the use case and solution
-* Created the user defined function for strangler
-* Forwarded data using the UDF in a database trigger
-* Created the database trigger
+* Exercised the code
+* Analyzed the code to see how the Strangler Pattern is implemented
