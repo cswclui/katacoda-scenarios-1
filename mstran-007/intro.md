@@ -12,6 +12,9 @@ The scenario implements a version of the Strangler Pattern that we'll call Stran
 
 Once the data is in the MariaDB database, that data is accessible to any interested service.
 
+![Strangler Architecture](mstran-007/assets/strangler-lite-architecture.png)
+
+
 The project is deployed as Docker containers aggregated under [Docker Compose](https://docs.docker.com/compose/).
 
 
