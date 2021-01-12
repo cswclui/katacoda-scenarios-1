@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is examine that demonstration service, *Fortune Cookies* in order to understand the the monolithic nature of the service.
+The objective of this lesson is to analyze the asynchronous version *Fortune Cookies* to learn how  it implements an event driven microservice architecture.
 
 ## Steps
 

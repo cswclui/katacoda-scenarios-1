@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is examine that demonstration service, *Fortune Cookies* in order to understand the the monolithic nature of the service.
+The objective of this lesson is to analyze the demonstration service, *Seat Saver* in order to understand how it implements gRPC as an example of a microservice that supports a data schema that is well known to both client and service.
 
 ## Steps
 

@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is examine that demonstration service, *Fortune Cookies* in order to understand the the monolithic nature of the service.
+The objective of this lesson analyze the synchronous version of MOA *Fortune Cookies* in order understand ow to develop a microservice oriented application that exposes each microservice in the application as a RESTful API.
 
 ## Steps
 
