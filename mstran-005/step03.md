@@ -53,11 +53,11 @@ You'll get output simlar to the following:
 
 ![Simple Query](mstran-005/assets/graphql-query-01.png)
 
-**NOTE:** As you can see above, the demonstration project applies a random string value to `name` field of a `venue`.
+**NOTE:** As you can see above, the demonstration project applies a random string value to the `name` field of a `venue`.
 
-Take note of an `id` of one of the venues. You'll use the id to retrieve `seat` data associated with a particular `venue`. In this case well get the seat data for the `venue` with the id of `5ffe25d278ada3582227c2f7`.
+Take note of an `id` of one of the venues. You'll use the `id` to retrieve `seat` data associated with a particular `venue`. In this case well get the seat data for the `venue` with the id of `5ffe25d278ada3582227c2f7`.
 
-**Step 2:** Execute a query against a particular `venue` in the GraphQL API getting the `status`, `section` and `number` data for each `seat` in the `venue`. Copy the code below which is in GraphQL Query Language (gql) in the left pane of the browser window of the GraphQL Playground: 
+**Step 2:** Execute a query against a particular `venue` in the GraphQL API getting the `status`, `section` and `number` data for each `seat` in the `venue`. Copy the code below which is in GraphQL Query Language (gql) in the left pane of the browser window of the GraphQL Playground **Don't forget** to use a venue `id` the query you ran previously. Each instance of **Seat Saver** will create its own unique `id` values for `venue`. 
 
 
 ```
@@ -102,7 +102,7 @@ You'll get output similar to the following:
  ```
 ![Simple Query](mstran-005/assets/graphql-query-02.png)
 
-You're now ready to register to the message server that is internal to the GraphQL API in order to receive notifications when the status of a seat changes in the API. The formal term in GraphQL for registering with the message server is `subscribing`.
+You're now ready to register to the message server that is internal to the GraphQL API in order to receive notifications when the status of a seat changes. The formal term in GraphQL for registering with the message server is `subscribing`. (Go [here](https://dgraph.io/docs/graphql/subscriptions/) to learn more about GraphQL Subscriptions.)
 
 ### Subscribing to the Message Server
 
@@ -201,9 +201,7 @@ The GraphQL mutation shown above will reserve a seat and also generate a `SeatEv
 
 You'll see that a message was sent to that browser window indicating that an `onSeatReserved` event was raised an a measage was sent.
 
-
-
-
+You've just experienced in the hybrid nature of the GraphQL. The next lesson will elaborate on the the hybrid style of microservices as demonstrated in this code exercise.
 
 ---
 
