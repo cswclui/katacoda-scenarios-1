@@ -102,11 +102,11 @@ You'll get output similar to the following:
  ```
 ![Simple Query](mstran-005/assets/graphql-query-02.png)
 
-You're now ready to register to the message server that is internal to the GraphQL to receiver notifications when the status of a seat changes in the API. The formal term in GraphQL for regsiting with the message server is `subscribing`.
+You're now ready to register to the message server that is internal to the GraphQL API in order to receive notifications when the status of a seat changes in the API. The formal term in GraphQL for registering with the message server is `subscribing`.
 
 ### Subscribing to the Message Server
 
-**Step 3:** Click the `New Tab` tab at the top left of the GraphQL Playground menu bar and then enter the following gql code:
+**Step 3:** Click the new tab button (+) at the top left of the GraphQL Playground menu bar and then enter the following gql code:
 
 ```
 subscription onSeatReserved{
@@ -158,9 +158,11 @@ We'll put this information into a GraphQL [query variable](https://blog.apollogr
 
 ```
 
- ![Query Variable](mstran-005/assets/query-variable-01.png)
+(**Don't Forget!** When creating the query variable to reservice a set use one of the venue `id` values that are special to your running instance of Seat Saver. You discovered the available `id` values above in **Step 2**.)
 
-**Step XX:** In GraphQL Playground query window on the left enter and execute the following GraphQL Query Language code to reserve a seat using the Seat Saver API.
+![Setting Query Variable](mstran-005/assets/setting-query-var.png)
+
+**Step 5:** In GraphQL Playground query window on the upper left enter and execute the following GraphQL Query Language code to reserve a seat using the Seat Saver API.
 
 ```
 mutation reserveSeat($seat: SeatInput!) {
