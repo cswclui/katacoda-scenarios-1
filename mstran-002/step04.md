@@ -29,7 +29,7 @@ The illustration below describes purpose of each of the components in the monoli
 
 ![logo](mstran-002/assets/basic-architecture-components.png)
 
-The important thing to understand that each component is the monolithic version of *Fortune Cookies* is well known internally within the application. One component call call another using a Javascript `require` statement.
+Each component in the monolithic version of *Fortune Cookies* is well known internally within the application. One component can call another using a Javascript `require` statement. In order to use `require`, the code needs to know the exact location of the source code for the given component of interest. If a file gets deleted or a reference is wrong, the code will fail.
 
 Let's take a look at the implication:
 
