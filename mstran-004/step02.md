@@ -40,6 +40,12 @@ You'll get the following output upon succesful completion:
 
 `minikube tunnel`{{execute T2}}
 
+---
+
+**WARNING:** As you traverse to and from separate terminal windows in Katacoda, it can take time for the terminal's command prompt (`$`) to appear. Don't click on an instruction in the left side interactive content pane until the command prompt appears.
+
+---
+
 You'll get the following episodic output from the process which will continue to run the third terminal window.
 
 ```
