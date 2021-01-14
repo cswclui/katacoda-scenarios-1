@@ -3,7 +3,7 @@ The objective of this lesson analyze the synchronous version of MOA *Fortune Coo
 
 The underlying principle of this version of *Fortune Cookies* is that each component runs and an independent service runniing under Kubernetes as accessible via a RESTful API.
 
-![logo](mstran-003/assets/sync-architecture.png)
+![Architecture](mstran-003/assets/sync-arch.png)
 
 The keys to understanding how this microservice architeccture works is to take a look at how one service interacts with another and then inspecting the configuration file that binds services together.
 
