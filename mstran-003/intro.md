@@ -8,7 +8,7 @@ The objective of the secenario is to get an example of a synchronous version of 
 
 Remember, the purpose of *Fortune Cookies* is to send a random "fortune" at a given interval of time to `users` that are registered with the system. Each user gets a random fortune. Fortune sending activity is coordinated in CronJobs that are created and managed in `scheduler` service.
 
-![Components](mstran-003/assets/basic-architecture-components)
+![Components](mstran-003/assets/basic-architecture-components.png)
 
 ## What you'll be doing 
 
