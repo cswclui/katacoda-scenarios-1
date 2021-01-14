@@ -47,7 +47,7 @@ and then enter:
 
 Notice the code at `Line 4`:
 
-`const {send} = require('../sender/index.js'):`
+`const {send} = require('../sender/index'):`
 
 The Javascript code shown above is the way Node.js imports a function from another internal module. In this case, the function `send` is imported.
 
@@ -55,7 +55,7 @@ The Javascript code shown above is the way Node.js imports a function from anoth
 
 Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
 
-`:21`{{execute T1}}}
+`:21`{{execute T1}}
 
 The code:
 

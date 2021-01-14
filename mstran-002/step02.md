@@ -29,12 +29,11 @@ You'll get output similar to the following:
 
 Give things a minute to "warm up"
 
-
 **Step 4:** Do a log dump to see scheduler activity:
 
 `docker logs --tail 2500 fc-monolith`{{execute T1}}
 
-You'll get output similar to the following"
+You'll get output similar to the following:
 
 ```
 Greetings from Ronny McCullough: Take your wife's first advice.
@@ -54,6 +53,7 @@ Greetings from Humberto West: The wise man is deceived once but the fool twice.
 Greetings from Addie D'Amore: After dinner rest a while, after supper walk a mile.
 
 ```
+This log output indicates that the each user's CronJob is executing as expected.
 
 ---
 

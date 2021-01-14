@@ -1,4 +1,4 @@
-**Congratulations!** You've completed the scenario, ***XXXX***
+**Congratulations!** You've completed the scenario, ***Microservice Transformation: 2-Anatomy of a Monolithic Service***
 
 The interactive scenario learned how to:
 
