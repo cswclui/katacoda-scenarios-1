@@ -4,7 +4,11 @@
 
 The objective of the secenario is to get an example of an asynchronous version of the *Fortune Cookies* microservice oriented application (MOA) installed and up and running. Then, once running, the added objective is to understand the structure and mechanics of the MOA.
 
+This asynchronous version of *Fortune Cookies* is based on the event-driven architecture pattern. In an event-driven architecture messages are published and consumed between microservices using a message broker. When a message is received a microservice will execute behavior special to the event described in the message. For example, when the `sender` microservice receives an `onFortunesMessageReceived` message, it will use that fortune in the message for its sending behavior.
+
 ![logo](mstran-004/assets/async-architecture.png)
+
+The benefit of using messages is that the behavior is "fire and forget". Unlike an HTTP `request/response` interaction which is inherently blocking, one a message is sent onto the broker, no further response is expected or needed. The assumption in play is that interested parties will receive the message and process it in their own way, in their own time.
 
 ## What you'll be doing 
 
@@ -15,7 +19,7 @@ You'll be doing the following steps:
 * **Step 1:** Installing the lesson code
 * **Step 2:** Getting the code up and running
 * **Step 3:** Exercising the Code
-* **Step 4:** Understanding the Code as an Example of a Synchronous Microservice Oriented Application
+* **Step 4:** Understanding the Code as an Example of an Asynchronous Microservice Oriented Application
 
 ## Executing command line instructions 
 
