@@ -53,6 +53,8 @@ The Javascript code shown above is the way Node.js imports a function from anoth
 
 **Step 4:** Go to `Line 21`.
 
+Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
+
 `:21`{{execute T1}}}
 
 The code:
