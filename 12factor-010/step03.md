@@ -45,7 +45,7 @@ and then enter:
 
 `:set number`{{execute T1}}}
 
-This Jeninsfile pipeline as five stages, `build service`, `test service`, `release service to container repo`, `provision target deployment` and `run service on deployment target`
+This Jenkinsfile pipeline as five stages, `build service`, `test service`, `release service to container repo`, `provision target deployment` and `run service on deployment target`
 
 **WHERE**
 

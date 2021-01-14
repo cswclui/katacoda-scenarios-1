@@ -14,7 +14,7 @@ As mentioned above, the demonstration MOA used in the scenario is named, *Seat S
 
 ![Seat Saver Object Model](mstran-005/assets/seat-saver-data-model.png)
 
-You view data in *Seat Saver* using a GraphQL [query](https://graphql.org/learn/queries/) . You change the `status` of a `seat` using a GraphQL [mutation](https://graphql.org/learn/queries/).
+You view data in *Seat Saver* using a GraphQL [query](https://graphql.org/learn/queries/). You change the `status` of a `seat` using a GraphQL [mutation](https://graphql.org/learn/queries/).
 
 Because *Seat Saver* is a hybrid microservice, in addition to the HTTP request/reponse interactions represented by GraphQL queries and mutations, *Seat Saver* facilitates asynchronous interations using a feature of GraphQL called, [subscriptions](https://dgraph.io/docs/graphql/subscriptions/).
 
