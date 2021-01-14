@@ -39,11 +39,11 @@ Let's take a look at the implication:
 
 **Step 3:** Turn on the line numbering features in `vi`.
 
-Press the ESC key: `^ESC`{{execute ctrl-seq T1}}}
+Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
 
 and then enter:
 
-`:set number`{{execute T1}}}
+`:set number`{{execute T1}}
 
 Notice the code at `Line 4`:
 
@@ -73,7 +73,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 **Step 6:** Exit `vi`
 
-`:q!`{{execute}}
+`:q!`{{execute T1}}
 
 You have exited `vi`.
 
