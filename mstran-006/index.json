@@ -1,5 +1,5 @@
 {
-  "title": "Microservice Transformation: 6-Working Interface Schema: gRPC",
+  "title": "Microservice Transformation: 6-Working with an Interface Schema: gRPC",
   "description": "Learn essential princples of defining a microservice interface by running a demonstration project that's powered by gRPC",
   "difficulty": "General understanding of structured programming, git, containers, gRPC and a reading knowledge of Node.js",
   "time": "20 minutes",
