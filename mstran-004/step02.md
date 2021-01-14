@@ -83,19 +83,19 @@ Upon successful seeding of the Local Container Registry you'll get the following
 
 `kubectl get pods`{{execute T1}}
 
-You'll get output similar to the following:
+**Eventually** you will get output similar to the following. (Interservice intitialization can take time. Be patient for a minute or two.)
 
 ```
 NAME                            READY   STATUS              RESTARTS   AGE
-fortunes                        0/1     Error               0          27s
-message-gen                     0/1     ContainerCreating   0          26s
-pingrx                          0/1     ContainerCreating   0          26s
-redis-master-7db7f6579f-xqjqc   0/1     ContainerCreating   0          27s
-redis-slave-5bdcfd74c7-c5c8z    1/1     Running             0          27s
-redis-slave-5bdcfd74c7-kn75x    1/1     Running             0          27s
-scheduler                       0/1     ContainerCreating   0          26s
-sender                          0/1     ContainerCreating   0          25s
-users                           0/1     ContainerCreating   0          25s
+fortunes                        1/1     Running   2          49s
+message-gen                     1/1     Running   0          48s
+pingrx                          1/1     Running   0          47s
+redis-master-7db7f6579f-wblng   1/1     Running   0          49s
+redis-slave-5bdcfd74c7-6x7xs    1/1     Running   0          49s
+redis-slave-5bdcfd74c7-txp7b    1/1     Running   0          49s
+scheduler                       1/1     Running   2          47s
+sender                          1/1     Running   2          47s
+users                           1/1     Running   2          46s
 ```
 
 `kubectl get services`{{execute T1}}

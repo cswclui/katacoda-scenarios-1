@@ -78,11 +78,11 @@ You'll get an output stream similar to the following:
 .
 ```
 
+Shutdown the log stream
 
-The output above indicates that the targets of *Fortune Cookie* data recieved their fortunes.
+`echo "Ctrl+C"`{{execute interrupt T1}}
 
-
-
+The output above indicates that the *Fortune Cookie* microservices are consuming and emitting messages as expected.
 
 ---
 
