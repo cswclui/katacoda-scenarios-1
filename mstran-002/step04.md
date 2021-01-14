@@ -5,7 +5,7 @@ The objective of this lesson is examine that demonstration service, *Fortune Coo
 
 **Step 1:** Take a look at the file and directory structure for the monolithic version of *Fortune Cookies*:
 
-`trere -L 1`{{execute T1}}
+`tree -L 1`{{execute T1}}
 
 You'll get the following output:
 
