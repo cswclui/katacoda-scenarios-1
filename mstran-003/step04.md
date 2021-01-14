@@ -21,11 +21,11 @@ First let's look at how the `scheduler` service calls the `sender` service.
 
 **Step 3:** Turn on the line numbering features in `vi`.
 
-Press the ESC key: `^ESC`{{execute ctrl-seq T1}}}
+Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
 
 and then enter:
 
-`:set number`{{execute T1}}}
+`:set number`{{execute T1}}
 
 ---
 
