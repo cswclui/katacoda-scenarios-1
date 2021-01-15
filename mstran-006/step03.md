@@ -5,7 +5,7 @@ The objective of this lesson exercise the synchronous version of MOA *Fortune Co
 
 First, we need to install a gRPC client.
 
-**Step 1:** Install the build tools
+**Step 1:** Install the build tools we'll need to create the gRPC client under the Go programming language:
 
 `go get -v github.com/fullstorydev/grpcurl/...`{{execute T1}}
 
@@ -25,7 +25,9 @@ You'll get output as follows:
 
 `seatsaver.SeatSaverService`
 
-**Step 4:** Describe the a remote procedure
+While is is possible for a gRPC API to publish multiple services, *Seat Saver* publishes only one service, `SeatSaverService`.
+
+**Step 4:** Describe the a remote procedure, `seatsaver.SeatSaverService.GetVenues`. This is the gRPC method that gets a list of all the venues in the API.
 
 `grpcurl -import-path ./proto -proto seatsaver.proto describe seatsaver.SeatSaverService.GetVenues`{{execute T1}}
 
@@ -37,7 +39,7 @@ rpc GetVenues ( .seatsaver.Authentication ) returns ( stream .seatsaver.Venue );
 
 ```
 
-**Step 5:**  Execute a method
+**Step 5:**  Execute a method, `GetVenues`:
 
 `grpcurl -plaintext -import-path ./proto -proto seatsaver.proto localhost:50051 seatsaver.SeatSaverService/GetVenues`{{execute T1}}
 
@@ -68,6 +70,10 @@ You'll get output similar to the snippet shown below:
 .
 ]
 ```
+
+These are the venues published by the *Seat Saver* API. There are other methods in the API. These other methods can be discovered by inspected the `.proto` file that describes the gRPC schema. This `.proto` file is used by both the gRPC client and gRPC server.
+
+We'll analyze the `.proto` file in the next lesson.
 ---
 
 ***Next: Understanding the code***

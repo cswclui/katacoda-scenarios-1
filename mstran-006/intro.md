@@ -4,9 +4,11 @@
 
 The objective of the secenario is to demonstrate a style of representing a microservice using gRPC.
 
-![Hybrid Architecture](mstran-006/assets/seats-idl.png)
+![Data Schema](mstran-006/assets/seats-idl.png)
 
-gRPC is an API technology that enables a client and server to communicate by sending streams of data to and from under HTTP/2. Whereas RESTful APIs use the standard `request/response` sessions to exchange data. gRPC, on the other hand, exchanges data over bi-directional streams. Also, the data is by default encoded into binary data thus facilitating faster communication. The tradeoff is that both client and server must have exact knowledge of data schemas in play prior to communication.
+[gRPC](https://grpc.io/) is an API technology that enables a client and server to communicate by sending streams of data to and fro under [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2). Whereas [RESTful](https://restfulapi.net/) APIs use standard `request/response` sessions to exchange data. gRPC, on the other hand, exchanges data over [bi-directional streams](https://www.programmableweb.com/news/how-to-build-streaming-api-using-grpc/how-to/2020/02/21). Also, the data is by default encoded into a binary format thus facilitating faster communication. The tradeoff is that both client and server must have exact knowledge of data schemas in play prior to communication.
+
+![Basic gRPC](mstran-006/assets/basic-grpc.png)
 
 ## What you'll be doing 
 
@@ -19,7 +21,7 @@ You'll be doing the following steps:
 * **Step 1:** Installing the lesson code
 * **Step 2:** Getting the code up and running
 * **Step 3:** Exercising the Code
-* **Step 4:** Understanding the Code as an Example of a Synchronous Microservice Oriented Application
+* **Step 4:** Understanding the Code as an Example a gRPC API.
 
 ## Executing command line instructions 
 

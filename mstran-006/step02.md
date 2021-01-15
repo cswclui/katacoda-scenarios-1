@@ -15,7 +15,7 @@ You'get get the following output:
 
 `/root/seat-saver-grpc
 
-**Step 2:** Run the MOA as `docker-compose` application
+**Step 2:** Run the MOA as a `docker-compose` application
 
 `docker-compose up -d`{{execute T1}}
 
