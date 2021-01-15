@@ -25,7 +25,7 @@ You'll get output as follows:
 
 `seatsaver.SeatSaverService`
 
-While is is possible for a gRPC API to publish multiple services, *Seat Saver* publishes only one service, `SeatSaverService`.
+While it is possible for a gRPC API to publish multiple services, *Seat Saver* publishes only one service, `SeatSaverService`.
 
 **Step 4:** Describe the a remote procedure, `seatsaver.SeatSaverService.GetVenues`. This is the gRPC method that gets a list of all the venues in the API.
 
