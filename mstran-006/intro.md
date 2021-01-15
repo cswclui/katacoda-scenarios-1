@@ -10,7 +10,9 @@ gRPC is an API technology that enables a client and server to communicate by sen
 
 ## What you'll be doing 
 
-In this scenario you'll get the demonstration microservice up and running as a gRPC API. Then, once the microservice is running, you'll exercise the code to get a sense of how it works.
+In this scenario you'll get the demonstration microservice up and running as a gRPC API. The demonstration microservice is called, *Seat Saver*. The purpose of *Seat Saver* is to allow customers to view, reserve and buy a seats in a given venue. (You worked a vesion of *Seat Saver* written under GraphQL in the previous scenario.)
+
+Once the microservice is running, you'll exercise the code to get a sense of how it works.
 
 You'll be doing the following steps:
 
