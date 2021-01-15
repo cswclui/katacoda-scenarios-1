@@ -14,7 +14,7 @@ According to the website, [12 Factor App](https://12factor.net/port-binding),
 
 ## What you'll be doing 
 
-In this lab we're going to revisit the demonstration application *Food Court* that we examined in the last lab about the principle of [Processes](https://12factor.net/processes). Only this time we're going to modify *Food Court* by changing the ports on which the constituent restaurant services run, thus demonstrating the benefit of the Port Binding principle. The way we are going ao manipluate port binding is by way of the third principle of 12 Factor App, [Configuration](https://12factor.net/config).
+In this scenario we're going to revisit the demonstration application *Food Court* that we examined in the last scenario about the principle of [Processes](https://12factor.net/processes). Only this time we're going to modify *Food Court* by changing the ports on which the constituent restaurant services run, thus demonstrating the benefit of the Port Binding principle. The way we are going ao manipluate port binding is by way of the third principle of 12 Factor App, [Configuration](https://12factor.net/config).
 
 The code in this version of the *Food Court* application has been refactored to make it responsive to changes in the port bindings. All of this well be revealed as you do the lessons in the lab.
 
