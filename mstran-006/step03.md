@@ -11,7 +11,7 @@ First, we need to install a gRPC client.
 
 `go install github.com/fullstorydev/grpcurl/cmd/grpcurl`{{execute T1}}
 
-Next, we need to get an understanding of the the gRPC API.
+Next, we need to get an understanding of the gRPC API.
 
 **Step 2:** Confirm the working directory
 
