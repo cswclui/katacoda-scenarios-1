@@ -62,7 +62,7 @@ Status:
 ```
 
 
-**Step 4:** Run the shell script the creates a Local Container Registry and seeds the registry with the containers representing each microservice
+**Step 4:** In the first terminal window, run the shell script the creates a Local Container Registry and seeds the registry with the containers representing each microservice
 
 `sh docker-seed.sh`{{execute T1}}
 
