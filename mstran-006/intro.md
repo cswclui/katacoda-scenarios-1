@@ -6,6 +6,8 @@ The objective of the secenario is to demonstrate a style of representing a micro
 
 ![Hybrid Architecture](mstran-006/assets/seats-idl.png)
 
+gRPC is an API technology that enables a client and server to communicate by sending streams of data to and from under HTTP/2. Whereas RESTful APIs use the standard `request/response` sessions to exchange data. gRPC, on the other hand, exchanges data over bi-directional streams. Also, the data is by default encoded into binary data thus facilitating faster communication. The tradeoff is that both client and server must have exact knowledge of data schemas in play prior to communication.
+
 ## What you'll be doing 
 
 In this scenario you'll get the demonstration microservice up and running as a gRPC API. Then, once the microservice is running, you'll exercise the code to get a sense of how it works.

@@ -7,7 +7,7 @@ In this lesson we're going to bring the demonstration code which is a microservi
 
 ## Steps
 
-**Step 1:** Confirm the working directory for the monolithic verison of *Fortune Cookies*.
+**Step 1:** Confirm the working directory for the asynchronous verison of *Fortune Cookies*.
 
 `clear && cd ~/fortune-cookies/microservice-async && pwd`{{execute T1}}
 

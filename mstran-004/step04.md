@@ -12,7 +12,6 @@ The objective of this lesson is to analyze the asynchronous version *Fortune Coo
 You'get get the following output:
 
 `/root/fortune-cookies/microservice-async`
----
 
 **Step 2:** Take a look at the file and directory structure of the asynchronous version of *Fortune Cookies*:
 
@@ -36,7 +35,7 @@ You'll get the following output:
 
 ```
 
-The relevant directories to the operation of *Fortune Cookies* are:
+The relevant directories to the operation of the *Fortune Cookies* microservices are:
 
 * `fortunes`
 * `scheduler`
@@ -45,13 +44,13 @@ The relevant directories to the operation of *Fortune Cookies* are:
 
 These directories contains the source code for the microservices that are part of the *Fortune Cookies* microservices oriented application (MOA).
 
-The important thing to understand at this point is that all communictation between these services take place between messages that are sent and received from a message broker. In this case the message broker used in Redis. However, at the conceptual level, any broker can be used.
+The important thing to understand at this point is that all communication between these microservices takes place between messages that are sent and received from a message broker. In this case the message broker used in Redis. However, at the conceptual level, any broker can be used.
 
 ![logo](mstran-004/assets/block-async.png)
 
-The benefit of using an asynchronous architecture is that all services a loosely coupled. In terms of *Fortune Cookies* no microservice has any direct knowledge or dependency on another microservice. All a given microservice really "knows" in the location of the message broker on the network, and this location is defined by a DNS name provided by the Kubernetes container orchestration technology. IP addresses are completely opaque to the microservice. Also, a microservice knows the format and schema of the message that it's  publishing. If a microservice is consuming a message, in that case, it also knows the format and schema of the incoming message.
+The benefit of using an asynchronous architecture is that all services a loosely coupled. In terms of *Fortune Cookies* no microservice has any direct knowledge or dependency on another microservice. All a given microservice really "knows" is the location of the message broker on the network, and this location is defined by a DNS name provided by the Kubernetes container orchestration technology. IP addresses are completely opaque to the microservice. Also, a microservice knows the format and schema of the message that it's  publishing or consuming.
 
-How a microservice behaves when consuming a message from a topic to which it is subscribed is the concern of that microservice only. Publishers don't know what comsumers are doing. Consumers don't know what publishers are doing nor do the consumers know when the activities of other microservices are taking place.
+How a microservice behaves when consuming a message from a topic to which it is subscribed is the concern of that microservice only. Publishers don't know what comsumers are doing. Consumers don't know what publishers are doing nor do the microservices know when the activities of other microservices are taking place.
 
 The boundaries of a microservice are well defined.
 
