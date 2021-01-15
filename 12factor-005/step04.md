@@ -44,10 +44,15 @@ The output above defines the environment variable, `SECRET_SOCIETY_AGENT` that w
 
 `curl http://localhost:3060`{{execute T1}}
 
-You'll get the following output:
+You'll get output simiar to the following:
 
 ```
-TBP
+{
+    "secretAgent": "Doctor Evil",
+    "secretMessage": "et aliquam dicta consequatur at",
+    "id": "0484ed02-498b-401b-8fa0-d03b949db2b3",
+    "created": "2021-01-15T03:37:30.989Z"
+}
 
 ```
 
