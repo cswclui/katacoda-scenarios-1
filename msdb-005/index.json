@@ -1,5 +1,5 @@
 {
-  "title": "Microservice Transformation: 7-Implementing the Strangler Pattern",
+  "title": "Microservice Database Design: 5-Implementing the Strangler Pattern",
   "description": "Learn the basics of implementing the Strangler Pattern to isolate a feature in an existing monolitic application for eventual extraction",
   "difficulty": "General understanding of structured programming, git, Docker, containers, database triggers, and a reading knowledge of Node.js",
   "time": "20 minutes",
