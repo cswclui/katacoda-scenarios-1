@@ -48,12 +48,12 @@ You have exited `vi`.
 
 ## Summary
 
-The key concept of the 12 Factor App principle of Port Binding is that no matter what the DNS name is for a URL, the port number is the way that the service represents itself to the network and the internal of the service repect the port number. The service does not hard code DNS names.
+The key concept of the 12 Factor App principle of Port Binding is that no matter what, the port number is the way that the service represents itself to the network and the internals of the service repect the port number. The service does not hard code DNS names.
 
 DNS naming is done by the run time environment. This is why we had to inject the DNS names of the restaurants into the `customer` in the demonstration application, *Food Court*.
 
-A pattern has emerged over the years in which certain well known products and services will publish default port numbers that become conventional. For example [MySQL](https://dev.mysql.com/) default to port to `3306`. [MongoDB's](https://docs.mongodb.com/manual/reference/default-mongodb-port/) default port is `27017`. Web servers run by default on port `80`. An secure web servers running under `HTTPS` run on port `443`. And, the SSH servers listen on port `22`.
+A pattern has emerged over the years in which certain well known products and services will publish default port numbers that become conventional. For example [MySQL](https://dev.mysql.com/) default to port to `3306`. [MongoDB's](https://docs.mongodb.com/manual/reference/default-mongodb-port/) default port is `27017`. Web servers run by default on port `80`. And, secure web servers running under `HTTPS` run on port `443`. Also, the SSH servers listen on port `22`.
 
 ---
 
-**Congratuations!** You've completed the lab.
+**Congratuations!** You've completed the scenario.
