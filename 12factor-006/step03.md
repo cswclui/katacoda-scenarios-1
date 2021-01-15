@@ -26,7 +26,7 @@ The file, `docker-seed.sh` is a utility script the creates a Local Docker Regist
 
 **Step 2:** View the contents of `docker-seed.sh`
 
-`cat `docker-seed.sh`{{execute T1`}}
+`cat docker-seed.sh`{{execute T1}}
 
 Each process runs as a webserver making it so the only means of interaction between processes is via standard [HTTP reqeust methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) between the web servers.
 
