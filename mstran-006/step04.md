@@ -145,7 +145,7 @@ The important thing to understand about using gRPC for your microservice is that
 
 gRPC is a compelling way to implement an API, and subsequently a microservice, because of the streaming capabilities it provides "out of the box."
 
-The notion of polygot development is an important principle of microservice design. You can have a variety to teams expert in a variety or programming languages implement gRPC microservices in the way  that is easist for the particular team. Yet, because the gRPC `.proto` specification is standardized, any microservice can interact with any other microservice regardless of the underlying programming langauge ***as long as the schemas defined in the microservices's `.proto` file is accesible to all interested parties.***
+The notion of polygot development is an important principle of microservice design. You can have a variety to teams expert in a variety or programming languages implement gRPC microservices in the way  that is easist for the particular team. Yet, because the gRPC `.proto` specification is standardized, any microservice can interact with any other microservice regardless of the underlying programming langauge ***as long as the schemas defined in the microservices's `.proto` file are accesible to all interested parties.***
 
 Also, an added benefit of gRPC is that its intended to be very fast.
 
