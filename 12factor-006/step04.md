@@ -5,7 +5,7 @@ In previous lessons we installed the demonstration application, *Food Court* as 
 
 Running the processes as independent containers complies with the 12 Factor principle of Processes.
 
-The only entry point into the *Food Court* application is to call the `customer` process which will, in turn, call one of the restaurant processes at random. (Docker Compose was configure to only expose the process `customer` at port 4000.)
+The only entry point into the *Food Court* application is to call the `customer` process which will, in turn, call one of the restaurant processes at random. (Docker Compose was configured to only expose the process `customer` at port 4000.)
 
 Calling the `customer` process via `localhost:4000` will make it so that the `customer` subsequently call a restaurant process.
 
@@ -44,7 +44,7 @@ Notice that there have been 20 calls to the`customer` process and that in turn e
 
 ## Summary
 
-The important thing to understand about the *Food Court* application is that it demonstrates the 12 Factor App princple of Processes. Each of the components that make up fo the *Food Court* application exists as distinct processes their own process space. Each process is indepedent. No code is shared among any.
+The important thing to understand about the *Food Court* application is that it demonstrates the 12 Factor App princple of Processes. Each of the components that make up the *Food Court* application exists as distinct processes in their own process space. Each process is indepedent. No code is shared among any.
 
 ---
 

@@ -52,6 +52,6 @@ You'll get the following output:
 * **hobos** is a food counter in the food court
 * **iowafried** is a food counter in the food court
 
-Each of these images represent of the distinct, stateless containers that will make up the processes for the entirety of the demonstration application.
+Each of these images is a representation of the distinct, stateless containers that will make up the processes for the entirety of the demonstration application.
 
 ***Next: Running the demonstration application***
