@@ -39,7 +39,9 @@ rpc GetVenues ( .seatsaver.Authentication ) returns ( stream .seatsaver.Venue );
 
 ```
 
-**Step 5:**  Execute a method, `GetVenues`:
+**Step 5:**  Execute the method, `GetVenues`:
+
+(**NOTE:** The parameter, `seatsaver.Authentication` is optional and is omitted in the following call)
 
 `grpcurl -plaintext -import-path ./proto -proto seatsaver.proto localhost:50051 seatsaver.SeatSaverService/GetVenues`{{execute T1}}
 
