@@ -1,8 +1,12 @@
-**Congratulations!** You've completed the scenario, ***Implementing the Strangler Pattern***
+## You've crossed the finish line!
 
-The interactive scenario you:
+In this scenario you:
 
-* Installed the lesson code
-* Got the code up and running
-* Exercised the code
-* Analyzed the code to see how the Strangler Pattern is implemented
+* Create a Kubernetes DaemonSet with node affinity
+* Set a label on the worker node to support the DaemonSet's expected node affinity
+* Observed Kubernetes automatically propagate the DaemonSet's contiainer to the labeled node
+* Observed the DaemonSet's container behavior using:
+ 
+ `kubectl logs POD_NAME`
+
+

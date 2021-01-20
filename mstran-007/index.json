@@ -1,29 +1,28 @@
 {
-  "title": "Microservice Transformation: 7-Implementing the Strangler Pattern",
-  "description": "Learn the basics of implementing the Strangler Pattern to isolate a feature in an existing monolitic application for eventual extraction",
-  "difficulty": "General understanding of structured programming, git, Docker, containers, database triggers, and a reading knowledge of Node.js",
-  "time": "20 minutes",
+  "title": "Microservice Transformation: 7-Creating a Kubernetes DaemonSet with Node Affinity",
+  "description": "A scenario that shows you how create a K8S DaemonSet with Node Affinity",
+  "difficulty": "Working knowledge of Kubernetes Nodes, Pods and DaemonSets",
+  "time": "15 minutes",
   "details": {
     "steps": [{
-        "title": "Installing the Code",
-        "text": "step01.md"
+      "title": "Step 1 - Cloning the Demo Code from GitHub",
+      "text": "step1.md"
+    },
+      {
+        "title": "Step 2 - Creating and Deploying the DaemonSet",
+        "text": "step2.md"
       },
       {
-        "title": "Getting the Code Up and Running",
-        "text": "step02.md"
+        "title": "Step 3 - Labeling the Node to Support the DaemonSet's Expectation",
+        "text": "step3.md"
       },
       {
-        "title": "Exercising the Code",
-        "text": "step03.md"
-      },
-      {
-        "title": "Analyzing the Code",
-        "text": "step04.md"
+        "title": "Step 4 - Observing the Results",
+        "text": "step4.md"
       }
     ],
     "intro": {
       "text": "intro.md",
-      "code": "foreground.sh",
       "credits": ""
     },
     "finish": {
@@ -32,9 +31,9 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nType 'docker version' to do a basic interaction\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "kubernetes-cluster-running"
   }
 }

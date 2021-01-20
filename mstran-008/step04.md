@@ -4,11 +4,11 @@ The objective of this lesson is to analyze the Strangler Lite code to see how th
 ## What You'll Be Doing
 In this lesson we're going to look at how the Stranger Pattern is implemented in the `sender` component of the monolithic *Fortune Cookies*. Remember, the purpose of `sender` is to send fortunes onto intended targets.
 
-![Fortune Cookies Components](mstran-007/assets/basic-architecture-components.png)
+![Fortune Cookies Components](mstran-008/assets/basic-architecture-components.png)
 
 The approach that Strangler Lite takes is to add a custom made `DataManager` component into the monolithic application. `DataManager` encapsulates data access activity to a MariaDB database using the [Sequilize](https://sequelize.org/) Node.js library. Also, a few lines of code will be added to the `sender` component. This added code will uses the `DataManager` to emit *sent Fortune* data to the external MariaDB database.
 
-![Strangler Architecture](mstran-007/assets/strangler-lite-architecture.png)
+![Strangler Architecture](mstran-008/assets/strangler-lite-architecture.png)
 
 
 ## Steps

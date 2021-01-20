@@ -44,12 +44,12 @@ fortune_cookie_1  | Wrote SentFortune [object Object] to datasource at Mon Jan 1
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
 
-![Database Access](mstran-007/assets/db_access.png)
+![Database Access](mstran-008/assets/db_access.png)
 
 You'll notice the database `fortune_cookies`. This is the database in which the monolithic application is storing data.
 
 **Step 6:** Enter the `fortune_cookies` database to view its tables.
 
-![Database Components](mstran-007/assets/stranger-data-ui.png)
+![Database Components](mstran-008/assets/stranger-data-ui.png)
 
 You'll notice row count in the table, `SentFortunes`. You can infer that the MariaDB is receiving data emitted from the `send` component.

@@ -1,0 +1,40 @@
+{
+  "title": "Microservice Transformation: 8-Implementing the Strangler Pattern",
+  "description": "Learn the basics of implementing the Strangler Pattern to isolate a feature in an existing monolitic application for eventual extraction",
+  "difficulty": "General understanding of structured programming, git, Docker, containers, database triggers, and a reading knowledge of Node.js",
+  "time": "20 minutes",
+  "details": {
+    "steps": [{
+        "title": "Installing the Code",
+        "text": "step01.md"
+      },
+      {
+        "title": "Getting the Code Up and Running",
+        "text": "step02.md"
+      },
+      {
+        "title": "Exercising the Code",
+        "text": "step03.md"
+      },
+      {
+        "title": "Analyzing the Code",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
