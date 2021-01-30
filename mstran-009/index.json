@@ -1,0 +1,39 @@
+{
+  "title": "Service Discovery and Health Checks with Consul",
+  "description": "Learn how setup and use Consul to implement service discovery and health checks for your microservice",
+  "difficulty": "Working knowledge of the concepts, docker, service discover and health checks",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+        "title": "Installing the Consul server",
+        "text": "step01.md"
+      },
+      {
+        "title": "Install the Registrator",
+        "text": "step02.md"
+      },
+      {
+        "title": "Installing the microservices",
+        "text": "step03.md"
+      },
+      {
+        "title": "Querying the Consul server",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal for Working with Consul\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
