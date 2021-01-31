@@ -10,7 +10,7 @@ This scenario preloads a multi-node Kubernetes cluster and Load Balancer that ar
 
 ## What you'll be doing
 
-In this scenario you are going to install a demonstration microservice written under Node.JS and installed as a Docker container from DockerHub.
+In this scenario you are going to install a [demonstration microservice](https://hub.docker.com/r/reselbob/istiocode/) written under Node.JS and installed as a Docker container from [DockerHub](https://hub.docker.com/r/reselbob/istiocode/).
 
 The application has two subordinate services, `frontend` and `business`. `frontend` delegates to `business` to call `worldclockapi.com` to get the current time. However, beause the microservice will be running under a Kubernetes cluster controlled by an Istio service mesh, users cannot access the service by default. An ingress rule is needed to allow access. Part of this scenario is to apply an pre-installed ingress rule to Istio.
 
