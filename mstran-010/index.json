@@ -1,0 +1,49 @@
+{
+  "title": "Microservice Transformation: 10-Working with a Service Mesh",
+  "description": "Learn how to use an Istio service mesh to control ingress and egress activities in a Kubernetes cluster",
+  "difficulty": "Basic Understanding of Kubernetes",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+        "title": "Confirming that Kubernetes and the Load Balancer are Installed",
+        "text": "step01.md"
+      },
+      {
+        "title": "Installing Istio",
+        "text": "step02.md"
+      },
+      {
+        "title": "Implementing an Ingress rule under Istio",
+        "text": "step03.md"
+      },
+      {
+        "title": "Implementing an Egress rule under Istio",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {"file": "deployments.yaml", "target": "/root/"},
+          {"file": "egress.yaml", "target": "/root/"},
+          {"file": "ingress.yaml", "target": "/root/"},
+          {"file": "namespace.yaml", "target": "/root/"},
+          {"file": "services.yaml", "target": "/root/"}
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal for Working with Istio\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
