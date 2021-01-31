@@ -1,5 +1,5 @@
 ## Objective
-The objective of this lesson is to define an Ingress rule that will allow general access into the Kubernetes cluster the Istio Gateway.
+The objective of this lesson is to define an Ingress rule that will allow general access into the Kubernetes cluster via the Istio Gateway.
 
 ## Steps
 
@@ -62,7 +62,7 @@ You'll get an error.
 
 `curl: (7) Failed to connect to 172.19.255.2 port 80: Connection refused`
 
-Notice you can't get outside the cluster
+Notice you can't get outside the cluster.
 
 Why? Because there is no Ingress rule that permits entry into the cluster. So, let's add an Ingress rule.
 
