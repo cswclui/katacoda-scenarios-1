@@ -167,7 +167,7 @@ We'll put this information into a GraphQL [query variable](https://blog.apollogr
 ```
 mutation reserveSeat($seat: SeatInput!) {
   reserveSeat(seat: $seat) {
-  	 id
+    id
     number
     section
     status 
