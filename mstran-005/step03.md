@@ -11,7 +11,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 ![GraphQL Playground](mstran-005/assets/seat-saver-01.png)
 
-You'll be entering registering to the underlying messaging server as well as executing GraphQL queries and mutation from within the GraphQL Playground UI.
+You'll be entering registering to the underlying GraphQL messaging server as well as executing GraphQL queries and mutation from within the GraphQL Playground UI.
 
 ### Making a Simple Query
 
@@ -57,7 +57,7 @@ You'll get output simlar to the following:
 
 Take note of an `id` of one of the venues. You'll use the `id` to retrieve `seat` data associated with a particular `venue`. In this case well get the seat data for the `venue` with the id of `5ffe25d278ada3582227c2f7`.
 
-**Step 2:** Execute a query against a particular `venue` in the GraphQL API getting the `status`, `section` and `number` data for each `seat` in the `venue`. Copy the code below which is in GraphQL Query Language (gql) in the left pane of the browser window of the GraphQL Playground **Don't forget** to use a venue `id` the query you ran previously. Each instance of **Seat Saver** will create its own unique `id` values for `venue`. 
+**Step 2:** Execute a query against a particular `venue` in the GraphQL API getting the `status`, `section` and `number` data for each `seat` in the `venue`. Copy the code below which is in GraphQL Query Language (gql) into the left pane of the browser window of the GraphQL Playground. **Don't forget** to use a venue `id` of the query you ran previously. Each instance of **Seat Saver** will create its own unique `id` values for `venue`. 
 
 
 ```
@@ -141,7 +141,7 @@ In order reserve a `seat` in a venue using the *Seat Saver* API, you need to sen
 
 We'll put this information into a GraphQL [query variable](https://blog.apollographql.com/the-anatomy-of-a-graphql-query-6dffa9e9e747) within the GraphQL Playbround.
 
-**Step 4:** In the first browser window for the GraphQL Playground,  enter the following gql code that defines the query variable in the query variable pane into the lower left of the GraphQL Playground browser window.
+**Step 4:** In the first browser window for the GraphQL Playground,  enter the following gql code that defines the query variable in the **query variable pane** into the lower left of the GraphQL Playground browser window.
 
 ```
 {
@@ -195,13 +195,13 @@ Upon succesful execution of the mutation, you'll get output similar to the follo
 ```
 ![Query Result](mstran-005/assets/query-result-01.png)
 
-The GraphQL mutation shown above will reserve a seat and also generate a `SeatEvent` message to the subscription, `onSeatReserved`. Go to the browser window for the GraphQL Playground instance where you registered the subscription to the message server that listens for `onSeatSold` event messages. You'll see a event message that correlates to the seat you just bought executing the query above.
+The GraphQL mutation shown above will reserve a seat and also generate a `SeatEvent` messages to the subscription, `onSeatReserved`. Go to the browser window for the GraphQL Playground instance where you registered the subscription to the message server that listens for `onSeatSold` event messages. You'll see event messages that correlate to the seat you just bought executing the query above.
 
 ![On Seat Reserved Message](mstran-005/assets/onseatreserved-01.png)
 
-You'll see that a message was sent to that browser window indicating that an `onSeatReserved` event was raised an a measage was sent.
+You'll see that message were sent to that browser window indicating that `onSeatReserved` events were raised as a measage was sent.
 
-You've just experienced in the hybrid nature of the GraphQL. The next lesson will elaborate on the the hybrid style of microservices as demonstrated in this code exercise.
+You've just experienced the hybrid nature of the GraphQL. The next lesson will elaborate on the the hybrid style of microservices as demonstrated in this code exercise.
 
 ---
 

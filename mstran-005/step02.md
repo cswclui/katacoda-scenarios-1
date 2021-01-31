@@ -3,7 +3,7 @@ The objective of this lesson is to get the demonstration code up and running.
 
 ## What You'll Be Doing
 
-In this lesson we're going to bring the demonstration code which is a hybrid microservice oriented application (MOA) named *Seat Saver*.
+In this lesson we're going to get the demonstration code which is a hybrid microservice oriented application (MOA) named *Seat Saver* up and running.
 
 ## Steps
 
@@ -29,7 +29,7 @@ Creating seat-saver_mongo_1     ... done
 
 ```
 
-**Step 3:** The microservice runs as GraphQL API. We can use the GraphQL Playground that the service publishes to work with the API. Click the link below to bring up the GraphQL Playground in a web browser.
+**Step 3:** The microservice runs as a GraphQL API. We can use the GraphQL Playground that the service publishes to work with the API. Click the link below to bring up the GraphQL Playground in a separate web browser tab.
 
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
