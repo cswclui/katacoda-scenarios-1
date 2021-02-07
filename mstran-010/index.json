@@ -1,5 +1,5 @@
 {
-  "title": "Microservice Transformation: 10-Working with a Service Mesh and System Monitoritn",
+  "title": "Microservice Transformation: 10-Working with a Service Mesh and System Monitoring",
   "description": "Learn how to use an Istio service mesh and Add On tools to control ingress and egress activities in a Kubernetes cluster",
   "difficulty": "Basic Understanding of Kubernetes and System Monitoring",
   "time": "20 minutes",
