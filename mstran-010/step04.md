@@ -3,17 +3,21 @@ The objective of this lesson is to demonstrate how to create an Istio egress rul
 
 ## Steps
 
-**Step 1:** Verify that the environment variable, `$ISTIO_GTWY_IP` is set the IP address of the Istio Gateway:
+**Step 1:** Verify that the environment variable, `$GATEWAY_URL` is set to the IP address of the Istio Gateway. Clear the screen in the spirit of good housekeeping.
 
-`clear && echo $ISTIO_GTWY_IP`{{execute}}
+`clear`{{execute}}
+
+Verify the value of `$GATEWAY_URL`:
+
+`echo $GATEWAY_URL`{{execute}}
 
 You'll get output similar to the following, but your instance might be different:
 
-`172.19.255.2`
+`172.19.255.2:80`
 
 **Step 2:** Verify that the demonstration application is denied access to URLs that are outside of the Kubernetes cluster.
 
-`curl $ISTIO_GTWY_IP`{{execute}}
+`curl $GATEWAY_URL`{{execute}}
 
 You'll get the following output:
 
@@ -39,7 +43,7 @@ You'll get the following output:
 
 **Step 4:** Run the `curl` command again.
 
-`curl $ISTIO_GTWY_IP`{{execute}}
+`curl $GATEWAY_URL`{{execute}}
 
 Notice you **can** get outside the cluster
 
@@ -59,5 +63,7 @@ http://worldclockapi.com/api/json/utc/now -> {"$id":"1","currentDateTime":"2021-
 Notice that the code is calling `http://worldclockapi.com/api/json/utc/now`. Before the egress rule was in force, such acceess was denied. As you can see, the egress rule is now in force.
 
 ----
-***Congratulations! You've complete the lab.***
+
+***Next: Working setting up Katacoda to work with the Istio add-ons in an external web browser.***
+
 

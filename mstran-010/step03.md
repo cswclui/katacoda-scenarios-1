@@ -38,25 +38,31 @@ istio-ingressgateway   LoadBalancer   10.96.40.202   172.19.255.2   15021:32586/
 istiod                 ClusterIP      10.96.175.26   <none>         15010/TCP,15012/TCP,443/TCP,15014/TCP                                        7m7s
 ```
 
-**Step 4:** Assign the Istio Gateway IP address to an environment variable. Get the value of `EXTERNAL-IP` assigned to the service, `istio-ingressgateway` and assign it to the environment variable, `ISTIO_GTWY_IP`.
+**Step 4:** Assign the Istio Gateway IP address to an environment variable.
 
-`export ISTIO_GTWY_IP=<Istio Gateway IP address>`
+Using the following bash commands to create the `GATEWAY_URL` environment variable that we'll use to access the demonstration microservice:
 
-For example:
+`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')`{{execute}}
 
-`export ISTIO_GTWY_IP=172.19.255.2`
+`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')`{{execute}}
+
+`export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="https")].port}')`{{execute}}
+
+`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT`{{execute}}
 
 **Step 5:** Confirm the environment variable value
 
-`echo $ISTIO_GTWY_IP`{{execute}}
+`echo $GATEWAY_URL`{{execute}}
 
-You'll get output similar to the following, but your value might be different:
+You'll get output similar to the following, but your value might be different.
 
-`172.19.255.2`
+`172.19.255.2:80`
+
+The important thing is that the value for `$GATEWAY_URL` match the value of `EXTERNAL-IP` assigned to the service, `istio-ingressgateway`.
 
 **Step 6:** Try to access the service
 
-`curl $ISTIO_GTWY_IP`{{execute}}
+`curl $GATEWAY_URL`{{execute}}
 
 You'll get an error.
 
@@ -79,7 +85,7 @@ virtualservice.networking.istio.io/frontend created
 
 **Step 8:** Try to access the service agin
 
-`curl $ISTIO_GTWY_IP`{{execute}}
+`curl $GATEWAY_URL`{{execute}}
 
 You'll get access into the cluster
 

@@ -1,17 +1,21 @@
 ## Objective
-The object of this step is to demonstrate how to install the Istio.
+The object of this step is to demonstrate how to install Istio with the Katacoda interactive learning environment.
 
 ## Steps
 
 **Step 1:**  Download and do the initial setup of Istio
 
-`curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.8.0 sh -`{{execute}}
+`curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.8.2 TARGET_ARCH=x86_64 sh -`{{execute}}
 
-**Step 2:** Add Istio to the system's `$PATH`
+**Step 2:** Go to the Istio directory
 
-`export PATH="$PATH:/root/istio-1.8.0/bin"`{{execute}}
+`cd istio-1.8.2`{{execute}}
 
-**Step 3:** Use `istioctl` to configure Istio, making it so that 
+**Step 3:** Add Istio to the system's `$PATH`
+
+`export PATH=$PWD/bin:$PATH`{{execute}}
+
+**Step 4:** Use `istioctl` to configure Istio, making it so that 
 no calls to external sites can leave the cluster unless egress permission is explicitly set.
 
 `istioctl install --set profile=demo -y --set meshConfig.outboundTrafficPolicy.mode=REGISTRY_ONLY`{{execute}}
@@ -27,7 +31,7 @@ Detected that your cluster does not support third party JWT authentication. Fall
 ✔ Installation complete    
 ```
 
-**Step 4:** Enable Istio namespace access
+**Step 5:** Enable Istio namespace access
 
 `kubectl label namespace default istio-injection=enabled`{{execute}}
 
@@ -35,7 +39,7 @@ You will be the following output:
 
 `namespace/default labeled`
 
-**Step 5:** Verify that the Istio services are running in the Kubernetes cluster.
+**Step 6:** Verify that the Istio services are running in the Kubernetes cluster.
 
 `kubectl get pods -n istio-system`{{execute}}
 

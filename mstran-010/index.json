@@ -1,8 +1,8 @@
 {
-  "title": "Microservice Transformation: 10-Working with a Service Mesh",
-  "description": "Learn how to use an Istio service mesh to control ingress and egress activities in a Kubernetes cluster",
-  "difficulty": "Basic Understanding of Kubernetes",
-  "time": "15 minutes",
+  "title": "Microservice Transformation: 10-Working with a Service Mesh and System Monitoritn",
+  "description": "Learn how to use an Istio service mesh and Add On tools to control ingress and egress activities in a Kubernetes cluster",
+  "difficulty": "Basic Understanding of Kubernetes and System Monitoring",
+  "time": "20 minutes",
   "details": {
     "steps": [{
         "title": "Confirming that Kubernetes and the Load Balancer are Installed",
@@ -19,6 +19,14 @@
       {
         "title": "Implementing an Egress rule under Istio",
         "text": "step04.md"
+      },
+      {
+        "title": "Exposing the Istio Add-Ons to the outside world",
+        "text": "step05.md"
+      },
+      {
+        "title": "Viewing the Istio Add-Ons in a web browser",
+        "text": "step06.md"
       }
     ],
     "intro": {
@@ -41,7 +49,7 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal for Working with Istio\u001b[m\r\n"
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal for Working with KinD\u001b[m\r\n"
   },
   "backend": {
     "imageid": "ubuntu"
