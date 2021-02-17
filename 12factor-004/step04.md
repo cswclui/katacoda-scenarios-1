@@ -125,9 +125,6 @@ You have exited `vi`.
 At this point you should have a conceptual sense of how the application *Pinger* use the backing service *Colllector* to store log data.
 
 In the next lesson we'll make spin up both *Pinger* and *Colllector* and demonstrate the code in action.
-
-TBP
-
 ---
 
 ***Next: Using a Backing Service***
