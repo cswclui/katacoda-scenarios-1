@@ -35,6 +35,10 @@ We're now ready to install Jenkins. As mentioned earlier, we're going to run Jen
 
 `docker run --name jenkins --network="host" -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker fatjenkins:v1`{{execute}}
 
+You'll get output similar to the following:
+
+`0e595880ee47de9afc74d5616fe0499795832ccc67dc43e9c9f6c79b62bb5893`
+
 **Step 8:**  Click the link below to go to the instance of Jenkins running in Katacoda.
 
 **Beware!** It takes the container running Jenkins a while to spin up. Sometimes it can take a minute or two. So,  you might have to click the link below a few times to get the Jenkins site to load.

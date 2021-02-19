@@ -65,7 +65,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 `40`{{execute}}
 
-`Lines 31 - 40` is the code for the the `release service to container repo` stage. This is where the pipleine code builds the `docker` image and pushes it into the Local Container Repository at `Line 29`.
+`Lines 31 - 40` is the code for the the `release service to container repo` stage. This is where the pipleine code builds the `docker` image and pushes it into the Local Container Repository at `Line 36`.
 
 Let's go down a bit further in the file:
 
@@ -79,7 +79,7 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 You'll notice the pipeline script calls `wget -O- http://localhost:4000` that at `Line 53`,
 
-**The important thing to notice** that the only thing special in the `Jenkinfile` pipeline script is the information that is relevant to the `V1` release of *Secret Society*. For example, the call to the branch `10-dev-prod-parity.0.0.1` on GitHub at `Line 7` and building the `docker` image using the tag `secretagent:v1` at `Line 27`.
+**The important thing to notice** that the only thing special in the `Jenkinfile` pipeline script is the information that is relevant to the `V1` release of *Secret Society*. For example, the call to the branch `10-dev-prod-parity.0.0.1` on GitHub at `Line 14` and building the `docker` image using the tag `secretagent:v1` at `Line 35`.
 
 All the other code is part of the deployment logic.
 
