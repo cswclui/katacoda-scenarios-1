@@ -1,0 +1,40 @@
+{
+  "title": "12 Factor App: 5-Build, Release, Run",
+  "description": "Learn how to deploy your app in a way from source code in a uniform manner that's easy to control and scale",
+  "difficulty": "Requires a general understanding of structured programming, using git, using Docker and a reading knowlege of Node.js",
+  "time": "20 minutes",
+  "details": {
+    "steps": [{
+        "title": "Getting the Lab's Code from GitHub",
+        "text": "step01.md"
+      },
+      {
+        "title": "Installing Jenkins in Katacoda",
+        "text": "step02.md"
+      },
+      {
+        "title": "Setting up the Automated Jenkins Pipeline to Build and Release Code",
+        "text": "step03.md"
+      },
+      {
+        "title": "Running the Demonstration Application Using the Container Registry",
+        "text": "step04.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mStandby while the terminal loads in the required apps...\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
