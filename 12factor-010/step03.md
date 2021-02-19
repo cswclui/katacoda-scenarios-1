@@ -55,17 +55,17 @@ This Jenkinsfile pipeline as five stages, `build service`, `test service`, `rele
 * `provision target deployment` installs `docker-compose` which is the runtime provisioning tool for this scenario. (You'd use a provisioning tools such as [Ansible](https://www.ansible.com/) or [Vagrant](https://www.vagrantup.com/) in a "real world" setting.
 * `run service on deployment target` executes `docker-compose up` to create the container relevant to the `V1` release of *Secret Society* and have it run on the docker network, `dev_network` at `port` 4000. (Here are the links to the relevant [`Dockerfile`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/app/Dockerfile) and [`docker-compose.yaml`](https://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) files if you want to see the exact details.
 
-`Lines 5 - 16` describe the stage `build service`.
+`Lines 12 - 23` describe the stage `build service`.
 
-`Lines 7 - 23` describe the stage `test service`.
+`Lines 24 - 30` describe the stage `test service`.
 
 Let's go down a bit in the file:
 
 Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
-`34`{{execute}}
+`40`{{execute}}
 
-`Lines 24 - 32` are the code for the the `release service to container repo` stage. This is where the pipleine code builds the `docker` image and pushes it into the Local Container Repository at `Line 29`.
+`Lines 31 - 40` is the code for the the `release service to container repo` stage. This is where the pipleine code builds the `docker` image and pushes it into the Local Container Repository at `Line 29`.
 
 Let's go down a bit further in the file:
 
@@ -73,11 +73,11 @@ Press the ESC key: `^ESC`{{execute ctrl-seq}}
 
 `51`{{execute}}
 
-`Lines 34 - 39` is the stage, `provision target deployment` where `docker-compose` is installed in the pipeline environment for this Jenkins job.
+`Lines 41 - 47` is the stage, `provision target deployment` where `docker-compose` is installed in the pipeline environment for this Jenkins job.
 
-`Lines 41 - 57` is the stage, `run service on deployment target` where the command `docker-compose up` is run. Running the command will make is it so that `docker-compose` creates a container for the docker image, `secretagent:v1` and runs it in a docker network named, `dev_network` as defined in the file, [`docker-compose.yaml`](vhttps://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) under the `port` 4000, which is exposed to the Jenkins pipeline script.
+`Lines 48 - 56` is the stage, `run service on deployment target` where the command `docker-compose up` is run. Running the command will make is it so that `docker-compose` creates a container for the docker image, `secretagent:v1` and runs it in a docker network named, `dev_network` as defined in the file, [`docker-compose.yaml`](vhttps://raw.githubusercontent.com/innovationinsoftware/12factor/10-dev-prod-parity.0.0.1/docker-compose.yaml) under the `port` 4000, which is exposed to the Jenkins pipeline script.
 
-You'll notice the pipeline script calls `wget -O- http://localhost:4000` that at `Line 46`,
+You'll notice the pipeline script calls `wget -O- http://localhost:4000` that at `Line 53`,
 
 **The important thing to notice** that the only thing special in the `Jenkinfile` pipeline script is the information that is relevant to the `V1` release of *Secret Society*. For example, the call to the branch `10-dev-prod-parity.0.0.1` on GitHub at `Line 7` and building the `docker` image using the tag `secretagent:v1` at `Line 27`.
 
