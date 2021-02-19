@@ -13,9 +13,9 @@ https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
 Once you're in the Jenkins web page, you're going to create 2 Pipeline jobs in Jenkins.
 
-One job, which will have the title, `secret_society_v1` will bind the source code repository on GitHub. This is the common repository for all work done on the demonstration application. (**Reminder:** [Codebase](https://12factor.net/) is the first principle of 12 Factor App.) The URL for the source code repository is `https://github.com/innovationinsoftware/12factor.git`. Also, the pipeline job will bind to the branch in the GitHub repository that has the source cdoe for the `V1` version of *Secrety Society*. The name of this branch is `10-dev-prod-parity.0.0.1`
+One job, which will have the title, `secret_society_v1` will bind to the source code repository on GitHub, `https://github.com/innovationinsoftware/12factor`. This is the common repository for all work done on the demonstration application. (**Reminder:** [Codebase](https://12factor.net/) is the first principle of 12 Factor App.) The URL for the source code repository is `https://github.com/innovationinsoftware/12factor.git`. Also, the pipeline job will bind to the branch in the GitHub repository that has the source cdoe for the `V1` version of *Secrety Society*. The name of this branch is `10-dev-prod-parity.0.0.1`
 
-The title of the second pipeline job is `secret_society_v2`. The second pipeline job will bind the the same source code repository in GitHub as the first pipeline job. However, the second pipeline job, `secret_society_v2` will bind to the branch `10-dev-prod-parity.0.0.2`. This branch has the source code for the `V2` version of *Secrety Society*.
+The title of the second pipeline job is `secret_society_v2`. The second pipeline job will bind to the same source code repository in GitHub as the first pipeline job. (`https://github.com/innovationinsoftware/12factor`) However, the second pipeline job, `secret_society_v2` will bind to the branch `10-dev-prod-parity.0.0.2`. This branch has the source code for the `V2` version of *Secrety Society*.
 
 ![Jenkins Pipeline](12factor-010/assets/jenkins-pipeline.png)
 
