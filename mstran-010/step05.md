@@ -1,6 +1,6 @@
 ## Objective
 
-[TO BE PROVIDED]
+The objective of this scenario is to get the Kiali and Grafana add-ons installed under Istio.
 
 ## Steps
 
