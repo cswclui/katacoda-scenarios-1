@@ -17,7 +17,7 @@ The approach taken is to use Redis as a message broker with 3 channels (one for 
 
 **Step 2:** Take a look at the directory and file structure of the working directory
 
-`tree -L 1`{{execute T1}}
+`tree -L 1`{{execute T2}}
 
 You'll get following output:
 
@@ -60,7 +60,7 @@ Take a look at the `expressjs app.post` function which starts at `Line 31`. We c
 
 Then it creates the Saga event message `ReceivedOrder` to be sent via the Redis message broker to the `payment` microservice
 
-Next, look at the `Subscriber` code on `Lines 11-21`.  This code has the function that is called whenever the `order` service receives Saga events from the Redis message broker channel it is listening on `OrderService`.  The only Saga event that can be received by the `order` service is the `CancelOrder` (forwarded from the `payment` microservice) which triggers `order` to remove the associated order (found by `orderId`) from its database
+Next, look at the `Subscriber` code on `Lines 11-21`.  This code has the function that is called whenever the `order` service receives Saga events from the Redis message broker channel it is listening on (`OrderService`).  The only Saga event that can be received by the `order` service is the `CancelOrder` (forwarded from the `payment` microservice) which triggers `order` to remove the associated order (found by `orderId`) from its database
 
 **Step 5:** Get out of `vi` line numbered view mode
 
@@ -72,43 +72,63 @@ Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 You have exited `vi`.
 
-**Step 7:**  that has the `report_gen` web server source code:
+**Step 7:**  Take a look at the file that contains the `payment` code. 
 
-`cd ~/fortune-cookies/monolith_strangled/report_gen/`{{execute T1}}
-
-**Step 8:** Take a look at the web server code:
-
-`vi index.js`{{execute T1}}
+`vi payment/index.js`{{execute T2}}
 
 Turn on line numbering:
 
-**Step 9:** Turn on line numbering in the `vi` editor:
+**Step 8:** Turn on line numbering in the `vi` editor:
 
-Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 and then enter:
 
-`:set number`{{execute T1}}
+`:set number`{{execute T2}}
 
-The code of interest is betweel `Lines 7 - 25`.
+Take a look at the `Subscriber` code on `Lines 13-36`.  This code has the function that is called whenever the `payment` service receives Saga events from the Redis message broker channel it is listening on (`PaymentService`).  There are two Saga events that can be received by the `payment` service. The first is the `ReceiveOrder` (forwarded from the `order` microservice) which triggers `payment` to add an accounting entry to credit the account with the associated value of the order and then forwarding the message onwards to the `stock` service to complete the order processing.  The second is the `CancelOrder` (forwarded from the `stock` microservice) that indicates `stock` encountered an error that requires rollback of the order.  This triggers `stock` to add an entry to the account to debit the appropriate amount to reverse the previous credit transaction and then forward the `CancelOrder` message onwards to the `order` service so it can also rollback its action related to the order.
 
-Notice at `Line 18` that the code uses the `getSentFortunes()` method from the `DataManager` component to access the *sent fortunes* data in the data source. As mentioned above, `DataManager` encapsulates data access activities to and from the external data source. The method, `getSentFortunes()` takes a single optional argument, `limit`. `limit` is derived from the `request` query parameter of the same name. If `request.query.limit` contain a numeric value, then `DataManager.getSentFortunes(limit)` will return the number of fortunes defined by `limit`. Otherwise, `DataManager.getSentFortunes()` will return the default number of rows, `10`,
+**Step 9:** Get out of `vi` line numbered view mode
 
-**Step 10:** Get out of `vi` line numbered view mode
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
-Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
+**Step 10:** Exit `vi`
 
-**Step 11:** Exit `vi`
+`:q!`{{execute T2}}
 
-`:q!`{{execute T1}}
+You have exited `vi`.
+
+**Step 11:** Take a look at the file that contains the `stock` code.
+
+`vi stock/index.js`{{execute T2}}
+
+Turn on line numbering:
+
+**Step 12:** Turn on line numbering in the `vi` editor:
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+and then enter:
+
+`:set number`{{execute T2}}
+
+Take a look at the `Subscriber` code on `Lines 11-29`.  This code has the function that is called whenever the `stock` service receives Saga events from the Redis message broker channel it is listening on (`StockService`).  There is only one Saga event that can be received by the `stock` service. This event is the `ReceivedOrder` (forwarded from the `payment` microservice) which triggers `stock` to verify sufficient inventory for the associated product and if there is it will decrement the inventory and increment the shipped quantities for the appropriate product.  If the product is not found or the inventory is insufficient the `stock` microservice will instead leave its data untouched and create and forward the `CancelOrder` Saga event message back to the `payment` microservice to begin the rollback of the other microservice actions.
+
+**Step 13:** Get out of `vi` line numbered view mode
+
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
+
+**Step 14:** Exit `vi`
+
+`:q!`{{execute T2}}
 
 You have exited `vi`.
 
 ## Conclusion 
 
-In closing you can see that by adding a new component, `DataManager` and adding a few lines of new code in `sender` we've made it so *Fortune Cookies* can export *sent Fortunes* data to an external data source. Once the data is externalized, it can be consumed by any interested party such as `report_gen`.
+In closing you can see the basic implementation for setting up a Choreography-based Saga.  The key components are the individual microservices, the message bus used to pass the Saga event messages between them, and the action and rollback code that each microservice undertakes when it receives the appropriate Saga event message
 
-Of course, there is more work to do. Eventually `sender` will need to be disconnected from the monolithic *Fortune Cookies* completely. This will take a lot more work. But, no matter what, starting to strangle `sender` by emitting it's data to an external data source is an important first step.
+This is a very simplified implementation where the microservices aren't using real databases for storing their local data but conceptually that would look very similar
 
 ---
 
