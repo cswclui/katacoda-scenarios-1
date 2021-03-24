@@ -42,37 +42,37 @@ You'll get following output:
 * `docker-seed.sh` is a simple bash script to build the container images for the `order`, `payment`, and `stock` microservices
 
 
-**Step 3:** Take a look at the file that contains the `sender` code. 
+**Step 3:** Take a look at the file that contains the `order` code. 
 
-`vi monolith/sender/index.js`{{execute T1}}
+`vi order/index.js`{{execute T2}}
 
 Turn on line numbering:
 
 **Step 4:** Turn on line numbering in the `vi` editor:
 
-Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 and then enter:
 
-`:set number`{{execute T1}}
+`:set number`{{execute T2}}
 
-Take a look at the `send` function which starts at `Line 7`. The comments in the code describe the old code and where the stranger code is added. The strangling code runs between `Lines 15 -22`.
+Take a look at the `expressjs app.post` function which starts at `Line 31`. We can see the function reads the JSON body of the HTTP request and used the `product` and `quantity` properties to create a new order and inserts it to the local database (in this simple case its just an array object in memory).
 
-Also, part of the strangling code is the addition of the `DataManager` which contains the [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) that encapsulates the data access activity to the MariaDB data base. The ORM that's used in the DataManager is the Node.js library, [Sequilize](https://www.npmjs.com/package/sequelize).
+Then it creates the Saga event message `ReceivedOrder` to be sent via the Redis message broker to the `payment` microservice
 
-The last piece to look at is the `report_gen` service. This is the service that consumes the data emitted from `sender` into the external database.
+Next, look at the `Subscriber` code on `Lines 11-21`.  This code has the function that is called whenever the `order` service receives Saga events from the Redis message broker channel it is listening on `OrderService`.  The only Saga event that can be received by the `order` service is the `CancelOrder` (forwarded from the `payment` microservice) which triggers `order` to remove the associated order (found by `orderId`) from its database
 
 **Step 5:** Get out of `vi` line numbered view mode
 
-Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 **Step 6:** Exit `vi`
 
-`:q!`{{execute T1}}
+`:q!`{{execute T2}}
 
 You have exited `vi`.
 
-**Step 7:** Go to directory that has the `report_gen` web server source code:
+**Step 7:**  that has the `report_gen` web server source code:
 
 `cd ~/fortune-cookies/monolith_strangled/report_gen/`{{execute T1}}
 
