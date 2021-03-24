@@ -1,21 +1,19 @@
 ## Objective
-The objective of this lesson is to analyze the Strangler Lite code to see how the Strangler Pattern is implemented.
+The objective of this lesson is to analyze the Saga Pattern code to see how it is implemented.
 
 ## What You'll Be Doing
-In this lesson we're going to look at how the Stranger Pattern is implemented in the `sender` component of the monolithic *Fortune Cookies*. Remember, the purpose of `sender` is to send fortunes onto intended targets.
+In this lesson we're going to look at how the Choreography-based Saga Pattern is implemented in the `order`, `payment`, and `stock` microservices.
 
-![Fortune Cookies Components](msdb-005/assets/basic-architecture-components.png)
+![Choreography-based Saga](msdb-005/assets/choreography-saga.png)
 
-The approach that Strangler Lite takes is to add a custom made `DataManager` component into the monolithic application. `DataManager` encapsulates data access activity to a MariaDB database using the [Sequilize](https://sequelize.org/) Node.js library. Also, a few lines of code will be added to the `sender` component. This added code will uses the `DataManager` to emit *sent Fortune* data to the external MariaDB database.
-
-![Strangler Architecture](msdb-005/assets/strangler-lite-architecture.png)
+The approach taken is to use Redis as a message broker with 3 channels (one for each service `order`, `payment`, and `stock`).  The Saga event signalling happens via these channels with the message `ReceivedOrder` indicating an order was received and processed and `CancelOrder`that a problem occurred and all actions should be rolled-back.  All 3 services are also simple expressjs apps exposing 1-2 endpoints for HTTP requests.
 
 
 ## Steps
 
 **Step 1:** Confirm you're in the working directory:
 
-`clear && cd ~/fortune-cookies/monolith_strangled/ && pwd`{{execute T1}}
+`clear && cd /root/microservices-db-saga/simple-saga && pwd`{{execute T2}}
 
 **Step 2:** Take a look at the directory and file structure of the working directory
 
@@ -25,57 +23,56 @@ You'll get following output:
 
 ```
 .
-├── config
-├── data
 ├── docker-compose.yml
-├── init
-├── monolith
-├── README.md
-└── report_gen
+├── docker-seed.sh
+├── order
+├── payment
+├── stock
+└── upgrade-docker-compose.sh
 
+3 directories, 3 files
 ```
 
 **WHERE**
 
-* `config`, `data` and `init` are directories that were created in the local file system according to the volume configuration for the database container as described in the `docker-compose.yml` file.
-* `docker-compose.yml` is the file the contains the `Docker Compose` configuration settinsg
-* `monolith` contains the source code the *Fortunes Cookies* monolithic application
-* `report_gen` is the directory that has the source code for the external service that consumes the data emitted from the refactored `send` component.
-* `README.md` is the conventional file that contains documentation content in markdown format
+* 
+* `order`, `payment` and `stock` are folders that contain the code and Dockerfiles for the `order`, `payment`, and `stock` microservices
+* `docker-compose.yml` is the file the contains the `Docker Compose` configuration settings to start Redis and the microservices containers
+* `upgrade-docker-compose.sh` is a simple bash script to upgrade the version of docker-compose on the lab machine
+* `docker-seed.sh` is a simple bash script to build the container images for the `order`, `payment`, and `stock` microservices
 
-`report_gen` is a new service, external to *Fortunes Cookies* that will consume data cominng out of the monolith. The interesting work takes place in the `sender` component in the *Fortunes Cookies* monolithic application so let's go there.
 
-**Step 3:** Take a look at the file that contains the `sender` code. 
+**Step 3:** Take a look at the file that contains the `order` code. 
 
-`vi monolith/sender/index.js`{{execute T1}}
+`vi order/index.js`{{execute T2}}
 
 Turn on line numbering:
 
 **Step 4:** Turn on line numbering in the `vi` editor:
 
-Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 and then enter:
 
-`:set number`{{execute T1}}
+`:set number`{{execute T2}}
 
-Take a look at the `send` function which starts at `Line 7`. The comments in the code describe the old code and where the stranger code is added. The strangling code runs between `Lines 15 -22`.
+Take a look at the `expressjs app.post` function which starts at `Line 31`. We can see the function reads the JSON body of the HTTP request and used the `product` and `quantity` properties to create a new order and inserts it to the local database (in this simple case its just an array object in memory).
 
-Also, part of the strangling code is the addition of the `DataManager` which contains the [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) that encapsulates the data access activity to the MariaDB data base. The ORM that's used in the DataManager is the Node.js library, [Sequilize](https://www.npmjs.com/package/sequelize).
+Then it creates the Saga event message `ReceivedOrder` to be sent via the Redis message broker to the `payment` microservice
 
-The last piece to look at is the `report_gen` service. This is the service that consumes the data emitted from `sender` into the external database.
+Next, look at the `Subscriber` code on `Lines 11-21`.  This code has the function that is called whenever the `order` service receives Saga events from the Redis message broker channel it is listening on `OrderService`.  The only Saga event that can be received by the `order` service is the `CancelOrder` (forwarded from the `payment` microservice) which triggers `order` to remove the associated order (found by `orderId`) from its database
 
 **Step 5:** Get out of `vi` line numbered view mode
 
-Press the ESC key: `^ESC`{{execute ctrl-seq T1}}
+Press the ESC key: `^ESC`{{execute ctrl-seq T2}}
 
 **Step 6:** Exit `vi`
 
-`:q!`{{execute T1}}
+`:q!`{{execute T2}}
 
 You have exited `vi`.
 
-**Step 7:** Go to directory that has the `report_gen` web server source code:
+**Step 7:**  that has the `report_gen` web server source code:
 
 `cd ~/fortune-cookies/monolith_strangled/report_gen/`{{execute T1}}
 

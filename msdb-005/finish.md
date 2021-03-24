@@ -1,4 +1,4 @@
-**Congratulations!** You've completed the scenario, ***Implementing the Strangler Pattern***
+**Congratulations!** You've completed the scenario,  ***Implementing the Saga Pattern***
 
 The interactive scenario you:
 

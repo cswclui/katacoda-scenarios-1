@@ -1,8 +1,8 @@
 {
-  "title": "Microservice Database Design: 5-Implementing the Saga Pattern",
-  "description": "Learn the basics of implementing the Saga Pattern to coordinate a sequence of distributed transactions (or rollback prior completed steps on failure)",
-  "difficulty": "General understanding of structured programming, git, Docker, containers, message brokers, and a reading knowledge of Node.js",
-  "time": "25 minutes",
+  "title": "Microservice Database Design: 6-Implementing the Strangler Pattern",
+  "description": "Learn the basics of implementing the Strangler Pattern to isolate a feature in an existing monolitic application for eventual extraction",
+  "difficulty": "General understanding of structured programming, git, Docker, containers, database triggers, and a reading knowledge of Node.js",
+  "time": "20 minutes",
   "details": {
     "steps": [{
         "title": "Installing the Code",
