@@ -2,17 +2,17 @@
 
 ## Objective
 
-The objective of the secenario is to demonstrate how to initiate the tranformation of a monolithic to a microservice using the [Strangler Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler-fig).
+The objective of the secenario is to demonstrate the basic structure and implementation of the Saga Pattern for coordinating distributed transactions.
 
 ## What You'll Be Doing 
 
-The scenario implements a version of the Strangler Pattern that we'll call Strangler Lite. Strangler Lite augments the code in the `sender` component of *Fortune Cookies* so that *sent Fortune* that have been sent internally from within the monolith are emitted from the application to an independent, external MariaDB database. 
+The scenario implements a simple Choreography-based Saga Pattern to coordinate a sequence of distributed transactions as may be done by a simple online store.
+An order microservice receives an order via an HTTP requests and then updates its local database of orders and sends a notification to a payment microservice.
+The payment microservice updates an account database and then sends a notification to a stock microservice which updates shipping and inventory data in its own
+local database.  Each of the microservices can be queried via HTTP to see their local database data.  If an error occurs at any point in the process the overall
+transaction is aborted and messages are sent along the reverse path to trigger the previous steps to be rolled back as well.
 
-![Fortune Cookies Components](msdb-005/assets/basic-architecture-components.png)
-
-Once the data is in the MariaDB database, that data is accessible to any interested service.
-
-![Strangler Architecture](msdb-005/assets/strangler-lite-architecture.png)
+![Choreography-based Saga](msdb-005/assets/choreography-saga.png)
 
 
 The project is deployed as Docker containers aggregated under [Docker Compose](https://docs.docker.com/compose/).

@@ -1,19 +1,21 @@
 ## Objective
-The objective of this lesson is to analyze the Saga Pattern code to see how it is implemented.
+The objective of this lesson is to analyze the Strangler Lite code to see how the Strangler Pattern is implemented.
 
 ## What You'll Be Doing
-In this lesson we're going to look at how the Choreography-based Saga Pattern is implemented in the `order`, `payment`, and `stock` microservices.
+In this lesson we're going to look at how the Stranger Pattern is implemented in the `sender` component of the monolithic *Fortune Cookies*. Remember, the purpose of `sender` is to send fortunes onto intended targets.
 
-![Choreography-based Saga](msdb-005/assets/choreography-saga.png)
+![Fortune Cookies Components](msdb-006/assets/basic-architecture-components.png)
 
-The approach taken is to use Redis as a message broker with 3 channels (one for each service `order`, `payment`, and `stock`).  The Saga event signalling happens via these channels with the message `ReceivedOrder` indicating an order was received and processed and `CancelOrder`that a problem occurred and all actions should be rolled-back.  All 3 services are also simple expressjs apps exposing 1-2 endpoints for HTTP requests.
+The approach that Strangler Lite takes is to add a custom made `DataManager` component into the monolithic application. `DataManager` encapsulates data access activity to a MariaDB database using the [Sequilize](https://sequelize.org/) Node.js library. Also, a few lines of code will be added to the `sender` component. This added code will uses the `DataManager` to emit *sent Fortune* data to the external MariaDB database.
+
+![Strangler Architecture](msdb-006/assets/strangler-lite-architecture.png)
 
 
 ## Steps
 
 **Step 1:** Confirm you're in the working directory:
 
-`clear && cd /root/microservices-db-saga/simple-saga && pwd`{{execute T2}}
+`clear && cd ~/fortune-cookies/monolith_strangled/ && pwd`{{execute T1}}
 
 **Step 2:** Take a look at the directory and file structure of the working directory
 
@@ -23,24 +25,25 @@ You'll get following output:
 
 ```
 .
+├── config
+├── data
 ├── docker-compose.yml
-├── docker-seed.sh
-├── order
-├── payment
-├── stock
-└── upgrade-docker-compose.sh
+├── init
+├── monolith
+├── README.md
+└── report_gen
 
-3 directories, 3 files
 ```
 
 **WHERE**
 
-* 
-* `order`, `payment` and `stock` are folders that contain the code and Dockerfiles for the `order`, `payment`, and `stock` microservices
-* `docker-compose.yml` is the file the contains the `Docker Compose` configuration settings to start Redis and the microservices containers
-* `upgrade-docker-compose.sh` is a simple bash script to upgrade the version of docker-compose on the lab machine
-* `docker-seed.sh` is a simple bash script to build the container images for the `order`, `payment`, and `stock` microservices
+* `config`, `data` and `init` are directories that were created in the local file system according to the volume configuration for the database container as described in the `docker-compose.yml` file.
+* `docker-compose.yml` is the file the contains the `Docker Compose` configuration settinsg
+* `monolith` contains the source code the *Fortunes Cookies* monolithic application
+* `report_gen` is the directory that has the source code for the external service that consumes the data emitted from the refactored `send` component.
+* `README.md` is the conventional file that contains documentation content in markdown format
 
+`report_gen` is a new service, external to *Fortunes Cookies* that will consume data cominng out of the monolith. The interesting work takes place in the `sender` component in the *Fortunes Cookies* monolithic application so let's go there.
 
 **Step 3:** Take a look at the file that contains the `sender` code. 
 
