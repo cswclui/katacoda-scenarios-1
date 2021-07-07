@@ -13,13 +13,22 @@ You get the following output:
 
 `/root/simplemicroservice`
 
-**Step 2:** In a second terminal window, start the microservice:
+**Step 2:** Open a second terminal window:
 
-`cd /root/simplemicroservice`{{execute T2}}
+`pwd`{{execute T2}}
+
+**Step 3:** Confirm you're in the microservice's working directory.
+
+`cd ~/simplemicroservice`{{execute T2}}
+
+`clear && pwd`{{execute T2}}
+
+**Step 4:** Start the microservice
+
 `node index.js`{{execute T2}}
 
 
-**Step 3:** In the first terminal window call the microservice 20 times using `curl`.
+**Step 5:** In the first terminal window call the microservice 20 times using `curl`.
 
 `for i in {1..20}; do curl localhost:3000 -w "\n"; done`{{execute T1}}
 
