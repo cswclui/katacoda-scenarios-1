@@ -15,7 +15,7 @@ You get the following output:
 
 **Step 2:** In a second terminal window, start the microservice:
 
-`node index.js`{{execute T2}}
+`cd /root/simplemicroservice && node index.js`{{execute T2}}
 
 
 **Step 3:** In the first terminal window call the microservice 20 times using `curl`.
